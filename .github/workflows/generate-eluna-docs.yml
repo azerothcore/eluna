@@ -29,12 +29,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          rm rf docs/
           mv mod-eluna/src/LuaEngine/docs/build/* docs/
           cd docs/
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           rm -rf mod-eluna
-          git add docs/
-          git add -A
+          git add .
           git commit -m "chore: Eluna documentation 🎉"
           git push
