@@ -25,13 +25,11 @@ jobs:
         run: |
           cd mod-eluna/src/LuaEngine/docs/
           python -m ElunaDoc
-      - name: move files
-        run: |
-
       - name: "commit eluna docs"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git add mod-eluna/src/LuaEngine/docs/build/*
           git mv mod-eluna/src/LuaEngine/docs/build/* docs/
           cd docs/
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
