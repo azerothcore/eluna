@@ -14,8 +14,6 @@ Eluna is a powerful and flexible Lua scripting engine designed to simplify the c
 
 For more information, visit the [Eluna GitHub repository](https://github.com/azerothcore/mod-eluna).
 
----
-
 ## Documentation
 
 The official Eluna documentation provides detailed guidance on how to:
