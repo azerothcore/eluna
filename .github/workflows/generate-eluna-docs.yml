@@ -29,7 +29,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          rm rf docs/
+          rm -rf docs
           mv mod-eluna/src/LuaEngine/docs/build/* docs/
           cd docs/
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
