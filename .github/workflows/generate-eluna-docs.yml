@@ -1,0 +1,38 @@
+name: generate-eluna-docs
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 06 * * *'
+
+jobs:
+  build-doxygen-doc:
+    permissions: write-all
+    runs-on: ubuntu-24.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: "clone mod-eluna source"
+        run: |
+          git clone --single-branch https://github.com/azerothcore/mod-eluna
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          architecture: 'x64'
+      - name: Install Python dependencies
+        run: pip install jinja2 typedecorator markdown
+      - name: Compile documentation
+        run: |
+          cd src/LuaEngine/docs/
+          python -m ElunaDoc
+      - name: "commit eluna docs"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd docs/
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          rm -rf mod-eluna
+          git add .
+          git commit -m "chore: Eluna documentation 🎉"
+          git push
