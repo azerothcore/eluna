@@ -23,7 +23,7 @@ jobs:
         run: pip install jinja2 typedecorator markdown
       - name: Compile documentation
         run: |
-          cd src/LuaEngine/docs/
+          cd mod-eluna/src/LuaEngine/docs/
           python -m ElunaDoc
       - name: "commit eluna docs"
         env:
