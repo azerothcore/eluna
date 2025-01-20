@@ -37,4 +37,4 @@ If you need help, check out the following resources:
 
 ---
 
-Thank you for supporting the development of Eluna and AzerothCore! Happy scripting!
+Thank you for supporting the development of Eluna and AzerothCore! Happy scripting! 🎮
