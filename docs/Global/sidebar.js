@@ -68,6 +68,7 @@ document.write(`
   <a id="Global:IsGameEventActive" class="fn" href="../Global/IsGameEventActive.html">IsGameEventActive</a>
   <a id="Global:IsInventoryPos" class="fn" href="../Global/IsInventoryPos.html">IsInventoryPos</a>
   <a id="Global:Kick" class="fn" href="../Global/Kick.html">Kick</a>
+  <a id="Global:LookupEntry" class="fn" href="../Global/LookupEntry.html">LookupEntry</a>
   <a id="Global:PerformIngameSpawn" class="fn" href="../Global/PerformIngameSpawn.html">PerformIngameSpawn</a>
   <a id="Global:PrintDebug" class="fn" href="../Global/PrintDebug.html">PrintDebug</a>
   <a id="Global:PrintError" class="fn" href="../Global/PrintError.html">PrintError</a>
