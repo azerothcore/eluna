@@ -1,5 +1,7 @@
 document.write(`
   <a id="Map:GetAreaId" class="fn" href="../Map/GetAreaId.html">GetAreaId</a>
+  <a id="Map:GetCreatures" class="fn" href="../Map/GetCreatures.html">GetCreatures</a>
+  <a id="Map:GetCreaturesByAreaId" class="fn" href="../Map/GetCreaturesByAreaId.html">GetCreaturesByAreaId</a>
   <a id="Map:GetDifficulty" class="fn" href="../Map/GetDifficulty.html">GetDifficulty</a>
   <a id="Map:GetHeight" class="fn" href="../Map/GetHeight.html">GetHeight</a>
   <a id="Map:GetInstanceData" class="fn" href="../Map/GetInstanceData.html">GetInstanceData</a>

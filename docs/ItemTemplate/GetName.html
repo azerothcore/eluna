@@ -68,20 +68,23 @@
 
     
     <div class='docblock'>
-        <p>Returns the <a class="mod" href="../ItemTemplate/index.html">ItemTemplate</a>'s name.</p>
+        <p>Returns the <a class="mod" href="../ItemTemplate/index.html">ItemTemplate</a>'s name in the <a class="mod" href="../Player/index.html">Player</a>'s locale.</p>
 
         <h2 id="synopsis" class='section-header'>
             <a href="#synopsis">Synopsis</a>
         </h2>
         <p>
-            <code>name = ItemTemplate:GetName()</code>
+            <code>name = ItemTemplate:GetName( locale )</code>
         </p>
 
         <h2 id="arguments" class='section-header'>
             <a href="#arguments">Arguments</a>
         </h2>
         <p>
-            None.
+            <dl>
+                <dt><code><strong><a href="https://github.com/ElunaLuaEngine/ElunaTrinityWotlk/search?l=cpp&q=%22enum+LocaleConstant%22&type=Code&utf8=%E2%9C%93">LocaleConstant</a></strong> locale (DEFAULT_LOCALE)</code></dt>
+                <dd class="docblock"><p>Locale to return the <a class="mod" href="../ItemTemplate/index.html">ItemTemplate</a> name in (it's optional default: LOCALE_enUS). </p></dd>
+            </dl>
         </p>
 
         <h2 id="returns" class='section-header'>

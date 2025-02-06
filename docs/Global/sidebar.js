@@ -39,6 +39,7 @@ document.write(`
   <a id="Global:GetGUIDLow" class="fn" href="../Global/GetGUIDLow.html">GetGUIDLow</a>
   <a id="Global:GetGUIDType" class="fn" href="../Global/GetGUIDType.html">GetGUIDType</a>
   <a id="Global:GetGameTime" class="fn" href="../Global/GetGameTime.html">GetGameTime</a>
+  <a id="Global:GetGossipMenuOptionLocale" class="fn" href="../Global/GetGossipMenuOptionLocale.html">GetGossipMenuOptionLocale</a>
   <a id="Global:GetGuildByLeaderGUID" class="fn" href="../Global/GetGuildByLeaderGUID.html">GetGuildByLeaderGUID</a>
   <a id="Global:GetGuildByName" class="fn" href="../Global/GetGuildByName.html">GetGuildByName</a>
   <a id="Global:GetItemGUID" class="fn" href="../Global/GetItemGUID.html">GetItemGUID</a>
@@ -46,6 +47,7 @@ document.write(`
   <a id="Global:GetItemTemplate" class="fn" href="../Global/GetItemTemplate.html">GetItemTemplate</a>
   <a id="Global:GetLuaEngine" class="fn" href="../Global/GetLuaEngine.html">GetLuaEngine</a>
   <a id="Global:GetMapById" class="fn" href="../Global/GetMapById.html">GetMapById</a>
+  <a id="Global:GetMapEntrance" class="fn" href="../Global/GetMapEntrance.html">GetMapEntrance</a>
   <a id="Global:GetObjectGUID" class="fn" href="../Global/GetObjectGUID.html">GetObjectGUID</a>
   <a id="Global:GetOwnerHalaa" class="fn" href="../Global/GetOwnerHalaa.html">GetOwnerHalaa</a>
   <a id="Global:GetPlayerByGUID" class="fn" href="../Global/GetPlayerByGUID.html">GetPlayerByGUID</a>
@@ -55,6 +57,7 @@ document.write(`
   <a id="Global:GetPlayersInWorld" class="fn" href="../Global/GetPlayersInWorld.html">GetPlayersInWorld</a>
   <a id="Global:GetQuest" class="fn" href="../Global/GetQuest.html">GetQuest</a>
   <a id="Global:GetRealmID" class="fn" href="../Global/GetRealmID.html">GetRealmID</a>
+  <a id="Global:GetSpellInfo" class="fn" href="../Global/GetSpellInfo.html">GetSpellInfo</a>
   <a id="Global:GetStateInstanceId" class="fn" href="../Global/GetStateInstanceId.html">GetStateInstanceId</a>
   <a id="Global:GetStateMap" class="fn" href="../Global/GetStateMap.html">GetStateMap</a>
   <a id="Global:GetStateMapId" class="fn" href="../Global/GetStateMapId.html">GetStateMapId</a>

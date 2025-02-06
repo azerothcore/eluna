@@ -7,6 +7,7 @@ document.write(`
   <a id="ItemTemplate:GetDisplayId" class="fn" href="../ItemTemplate/GetDisplayId.html">GetDisplayId</a>
   <a id="ItemTemplate:GetExtraFlags" class="fn" href="../ItemTemplate/GetExtraFlags.html">GetExtraFlags</a>
   <a id="ItemTemplate:GetFlags" class="fn" href="../ItemTemplate/GetFlags.html">GetFlags</a>
+  <a id="ItemTemplate:GetIcon" class="fn" href="../ItemTemplate/GetIcon.html">GetIcon</a>
   <a id="ItemTemplate:GetInventoryType" class="fn" href="../ItemTemplate/GetInventoryType.html">GetInventoryType</a>
   <a id="ItemTemplate:GetItemId" class="fn" href="../ItemTemplate/GetItemId.html">GetItemId</a>
   <a id="ItemTemplate:GetItemLevel" class="fn" href="../ItemTemplate/GetItemLevel.html">GetItemLevel</a>

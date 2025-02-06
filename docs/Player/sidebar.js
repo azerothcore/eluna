@@ -1,4 +1,5 @@
 document.write(`
+  <a id="Player:AddBonusTalent" class="fn" href="../Player/AddBonusTalent.html">AddBonusTalent</a>
   <a id="Player:AddComboPoints" class="fn" href="../Player/AddComboPoints.html">AddComboPoints</a>
   <a id="Player:AddItem" class="fn" href="../Player/AddItem.html">AddItem</a>
   <a id="Player:AddLifetimeKills" class="fn" href="../Player/AddLifetimeKills.html">AddLifetimeKills</a>
@@ -39,6 +40,7 @@ document.write(`
   <a id="Player:GetBaseSkillValue" class="fn" href="../Player/GetBaseSkillValue.html">GetBaseSkillValue</a>
   <a id="Player:GetBattlegroundId" class="fn" href="../Player/GetBattlegroundId.html">GetBattlegroundId</a>
   <a id="Player:GetBattlegroundTypeId" class="fn" href="../Player/GetBattlegroundTypeId.html">GetBattlegroundTypeId</a>
+  <a id="Player:GetBonusTalentCount" class="fn" href="../Player/GetBonusTalentCount.html">GetBonusTalentCount</a>
   <a id="Player:GetChampioningFaction" class="fn" href="../Player/GetChampioningFaction.html">GetChampioningFaction</a>
   <a id="Player:GetChatTag" class="fn" href="../Player/GetChatTag.html">GetChatTag</a>
   <a id="Player:GetCoinage" class="fn" href="../Player/GetCoinage.html">GetCoinage</a>
@@ -63,6 +65,7 @@ document.write(`
   <a id="Player:GetGuildName" class="fn" href="../Player/GetGuildName.html">GetGuildName</a>
   <a id="Player:GetGuildRank" class="fn" href="../Player/GetGuildRank.html">GetGuildRank</a>
   <a id="Player:GetHealthBonusFromStamina" class="fn" href="../Player/GetHealthBonusFromStamina.html">GetHealthBonusFromStamina</a>
+  <a id="Player:GetHomebind" class="fn" href="../Player/GetHomebind.html">GetHomebind</a>
   <a id="Player:GetHonorPoints" class="fn" href="../Player/GetHonorPoints.html">GetHonorPoints</a>
   <a id="Player:GetInGameTime" class="fn" href="../Player/GetInGameTime.html">GetInGameTime</a>
   <a id="Player:GetItemByEntry" class="fn" href="../Player/GetItemByEntry.html">GetItemByEntry</a>
@@ -98,6 +101,7 @@ document.write(`
   <a id="Player:GetSkillValue" class="fn" href="../Player/GetSkillValue.html">GetSkillValue</a>
   <a id="Player:GetSpecsCount" class="fn" href="../Player/GetSpecsCount.html">GetSpecsCount</a>
   <a id="Player:GetSpellCooldownDelay" class="fn" href="../Player/GetSpellCooldownDelay.html">GetSpellCooldownDelay</a>
+  <a id="Player:GetSpells" class="fn" href="../Player/GetSpells.html">GetSpells</a>
   <a id="Player:GetSubGroup" class="fn" href="../Player/GetSubGroup.html">GetSubGroup</a>
   <a id="Player:GetTeam" class="fn" href="../Player/GetTeam.html">GetTeam</a>
   <a id="Player:GetTotalPlayedTime" class="fn" href="../Player/GetTotalPlayedTime.html">GetTotalPlayedTime</a>
@@ -168,6 +172,7 @@ document.write(`
   <a id="Player:ModifyMoney" class="fn" href="../Player/ModifyMoney.html">ModifyMoney</a>
   <a id="Player:Mute" class="fn" href="../Player/Mute.html">Mute</a>
   <a id="Player:RemoveArenaSpellCooldowns" class="fn" href="../Player/RemoveArenaSpellCooldowns.html">RemoveArenaSpellCooldowns</a>
+  <a id="Player:RemoveBonusTalent" class="fn" href="../Player/RemoveBonusTalent.html">RemoveBonusTalent</a>
   <a id="Player:RemoveFromBattlegroundRaid" class="fn" href="../Player/RemoveFromBattlegroundRaid.html">RemoveFromBattlegroundRaid</a>
   <a id="Player:RemoveFromGroup" class="fn" href="../Player/RemoveFromGroup.html">RemoveFromGroup</a>
   <a id="Player:RemoveItem" class="fn" href="../Player/RemoveItem.html">RemoveItem</a>
@@ -210,6 +215,7 @@ document.write(`
   <a id="Player:SetArenaPoints" class="fn" href="../Player/SetArenaPoints.html">SetArenaPoints</a>
   <a id="Player:SetAtLoginFlag" class="fn" href="../Player/SetAtLoginFlag.html">SetAtLoginFlag</a>
   <a id="Player:SetBindPoint" class="fn" href="../Player/SetBindPoint.html">SetBindPoint</a>
+  <a id="Player:SetBonusTalentCount" class="fn" href="../Player/SetBonusTalentCount.html">SetBonusTalentCount</a>
   <a id="Player:SetCoinage" class="fn" href="../Player/SetCoinage.html">SetCoinage</a>
   <a id="Player:SetDrunkValue" class="fn" href="../Player/SetDrunkValue.html">SetDrunkValue</a>
   <a id="Player:SetFactionForRace" class="fn" href="../Player/SetFactionForRace.html">SetFactionForRace</a>
@@ -237,6 +243,7 @@ document.write(`
   <a id="Player:SummonPlayer" class="fn" href="../Player/SummonPlayer.html">SummonPlayer</a>
   <a id="Player:TalkedToCreature" class="fn" href="../Player/TalkedToCreature.html">TalkedToCreature</a>
   <a id="Player:Teleport" class="fn" href="../Player/Teleport.html">Teleport</a>
+  <a id="Player:TeleportTo" class="fn" href="../Player/TeleportTo.html">TeleportTo</a>
   <a id="Player:TextEmote" class="fn" href="../Player/TextEmote.html">TextEmote</a>
   <a id="Player:ToggleAFK" class="fn" href="../Player/ToggleAFK.html">ToggleAFK</a>
   <a id="Player:ToggleDND" class="fn" href="../Player/ToggleDND.html">ToggleDND</a>

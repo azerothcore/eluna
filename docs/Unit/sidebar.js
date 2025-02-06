@@ -8,6 +8,7 @@ document.write(`
   <a id="Unit:CastSpell" class="fn" href="../Unit/CastSpell.html">CastSpell</a>
   <a id="Unit:CastSpellAoF" class="fn" href="../Unit/CastSpellAoF.html">CastSpellAoF</a>
   <a id="Unit:ClearInCombat" class="fn" href="../Unit/ClearInCombat.html">ClearInCombat</a>
+  <a id="Unit:ClearThreat" class="fn" href="../Unit/ClearThreat.html">ClearThreat</a>
   <a id="Unit:ClearThreatList" class="fn" href="../Unit/ClearThreatList.html">ClearThreatList</a>
   <a id="Unit:ClearUnitState" class="fn" href="../Unit/ClearUnitState.html">ClearUnitState</a>
   <a id="Unit:CountPctFromCurHealth" class="fn" href="../Unit/CountPctFromCurHealth.html">CountPctFromCurHealth</a>
@@ -56,6 +57,7 @@ document.write(`
   <a id="Unit:GetSpeedRate" class="fn" href="../Unit/GetSpeedRate.html">GetSpeedRate</a>
   <a id="Unit:GetStandState" class="fn" href="../Unit/GetStandState.html">GetStandState</a>
   <a id="Unit:GetStat" class="fn" href="../Unit/GetStat.html">GetStat</a>
+  <a id="Unit:GetThreat" class="fn" href="../Unit/GetThreat.html">GetThreat</a>
   <a id="Unit:GetThreatList" class="fn" href="../Unit/GetThreatList.html">GetThreatList</a>
   <a id="Unit:GetUnfriendlyUnitsInRange" class="fn" href="../Unit/GetUnfriendlyUnitsInRange.html">GetUnfriendlyUnitsInRange</a>
   <a id="Unit:GetVehicle" class="fn" href="../Unit/GetVehicle.html">GetVehicle</a>
@@ -121,6 +123,7 @@ document.write(`
   <a id="Unit:RemoveAllAuras" class="fn" href="../Unit/RemoveAllAuras.html">RemoveAllAuras</a>
   <a id="Unit:RemoveArenaAuras" class="fn" href="../Unit/RemoveArenaAuras.html">RemoveArenaAuras</a>
   <a id="Unit:RemoveAura" class="fn" href="../Unit/RemoveAura.html">RemoveAura</a>
+  <a id="Unit:ResetAllThreat" class="fn" href="../Unit/ResetAllThreat.html">ResetAllThreat</a>
   <a id="Unit:SendChatMessageToPlayer" class="fn" href="../Unit/SendChatMessageToPlayer.html">SendChatMessageToPlayer</a>
   <a id="Unit:SendUnitEmote" class="fn" href="../Unit/SendUnitEmote.html">SendUnitEmote</a>
   <a id="Unit:SendUnitSay" class="fn" href="../Unit/SendUnitSay.html">SendUnitSay</a>
