@@ -36,5 +36,10 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add docs/
-          git commit -m "chore: Eluna documentation 🎉"
-          git push
+          if git status -- ":!docs/date.js" | grep -q "Changes to be committed"
+          then
+              git commit -m "chore: Eluna documentation 🎉"
+              git push
+          else
+              echo "No changes detected"
+          fi
