@@ -32,6 +32,7 @@ document.write(`
   <a id="Global:CreateULongLong" class="fn" href="../Global/CreateULongLong.html">CreateULongLong</a>
   <a id="Global:GetActiveGameEvents" class="fn" href="../Global/GetActiveGameEvents.html">GetActiveGameEvents</a>
   <a id="Global:GetAreaName" class="fn" href="../Global/GetAreaName.html">GetAreaName</a>
+  <a id="Global:GetConfigValue" class="fn" href="../Global/GetConfigValue.html">GetConfigValue</a>
   <a id="Global:GetCoreExpansion" class="fn" href="../Global/GetCoreExpansion.html">GetCoreExpansion</a>
   <a id="Global:GetCoreName" class="fn" href="../Global/GetCoreName.html">GetCoreName</a>
   <a id="Global:GetCoreVersion" class="fn" href="../Global/GetCoreVersion.html">GetCoreVersion</a>
@@ -51,6 +52,7 @@ document.write(`
   <a id="Global:GetMapEntrance" class="fn" href="../Global/GetMapEntrance.html">GetMapEntrance</a>
   <a id="Global:GetObjectGUID" class="fn" href="../Global/GetObjectGUID.html">GetObjectGUID</a>
   <a id="Global:GetOwnerHalaa" class="fn" href="../Global/GetOwnerHalaa.html">GetOwnerHalaa</a>
+  <a id="Global:GetPackedGUIDSize" class="fn" href="../Global/GetPackedGUIDSize.html">GetPackedGUIDSize</a>
   <a id="Global:GetPlayerByGUID" class="fn" href="../Global/GetPlayerByGUID.html">GetPlayerByGUID</a>
   <a id="Global:GetPlayerByName" class="fn" href="../Global/GetPlayerByName.html">GetPlayerByName</a>
   <a id="Global:GetPlayerCount" class="fn" href="../Global/GetPlayerCount.html">GetPlayerCount</a>

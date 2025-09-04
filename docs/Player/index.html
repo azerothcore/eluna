@@ -60,6 +60,24 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AbandonQuest.html'>AbandonQuest</a>
+            </td>
+            <td class='docblock short'>
+                <p>Abandons a quest from the <a class="mod" href="../Player/index.html">Player</a>'s quest log.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AddArmorProficiency.html'>AddArmorProficiency</a>
+            </td>
+            <td class='docblock short'>
+                <p>Adds armor proficiency to the <a class="mod" href="../Player/index.html">Player</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='AddBonusTalent.html'>AddBonusTalent</a>
             </td>
             <td class='docblock short'>
@@ -105,6 +123,15 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AddWeaponProficiency.html'>AddWeaponProficiency</a>
+            </td>
+            <td class='docblock short'>
+                <p>Adds weapon proficiency to the <a class="mod" href="../Player/index.html">Player</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='AdvanceAllSkills.html'>AdvanceAllSkills</a>
             </td>
             <td class='docblock short'>
@@ -117,7 +144,7 @@
                 <a class='fn' href='AdvanceSkill.html'>AdvanceSkill</a>
             </td>
             <td class='docblock short'>
-                <p>Advances a <a class="mod" href="../Player/index.html">Player</a>s specific skill to the amount specified</p>
+                <p>Updates a skill for the <a class="mod" href="../Player/index.html">Player</a> and advances it by the specified step.</p>
             </td>
         </tr>
         <tr>
@@ -136,6 +163,24 @@
             </td>
             <td class='docblock short'>
                 <p>Completes the <a class="mod" href="../Quest/index.html">Quest</a> if a <a class="mod" href="../Quest/index.html">Quest</a> area is explored, or completes the <a class="mod" href="../Quest/index.html">Quest</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CalculateReputationGain.html'>CalculateReputationGain</a>
+            </td>
+            <td class='docblock short'>
+                <p>Calculates reputation gain for the <a class="mod" href="../Player/index.html">Player</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanAddQuest.html'>CanAddQuest</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> can add the specified quest, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
@@ -186,6 +231,15 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanInteractWithQuestGiver.html'>CanInteractWithQuestGiver</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> can interact with the specified quest giver, <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='CanParry.html'>CanParry</a>
             </td>
             <td class='docblock short'>
@@ -195,10 +249,46 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanPetResurrect.html'>CanPetResurrect</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> can resurrect their <a class="mod" href="../Pet/index.html">Pet</a> and returns <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanResummonPet.html'>CanResummonPet</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> can resummon a <a class="mod" href="../Pet/index.html">Pet</a> with the specified spell ID, and <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='CanRewardQuest.html'>CanRewardQuest</a>
             </td>
             <td class='docblock short'>
                 <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> satisfies all requirements to reward the quest entry.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanSeeDKPet.html'>CanSeeDKPet</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> can see Death Knight <a class="mod" href="../Pet/index.html">Pet</a>s, and <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanSeeStartQuest.html'>CanSeeStartQuest</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> can see the specified quest start, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
@@ -217,6 +307,33 @@
             </td>
             <td class='docblock short'>
                 <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> can currently communicate through chat, <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanTakeQuest.html'>CanTakeQuest</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> can take the specified quest, <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanTameExoticPets.html'>CanTameExoticPets</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> can tame exotic pets, and <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CanTeleport.html'>CanTeleport</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> can teleport, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
@@ -262,6 +379,24 @@
             </td>
             <td class='docblock short'>
                 <p>Completes the given quest entry for the <a class="mod" href="../Player/index.html">Player</a> and tries to satisfy all quest requirements.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CreatePet.html'>CreatePet</a>
+            </td>
+            <td class='docblock short'>
+                <p>Creates a tamed <a class="mod" href="../Pet/index.html">Pet</a> from a <a class="mod" href="../Creature/index.html">Creature</a> or creature entry.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='DoRandomRoll.html'>DoRandomRoll</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns a random number between the specified minimum and maximum values.</p>
             </td>
         </tr>
         <tr>
@@ -330,6 +465,15 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='EnvironmentalDamage.html'>EnvironmentalDamage</a>
+            </td>
+            <td class='docblock short'>
+                <p>Applies environmental damage to the <a class="mod" href="../Player/index.html">Player</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='EquipItem.html'>EquipItem</a>
             </td>
             <td class='docblock short'>
@@ -393,10 +537,55 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAmmoDPS.html'>GetAmmoDPS</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Player/index.html">Player</a>'s ammo DPS.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetArenaPoints.html'>GetArenaPoints</a>
             </td>
             <td class='docblock short'>
                 <p>Returns the <a class="mod" href="../Player/index.html">Player</a>s current amount of Arena Points</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetArmorProficiency.html'>GetArmorProficiency</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Player/index.html">Player</a>'s armor proficiency flags.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAverageItemLevel.html'>GetAverageItemLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the average item level of the <a class="mod" href="../Player/index.html">Player</a>'s equipment.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetBankItem.html'>GetBankItem</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns an item from the <a class="mod" href="../Player/index.html">Player</a>'s bank by slot.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetBarberShopCost.html'>GetBarberShopCost</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the barber shop cost for the specified style changes.</p>
             </td>
         </tr>
         <tr>
@@ -510,6 +699,15 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCreationTime.html'>GetCreationTime</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Player/index.html">Player</a>'s character creation time.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetDbLocaleIndex.html'>GetDbLocaleIndex</a>
             </td>
             <td class='docblock short'>
@@ -532,6 +730,15 @@
             </td>
             <td class='docblock short'>
                 <p>Returns raid or dungeon difficulty</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetDodgeFromAgility.html'>GetDodgeFromAgility</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Player/index.html">Player</a>'s dodge chance from agility.</p>
             </td>
         </tr>
         <tr>
@@ -681,6 +888,15 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetInventoryItem.html'>GetInventoryItem</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns an item from the <a class="mod" href="../Player/index.html">Player</a>'s inventory by slot.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetItemByEntry.html'>GetItemByEntry</a>
             </td>
             <td class='docblock short'>
@@ -712,6 +928,33 @@
             </td>
             <td class='docblock short'>
                 <p>Returns amount of the specified <a class="mod" href="../Item/index.html">Item</a> the <a class="mod" href="../Player/index.html">Player</a> has.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetKnownTaxiNodes.html'>GetKnownTaxiNodes</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns known taxi nodes (flight paths) that the player has unlocked.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetLastPetNumber.html'>GetLastPetNumber</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the last pet number for the <a class="mod" href="../Player/index.html">Player</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetLastPetSpell.html'>GetLastPetSpell</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the spell ID of the <a class="mod" href="../Player/index.html">Player</a>'s last <a class="mod" href="../Pet/index.html">Pet</a> summoning spell.</p>
             </td>
         </tr>
         <tr>
@@ -780,6 +1023,15 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMeleeCritFromAgility.html'>GetMeleeCritFromAgility</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Player/index.html">Player</a>'s melee critical hit chance from agility.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetNextRandomRaidMember.html'>GetNextRandomRaidMember</a>
             </td>
             <td class='docblock short'>
@@ -802,6 +1054,15 @@
             </td>
             <td class='docblock short'>
                 <p>Returns <a class="mod" href="../Player/index.html">Player</a>s original sub group</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPet.html'>GetPet</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Player/index.html">Player</a>'s current <a class="mod" href="../Pet/index.html">Pet</a>, if any.</p>
             </td>
         </tr>
         <tr>
@@ -915,6 +1176,15 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetRunesState.html'>GetRunesState</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Player/index.html">Player</a>'s runes state for Death Knights.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetSelection.html'>GetSelection</a>
             </td>
             <td class='docblock short'>
@@ -924,10 +1194,28 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetShield.html'>GetShield</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Player/index.html">Player</a>'s shield item.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetShieldBlockValue.html'>GetShieldBlockValue</a>
             </td>
             <td class='docblock short'>
                 <p>Returns the <a class="mod" href="../Player/index.html">Player</a>s current shield block value</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetSightRange.html'>GetSightRange</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the sight range of the <a class="mod" href="../Player/index.html">Player</a> for the specified target.</p>
             </td>
         </tr>
         <tr>
@@ -978,6 +1266,15 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetSpellCritFromIntellect.html'>GetSpellCritFromIntellect</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Player/index.html">Player</a>'s spell critical hit chance from intellect.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetSpells.html'>GetSpells</a>
             </td>
             <td class='docblock short'>
@@ -1005,6 +1302,15 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetTemporaryUnsummonedPetNumber.html'>GetTemporaryUnsummonedPetNumber</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the temporary unsummoned pet number for the <a class="mod" href="../Player/index.html">Player</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetTotalPlayedTime.html'>GetTotalPlayedTime</a>
             </td>
             <td class='docblock short'>
@@ -1018,6 +1324,24 @@
             </td>
             <td class='docblock short'>
                 <p>Returns the <a class="mod" href="../Player/index.html">Player</a> that is currently trading with this <a class="mod" href="../Player/index.html">Player</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetViewpoint.html'>GetViewpoint</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Player/index.html">Player</a>'s current viewpoint target.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetWeaponProficiency.html'>GetWeaponProficiency</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Player/index.html">Player</a>'s weapon proficiency flags.</p>
             </td>
         </tr>
         <tr>
@@ -1266,6 +1590,15 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HasTitleByIndex.html'>HasTitleByIndex</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> has a title by bit index, <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='InArena.html'>InArena</a>
             </td>
             <td class='docblock short'>
@@ -1293,10 +1626,28 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='InRandomLfgDungeon.html'>InRandomLfgDungeon</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> is in a random LFG dungeon, <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IncompleteQuest.html'>IncompleteQuest</a>
             </td>
             <td class='docblock short'>
                 <p>Sets the given quest entry incomplete for the <a class="mod" href="../Player/index.html">Player</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='InitTaxiNodesForLevel.html'>InitTaxiNodesForLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>Initializes taxi nodes for the <a class="mod" href="../Player/index.html">Player</a>'s current level.</p>
             </td>
         </tr>
         <tr>
@@ -1329,10 +1680,55 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsAtGroupRewardDistance.html'>IsAtGroupRewardDistance</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> is at group reward distance from the target, <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsAtLootRewardDistance.html'>IsAtLootRewardDistance</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> is at loot reward distance from the target, <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IsDND.html'>IsDND</a>
             </td>
             <td class='docblock short'>
                 <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> is 'Do Not Disturb' flagged, <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsDailyQuestDone.html'>IsDailyQuestDone</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> has completed the daily quest, <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsExistPet.html'>IsExistPet</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> has a <a class="mod" href="../Pet/index.html">Pet</a> (active or stored) and returns <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsFFAPvP.html'>IsFFAPvP</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> is flagged for Free-for-all PvP, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
@@ -1473,10 +1869,37 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsMaxLevel.html'>IsMaxLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> is at maximum level, <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IsMoving.html'>IsMoving</a>
             </td>
             <td class='docblock short'>
                 <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> is currently moving, <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsPetNeedBeTemporaryUnsummoned.html'>IsPetNeedBeTemporaryUnsummoned</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> needs to temporarily unsummon their <a class="mod" href="../Pet/index.html">Pet</a>, and <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsPvP.html'>IsPvP</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> is flagged for PvP, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
@@ -1491,10 +1914,28 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsSpectator.html'>IsSpectator</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> is a spectator, <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IsTaxiCheater.html'>IsTaxiCheater</a>
             </td>
             <td class='docblock short'>
                 <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> has taxi cheat activated, <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsUsingLfg.html'>IsUsingLfg</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Player/index.html">Player</a> is using the Looking for Group system, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
@@ -1531,6 +1972,15 @@
             </td>
             <td class='docblock short'>
                 <p>Gives <a class="mod" href="../Quest/index.html">Quest</a> monster killed credit</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='LearnPetTalent.html'>LearnPetTalent</a>
+            </td>
+            <td class='docblock short'>
+                <p>Learns a pet talent for the specified <a class="mod" href="../Pet/index.html">Pet</a> of the <a class="mod" href="../Player/index.html">Player</a>.</p>
             </td>
         </tr>
         <tr>
@@ -1608,6 +2058,15 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RemoveAmmo.html'>RemoveAmmo</a>
+            </td>
+            <td class='docblock short'>
+                <p>Removes the <a class="mod" href="../Player/index.html">Player</a>'s ammo.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='RemoveArenaSpellCooldowns.html'>RemoveArenaSpellCooldowns</a>
             </td>
             <td class='docblock short'>
@@ -1662,6 +2121,24 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RemovePet.html'>RemovePet</a>
+            </td>
+            <td class='docblock short'>
+                <p>Removes the specified <a class="mod" href="../Pet/index.html">Pet</a> from the <a class="mod" href="../Player/index.html">Player</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RemovePlayerFlag.html'>RemovePlayerFlag</a>
+            </td>
+            <td class='docblock short'>
+                <p>Removes the specified player flag from the <a class="mod" href="../Player/index.html">Player</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='RemoveQuest.html'>RemoveQuest</a>
             </td>
             <td class='docblock short'>
@@ -1710,7 +2187,7 @@
                 <a class='fn' href='ResetPetTalents.html'>ResetPetTalents</a>
             </td>
             <td class='docblock short'>
-                <p>Resets the <a class="mod" href="../Player/index.html">Player</a>s pets talent points</p>
+                <p>Resets the <a class="mod" href="../Player/index.html">Player</a>'s pet talents.</p>
             </td>
         </tr>
         <tr>
@@ -1747,6 +2224,15 @@
             </td>
             <td class='docblock short'>
                 <p>Resets cooldown of the specified category</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ResummonPetTemporaryUnSummonedIfAny.html'>ResummonPetTemporaryUnSummonedIfAny</a>
+            </td>
+            <td class='docblock short'>
+                <p>Resummons the <a class="mod" href="../Player/index.html">Player</a>'s pet if it was temporarily unsummoned.</p>
             </td>
         </tr>
         <tr>
@@ -1977,6 +2463,15 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetAmmo.html'>SetAmmo</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets the <a class="mod" href="../Player/index.html">Player</a>'s ammo item.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='SetArenaPoints.html'>SetArenaPoints</a>
             </td>
             <td class='docblock short'>
@@ -2013,10 +2508,28 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetCanTeleport.html'>SetCanTeleport</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets whether the <a class="mod" href="../Player/index.html">Player</a> can teleport.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='SetCoinage.html'>SetCoinage</a>
             </td>
             <td class='docblock short'>
                 <p>Sets the <a class="mod" href="../Player/index.html">Player</a>s amount of money to copper specified</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetCreationTime.html'>SetCreationTime</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets the <a class="mod" href="../Player/index.html">Player</a>'s character creation time.</p>
             </td>
         </tr>
         <tr>
@@ -2112,6 +2625,24 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetIsSpectator.html'>SetIsSpectator</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets the <a class="mod" href="../Player/index.html">Player</a> as spectator.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetKnownTaxiNodes.html'>SetKnownTaxiNodes</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets the player's known taxi nodes (flight paths).</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='SetKnownTitle.html'>SetKnownTitle</a>
             </td>
             <td class='docblock short'>
@@ -2121,10 +2652,37 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetLastPetNumber.html'>SetLastPetNumber</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets the last pet number for the <a class="mod" href="../Player/index.html">Player</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetLastPetSpell.html'>SetLastPetSpell</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets the spell ID of the <a class="mod" href="../Player/index.html">Player</a>'s last <a class="mod" href="../Pet/index.html">Pet</a> summoning spell.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='SetLifetimeKills.html'>SetLifetimeKills</a>
             </td>
             <td class='docblock short'>
                 <p>Sets the <a class="mod" href="../Player/index.html">Player</a>s amount of Lifetime Honorable Kills to the value specified</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetPlayerFlag.html'>SetPlayerFlag</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets the specified player flag on the <a class="mod" href="../Player/index.html">Player</a>.</p>
             </td>
         </tr>
         <tr>
@@ -2184,6 +2742,15 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetShowDKPet.html'>SetShowDKPet</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets whether the <a class="mod" href="../Player/index.html">Player</a> can see Death  Knight <a class="mod" href="../Pet/index.html">Pet</a>s.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='SetSkill.html'>SetSkill</a>
             </td>
             <td class='docblock short'>
@@ -2211,6 +2778,24 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetTemporaryUnsummonedPetNumber.html'>SetTemporaryUnsummonedPetNumber</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets the temporary unsummoned pet number for the <a class="mod" href="../Player/index.html">Player</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetViewpoint.html'>SetViewpoint</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets the <a class="mod" href="../Player/index.html">Player</a>'s viewpoint to the specified target.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='SpawnBones.html'>SpawnBones</a>
             </td>
             <td class='docblock short'>
@@ -2224,6 +2809,15 @@
             </td>
             <td class='docblock short'>
                 <p>Attempts to start the taxi/flying to the given pathID</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SummonPet.html'>SummonPet</a>
+            </td>
+            <td class='docblock short'>
+                <p>Summons a <a class="mod" href="../Pet/index.html">Pet</a> at the specified location.</p>
             </td>
         </tr>
         <tr>
@@ -2292,6 +2886,15 @@
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ToggleInstantFlight.html'>ToggleInstantFlight</a>
+            </td>
+            <td class='docblock short'>
+                <p>Toggles instant flight mode for the <a class="mod" href="../Player/index.html">Player</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='UnbindAllInstances.html'>UnbindAllInstances</a>
             </td>
             <td class='docblock short'>
@@ -2314,6 +2917,15 @@
             </td>
             <td class='docblock short'>
                 <p>Removes a title by ID from the <a class="mod" href="../Player/index.html">Player</a>s list of known titles</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='UnsummonPetTemporarily.html'>UnsummonPetTemporarily</a>
+            </td>
+            <td class='docblock short'>
+                <p>Temporarily unsummons the <a class="mod" href="../Player/index.html">Player</a>'s current <a class="mod" href="../Pet/index.html">Pet</a>.</p>
             </td>
         </tr>
         <tr>

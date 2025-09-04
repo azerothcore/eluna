@@ -52,4 +52,6 @@ document.write(`
   <a id="Item:SetCount" class="fn" href="../Item/SetCount.html">SetCount</a>
   <a id="Item:SetEnchantment" class="fn" href="../Item/SetEnchantment.html">SetEnchantment</a>
   <a id="Item:SetOwner" class="fn" href="../Item/SetOwner.html">SetOwner</a>
+  <a id="Item:SetRandomProperty" class="fn" href="../Item/SetRandomProperty.html">SetRandomProperty</a>
+  <a id="Item:SetRandomSuffix" class="fn" href="../Item/SetRandomSuffix.html">SetRandomSuffix</a>
 `);

@@ -1,27 +1,42 @@
 document.write(`
+  <a id="Player:AbandonQuest" class="fn" href="../Player/AbandonQuest.html">AbandonQuest</a>
+  <a id="Player:AddArmorProficiency" class="fn" href="../Player/AddArmorProficiency.html">AddArmorProficiency</a>
   <a id="Player:AddBonusTalent" class="fn" href="../Player/AddBonusTalent.html">AddBonusTalent</a>
   <a id="Player:AddComboPoints" class="fn" href="../Player/AddComboPoints.html">AddComboPoints</a>
   <a id="Player:AddItem" class="fn" href="../Player/AddItem.html">AddItem</a>
   <a id="Player:AddLifetimeKills" class="fn" href="../Player/AddLifetimeKills.html">AddLifetimeKills</a>
   <a id="Player:AddQuest" class="fn" href="../Player/AddQuest.html">AddQuest</a>
+  <a id="Player:AddWeaponProficiency" class="fn" href="../Player/AddWeaponProficiency.html">AddWeaponProficiency</a>
   <a id="Player:AdvanceAllSkills" class="fn" href="../Player/AdvanceAllSkills.html">AdvanceAllSkills</a>
   <a id="Player:AdvanceSkill" class="fn" href="../Player/AdvanceSkill.html">AdvanceSkill</a>
   <a id="Player:AdvanceSkillsToMax" class="fn" href="../Player/AdvanceSkillsToMax.html">AdvanceSkillsToMax</a>
   <a id="Player:AreaExploredOrEventHappens" class="fn" href="../Player/AreaExploredOrEventHappens.html">AreaExploredOrEventHappens</a>
+  <a id="Player:CalculateReputationGain" class="fn" href="../Player/CalculateReputationGain.html">CalculateReputationGain</a>
+  <a id="Player:CanAddQuest" class="fn" href="../Player/CanAddQuest.html">CanAddQuest</a>
   <a id="Player:CanBlock" class="fn" href="../Player/CanBlock.html">CanBlock</a>
   <a id="Player:CanCompleteQuest" class="fn" href="../Player/CanCompleteQuest.html">CanCompleteQuest</a>
   <a id="Player:CanCompleteRepeatableQuest" class="fn" href="../Player/CanCompleteRepeatableQuest.html">CanCompleteRepeatableQuest</a>
   <a id="Player:CanEquipItem" class="fn" href="../Player/CanEquipItem.html">CanEquipItem</a>
   <a id="Player:CanFly" class="fn" href="../Player/CanFly.html">CanFly</a>
+  <a id="Player:CanInteractWithQuestGiver" class="fn" href="../Player/CanInteractWithQuestGiver.html">CanInteractWithQuestGiver</a>
   <a id="Player:CanParry" class="fn" href="../Player/CanParry.html">CanParry</a>
+  <a id="Player:CanPetResurrect" class="fn" href="../Player/CanPetResurrect.html">CanPetResurrect</a>
+  <a id="Player:CanResummonPet" class="fn" href="../Player/CanResummonPet.html">CanResummonPet</a>
   <a id="Player:CanRewardQuest" class="fn" href="../Player/CanRewardQuest.html">CanRewardQuest</a>
+  <a id="Player:CanSeeDKPet" class="fn" href="../Player/CanSeeDKPet.html">CanSeeDKPet</a>
+  <a id="Player:CanSeeStartQuest" class="fn" href="../Player/CanSeeStartQuest.html">CanSeeStartQuest</a>
   <a id="Player:CanShareQuest" class="fn" href="../Player/CanShareQuest.html">CanShareQuest</a>
   <a id="Player:CanSpeak" class="fn" href="../Player/CanSpeak.html">CanSpeak</a>
+  <a id="Player:CanTakeQuest" class="fn" href="../Player/CanTakeQuest.html">CanTakeQuest</a>
+  <a id="Player:CanTameExoticPets" class="fn" href="../Player/CanTameExoticPets.html">CanTameExoticPets</a>
+  <a id="Player:CanTeleport" class="fn" href="../Player/CanTeleport.html">CanTeleport</a>
   <a id="Player:CanTitanGrip" class="fn" href="../Player/CanTitanGrip.html">CanTitanGrip</a>
   <a id="Player:CanUninviteFromGroup" class="fn" href="../Player/CanUninviteFromGroup.html">CanUninviteFromGroup</a>
   <a id="Player:CanUseItem" class="fn" href="../Player/CanUseItem.html">CanUseItem</a>
   <a id="Player:ClearComboPoints" class="fn" href="../Player/ClearComboPoints.html">ClearComboPoints</a>
   <a id="Player:CompleteQuest" class="fn" href="../Player/CompleteQuest.html">CompleteQuest</a>
+  <a id="Player:CreatePet" class="fn" href="../Player/CreatePet.html">CreatePet</a>
+  <a id="Player:DoRandomRoll" class="fn" href="../Player/DoRandomRoll.html">DoRandomRoll</a>
   <a id="Player:DurabilityLoss" class="fn" href="../Player/DurabilityLoss.html">DurabilityLoss</a>
   <a id="Player:DurabilityLossAll" class="fn" href="../Player/DurabilityLossAll.html">DurabilityLossAll</a>
   <a id="Player:DurabilityPointLossForEquipSlot" class="fn" href="../Player/DurabilityPointLossForEquipSlot.html">DurabilityPointLossForEquipSlot</a>
@@ -29,6 +44,7 @@ document.write(`
   <a id="Player:DurabilityPointsLossAll" class="fn" href="../Player/DurabilityPointsLossAll.html">DurabilityPointsLossAll</a>
   <a id="Player:DurabilityRepair" class="fn" href="../Player/DurabilityRepair.html">DurabilityRepair</a>
   <a id="Player:DurabilityRepairAll" class="fn" href="../Player/DurabilityRepairAll.html">DurabilityRepairAll</a>
+  <a id="Player:EnvironmentalDamage" class="fn" href="../Player/EnvironmentalDamage.html">EnvironmentalDamage</a>
   <a id="Player:EquipItem" class="fn" href="../Player/EquipItem.html">EquipItem</a>
   <a id="Player:FailQuest" class="fn" href="../Player/FailQuest.html">FailQuest</a>
   <a id="Player:GetAccountId" class="fn" href="../Player/GetAccountId.html">GetAccountId</a>
@@ -36,7 +52,12 @@ document.write(`
   <a id="Player:GetAchievementCriteriaProgress" class="fn" href="../Player/GetAchievementCriteriaProgress.html">GetAchievementCriteriaProgress</a>
   <a id="Player:GetAchievementPoints" class="fn" href="../Player/GetAchievementPoints.html">GetAchievementPoints</a>
   <a id="Player:GetActiveSpec" class="fn" href="../Player/GetActiveSpec.html">GetActiveSpec</a>
+  <a id="Player:GetAmmoDPS" class="fn" href="../Player/GetAmmoDPS.html">GetAmmoDPS</a>
   <a id="Player:GetArenaPoints" class="fn" href="../Player/GetArenaPoints.html">GetArenaPoints</a>
+  <a id="Player:GetArmorProficiency" class="fn" href="../Player/GetArmorProficiency.html">GetArmorProficiency</a>
+  <a id="Player:GetAverageItemLevel" class="fn" href="../Player/GetAverageItemLevel.html">GetAverageItemLevel</a>
+  <a id="Player:GetBankItem" class="fn" href="../Player/GetBankItem.html">GetBankItem</a>
+  <a id="Player:GetBarberShopCost" class="fn" href="../Player/GetBarberShopCost.html">GetBarberShopCost</a>
   <a id="Player:GetBaseSkillValue" class="fn" href="../Player/GetBaseSkillValue.html">GetBaseSkillValue</a>
   <a id="Player:GetBattlegroundId" class="fn" href="../Player/GetBattlegroundId.html">GetBattlegroundId</a>
   <a id="Player:GetBattlegroundTypeId" class="fn" href="../Player/GetBattlegroundTypeId.html">GetBattlegroundTypeId</a>
@@ -49,9 +70,11 @@ document.write(`
   <a id="Player:GetCompletedAchievementsCount" class="fn" href="../Player/GetCompletedAchievementsCount.html">GetCompletedAchievementsCount</a>
   <a id="Player:GetCompletedQuestsCount" class="fn" href="../Player/GetCompletedQuestsCount.html">GetCompletedQuestsCount</a>
   <a id="Player:GetCorpse" class="fn" href="../Player/GetCorpse.html">GetCorpse</a>
+  <a id="Player:GetCreationTime" class="fn" href="../Player/GetCreationTime.html">GetCreationTime</a>
   <a id="Player:GetDbLocaleIndex" class="fn" href="../Player/GetDbLocaleIndex.html">GetDbLocaleIndex</a>
   <a id="Player:GetDbcLocale" class="fn" href="../Player/GetDbcLocale.html">GetDbcLocale</a>
   <a id="Player:GetDifficulty" class="fn" href="../Player/GetDifficulty.html">GetDifficulty</a>
+  <a id="Player:GetDodgeFromAgility" class="fn" href="../Player/GetDodgeFromAgility.html">GetDodgeFromAgility</a>
   <a id="Player:GetDrunkValue" class="fn" href="../Player/GetDrunkValue.html">GetDrunkValue</a>
   <a id="Player:GetEquippedItemBySlot" class="fn" href="../Player/GetEquippedItemBySlot.html">GetEquippedItemBySlot</a>
   <a id="Player:GetFreeTalentPoints" class="fn" href="../Player/GetFreeTalentPoints.html">GetFreeTalentPoints</a>
@@ -68,10 +91,14 @@ document.write(`
   <a id="Player:GetHomebind" class="fn" href="../Player/GetHomebind.html">GetHomebind</a>
   <a id="Player:GetHonorPoints" class="fn" href="../Player/GetHonorPoints.html">GetHonorPoints</a>
   <a id="Player:GetInGameTime" class="fn" href="../Player/GetInGameTime.html">GetInGameTime</a>
+  <a id="Player:GetInventoryItem" class="fn" href="../Player/GetInventoryItem.html">GetInventoryItem</a>
   <a id="Player:GetItemByEntry" class="fn" href="../Player/GetItemByEntry.html">GetItemByEntry</a>
   <a id="Player:GetItemByGUID" class="fn" href="../Player/GetItemByGUID.html">GetItemByGUID</a>
   <a id="Player:GetItemByPos" class="fn" href="../Player/GetItemByPos.html">GetItemByPos</a>
   <a id="Player:GetItemCount" class="fn" href="../Player/GetItemCount.html">GetItemCount</a>
+  <a id="Player:GetKnownTaxiNodes" class="fn" href="../Player/GetKnownTaxiNodes.html">GetKnownTaxiNodes</a>
+  <a id="Player:GetLastPetNumber" class="fn" href="../Player/GetLastPetNumber.html">GetLastPetNumber</a>
+  <a id="Player:GetLastPetSpell" class="fn" href="../Player/GetLastPetSpell.html">GetLastPetSpell</a>
   <a id="Player:GetLatency" class="fn" href="../Player/GetLatency.html">GetLatency</a>
   <a id="Player:GetLevelPlayedTime" class="fn" href="../Player/GetLevelPlayedTime.html">GetLevelPlayedTime</a>
   <a id="Player:GetLifetimeKills" class="fn" href="../Player/GetLifetimeKills.html">GetLifetimeKills</a>
@@ -79,9 +106,11 @@ document.write(`
   <a id="Player:GetMailItem" class="fn" href="../Player/GetMailItem.html">GetMailItem</a>
   <a id="Player:GetManaBonusFromIntellect" class="fn" href="../Player/GetManaBonusFromIntellect.html">GetManaBonusFromIntellect</a>
   <a id="Player:GetMaxSkillValue" class="fn" href="../Player/GetMaxSkillValue.html">GetMaxSkillValue</a>
+  <a id="Player:GetMeleeCritFromAgility" class="fn" href="../Player/GetMeleeCritFromAgility.html">GetMeleeCritFromAgility</a>
   <a id="Player:GetNextRandomRaidMember" class="fn" href="../Player/GetNextRandomRaidMember.html">GetNextRandomRaidMember</a>
   <a id="Player:GetOriginalGroup" class="fn" href="../Player/GetOriginalGroup.html">GetOriginalGroup</a>
   <a id="Player:GetOriginalSubGroup" class="fn" href="../Player/GetOriginalSubGroup.html">GetOriginalSubGroup</a>
+  <a id="Player:GetPet" class="fn" href="../Player/GetPet.html">GetPet</a>
   <a id="Player:GetPhaseMaskForSpawn" class="fn" href="../Player/GetPhaseMaskForSpawn.html">GetPhaseMaskForSpawn</a>
   <a id="Player:GetPlayerIP" class="fn" href="../Player/GetPlayerIP.html">GetPlayerIP</a>
   <a id="Player:GetPlayerSettingValue" class="fn" href="../Player/GetPlayerSettingValue.html">GetPlayerSettingValue</a>
@@ -94,18 +123,25 @@ document.write(`
   <a id="Player:GetReputationRank" class="fn" href="../Player/GetReputationRank.html">GetReputationRank</a>
   <a id="Player:GetReqKillOrCastCurrentCount" class="fn" href="../Player/GetReqKillOrCastCurrentCount.html">GetReqKillOrCastCurrentCount</a>
   <a id="Player:GetRestBonus" class="fn" href="../Player/GetRestBonus.html">GetRestBonus</a>
+  <a id="Player:GetRunesState" class="fn" href="../Player/GetRunesState.html">GetRunesState</a>
   <a id="Player:GetSelection" class="fn" href="../Player/GetSelection.html">GetSelection</a>
+  <a id="Player:GetShield" class="fn" href="../Player/GetShield.html">GetShield</a>
   <a id="Player:GetShieldBlockValue" class="fn" href="../Player/GetShieldBlockValue.html">GetShieldBlockValue</a>
+  <a id="Player:GetSightRange" class="fn" href="../Player/GetSightRange.html">GetSightRange</a>
   <a id="Player:GetSkillPermBonusValue" class="fn" href="../Player/GetSkillPermBonusValue.html">GetSkillPermBonusValue</a>
   <a id="Player:GetSkillTempBonusValue" class="fn" href="../Player/GetSkillTempBonusValue.html">GetSkillTempBonusValue</a>
   <a id="Player:GetSkillValue" class="fn" href="../Player/GetSkillValue.html">GetSkillValue</a>
   <a id="Player:GetSpecsCount" class="fn" href="../Player/GetSpecsCount.html">GetSpecsCount</a>
   <a id="Player:GetSpellCooldownDelay" class="fn" href="../Player/GetSpellCooldownDelay.html">GetSpellCooldownDelay</a>
+  <a id="Player:GetSpellCritFromIntellect" class="fn" href="../Player/GetSpellCritFromIntellect.html">GetSpellCritFromIntellect</a>
   <a id="Player:GetSpells" class="fn" href="../Player/GetSpells.html">GetSpells</a>
   <a id="Player:GetSubGroup" class="fn" href="../Player/GetSubGroup.html">GetSubGroup</a>
   <a id="Player:GetTeam" class="fn" href="../Player/GetTeam.html">GetTeam</a>
+  <a id="Player:GetTemporaryUnsummonedPetNumber" class="fn" href="../Player/GetTemporaryUnsummonedPetNumber.html">GetTemporaryUnsummonedPetNumber</a>
   <a id="Player:GetTotalPlayedTime" class="fn" href="../Player/GetTotalPlayedTime.html">GetTotalPlayedTime</a>
   <a id="Player:GetTrader" class="fn" href="../Player/GetTrader.html">GetTrader</a>
+  <a id="Player:GetViewpoint" class="fn" href="../Player/GetViewpoint.html">GetViewpoint</a>
+  <a id="Player:GetWeaponProficiency" class="fn" href="../Player/GetWeaponProficiency.html">GetWeaponProficiency</a>
   <a id="Player:GetXP" class="fn" href="../Player/GetXP.html">GetXP</a>
   <a id="Player:GetXPRestBonus" class="fn" href="../Player/GetXPRestBonus.html">GetXPRestBonus</a>
   <a id="Player:GiveXP" class="fn" href="../Player/GiveXP.html">GiveXP</a>
@@ -133,14 +169,22 @@ document.write(`
   <a id="Player:HasTalent" class="fn" href="../Player/HasTalent.html">HasTalent</a>
   <a id="Player:HasTankSpec" class="fn" href="../Player/HasTankSpec.html">HasTankSpec</a>
   <a id="Player:HasTitle" class="fn" href="../Player/HasTitle.html">HasTitle</a>
+  <a id="Player:HasTitleByIndex" class="fn" href="../Player/HasTitleByIndex.html">HasTitleByIndex</a>
   <a id="Player:InArena" class="fn" href="../Player/InArena.html">InArena</a>
   <a id="Player:InBattleground" class="fn" href="../Player/InBattleground.html">InBattleground</a>
   <a id="Player:InBattlegroundQueue" class="fn" href="../Player/InBattlegroundQueue.html">InBattlegroundQueue</a>
+  <a id="Player:InRandomLfgDungeon" class="fn" href="../Player/InRandomLfgDungeon.html">InRandomLfgDungeon</a>
   <a id="Player:IncompleteQuest" class="fn" href="../Player/IncompleteQuest.html">IncompleteQuest</a>
+  <a id="Player:InitTaxiNodesForLevel" class="fn" href="../Player/InitTaxiNodesForLevel.html">InitTaxiNodesForLevel</a>
   <a id="Player:IsAFK" class="fn" href="../Player/IsAFK.html">IsAFK</a>
   <a id="Player:IsAcceptingWhispers" class="fn" href="../Player/IsAcceptingWhispers.html">IsAcceptingWhispers</a>
   <a id="Player:IsAlliance" class="fn" href="../Player/IsAlliance.html">IsAlliance</a>
+  <a id="Player:IsAtGroupRewardDistance" class="fn" href="../Player/IsAtGroupRewardDistance.html">IsAtGroupRewardDistance</a>
+  <a id="Player:IsAtLootRewardDistance" class="fn" href="../Player/IsAtLootRewardDistance.html">IsAtLootRewardDistance</a>
   <a id="Player:IsDND" class="fn" href="../Player/IsDND.html">IsDND</a>
+  <a id="Player:IsDailyQuestDone" class="fn" href="../Player/IsDailyQuestDone.html">IsDailyQuestDone</a>
+  <a id="Player:IsExistPet" class="fn" href="../Player/IsExistPet.html">IsExistPet</a>
+  <a id="Player:IsFFAPvP" class="fn" href="../Player/IsFFAPvP.html">IsFFAPvP</a>
   <a id="Player:IsFalling" class="fn" href="../Player/IsFalling.html">IsFalling</a>
   <a id="Player:IsFlying" class="fn" href="../Player/IsFlying.html">IsFlying</a>
   <a id="Player:IsGM" class="fn" href="../Player/IsGM.html">IsGM</a>
@@ -156,13 +200,19 @@ document.write(`
   <a id="Player:IsInSameGroupWith" class="fn" href="../Player/IsInSameGroupWith.html">IsInSameGroupWith</a>
   <a id="Player:IsInSameRaidWith" class="fn" href="../Player/IsInSameRaidWith.html">IsInSameRaidWith</a>
   <a id="Player:IsInWater" class="fn" href="../Player/IsInWater.html">IsInWater</a>
+  <a id="Player:IsMaxLevel" class="fn" href="../Player/IsMaxLevel.html">IsMaxLevel</a>
   <a id="Player:IsMoving" class="fn" href="../Player/IsMoving.html">IsMoving</a>
+  <a id="Player:IsPetNeedBeTemporaryUnsummoned" class="fn" href="../Player/IsPetNeedBeTemporaryUnsummoned.html">IsPetNeedBeTemporaryUnsummoned</a>
+  <a id="Player:IsPvP" class="fn" href="../Player/IsPvP.html">IsPvP</a>
   <a id="Player:IsRested" class="fn" href="../Player/IsRested.html">IsRested</a>
+  <a id="Player:IsSpectator" class="fn" href="../Player/IsSpectator.html">IsSpectator</a>
   <a id="Player:IsTaxiCheater" class="fn" href="../Player/IsTaxiCheater.html">IsTaxiCheater</a>
+  <a id="Player:IsUsingLfg" class="fn" href="../Player/IsUsingLfg.html">IsUsingLfg</a>
   <a id="Player:IsVisibleForPlayer" class="fn" href="../Player/IsVisibleForPlayer.html">IsVisibleForPlayer</a>
   <a id="Player:KickPlayer" class="fn" href="../Player/KickPlayer.html">KickPlayer</a>
   <a id="Player:KillPlayer" class="fn" href="../Player/KillPlayer.html">KillPlayer</a>
   <a id="Player:KilledMonsterCredit" class="fn" href="../Player/KilledMonsterCredit.html">KilledMonsterCredit</a>
+  <a id="Player:LearnPetTalent" class="fn" href="../Player/LearnPetTalent.html">LearnPetTalent</a>
   <a id="Player:LearnSpell" class="fn" href="../Player/LearnSpell.html">LearnSpell</a>
   <a id="Player:LearnTalent" class="fn" href="../Player/LearnTalent.html">LearnTalent</a>
   <a id="Player:LeaveBattleground" class="fn" href="../Player/LeaveBattleground.html">LeaveBattleground</a>
@@ -171,12 +221,15 @@ document.write(`
   <a id="Player:ModifyHonorPoints" class="fn" href="../Player/ModifyHonorPoints.html">ModifyHonorPoints</a>
   <a id="Player:ModifyMoney" class="fn" href="../Player/ModifyMoney.html">ModifyMoney</a>
   <a id="Player:Mute" class="fn" href="../Player/Mute.html">Mute</a>
+  <a id="Player:RemoveAmmo" class="fn" href="../Player/RemoveAmmo.html">RemoveAmmo</a>
   <a id="Player:RemoveArenaSpellCooldowns" class="fn" href="../Player/RemoveArenaSpellCooldowns.html">RemoveArenaSpellCooldowns</a>
   <a id="Player:RemoveBonusTalent" class="fn" href="../Player/RemoveBonusTalent.html">RemoveBonusTalent</a>
   <a id="Player:RemoveFromBattlegroundRaid" class="fn" href="../Player/RemoveFromBattlegroundRaid.html">RemoveFromBattlegroundRaid</a>
   <a id="Player:RemoveFromGroup" class="fn" href="../Player/RemoveFromGroup.html">RemoveFromGroup</a>
   <a id="Player:RemoveItem" class="fn" href="../Player/RemoveItem.html">RemoveItem</a>
   <a id="Player:RemoveLifetimeKills" class="fn" href="../Player/RemoveLifetimeKills.html">RemoveLifetimeKills</a>
+  <a id="Player:RemovePet" class="fn" href="../Player/RemovePet.html">RemovePet</a>
+  <a id="Player:RemovePlayerFlag" class="fn" href="../Player/RemovePlayerFlag.html">RemovePlayerFlag</a>
   <a id="Player:RemoveQuest" class="fn" href="../Player/RemoveQuest.html">RemoveQuest</a>
   <a id="Player:RemoveSpell" class="fn" href="../Player/RemoveSpell.html">RemoveSpell</a>
   <a id="Player:RemovedInsignia" class="fn" href="../Player/RemovedInsignia.html">RemovedInsignia</a>
@@ -187,6 +240,7 @@ document.write(`
   <a id="Player:ResetTalents" class="fn" href="../Player/ResetTalents.html">ResetTalents</a>
   <a id="Player:ResetTalentsCost" class="fn" href="../Player/ResetTalentsCost.html">ResetTalentsCost</a>
   <a id="Player:ResetTypeCooldowns" class="fn" href="../Player/ResetTypeCooldowns.html">ResetTypeCooldowns</a>
+  <a id="Player:ResummonPetTemporaryUnSummonedIfAny" class="fn" href="../Player/ResummonPetTemporaryUnSummonedIfAny.html">ResummonPetTemporaryUnSummonedIfAny</a>
   <a id="Player:ResurrectPlayer" class="fn" href="../Player/ResurrectPlayer.html">ResurrectPlayer</a>
   <a id="Player:RewardQuest" class="fn" href="../Player/RewardQuest.html">RewardQuest</a>
   <a id="Player:RunCommand" class="fn" href="../Player/RunCommand.html">RunCommand</a>
@@ -212,11 +266,14 @@ document.write(`
   <a id="Player:SendUpdateWorldState" class="fn" href="../Player/SendUpdateWorldState.html">SendUpdateWorldState</a>
   <a id="Player:SetAcceptWhispers" class="fn" href="../Player/SetAcceptWhispers.html">SetAcceptWhispers</a>
   <a id="Player:SetAchievement" class="fn" href="../Player/SetAchievement.html">SetAchievement</a>
+  <a id="Player:SetAmmo" class="fn" href="../Player/SetAmmo.html">SetAmmo</a>
   <a id="Player:SetArenaPoints" class="fn" href="../Player/SetArenaPoints.html">SetArenaPoints</a>
   <a id="Player:SetAtLoginFlag" class="fn" href="../Player/SetAtLoginFlag.html">SetAtLoginFlag</a>
   <a id="Player:SetBindPoint" class="fn" href="../Player/SetBindPoint.html">SetBindPoint</a>
   <a id="Player:SetBonusTalentCount" class="fn" href="../Player/SetBonusTalentCount.html">SetBonusTalentCount</a>
+  <a id="Player:SetCanTeleport" class="fn" href="../Player/SetCanTeleport.html">SetCanTeleport</a>
   <a id="Player:SetCoinage" class="fn" href="../Player/SetCoinage.html">SetCoinage</a>
+  <a id="Player:SetCreationTime" class="fn" href="../Player/SetCreationTime.html">SetCreationTime</a>
   <a id="Player:SetDrunkValue" class="fn" href="../Player/SetDrunkValue.html">SetDrunkValue</a>
   <a id="Player:SetFactionForRace" class="fn" href="../Player/SetFactionForRace.html">SetFactionForRace</a>
   <a id="Player:SetFreeTalentPoints" class="fn" href="../Player/SetFreeTalentPoints.html">SetFreeTalentPoints</a>
@@ -227,19 +284,28 @@ document.write(`
   <a id="Player:SetGlyph" class="fn" href="../Player/SetGlyph.html">SetGlyph</a>
   <a id="Player:SetGuildRank" class="fn" href="../Player/SetGuildRank.html">SetGuildRank</a>
   <a id="Player:SetHonorPoints" class="fn" href="../Player/SetHonorPoints.html">SetHonorPoints</a>
+  <a id="Player:SetIsSpectator" class="fn" href="../Player/SetIsSpectator.html">SetIsSpectator</a>
+  <a id="Player:SetKnownTaxiNodes" class="fn" href="../Player/SetKnownTaxiNodes.html">SetKnownTaxiNodes</a>
   <a id="Player:SetKnownTitle" class="fn" href="../Player/SetKnownTitle.html">SetKnownTitle</a>
+  <a id="Player:SetLastPetNumber" class="fn" href="../Player/SetLastPetNumber.html">SetLastPetNumber</a>
+  <a id="Player:SetLastPetSpell" class="fn" href="../Player/SetLastPetSpell.html">SetLastPetSpell</a>
   <a id="Player:SetLifetimeKills" class="fn" href="../Player/SetLifetimeKills.html">SetLifetimeKills</a>
+  <a id="Player:SetPlayerFlag" class="fn" href="../Player/SetPlayerFlag.html">SetPlayerFlag</a>
   <a id="Player:SetPlayerLock" class="fn" href="../Player/SetPlayerLock.html">SetPlayerLock</a>
   <a id="Player:SetPvPDeath" class="fn" href="../Player/SetPvPDeath.html">SetPvPDeath</a>
   <a id="Player:SetQuestStatus" class="fn" href="../Player/SetQuestStatus.html">SetQuestStatus</a>
   <a id="Player:SetReputation" class="fn" href="../Player/SetReputation.html">SetReputation</a>
   <a id="Player:SetRestBonus" class="fn" href="../Player/SetRestBonus.html">SetRestBonus</a>
   <a id="Player:SetSheath" class="fn" href="../Player/SetSheath.html">SetSheath</a>
+  <a id="Player:SetShowDKPet" class="fn" href="../Player/SetShowDKPet.html">SetShowDKPet</a>
   <a id="Player:SetSkill" class="fn" href="../Player/SetSkill.html">SetSkill</a>
   <a id="Player:SetSpellPower" class="fn" href="../Player/SetSpellPower.html">SetSpellPower</a>
   <a id="Player:SetTaxiCheat" class="fn" href="../Player/SetTaxiCheat.html">SetTaxiCheat</a>
+  <a id="Player:SetTemporaryUnsummonedPetNumber" class="fn" href="../Player/SetTemporaryUnsummonedPetNumber.html">SetTemporaryUnsummonedPetNumber</a>
+  <a id="Player:SetViewpoint" class="fn" href="../Player/SetViewpoint.html">SetViewpoint</a>
   <a id="Player:SpawnBones" class="fn" href="../Player/SpawnBones.html">SpawnBones</a>
   <a id="Player:StartTaxi" class="fn" href="../Player/StartTaxi.html">StartTaxi</a>
+  <a id="Player:SummonPet" class="fn" href="../Player/SummonPet.html">SummonPet</a>
   <a id="Player:SummonPlayer" class="fn" href="../Player/SummonPlayer.html">SummonPlayer</a>
   <a id="Player:TalkedToCreature" class="fn" href="../Player/TalkedToCreature.html">TalkedToCreature</a>
   <a id="Player:Teleport" class="fn" href="../Player/Teleport.html">Teleport</a>
@@ -247,9 +313,11 @@ document.write(`
   <a id="Player:TextEmote" class="fn" href="../Player/TextEmote.html">TextEmote</a>
   <a id="Player:ToggleAFK" class="fn" href="../Player/ToggleAFK.html">ToggleAFK</a>
   <a id="Player:ToggleDND" class="fn" href="../Player/ToggleDND.html">ToggleDND</a>
+  <a id="Player:ToggleInstantFlight" class="fn" href="../Player/ToggleInstantFlight.html">ToggleInstantFlight</a>
   <a id="Player:UnbindAllInstances" class="fn" href="../Player/UnbindAllInstances.html">UnbindAllInstances</a>
   <a id="Player:UnbindInstance" class="fn" href="../Player/UnbindInstance.html">UnbindInstance</a>
   <a id="Player:UnsetKnownTitle" class="fn" href="../Player/UnsetKnownTitle.html">UnsetKnownTitle</a>
+  <a id="Player:UnsummonPetTemporarily" class="fn" href="../Player/UnsummonPetTemporarily.html">UnsummonPetTemporarily</a>
   <a id="Player:UpdatePlayerSetting" class="fn" href="../Player/UpdatePlayerSetting.html">UpdatePlayerSetting</a>
   <a id="Player:Whisper" class="fn" href="../Player/Whisper.html">Whisper</a>
   <a id="Player:Yell" class="fn" href="../Player/Yell.html">Yell</a>

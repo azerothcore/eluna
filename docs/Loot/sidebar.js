@@ -1,0 +1,33 @@
+document.write(`
+  <a id="Loot:AddItem" class="fn" href="../Loot/AddItem.html">AddItem</a>
+  <a id="Loot:AddLooter" class="fn" href="../Loot/AddLooter.html">AddLooter</a>
+  <a id="Loot:Clear" class="fn" href="../Loot/Clear.html">Clear</a>
+  <a id="Loot:GenerateMoney" class="fn" href="../Loot/GenerateMoney.html">GenerateMoney</a>
+  <a id="Loot:GetContainer" class="fn" href="../Loot/GetContainer.html">GetContainer</a>
+  <a id="Loot:GetItemCount" class="fn" href="../Loot/GetItemCount.html">GetItemCount</a>
+  <a id="Loot:GetItems" class="fn" href="../Loot/GetItems.html">GetItems</a>
+  <a id="Loot:GetLootOwner" class="fn" href="../Loot/GetLootOwner.html">GetLootOwner</a>
+  <a id="Loot:GetLootType" class="fn" href="../Loot/GetLootType.html">GetLootType</a>
+  <a id="Loot:GetMaxSlotForPlayer" class="fn" href="../Loot/GetMaxSlotForPlayer.html">GetMaxSlotForPlayer</a>
+  <a id="Loot:GetMoney" class="fn" href="../Loot/GetMoney.html">GetMoney</a>
+  <a id="Loot:GetRoundRobinPlayer" class="fn" href="../Loot/GetRoundRobinPlayer.html">GetRoundRobinPlayer</a>
+  <a id="Loot:GetSourceWorldObject" class="fn" href="../Loot/GetSourceWorldObject.html">GetSourceWorldObject</a>
+  <a id="Loot:GetUnlootedCount" class="fn" href="../Loot/GetUnlootedCount.html">GetUnlootedCount</a>
+  <a id="Loot:HasItem" class="fn" href="../Loot/HasItem.html">HasItem</a>
+  <a id="Loot:HasItemForAll" class="fn" href="../Loot/HasItemForAll.html">HasItemForAll</a>
+  <a id="Loot:HasOverThresholdItem" class="fn" href="../Loot/HasOverThresholdItem.html">HasOverThresholdItem</a>
+  <a id="Loot:HasQuestItems" class="fn" href="../Loot/HasQuestItems.html">HasQuestItems</a>
+  <a id="Loot:IsEmpty" class="fn" href="../Loot/IsEmpty.html">IsEmpty</a>
+  <a id="Loot:IsLooted" class="fn" href="../Loot/IsLooted.html">IsLooted</a>
+  <a id="Loot:RemoveItem" class="fn" href="../Loot/RemoveItem.html">RemoveItem</a>
+  <a id="Loot:RemoveLooter" class="fn" href="../Loot/RemoveLooter.html">RemoveLooter</a>
+  <a id="Loot:SetContainer" class="fn" href="../Loot/SetContainer.html">SetContainer</a>
+  <a id="Loot:SetItemLooted" class="fn" href="../Loot/SetItemLooted.html">SetItemLooted</a>
+  <a id="Loot:SetLootOwner" class="fn" href="../Loot/SetLootOwner.html">SetLootOwner</a>
+  <a id="Loot:SetLootType" class="fn" href="../Loot/SetLootType.html">SetLootType</a>
+  <a id="Loot:SetMoney" class="fn" href="../Loot/SetMoney.html">SetMoney</a>
+  <a id="Loot:SetRoundRobinPlayer" class="fn" href="../Loot/SetRoundRobinPlayer.html">SetRoundRobinPlayer</a>
+  <a id="Loot:SetSourceWorldObject" class="fn" href="../Loot/SetSourceWorldObject.html">SetSourceWorldObject</a>
+  <a id="Loot:SetUnlootedCount" class="fn" href="../Loot/SetUnlootedCount.html">SetUnlootedCount</a>
+  <a id="Loot:UpdateItemIndex" class="fn" href="../Loot/UpdateItemIndex.html">UpdateItemIndex</a>
+`);

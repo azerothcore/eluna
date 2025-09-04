@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="API documentation for the Pet class in the Eluna engine.">
+    <meta name="keywords" content="eluna, lua, lua engine, azerothcore, script, scripting, doc, docs, documentation">
+
+    <title>Pet - Eluna API</title>
+
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+    <link rel="stylesheet" type="text/css" href="../static/dark.css">
+
+    <link rel="shortcut icon" href="../static/favicon.ico">
+
+</head>
+<body class="rustdoc">
+<!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+<section class="sidebar">
+    <a href='../index.html'><img src='../static/eluna-logo.png' alt='Eluna Logo' width='100'></a>
+    <div class="block">
+        
+
+    </div>
+</section>
+
+<nav class="sub">
+    <form class="search-form js-only">
+        <div class="search-container">
+            <input class="search-input" name="search"
+                   autocomplete="off"
+                   placeholder="Click or press 'S' to search, '?' for more options..."
+                   type="search">
+        </div>
+    </form>
+</nav>
+
+<section id='main' class="content mod">
+    <h1 class='fqn'>
+        Class <a class="mod" href="">Pet</a>
+        <span class='out-of-band'>
+            <span id='render-detail'>
+                <a id="collapse-all" href="#">[-]</a>
+                <a id="expand-all" href="#">[+]</a>
+            </span>
+        </span>
+    </h1>
+
+    
+    <p>Non-<a class="mod" href="../Player/index.html">Player</a> controlled companions that fight alongside their owners.</p>
+<p>Includes hunter pets, warlock demons, death knight ghouls, and other summoned creatures.
+<a class="mod" href="../Pet/index.html">Pet</a>s can be temporary or permanent and have various AI behaviors and spell abilities.</p>
+<p>Inherits all methods from: <a class="mod" href="../Object/index.html">Object</a>, <a class="mod" href="../WorldObject/index.html">WorldObject</a>, <a class="mod" href="../Unit/index.html">Unit</a>, [Guardian]</p>
+
+    <h2 id='methods' class='section-header'><a href="#methods">Methods</a></h2>
+    <table>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='AddSpell.html'>AddSpell</a>
+            </td>
+            <td class='docblock short'>
+                <p>Adds a spell to the <a class="mod" href="../Pet/index.html">Pet</a>'s spellbook.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CastWhenWillAvailable.html'>CastWhenWillAvailable</a>
+            </td>
+            <td class='docblock short'>
+                <p>Queues a spell to be cast when the <a class="mod" href="../Pet/index.html">Pet</a> becomes available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CleanupActionBar.html'>CleanupActionBar</a>
+            </td>
+            <td class='docblock short'>
+                <p>Cleans up the <a class="mod" href="../Pet/index.html">Pet</a>'s action bar, removing invalid spells.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ClearCastWhenWillAvailable.html'>ClearCastWhenWillAvailable</a>
+            </td>
+            <td class='docblock short'>
+                <p>Clears any queued spell that was set to cast when available.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='CreateBaseAtCreature.html'>CreateBaseAtCreature</a>
+            </td>
+            <td class='docblock short'>
+                <p>Creates the <a class="mod" href="../Pet/index.html">Pet</a>'s base stats and properties from an existing <a class="mod" href="../Creature/index.html">Creature</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GenerateActionBarData.html'>GenerateActionBarData</a>
+            </td>
+            <td class='docblock short'>
+                <p>Generates action bar data for the <a class="mod" href="../Pet/index.html">Pet</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetAuraUpdateMaskForRaid.html'>GetAuraUpdateMaskForRaid</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the aura update mask for raid members.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetCurrentFoodBenefitLevel.html'>GetCurrentFoodBenefitLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the food benefit level for an item of the specified level.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetDuration.html'>GetDuration</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Pet/index.html">Pet</a>'s remaining duration in milliseconds.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetFreeTalentPoints.html'>GetFreeTalentPoints</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the number of unspent talent points the <a class="mod" href="../Pet/index.html">Pet</a> has.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetHappinessState.html'>GetHappinessState</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Pet/index.html">Pet</a>'s current happiness state.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetMaxTalentPointsForLevel.html'>GetMaxTalentPointsForLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the maximum number of talent points available at the specified level.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetOwner.html'>GetOwner</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Player/index.html">Player</a> who owns this <a class="mod" href="../Pet/index.html">Pet</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPetAutoSpellOnPos.html'>GetPetAutoSpellOnPos</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the auto-spell at the specified position.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPetAutoSpellSize.html'>GetPetAutoSpellSize</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the number of auto-spells the <a class="mod" href="../Pet/index.html">Pet</a> has.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetPetType.html'>GetPetType</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the <a class="mod" href="../Pet/index.html">Pet</a>'s type.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GetUsedTalentCount.html'>GetUsedTalentCount</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns the number of talents the <a class="mod" href="../Pet/index.html">Pet</a> has used.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GivePetLevel.html'>GivePetLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets the <a class="mod" href="../Pet/index.html">Pet</a>'s level directly.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='GivePetXP.html'>GivePetXP</a>
+            </td>
+            <td class='docblock short'>
+                <p>Gives experience points to the <a class="mod" href="../Pet/index.html">Pet</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HasTempSpell.html'>HasTempSpell</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Pet/index.html">Pet</a> has a temporary spell queued, returns <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='HaveInDiet.html'>HaveInDiet</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Pet/index.html">Pet</a> can eat the specified <a class="mod" href="../Item/index.html">Item</a>, returns <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='InitLevelupSpellsForLevel.html'>InitLevelupSpellsForLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>Initializes level-up spells for the <a class="mod" href="../Pet/index.html">Pet</a>'s current level.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='InitPetCreateSpells.html'>InitPetCreateSpells</a>
+            </td>
+            <td class='docblock short'>
+                <p>Initializes the <a class="mod" href="../Pet/index.html">Pet</a>'s creation spells.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='InitTalentForLevel.html'>InitTalentForLevel</a>
+            </td>
+            <td class='docblock short'>
+                <p>Initializes talents for the <a class="mod" href="../Pet/index.html">Pet</a>'s current level.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsBeingLoaded.html'>IsBeingLoaded</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Pet/index.html">Pet</a> is currently being loaded from the database, returns <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsControlled.html'>IsControlled</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Pet/index.html">Pet</a> is controlled by a player, returns <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsPermanentPetFor.html'>IsPermanentPetFor</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Pet/index.html">Pet</a> is a permanent pet for the specified <a class="mod" href="../Player/index.html">Player</a>, returns <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsRemoved.html'>IsRemoved</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Pet/index.html">Pet</a> is marked as removed, returns <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='IsTemporarySummoned.html'>IsTemporarySummoned</a>
+            </td>
+            <td class='docblock short'>
+                <p>Returns <code>true</code> if the <a class="mod" href="../Pet/index.html">Pet</a> is temporarily summoned, returns <code>false</code> otherwise.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='LearnPetPassives.html'>LearnPetPassives</a>
+            </td>
+            <td class='docblock short'>
+                <p>Makes the <a class="mod" href="../Pet/index.html">Pet</a> learn all passive spells it should know.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='LearnSpell.html'>LearnSpell</a>
+            </td>
+            <td class='docblock short'>
+                <p>Makes the <a class="mod" href="../Pet/index.html">Pet</a> learn a spell.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='LearnSpellHighRank.html'>LearnSpellHighRank</a>
+            </td>
+            <td class='docblock short'>
+                <p>Makes the <a class="mod" href="../Pet/index.html">Pet</a> learn the highest available rank of a spell.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='Remove.html'>Remove</a>
+            </td>
+            <td class='docblock short'>
+                <p>Removes the <a class="mod" href="../Pet/index.html">Pet</a> from the world.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='RemoveSpell.html'>RemoveSpell</a>
+            </td>
+            <td class='docblock short'>
+                <p>Removes a spell from the <a class="mod" href="../Pet/index.html">Pet</a>'s spellbook.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ResetAuraUpdateMaskForRaid.html'>ResetAuraUpdateMaskForRaid</a>
+            </td>
+            <td class='docblock short'>
+                <p>Resets the aura update mask for raid members.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ResetTalents.html'>ResetTalents</a>
+            </td>
+            <td class='docblock short'>
+                <p>Resets all of the <a class="mod" href="../Pet/index.html">Pet</a>'s talents.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SavePetToDB.html'>SavePetToDB</a>
+            </td>
+            <td class='docblock short'>
+                <p>Saves the <a class="mod" href="../Pet/index.html">Pet</a> to the database.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetAuraUpdateMaskForRaid.html'>SetAuraUpdateMaskForRaid</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets an aura slot in the raid update mask.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetDuration.html'>SetDuration</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets the <a class="mod" href="../Pet/index.html">Pet</a>'s duration in milliseconds.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetFreeTalentPoints.html'>SetFreeTalentPoints</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets the number of unspent talent points for the <a class="mod" href="../Pet/index.html">Pet</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetPetType.html'>SetPetType</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets the <a class="mod" href="../Pet/index.html">Pet</a>'s type.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetRemoved.html'>SetRemoved</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets whether the <a class="mod" href="../Pet/index.html">Pet</a> is marked as removed.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SetUsedTalentCount.html'>SetUsedTalentCount</a>
+            </td>
+            <td class='docblock short'>
+                <p>Sets the number of talents the <a class="mod" href="../Pet/index.html">Pet</a> has used.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='SynchronizeLevelWithOwner.html'>SynchronizeLevelWithOwner</a>
+            </td>
+            <td class='docblock short'>
+                <p>Synchronizes the <a class="mod" href="../Pet/index.html">Pet</a>'s level with its owner's level.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ToggleAutocast.html'>ToggleAutocast</a>
+            </td>
+            <td class='docblock short'>
+                <p>Toggles autocast on or off for the specified spell.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='UnlearnSpell.html'>UnlearnSpell</a>
+            </td>
+            <td class='docblock short'>
+                <p>Makes the <a class="mod" href="../Pet/index.html">Pet</a> unlearn a spell.</p>
+            </td>
+        </tr>
+    </table>
+
+</section>
+
+<section id='search' class="content hidden"></section>
+
+<section class="footer"></section>
+
+<div id="help" class="hidden">
+    <div class="shortcuts">
+        <h1>Keyboard shortcuts</h1>
+        <dl>
+            <dt>?</dt>
+            <dd>Show this help dialog</dd>
+            <dt>S</dt>
+            <dd>Focus the search field</dd>
+            <dt>&larrb;</dt>
+            <dd>Move up in search results</dd>
+            <dt>&rarrb;</dt>
+            <dd>Move down in search results</dd>
+            <dt>&#9166;</dt>
+            <dd>Go to active search result</dd>
+        </dl>
+    </div>
+    <div class="infos">
+        <h1>Search tricks</h1>
+        <p>
+            Prefix searches with a type followed by a colon (e.g.
+            <code>fn:</code>) to restrict the search to a given type.
+        </p>
+        <p>
+            Accepted types are: <code>fn</code>, <code>mod</code>,
+            <code>struct</code> (or <code>str</code>), <code>enum</code>,
+            <code>trait</code>, <code>typedef</code> (or
+            <code>tdef</code>).
+        </p>
+    </div>
+</div>
+
+<script>
+    window.rootPath = "../";
+</script>
+<script src="../static/jquery.js"></script>
+<script src="../static/main.js"></script>
+<script async src="../search-index.js"></script>
+<center>Generated on <script src="../date.js"></script></center>
+<center>&copy;2016 - Eluna Lua Engine</center>
+</body>
+</html>

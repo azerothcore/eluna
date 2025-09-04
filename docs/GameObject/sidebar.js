@@ -1,12 +1,12 @@
 document.write(`
   <a id="GameObject:AddLoot" class="fn" href="../GameObject/AddLoot.html">AddLoot</a>
   <a id="GameObject:Despawn" class="fn" href="../GameObject/Despawn.html">Despawn</a>
-  <a id="GameObject:GetDBTableGUIDLow" class="fn" href="../GameObject/GetDBTableGUIDLow.html">GetDBTableGUIDLow</a>
   <a id="GameObject:GetDisplayId" class="fn" href="../GameObject/GetDisplayId.html">GetDisplayId</a>
   <a id="GameObject:GetGoState" class="fn" href="../GameObject/GetGoState.html">GetGoState</a>
   <a id="GameObject:GetLootRecipient" class="fn" href="../GameObject/GetLootRecipient.html">GetLootRecipient</a>
   <a id="GameObject:GetLootRecipientGroup" class="fn" href="../GameObject/GetLootRecipientGroup.html">GetLootRecipientGroup</a>
   <a id="GameObject:GetLootState" class="fn" href="../GameObject/GetLootState.html">GetLootState</a>
+  <a id="GameObject:GetSpawnId" class="fn" href="../GameObject/GetSpawnId.html">GetSpawnId</a>
   <a id="GameObject:HasQuest" class="fn" href="../GameObject/HasQuest.html">HasQuest</a>
   <a id="GameObject:IsActive" class="fn" href="../GameObject/IsActive.html">IsActive</a>
   <a id="GameObject:IsSpawned" class="fn" href="../GameObject/IsSpawned.html">IsSpawned</a>

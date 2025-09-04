@@ -68,13 +68,13 @@
 
     
     <div class='docblock'>
-        <p>Advances a <a class="mod" href="../Player/index.html">Player</a>s specific skill to the amount specified</p>
+        <p>Updates a skill for the <a class="mod" href="../Player/index.html">Player</a> and advances it by the specified step.</p>
 
         <h2 id="synopsis" class='section-header'>
             <a href="#synopsis">Synopsis</a>
         </h2>
         <p>
-            <code>Player:AdvanceSkill( skillId, skillStep )</code>
+            <code>success = Player:AdvanceSkill( skillId, step )</code>
         </p>
 
         <h2 id="arguments" class='section-header'>
@@ -83,11 +83,11 @@
         <p>
             <dl>
                 <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> skillId</code></dt>
-                <dd class="docblock"><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
+                <dd class="docblock"><p>The skill to update. </p><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
             </dl>
             <dl>
-                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> skillStep</code></dt>
-                <dd class="docblock"><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> step</code></dt>
+                <dd class="docblock"><p>The step to advance the skill by. </p><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
             </dl>
         </p>
 
@@ -95,7 +95,10 @@
             <a href="#returns">Returns</a>
         </h2>
         <p>
-            Nothing.
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.2.html">boolean</a></strong> success</code></dt>
+                <dd class="docblock"><p>True if the skill was updated successfully. </p></dd>
+            </dl>
         </p>
     </div>
 

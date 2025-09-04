@@ -25,15 +25,18 @@ document.write(`
   <a id="Creature:GetDefaultMovementType" class="fn" href="../Creature/GetDefaultMovementType.html">GetDefaultMovementType</a>
   <a id="Creature:GetExtraFlags" class="fn" href="../Creature/GetExtraFlags.html">GetExtraFlags</a>
   <a id="Creature:GetHomePosition" class="fn" href="../Creature/GetHomePosition.html">GetHomePosition</a>
+  <a id="Creature:GetLoot" class="fn" href="../Creature/GetLoot.html">GetLoot</a>
   <a id="Creature:GetLootMode" class="fn" href="../Creature/GetLootMode.html">GetLootMode</a>
   <a id="Creature:GetLootRecipient" class="fn" href="../Creature/GetLootRecipient.html">GetLootRecipient</a>
   <a id="Creature:GetLootRecipientGroup" class="fn" href="../Creature/GetLootRecipientGroup.html">GetLootRecipientGroup</a>
   <a id="Creature:GetNPCFlags" class="fn" href="../Creature/GetNPCFlags.html">GetNPCFlags</a>
   <a id="Creature:GetRank" class="fn" href="../Creature/GetRank.html">GetRank</a>
+  <a id="Creature:GetReactState" class="fn" href="../Creature/GetReactState.html">GetReactState</a>
   <a id="Creature:GetRespawnDelay" class="fn" href="../Creature/GetRespawnDelay.html">GetRespawnDelay</a>
   <a id="Creature:GetScriptId" class="fn" href="../Creature/GetScriptId.html">GetScriptId</a>
   <a id="Creature:GetScriptName" class="fn" href="../Creature/GetScriptName.html">GetScriptName</a>
   <a id="Creature:GetShieldBlockValue" class="fn" href="../Creature/GetShieldBlockValue.html">GetShieldBlockValue</a>
+  <a id="Creature:GetSpawnId" class="fn" href="../Creature/GetSpawnId.html">GetSpawnId</a>
   <a id="Creature:GetUnitFlags" class="fn" href="../Creature/GetUnitFlags.html">GetUnitFlags</a>
   <a id="Creature:GetUnitFlagsTwo" class="fn" href="../Creature/GetUnitFlagsTwo.html">GetUnitFlagsTwo</a>
   <a id="Creature:GetWanderRadius" class="fn" href="../Creature/GetWanderRadius.html">GetWanderRadius</a>
@@ -66,6 +69,7 @@ document.write(`
   <a id="Creature:SaveToDB" class="fn" href="../Creature/SaveToDB.html">SaveToDB</a>
   <a id="Creature:SelectVictim" class="fn" href="../Creature/SelectVictim.html">SelectVictim</a>
   <a id="Creature:SetAggroEnabled" class="fn" href="../Creature/SetAggroEnabled.html">SetAggroEnabled</a>
+  <a id="Creature:SetCorpseDelay" class="fn" href="../Creature/SetCorpseDelay.html">SetCorpseDelay</a>
   <a id="Creature:SetDeathState" class="fn" href="../Creature/SetDeathState.html">SetDeathState</a>
   <a id="Creature:SetDefaultMovementType" class="fn" href="../Creature/SetDefaultMovementType.html">SetDefaultMovementType</a>
   <a id="Creature:SetDisableGravity" class="fn" href="../Creature/SetDisableGravity.html">SetDisableGravity</a>

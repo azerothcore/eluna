@@ -6,6 +6,7 @@ document.write(`
   <a id="WorldPacket:ReadFloat" class="fn" href="../WorldPacket/ReadFloat.html">ReadFloat</a>
   <a id="WorldPacket:ReadGUID" class="fn" href="../WorldPacket/ReadGUID.html">ReadGUID</a>
   <a id="WorldPacket:ReadLong" class="fn" href="../WorldPacket/ReadLong.html">ReadLong</a>
+  <a id="WorldPacket:ReadPackedGUID" class="fn" href="../WorldPacket/ReadPackedGUID.html">ReadPackedGUID</a>
   <a id="WorldPacket:ReadShort" class="fn" href="../WorldPacket/ReadShort.html">ReadShort</a>
   <a id="WorldPacket:ReadString" class="fn" href="../WorldPacket/ReadString.html">ReadString</a>
   <a id="WorldPacket:ReadUByte" class="fn" href="../WorldPacket/ReadUByte.html">ReadUByte</a>
@@ -17,6 +18,7 @@ document.write(`
   <a id="WorldPacket:WriteFloat" class="fn" href="../WorldPacket/WriteFloat.html">WriteFloat</a>
   <a id="WorldPacket:WriteGUID" class="fn" href="../WorldPacket/WriteGUID.html">WriteGUID</a>
   <a id="WorldPacket:WriteLong" class="fn" href="../WorldPacket/WriteLong.html">WriteLong</a>
+  <a id="WorldPacket:WritePackedGUID" class="fn" href="../WorldPacket/WritePackedGUID.html">WritePackedGUID</a>
   <a id="WorldPacket:WriteShort" class="fn" href="../WorldPacket/WriteShort.html">WriteShort</a>
   <a id="WorldPacket:WriteString" class="fn" href="../WorldPacket/WriteString.html">WriteString</a>
   <a id="WorldPacket:WriteUByte" class="fn" href="../WorldPacket/WriteUByte.html">WriteUByte</a>

@@ -128,6 +128,16 @@ the client has sent a message that its <a class="mod" href="../Player/index.html
         <tr>
             <td>
                 <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='ReadPackedGUID.html'>ReadPackedGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>Reads a packed GUID from the <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> and returns it as a full 64-bit integer.
+The packed data size varies (2-9 bytes), but always unpacks to a complete 64-bit GUID.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='ReadShort.html'>ReadShort</a>
             </td>
             <td class='docblock short'>
@@ -222,6 +232,15 @@ the client has sent a message that its <a class="mod" href="../Player/index.html
             </td>
             <td class='docblock short'>
                 <p>Writes a signed 32-bit integer value to the <a class="mod" href="../WorldPacket/index.html">WorldPacket</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a class='stability Stable' title='Documented'></a>
+                <a class='fn' href='WritePackedGUID.html'>WritePackedGUID</a>
+            </td>
+            <td class='docblock short'>
+                <p>Writes an ObjectGuid as packed GUID format to the <a class="mod" href="../WorldPacket/index.html">WorldPacket</a>.</p>
             </td>
         </tr>
         <tr>
