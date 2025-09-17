@@ -68,13 +68,13 @@
 
     
     <div class='docblock'>
-        <p>Return true if the <a class="mod" href="../Ticket/index.html">Ticket</a> is assigned to the GUID or false.</p>
+        <p>Return true if the <a class="mod" href="../Ticket/index.html">Ticket</a> is assigned to the <a class="mod" href="../Player/index.html">Player</a> or false.</p>
 
         <h2 id="synopsis" class='section-header'>
             <a href="#synopsis">Synopsis</a>
         </h2>
         <p>
-            <code>is_assigned_to = Ticket:IsAssignedTo( playerGuid )</code>
+            <code>isAssignedTo = Ticket:IsAssignedTo( playerGuid )</code>
         </p>
 
         <h2 id="arguments" class='section-header'>
@@ -82,8 +82,8 @@
         </h2>
         <p>
             <dl>
-                <dt><code><strong><a href="https://github.com/ElunaLuaEngine/ElunaTrinityWotlk/search?l=cpp&q=%22enum+ui%22&type=Code&utf8=%E2%9C%93">ui</a></strong> playerGuid</code></dt>
-                <dd class="docblock"><p>Desired playerGuid. </p></dd>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> playerGuid</code></dt>
+                <dd class="docblock"><p><em>Valid numbers</em>: integers from 0 to 18,446,744,073,709,551,615.</p></dd>
             </dl>
         </p>
 
@@ -92,7 +92,7 @@
         </h2>
         <p>
             <dl>
-                <dt><code><strong><a href="http://www.lua.org/pil/2.2.html">boolean</a></strong> is_assigned_to</code></dt>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.2.html">boolean</a></strong> isAssignedTo</code></dt>
                 <dd class="docblock"><em>See method description.</em></dd>
             </dl>
         </p>

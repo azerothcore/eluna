@@ -68,17 +68,13 @@
 
     
     <div class='docblock'>
-        <p>Return the entrance position (x, y, z, o) of the specified dungeon map id</p>
-<p>return uint32 pos_x
-return uint32 pos_y
-return uint32 pos_z
-return uint32 pos_o</p>
+        <p>Return the entrance position (x, y, z, o) of the specified dungeon map id.</p>
 
         <h2 id="synopsis" class='section-header'>
             <a href="#synopsis">Synopsis</a>
         </h2>
         <p>
-            <code>GetMapEntrance( mapId )</code>
+            <code>pos_x, pos_y, pos_z, pos_o = GetMapEntrance( mapId )</code>
         </p>
 
         <h2 id="arguments" class='section-header'>
@@ -95,7 +91,22 @@ return uint32 pos_o</p>
             <a href="#returns">Returns</a>
         </h2>
         <p>
-            Nothing.
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> pos_x</code></dt>
+                <dd class="docblock"><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
+            </dl>
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> pos_y</code></dt>
+                <dd class="docblock"><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
+            </dl>
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> pos_z</code></dt>
+                <dd class="docblock"><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
+            </dl>
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> pos_o</code></dt>
+                <dd class="docblock"><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
+            </dl>
         </p>
     </div>
 

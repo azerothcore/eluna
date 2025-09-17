@@ -8,6 +8,7 @@ document.write(`
   <a id="Global:CharDBExecute" class="fn" href="../Global/CharDBExecute.html">CharDBExecute</a>
   <a id="Global:CharDBQuery" class="fn" href="../Global/CharDBQuery.html">CharDBQuery</a>
   <a id="Global:CharDBQueryAsync" class="fn" href="../Global/CharDBQueryAsync.html">CharDBQueryAsync</a>
+  <a id="Global:ClearAllCreatureEvents" class="fn" href="../Global/ClearAllCreatureEvents.html">ClearAllCreatureEvents</a>
   <a id="Global:ClearBattleGroundEvents" class="fn" href="../Global/ClearBattleGroundEvents.html">ClearBattleGroundEvents</a>
   <a id="Global:ClearCreatureEvents" class="fn" href="../Global/ClearCreatureEvents.html">ClearCreatureEvents</a>
   <a id="Global:ClearCreatureGossipEvents" class="fn" href="../Global/ClearCreatureGossipEvents.html">ClearCreatureGossipEvents</a>
@@ -79,6 +80,7 @@ document.write(`
   <a id="Global:PrintDebug" class="fn" href="../Global/PrintDebug.html">PrintDebug</a>
   <a id="Global:PrintError" class="fn" href="../Global/PrintError.html">PrintError</a>
   <a id="Global:PrintInfo" class="fn" href="../Global/PrintInfo.html">PrintInfo</a>
+  <a id="Global:RegisterAllCreatureEvent" class="fn" href="../Global/RegisterAllCreatureEvent.html">RegisterAllCreatureEvent</a>
   <a id="Global:RegisterBGEvent" class="fn" href="../Global/RegisterBGEvent.html">RegisterBGEvent</a>
   <a id="Global:RegisterCreatureEvent" class="fn" href="../Global/RegisterCreatureEvent.html">RegisterCreatureEvent</a>
   <a id="Global:RegisterCreatureGossipEvent" class="fn" href="../Global/RegisterCreatureGossipEvent.html">RegisterCreatureGossipEvent</a>

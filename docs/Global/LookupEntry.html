@@ -68,15 +68,14 @@
 
     
     <div class='docblock'>
-        <p>Returns the instance of the specified DBC (DatabaseClient) store.</p>
-<p>This function retrieves the DBC store associated with the provided name 
-and pushes it onto the Lua stack.</p>
+        <p>Returns an entry from the specified DBC (DatabaseClient) store.</p>
+<p>This function looks up an entry in a DBC file by name and ID, and pushes it onto the Lua stack.</p>
 
         <h2 id="synopsis" class='section-header'>
             <a href="#synopsis">Synopsis</a>
         </h2>
         <p>
-            <code>store = LookupEntry( char, id )</code>
+            <code>store = LookupEntry( dbcName, id )</code>
         </p>
 
         <h2 id="arguments" class='section-header'>
@@ -84,12 +83,12 @@ and pushes it onto the Lua stack.</p>
         </h2>
         <p>
             <dl>
-                <dt><code><strong><a href="https://github.com/ElunaLuaEngine/ElunaTrinityWotlk/search?l=cpp&q=%22enum+ons%22&type=Code&utf8=%E2%9C%93">ons</a></strong> char</code></dt>
-                <dd class="docblock"><em>See method description.</em></dd>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.4.html">string</a></strong> dbcName</code></dt>
+                <dd class="docblock"><p>The name of the DBC store (e.g., "ItemDisplayInfo"). </p></dd>
             </dl>
             <dl>
                 <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> id</code></dt>
-                <dd class="docblock"><p>The ID used to look up within the specified DBC store.. </p><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
+                <dd class="docblock"><p>The ID used to look up within the specified DBC store. </p><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
             </dl>
         </p>
 
@@ -99,7 +98,7 @@ and pushes it onto the Lua stack.</p>
         <p>
             <dl>
                 <dt><code><strong><a href="https://github.com/ElunaLuaEngine/ElunaTrinityWotlk/search?l=cpp&q=%22enum+DBCStore%22&type=Code&utf8=%E2%9C%93">DBCStore</a></strong> store</code></dt>
-                <dd class="docblock"><p>The requested DBC store instance.. </p></dd>
+                <dd class="docblock"><p>The requested DBC store instance. </p></dd>
             </dl>
         </p>
     </div>

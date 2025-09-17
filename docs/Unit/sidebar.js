@@ -60,7 +60,6 @@ document.write(`
   <a id="Unit:GetThreat" class="fn" href="../Unit/GetThreat.html">GetThreat</a>
   <a id="Unit:GetThreatList" class="fn" href="../Unit/GetThreatList.html">GetThreatList</a>
   <a id="Unit:GetUnfriendlyUnitsInRange" class="fn" href="../Unit/GetUnfriendlyUnitsInRange.html">GetUnfriendlyUnitsInRange</a>
-  <a id="Unit:GetVehicle" class="fn" href="../Unit/GetVehicle.html">GetVehicle</a>
   <a id="Unit:GetVehicleKit" class="fn" href="../Unit/GetVehicleKit.html">GetVehicleKit</a>
   <a id="Unit:GetVictim" class="fn" href="../Unit/GetVictim.html">GetVictim</a>
   <a id="Unit:HandleStatModifier" class="fn" href="../Unit/HandleStatModifier.html">HandleStatModifier</a>

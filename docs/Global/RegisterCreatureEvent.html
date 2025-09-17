@@ -109,6 +109,9 @@ enum CreatureEvents
     CREATURE_EVENT_ON_DIALOG_STATUS                   = 35, // (event, player, creature)
     CREATURE_EVENT_ON_ADD                             = 36, // (event, creature)
     CREATURE_EVENT_ON_REMOVE                          = 37, // (event, creature)
+    CREATURE_EVENT_ON_AURA_APPLY                      = 38, // (event, creature, aura)
+    CREATURE_EVENT_ON_HEAL                            = 39, // (event, creature, target, heal) - Can return new heal amount
+    CREATURE_EVENT_ON_DAMAGE                          = 40, // (event, creature, target, damage) - Can return new damage amount
     CREATURE_EVENT_COUNT
 };
 </pre>

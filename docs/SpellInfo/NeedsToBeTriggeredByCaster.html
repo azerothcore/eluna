@@ -68,16 +68,16 @@
 
     
     <div class='docblock'>
-        <p>Checks if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> requires to be triggered by the caster of another specified spell.</p>
+        <p>Checks if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> requires to be triggered by the caster of another specified <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>.</p>
 <p>Certain spells or abilities can only be activated or become effective when they are triggered by the caster 
-of another specific spell (the triggeringSpell). This function examines if the spell or ability represented 
+of another specific spell (the <code>triggeringSpell</code>). This function examines if the spell or ability represented 
 by <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> has such requirement.</p>
 
         <h2 id="synopsis" class='section-header'>
             <a href="#synopsis">Synopsis</a>
         </h2>
         <p>
-            <code>needs_to_be_triggered_by_caster = SpellInfo:NeedsToBeTriggeredByCaster( The )</code>
+            <code>needs_to_be_triggered_by_caster = SpellInfo:NeedsToBeTriggeredByCaster( triggeringSpell )</code>
         </p>
 
         <h2 id="arguments" class='section-header'>
@@ -85,8 +85,8 @@ by <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> has such requirem
         </h2>
         <p>
             <dl>
-                <dt><code><strong><a href="https://github.com/ElunaLuaEngine/ElunaTrinityWotlk/search?l=cpp&q=%22enum+riggeringSpel%22&type=Code&utf8=%E2%9C%93">riggeringSpel</a></strong> The</code></dt>
-                <dd class="docblock"><em>See method description.</em></dd>
+                <dt><code><strong><a class="mod" href="../SpellInfo/index.html">SpellInfo</a></strong> triggeringSpell</code></dt>
+                <dd class="docblock"><p>The spell by the casting of which the ability or spell represented by <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> is triggered. </p></dd>
             </dl>
         </p>
 

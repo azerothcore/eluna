@@ -68,28 +68,33 @@
 
     
     <div class='docblock'>
-        <p>This method is <em>undocumented</em>. <strong>Use at your own risk.</strong></p>
-        <p>For temporary documentation, please check the <a href="https://github.com/ElunaLuaEngine/Eluna/blob/master/LuaFunctions.cpp">LuaFunctions</a> source file.</p>
+        <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> can pierce through an immunity aura defined by the given <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>, <code>false</code> otherwise.</p>
 
         <h2 id="synopsis" class='section-header'>
             <a href="#synopsis">Synopsis</a>
         </h2>
         <p>
-            <code>SpellInfo:CanPierceImmuneAura()</code>
+            <code>canPierce = SpellInfo:CanPierceImmuneAura( auraSpellInfo )</code>
         </p>
 
         <h2 id="arguments" class='section-header'>
             <a href="#arguments">Arguments</a>
         </h2>
         <p>
-            Unknown.
+            <dl>
+                <dt><code><strong><a class="mod" href="../SpellInfo/index.html">SpellInfo</a></strong> auraSpellInfo</code></dt>
+                <dd class="docblock"><p>The spell representing the immunity aura. </p></dd>
+            </dl>
         </p>
 
         <h2 id="returns" class='section-header'>
             <a href="#returns">Returns</a>
         </h2>
         <p>
-            Unknown.
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.2.html">boolean</a></strong> canPierce</code></dt>
+                <dd class="docblock"><em>See method description.</em></dd>
+            </dl>
         </p>
     </div>
 

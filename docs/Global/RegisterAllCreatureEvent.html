@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="API documentation for the Unit:GetVehicle method in the Eluna engine.">
+    <meta name="description" content="API documentation for the Global:RegisterAllCreatureEvent method in the Eluna engine.">
     <meta name="keywords" content="eluna, lua, lua engine, azerothcore, script, scripting, doc, docs, documentation">
 
-    <title>Unit:GetVehicle - Eluna</title>
+    <title>Global:RegisterAllCreatureEvent - Eluna</title>
 
     <link rel="stylesheet" type="text/css" href="../static/main.css">
     <link rel="stylesheet" type="text/css" href="../static/dark.css">
@@ -26,11 +26,11 @@
     <a href='../index.html'><img src='../static/eluna-logo.png' alt='Eluna Logo' width='100'></a>
     <div class="block">
         
-    <h2>Unit Methods</h2>
+    <h2>Global Methods</h2>
     <script src="sidebar.js"></script>
     <script>
       // Highlight current method by adding "current" class to it
-      var element = document.getElementById("Unit:GetVehicle");
+      var element = document.getElementById("Global:RegisterAllCreatureEvent");
       if (element) {
         var classname = "current";
         arr = element.className.split(" ");
@@ -57,7 +57,7 @@
 <section id='main' class="content mod">
     <h1 class='fqn'>
         Method
-    <a class="mod" href="../Unit/index.html">Unit</a>:<a class="fn" href="../Unit/GetVehicle.html">GetVehicle</a>
+    <a class="mod" href="../Global/index.html">Global</a>:<a class="fn" href="../Global/RegisterAllCreatureEvent.html">RegisterAllCreatureEvent</a>
         <span class='out-of-band'>
             <span id='render-detail'>
                 <a id="collapse-all" href="#">[-]</a>
@@ -68,28 +68,51 @@
 
     
     <div class='docblock'>
-        <p>This method is <em>undocumented</em>. <strong>Use at your own risk.</strong></p>
-        <p>For temporary documentation, please check the <a href="https://github.com/ElunaLuaEngine/Eluna/blob/master/LuaFunctions.cpp">LuaFunctions</a> source file.</p>
+        <p>Registers a <a class="mod" href="../Creature/index.html">Creature</a> event handler. It used AllCreatureScript so this don't need creature entry as a key.</p>
+<pre>
+enum AllCreatureEvents
+{
+    ALL_CREATURE_EVENT_ON_ADD                       = 1, // (event, creature)
+    ALL_CREATURE_EVENT_ON_REMOVE                    = 2, // (event, creature)
+    ALL_CREATURE_EVENT_ON_SELECT_LEVEL              = 3, // (event, creature_template, creature)
+    ALL_CREATURE_EVENT_ON_BEFORE_SELECT_LEVEL       = 4, // (event, creature_template, creature, level) - Can return the new level
+    ALL_CREATURE_EVENT_COUNT
+};
+</pre>
 
         <h2 id="synopsis" class='section-header'>
             <a href="#synopsis">Synopsis</a>
         </h2>
         <p>
-            <code>Unit:GetVehicle()</code>
+            <code>RegisterAllCreatureEvent( event, function )</code>
+        </p>
+        <p>
+            <code>RegisterAllCreatureEvent( event, function, shots )</code>
         </p>
 
         <h2 id="arguments" class='section-header'>
             <a href="#arguments">Arguments</a>
         </h2>
         <p>
-            Unknown.
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> event</code></dt>
+                <dd class="docblock"><p>Event ID, refer to AllCreatureEvents above. </p><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
+            </dl>
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.6.html">function</a></strong> function</code></dt>
+                <dd class="docblock"><p>Function to register. </p></dd>
+            </dl>
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> shots (0)</code></dt>
+                <dd class="docblock"><p>The number of times the function will be called, 0 means "always call this function". </p><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
+            </dl>
         </p>
 
         <h2 id="returns" class='section-header'>
             <a href="#returns">Returns</a>
         </h2>
         <p>
-            Unknown.
+            Nothing.
         </p>
     </div>
 

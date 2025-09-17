@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="API documentation for the SpellInfo:GetSpellSpecific method in the Eluna engine.">
+    <meta name="description" content="API documentation for the Global:ClearAllCreatureEvents method in the Eluna engine.">
     <meta name="keywords" content="eluna, lua, lua engine, azerothcore, script, scripting, doc, docs, documentation">
 
-    <title>SpellInfo:GetSpellSpecific - Eluna</title>
+    <title>Global:ClearAllCreatureEvents - Eluna</title>
 
     <link rel="stylesheet" type="text/css" href="../static/main.css">
     <link rel="stylesheet" type="text/css" href="../static/dark.css">
@@ -26,11 +26,11 @@
     <a href='../index.html'><img src='../static/eluna-logo.png' alt='Eluna Logo' width='100'></a>
     <div class="block">
         
-    <h2>SpellInfo Methods</h2>
+    <h2>Global Methods</h2>
     <script src="sidebar.js"></script>
     <script>
       // Highlight current method by adding "current" class to it
-      var element = document.getElementById("SpellInfo:GetSpellSpecific");
+      var element = document.getElementById("Global:ClearAllCreatureEvents");
       if (element) {
         var classname = "current";
         arr = element.className.split(" ");
@@ -57,7 +57,7 @@
 <section id='main' class="content mod">
     <h1 class='fqn'>
         Method
-    <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>:<a class="fn" href="../SpellInfo/GetSpellSpecific.html">GetSpellSpecific</a>
+    <a class="mod" href="../Global/index.html">Global</a>:<a class="fn" href="../Global/ClearAllCreatureEvents.html">ClearAllCreatureEvents</a>
         <span class='out-of-band'>
             <span id='render-detail'>
                 <a id="collapse-all" href="#">[-]</a>
@@ -68,31 +68,35 @@
 
     
     <div class='docblock'>
-        <p>Returns the spell specific type of the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>.</p>
-<p>Useful for identifying special types such as food, bandages, portals, etc.</p>
+        <p>Unbinds event handlers for either all <a class="mod" href="../Creature/index.html">Creature</a> events, or one type of <a class="mod" href="../Creature/index.html">Creature</a> event.</p>
+<p>If <code>event_type</code> is <code>nil</code>, all <a class="mod" href="../Creature/index.html">Creature</a> event handlers are cleared.</p>
+<p>Otherwise, only event handlers for <code>event_type</code> are cleared.</p>
 
         <h2 id="synopsis" class='section-header'>
             <a href="#synopsis">Synopsis</a>
         </h2>
         <p>
-            <code>spellSpecific = SpellInfo:GetSpellSpecific()</code>
+            <code>ClearAllCreatureEvents()</code>
+        </p>
+        <p>
+            <code>ClearAllCreatureEvents( event_type )</code>
         </p>
 
         <h2 id="arguments" class='section-header'>
             <a href="#arguments">Arguments</a>
         </h2>
         <p>
-            None.
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> event_type</code></dt>
+                <dd class="docblock"><p>The event whose handlers will be cleared, see <a class="fn" href="../Global/RegisterAllCreatureEvent.html">Global:RegisterAllCreatureEvent</a>. </p><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
+            </dl>
         </p>
 
         <h2 id="returns" class='section-header'>
             <a href="#returns">Returns</a>
         </h2>
         <p>
-            <dl>
-                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> spellSpecific</code></dt>
-                <dd class="docblock"><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
-            </dl>
+            Nothing.
         </p>
     </div>
 

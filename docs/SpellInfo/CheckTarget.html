@@ -68,28 +68,44 @@
 
     
     <div class='docblock'>
-        <p>This method is <em>undocumented</em>. <strong>Use at your own risk.</strong></p>
-        <p>For temporary documentation, please check the <a href="https://github.com/ElunaLuaEngine/Eluna/blob/master/LuaFunctions.cpp">LuaFunctions</a> source file.</p>
+        <p>Returns <code>true</code> if the target is valid for the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>.</p>
 
         <h2 id="synopsis" class='section-header'>
             <a href="#synopsis">Synopsis</a>
         </h2>
         <p>
-            <code>SpellInfo:CheckTarget()</code>
+            <code>isValid = SpellInfo:CheckTarget( caster, target )</code>
+        </p>
+        <p>
+            <code>isValid = SpellInfo:CheckTarget( caster, target, implicit )</code>
         </p>
 
         <h2 id="arguments" class='section-header'>
             <a href="#arguments">Arguments</a>
         </h2>
         <p>
-            Unknown.
+            <dl>
+                <dt><code><strong><a class="mod" href="../Unit/index.html">Unit</a></strong> caster</code></dt>
+                <dd class="docblock"><p>The <a class="mod" href="../Unit/index.html">Unit</a> casting the spell. </p></dd>
+            </dl>
+            <dl>
+                <dt><code><strong><a class="mod" href="../WorldObject/index.html">WorldObject</a></strong> target</code></dt>
+                <dd class="docblock"><p>The intended target. </p></dd>
+            </dl>
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.2.html">boolean</a></strong> implicit (true)</code></dt>
+                <dd class="docblock"><p>Whether implicit target checks should apply. </p></dd>
+            </dl>
         </p>
 
         <h2 id="returns" class='section-header'>
             <a href="#returns">Returns</a>
         </h2>
         <p>
-            Unknown.
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.2.html">boolean</a></strong> isValid</code></dt>
+                <dd class="docblock"><em>See method description.</em></dd>
+            </dl>
         </p>
     </div>
 

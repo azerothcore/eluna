@@ -137,6 +137,9 @@ enum PlayerEvents
     PLAYER_EVENT_ON_BEFORE_UPDATE_SKILL     =     61,       // (event, player, skill_id, value, max, step) -- Can return new amount
     PLAYER_EVENT_ON_UPDATE_SKILL            =     62,       // (event, player, skill_id, value, max, step, new_value)
     PLAYER_EVENT_ON_QUEST_ACCEPT            =     63,       // (event, player, quest)
+    PLAYER_EVENT_ON_AURA_APPLY              =     64,       // (event, player, aura)
+    PLAYER_EVENT_ON_HEAL                    =     65,       // (event, player, target, heal) - Can return new heal amount
+    PLAYER_EVENT_ON_DAMAGE                  =     66,       // (event, player, target, damage) - Can return new damage amount
 };
 </pre>
 

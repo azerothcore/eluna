@@ -68,28 +68,52 @@
 
     
     <div class='docblock'>
-        <p>This method is <em>undocumented</em>. <strong>Use at your own risk.</strong></p>
-        <p>For temporary documentation, please check the <a href="https://github.com/ElunaLuaEngine/Eluna/blob/master/LuaFunctions.cpp">LuaFunctions</a> source file.</p>
+        <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> can be cast in the specified location.</p>
 
         <h2 id="synopsis" class='section-header'>
             <a href="#synopsis">Synopsis</a>
         </h2>
         <p>
-            <code>SpellInfo:CheckLocation()</code>
+            <code>isAllowed = SpellInfo:CheckLocation( map_id, zone_id, area_id, player )</code>
+        </p>
+        <p>
+            <code>isAllowed = SpellInfo:CheckLocation( map_id, zone_id, area_id, player, strict )</code>
         </p>
 
         <h2 id="arguments" class='section-header'>
             <a href="#arguments">Arguments</a>
         </h2>
         <p>
-            Unknown.
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> map_id</code></dt>
+                <dd class="docblock"><p>Required map ID. </p><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
+            </dl>
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> zone_id</code></dt>
+                <dd class="docblock"><p>Required zone ID. </p><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
+            </dl>
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> area_id</code></dt>
+                <dd class="docblock"><p>Required area ID. </p><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
+            </dl>
+            <dl>
+                <dt><code><strong><a class="mod" href="../Player/index.html">Player</a></strong> player</code></dt>
+                <dd class="docblock"><p>The <a class="mod" href="../Player/index.html">Player</a> casting the spell. </p></dd>
+            </dl>
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.2.html">boolean</a></strong> strict (false)</code></dt>
+                <dd class="docblock"><p>Whether all conditions must strictly match. </p></dd>
+            </dl>
         </p>
 
         <h2 id="returns" class='section-header'>
             <a href="#returns">Returns</a>
         </h2>
         <p>
-            Unknown.
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.2.html">boolean</a></strong> isAllowed</code></dt>
+                <dd class="docblock"><em>See method description.</em></dd>
+            </dl>
         </p>
     </div>
 

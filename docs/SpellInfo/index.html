@@ -53,89 +53,92 @@
     </h1>
 
     
-    
+    <p>Represents spell metadata used for behavior, targeting, attributes, mechanics, auras, and conditions.</p>
+<p>Unlike <a class="mod" href="../SpellEntry/index.html">SpellEntry</a>, this class includes helper functions and logic used to determine spell behavior in-game.
+Used for checking if a spell is passive, area-targeted, profession-related, or has specific effects or auras.</p>
+<p>Inherits all methods from: none</p>
 
     <h2 id='methods' class='section-header'><a href="#methods">Methods</a></h2>
     <table>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='CanBeUsedInCombat.html'>CanBeUsedInCombat</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> can be cast while in combat, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='CanDispelAura.html'>CanDispelAura</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> can dispel the specified aura <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='CanPierceImmuneAura.html'>CanPierceImmuneAura</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> can pierce through an immunity aura defined by the given <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='CheckExplicitTarget.html'>CheckExplicitTarget</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> can be explicitly cast on the given [target] with the optional <a class="mod" href="../Item/index.html">Item</a>.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='CheckLocation.html'>CheckLocation</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> can be cast in the specified location.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='CheckShapeshift.html'>CheckShapeshift</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> can be cast while in the specified shapeshift form.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='CheckTarget.html'>CheckTarget</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the target is valid for the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='CheckTargetCreatureType.html'>CheckTargetCreatureType</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> can affect the <a class="mod" href="../Unit/index.html">Unit</a> based on its creature type.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetAllEffectsMechanicMask.html'>GetAllEffectsMechanicMask</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns a combined mechanic mask of all effects for the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>.</p>
             </td>
         </tr>
         <tr>
@@ -149,11 +152,11 @@
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetAuraState.html'>GetAuraState</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns the aura state requirement for the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>.</p>
             </td>
         </tr>
         <tr>
@@ -167,38 +170,38 @@
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetDispelMask.html'>GetDispelMask</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns the dispel mask for the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetEffectMechanic.html'>GetEffectMechanic</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns the mechanic of the specified effect index in the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetEffectMechanicMask.html'>GetEffectMechanicMask</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns the mechanic mask of a specific effect of the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetExplicitTargetMask.html'>GetExplicitTargetMask</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns the explicit target mask of the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>.</p>
             </td>
         </tr>
         <tr>
@@ -212,29 +215,29 @@
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetSchoolMask.html'>GetSchoolMask</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns the school mask of the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetSpellMechanicMaskByEffectMask.html'>GetSpellMechanicMaskByEffectMask</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns the mechanic mask for the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> based on an effect bitmask.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='GetSpellSpecific.html'>GetSpellSpecific</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns the spell specific type of the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>.</p>
             </td>
         </tr>
         <tr>
@@ -293,11 +296,11 @@
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IsAffectedBySpellMods.html'>IsAffectedBySpellMods</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> is affected by spell modifiers (e.g., talents, auras), <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
@@ -311,38 +314,38 @@
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IsAllowingDeadTarget.html'>IsAllowingDeadTarget</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> allows casting on dead targets, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IsAuraExclusiveBySpecificPerCasterWith.html'>IsAuraExclusiveBySpecificPerCasterWith</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> is exclusive with the specified <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> per caster, based on aura exclusivity rules.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IsAuraExclusiveBySpecificWith.html'>IsAuraExclusiveBySpecificWith</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> is mutually exclusive with the specified <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> due to specific aura exclusivity rules.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IsAutoRepeatRangedSpell.html'>IsAutoRepeatRangedSpell</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> is an auto-repeat ranged spell (e.g., auto-shot), <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
@@ -356,20 +359,20 @@
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IsBreakingStealth.html'>IsBreakingStealth</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> breaks stealth when cast, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IsChanneled.html'>IsChanneled</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> is a channeled spell, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
@@ -437,20 +440,20 @@
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IsPositive.html'>IsPositive</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> is considered a positive (beneficial) spell, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IsPositiveEffect.html'>IsPositiveEffect</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the specified effect index of the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> is positive, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
@@ -491,11 +494,11 @@
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IsRangedWeaponSpell.html'>IsRangedWeaponSpell</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> is a ranged weapon attack (e.g., shoot, throw), <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
@@ -518,11 +521,11 @@
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='IsSingleTarget.html'>IsSingleTarget</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> only affects a single target, <code>false</code> if it affects multiple or area targets.</p>
             </td>
         </tr>
         <tr>
@@ -545,11 +548,11 @@
         </tr>
         <tr>
             <td>
-                <a class='stability Experimental' title='Undocumented'></a>
+                <a class='stability Stable' title='Documented'></a>
                 <a class='fn' href='NeedsComboPoints.html'>NeedsComboPoints</a>
             </td>
             <td class='docblock short'>
-                <p></p>
+                <p>Returns <code>true</code> if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> requires combo points to cast, <code>false</code> otherwise.</p>
             </td>
         </tr>
         <tr>
@@ -567,7 +570,7 @@
                 <a class='fn' href='NeedsToBeTriggeredByCaster.html'>NeedsToBeTriggeredByCaster</a>
             </td>
             <td class='docblock short'>
-                <p>Checks if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> requires to be triggered by the caster of another specified spell.</p>
+                <p>Checks if the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> requires to be triggered by the caster of another specified <a class="mod" href="../SpellInfo/index.html">SpellInfo</a>.</p>
             </td>
         </tr>
     </table>
