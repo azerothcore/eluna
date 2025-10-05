@@ -80,6 +80,9 @@
         <p>
             <code>Loot:AddItem( itemId, minCount, maxCount, chance, lootMode, needsQuest )</code>
         </p>
+        <p>
+            <code>Loot:AddItem( itemId, minCount, maxCount, chance, lootMode, needsQuest, allowStacking )</code>
+        </p>
 
         <h2 id="arguments" class='section-header'>
             <a href="#arguments">Arguments</a>
@@ -108,6 +111,10 @@
             <dl>
                 <dt><code><strong><a href="http://www.lua.org/pil/2.2.html">boolean</a></strong> needsQuest (false)</code></dt>
                 <dd class="docblock"><p>If <code>true</code>, the item requires a quest to be looted. </p></dd>
+            </dl>
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.2.html">boolean</a></strong> allowStacking (true)</code></dt>
+                <dd class="docblock"><p>If <code>true</code>, allow items to stack in the loot window. </p></dd>
             </dl>
         </p>
 

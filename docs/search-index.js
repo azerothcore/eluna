@@ -508,6 +508,7 @@ searchIndex["Achievement"] = {
         [3, "GetLootType", "", "Returns the <a class=\"mod\" href=\"Loot/index.html\">Loot</a> type."],
         [3, "GetMaxSlotForPlayer", "", "Returns the maximum loot slot index available for the specified <a class=\"mod\" href=\"Player/index.html\">Player</a>."],
         [3, "GetMoney", "", "Returns the amount of money in this <a class=\"mod\" href=\"Loot/index.html\">Loot</a>."],
+        [3, "GetQuestItems", "", "Returns a table containing all quest items in this <a class=\"mod\" href=\"Loot/index.html\">Loot</a>."],
         [3, "GetRoundRobinPlayer", "", "Returns the <a class=\"mod\" href=\"Player/index.html\">Player</a> GUID that owns this loot for round robin distribution."],
         [3, "GetSourceWorldObject", "", "Returns the source <a class=\"mod\" href=\"WorldObject/index.html\">WorldObject</a> GUID for this loot."],
         [3, "GetUnlootedCount", "", "Returns the number of unlooted items in this <a class=\"mod\" href=\"Loot/index.html\">Loot</a>."],

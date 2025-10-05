@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="API documentation for the Loot:GetItems method in the Eluna engine.">
+    <meta name="description" content="API documentation for the Loot:GetQuestItems method in the Eluna engine.">
     <meta name="keywords" content="eluna, lua, lua engine, azerothcore, script, scripting, doc, docs, documentation">
 
-    <title>Loot:GetItems - Eluna</title>
+    <title>Loot:GetQuestItems - Eluna</title>
 
     <link rel="stylesheet" type="text/css" href="../static/main.css">
     <link rel="stylesheet" type="text/css" href="../static/dark.css">
@@ -30,7 +30,7 @@
     <script src="sidebar.js"></script>
     <script>
       // Highlight current method by adding "current" class to it
-      var element = document.getElementById("Loot:GetItems");
+      var element = document.getElementById("Loot:GetQuestItems");
       if (element) {
         var classname = "current";
         arr = element.className.split(" ");
@@ -57,7 +57,7 @@
 <section id='main' class="content mod">
     <h1 class='fqn'>
         Method
-    <a class="mod" href="../Loot/index.html">Loot</a>:<a class="fn" href="../Loot/GetItems.html">GetItems</a>
+    <a class="mod" href="../Loot/index.html">Loot</a>:<a class="fn" href="../Loot/GetQuestItems.html">GetQuestItems</a>
         <span class='out-of-band'>
             <span id='render-detail'>
                 <a id="collapse-all" href="#">[-]</a>
@@ -68,10 +68,10 @@
 
     
     <div class='docblock'>
-        <p>Returns a table containing all items in this <a class="mod" href="../Loot/index.html">Loot</a>.</p>
-<p>Each item is represented as a table with the following fields:
+        <p>Returns a table containing all quest items in this <a class="mod" href="../Loot/index.html">Loot</a>.</p>
+<p>Each quest item is represented as a table with the following fields:
   - id: item ID
-  - index: item index in the loot list
+  - index: item index in the quest loot list
   - count: quantity of the item
   - needs_quest: whether the item requires a quest
   - is_looted: whether the item has already been looted
@@ -81,7 +81,7 @@
             <a href="#synopsis">Synopsis</a>
         </h2>
         <p>
-            <code>items = Loot:GetItems()</code>
+            <code>quest_items = Loot:GetQuestItems()</code>
         </p>
 
         <h2 id="arguments" class='section-header'>
@@ -96,8 +96,8 @@
         </h2>
         <p>
             <dl>
-                <dt><code><strong><a href="http://www.lua.org/pil/2.5.html">table</a></strong> items</code></dt>
-                <dd class="docblock"><p>Array of item tables. </p></dd>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.5.html">table</a></strong> quest_items</code></dt>
+                <dd class="docblock"><p>Array of quest item tables. </p></dd>
             </dl>
         </p>
     </div>

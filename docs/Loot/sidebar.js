@@ -10,6 +10,7 @@ document.write(`
   <a id="Loot:GetLootType" class="fn" href="../Loot/GetLootType.html">GetLootType</a>
   <a id="Loot:GetMaxSlotForPlayer" class="fn" href="../Loot/GetMaxSlotForPlayer.html">GetMaxSlotForPlayer</a>
   <a id="Loot:GetMoney" class="fn" href="../Loot/GetMoney.html">GetMoney</a>
+  <a id="Loot:GetQuestItems" class="fn" href="../Loot/GetQuestItems.html">GetQuestItems</a>
   <a id="Loot:GetRoundRobinPlayer" class="fn" href="../Loot/GetRoundRobinPlayer.html">GetRoundRobinPlayer</a>
   <a id="Loot:GetSourceWorldObject" class="fn" href="../Loot/GetSourceWorldObject.html">GetSourceWorldObject</a>
   <a id="Loot:GetUnlootedCount" class="fn" href="../Loot/GetUnlootedCount.html">GetUnlootedCount</a>
