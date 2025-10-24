@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="API documentation for the ElunaQuery:GetRowCount method in the Eluna engine.">
+    <meta name="description" content="API documentation for the ALEQuery:GetRow method in the Eluna engine.">
     <meta name="keywords" content="eluna, lua, lua engine, azerothcore, script, scripting, doc, docs, documentation">
 
-    <title>ElunaQuery:GetRowCount - Eluna</title>
+    <title>ALEQuery:GetRow - Eluna</title>
 
     <link rel="stylesheet" type="text/css" href="../static/main.css">
     <link rel="stylesheet" type="text/css" href="../static/dark.css">
@@ -26,11 +26,11 @@
     <a href='../index.html'><img src='../static/eluna-logo.png' alt='Eluna Logo' width='100'></a>
     <div class="block">
         
-    <h2>ElunaQuery Methods</h2>
+    <h2>ALEQuery Methods</h2>
     <script src="sidebar.js"></script>
     <script>
       // Highlight current method by adding "current" class to it
-      var element = document.getElementById("ElunaQuery:GetRowCount");
+      var element = document.getElementById("ALEQuery:GetRow");
       if (element) {
         var classname = "current";
         arr = element.className.split(" ");
@@ -57,7 +57,7 @@
 <section id='main' class="content mod">
     <h1 class='fqn'>
         Method
-    <a class="mod" href="../ElunaQuery/index.html">ElunaQuery</a>:<a class="fn" href="../ElunaQuery/GetRowCount.html">GetRowCount</a>
+    <a class="mod" href="../ALEQuery/index.html">ALEQuery</a>:<a class="fn" href="../ALEQuery/GetRow.html">GetRow</a>
         <span class='out-of-band'>
             <span id='render-detail'>
                 <a id="collapse-all" href="#">[-]</a>
@@ -68,13 +68,21 @@
 
     
     <div class='docblock'>
-        <p>Returns the number of rows in the result set.</p>
+        <p>Returns a table from the current row where keys are field names and values are the row's values.</p>
+<p>All numerical values will be numbers and everything else is returned as a string.</p>
+<p><strong>For example,</strong> the query:</p>
+<pre><code>SELECT entry, name FROM creature_template
+</code></pre>
+<p>would result in a table like:</p>
+<pre><code>{ entry = 123, name = "some creature name" }
+</code></pre>
+<p>To move to next row use <a class="fn" href="../ALEQuery/NextRow.html">ALEQuery:NextRow</a>.</p>
 
         <h2 id="synopsis" class='section-header'>
             <a href="#synopsis">Synopsis</a>
         </h2>
         <p>
-            <code>rowCount = ElunaQuery:GetRowCount()</code>
+            <code>rowData = ALEQuery:GetRow()</code>
         </p>
 
         <h2 id="arguments" class='section-header'>
@@ -89,8 +97,8 @@
         </h2>
         <p>
             <dl>
-                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> rowCount</code></dt>
-                <dd class="docblock"><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.5.html">table</a></strong> rowData</code></dt>
+                <dd class="docblock"><p>Table filled with row columns and data where <code>T[column] = data</code>. </p></dd>
             </dl>
         </p>
     </div>

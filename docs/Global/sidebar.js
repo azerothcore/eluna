@@ -99,7 +99,7 @@ document.write(`
   <a id="Global:RegisterSpellEvent" class="fn" href="../Global/RegisterSpellEvent.html">RegisterSpellEvent</a>
   <a id="Global:RegisterTicketEvent" class="fn" href="../Global/RegisterTicketEvent.html">RegisterTicketEvent</a>
   <a id="Global:RegisterUniqueCreatureEvent" class="fn" href="../Global/RegisterUniqueCreatureEvent.html">RegisterUniqueCreatureEvent</a>
-  <a id="Global:ReloadEluna" class="fn" href="../Global/ReloadEluna.html">ReloadEluna</a>
+  <a id="Global:ReloadALE" class="fn" href="../Global/ReloadALE.html">ReloadALE</a>
   <a id="Global:RemoveEventById" class="fn" href="../Global/RemoveEventById.html">RemoveEventById</a>
   <a id="Global:RemoveEvents" class="fn" href="../Global/RemoveEvents.html">RemoveEvents</a>
   <a id="Global:RunCommand" class="fn" href="../Global/RunCommand.html">RunCommand</a>
