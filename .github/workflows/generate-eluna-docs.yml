@@ -1,19 +1,19 @@
-name: generate-eluna-docs
+name: generate-ale-docs
 on:
   workflow_dispatch:
   schedule:
     - cron: '0 06 * * *'
 
 jobs:
-  build-eluna-doc:
+  build-ale-doc:
     permissions: write-all
     runs-on: ubuntu-24.04
     steps:
       - name: checkout
         uses: actions/checkout@v4
-      - name: "clone mod-eluna source"
+      - name: "clone mod-ale source"
         run: |
-          git clone --single-branch https://github.com/azerothcore/mod-eluna
+          git clone --single-branch https://github.com/azerothcore/mod-ale
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -23,22 +23,22 @@ jobs:
         run: pip install jinja2 typedecorator markdown
       - name: Compile documentation
         run: |
-          cd mod-eluna/src/LuaEngine/docs/
-          python -m ElunaDoc
-      - name: "commit eluna docs"
+          cd mod-ale/src/LuaEngine/docs/
+          python -m ALEDoc
+      - name: "commit ale docs"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           rm -rf docs
-          cp -r mod-eluna/src/LuaEngine/docs/build docs
+          cp -r mod-ale/src/LuaEngine/docs/build docs
           touch docs/.nojekyll
-          rm -rf mod-eluna
+          rm -rf mod-ale
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add docs/
           if git status -- ":!docs/date.js" | grep -q "Changes to be committed"
           then
-              git commit -m "chore: Eluna documentation 🎉"
+              git commit -m "chore: ALE documentation 🎉"
               git push
           else
               echo "No changes detected"
