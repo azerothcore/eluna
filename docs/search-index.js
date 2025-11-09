@@ -1195,6 +1195,8 @@ searchIndex["ALEQuery"] = {
         [3, "GetDispelMask", "", "Returns the dispel mask for the <a class=\"mod\" href=\"SpellInfo/index.html\">SpellInfo</a>."],
         [3, "GetEffectMechanic", "", "Returns the mechanic of the specified effect index in the <a class=\"mod\" href=\"SpellInfo/index.html\">SpellInfo</a>."],
         [3, "GetEffectMechanicMask", "", "Returns the mechanic mask of a specific effect of the <a class=\"mod\" href=\"SpellInfo/index.html\">SpellInfo</a>."],
+        [3, "GetEffectMiscValueA", "", "Retrieves the MiscValueA of a spell effect at the specified index."],
+        [3, "GetEffectMiscValueB", "", "Retrieves the MiscValueB of a spell effect at the specified index."],
         [3, "GetExplicitTargetMask", "", "Returns the explicit target mask of the <a class=\"mod\" href=\"SpellInfo/index.html\">SpellInfo</a>."],
         [3, "GetName", "", "Returns the name of the <a class=\"mod\" href=\"SpellInfo/index.html\">SpellInfo</a>"],
         [3, "GetSchoolMask", "", "Returns the school mask of the <a class=\"mod\" href=\"SpellInfo/index.html\">SpellInfo</a>."],

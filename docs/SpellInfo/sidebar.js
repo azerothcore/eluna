@@ -14,6 +14,8 @@ document.write(`
   <a id="SpellInfo:GetDispelMask" class="fn" href="../SpellInfo/GetDispelMask.html">GetDispelMask</a>
   <a id="SpellInfo:GetEffectMechanic" class="fn" href="../SpellInfo/GetEffectMechanic.html">GetEffectMechanic</a>
   <a id="SpellInfo:GetEffectMechanicMask" class="fn" href="../SpellInfo/GetEffectMechanicMask.html">GetEffectMechanicMask</a>
+  <a id="SpellInfo:GetEffectMiscValueA" class="fn" href="../SpellInfo/GetEffectMiscValueA.html">GetEffectMiscValueA</a>
+  <a id="SpellInfo:GetEffectMiscValueB" class="fn" href="../SpellInfo/GetEffectMiscValueB.html">GetEffectMiscValueB</a>
   <a id="SpellInfo:GetExplicitTargetMask" class="fn" href="../SpellInfo/GetExplicitTargetMask.html">GetExplicitTargetMask</a>
   <a id="SpellInfo:GetName" class="fn" href="../SpellInfo/GetName.html">GetName</a>
   <a id="SpellInfo:GetSchoolMask" class="fn" href="../SpellInfo/GetSchoolMask.html">GetSchoolMask</a>
