@@ -10,6 +10,7 @@ document.write(`
   <a id="Player:AdvanceAllSkills" class="fn" href="../Player/AdvanceAllSkills.html">AdvanceAllSkills</a>
   <a id="Player:AdvanceSkill" class="fn" href="../Player/AdvanceSkill.html">AdvanceSkill</a>
   <a id="Player:AdvanceSkillsToMax" class="fn" href="../Player/AdvanceSkillsToMax.html">AdvanceSkillsToMax</a>
+  <a id="Player:ApplyRatingMod" class="fn" href="../Player/ApplyRatingMod.html">ApplyRatingMod</a>
   <a id="Player:AreaExploredOrEventHappens" class="fn" href="../Player/AreaExploredOrEventHappens.html">AreaExploredOrEventHappens</a>
   <a id="Player:CalculateReputationGain" class="fn" href="../Player/CalculateReputationGain.html">CalculateReputationGain</a>
   <a id="Player:CanAddQuest" class="fn" href="../Player/CanAddQuest.html">CanAddQuest</a>
@@ -118,6 +119,7 @@ document.write(`
   <a id="Player:GetPureSkillValue" class="fn" href="../Player/GetPureSkillValue.html">GetPureSkillValue</a>
   <a id="Player:GetQuestLevel" class="fn" href="../Player/GetQuestLevel.html">GetQuestLevel</a>
   <a id="Player:GetQuestRewardStatus" class="fn" href="../Player/GetQuestRewardStatus.html">GetQuestRewardStatus</a>
+  <a id="Player:GetQuestSlotQuestId" class="fn" href="../Player/GetQuestSlotQuestId.html">GetQuestSlotQuestId</a>
   <a id="Player:GetQuestStatus" class="fn" href="../Player/GetQuestStatus.html">GetQuestStatus</a>
   <a id="Player:GetReputation" class="fn" href="../Player/GetReputation.html">GetReputation</a>
   <a id="Player:GetReputationRank" class="fn" href="../Player/GetReputationRank.html">GetReputationRank</a>
@@ -271,6 +273,7 @@ document.write(`
   <a id="Player:SetAtLoginFlag" class="fn" href="../Player/SetAtLoginFlag.html">SetAtLoginFlag</a>
   <a id="Player:SetBindPoint" class="fn" href="../Player/SetBindPoint.html">SetBindPoint</a>
   <a id="Player:SetBonusTalentCount" class="fn" href="../Player/SetBonusTalentCount.html">SetBonusTalentCount</a>
+  <a id="Player:SetCanFly" class="fn" href="../Player/SetCanFly.html">SetCanFly</a>
   <a id="Player:SetCanTeleport" class="fn" href="../Player/SetCanTeleport.html">SetCanTeleport</a>
   <a id="Player:SetCoinage" class="fn" href="../Player/SetCoinage.html">SetCoinage</a>
   <a id="Player:SetCreationTime" class="fn" href="../Player/SetCreationTime.html">SetCreationTime</a>
