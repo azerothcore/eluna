@@ -1340,7 +1340,7 @@ searchIndex["ALEQuery"] = {
         [3, "GetUnfriendlyUnitsInRange", "", "Returns a table containing unfriendly <a class=\"mod\" href=\"Unit/index.html\">Unit</a>'s within given range of the <a class=\"mod\" href=\"Unit/index.html\">Unit</a>."],
         [3, "GetVehicleKit", "", "Returns <a class=\"mod\" href=\"Unit/index.html\">Unit</a>'s <a class=\"mod\" href=\"Vehicle/index.html\">Vehicle</a> methods"],
         [3, "GetVictim", "", "Returns the <a class=\"mod\" href=\"Unit/index.html\">Unit</a>'s current victim target or nil."],
-        [3, "HandleStatModifier", "", "The <a class=\"mod\" href=\"Unit/index.html\">Unit</a> modifies a specific stat"],
+        [3, "HandleStatFlatModifier", "", "The <a class=\"mod\" href=\"Unit/index.html\">Unit</a> modifies a specific stat"],
         [3, "HasAura", "", "Returns true if the <a class=\"mod\" href=\"Unit/index.html\">Unit</a> has an aura from the given spell entry."],
         [3, "HasUnitState", "", "Returns true if the <a class=\"mod\" href=\"Unit/index.html\">Unit</a> has the given unit state."],
         [3, "HealthAbovePct", "", "Returns true if the <a class=\"mod\" href=\"Unit/index.html\">Unit</a>'s health is above the given percentage."],

@@ -62,7 +62,7 @@ document.write(`
   <a id="Unit:GetUnfriendlyUnitsInRange" class="fn" href="../Unit/GetUnfriendlyUnitsInRange.html">GetUnfriendlyUnitsInRange</a>
   <a id="Unit:GetVehicleKit" class="fn" href="../Unit/GetVehicleKit.html">GetVehicleKit</a>
   <a id="Unit:GetVictim" class="fn" href="../Unit/GetVictim.html">GetVictim</a>
-  <a id="Unit:HandleStatModifier" class="fn" href="../Unit/HandleStatModifier.html">HandleStatModifier</a>
+  <a id="Unit:HandleStatFlatModifier" class="fn" href="../Unit/HandleStatFlatModifier.html">HandleStatFlatModifier</a>
   <a id="Unit:HasAura" class="fn" href="../Unit/HasAura.html">HasAura</a>
   <a id="Unit:HasUnitState" class="fn" href="../Unit/HasUnitState.html">HasUnitState</a>
   <a id="Unit:HealthAbovePct" class="fn" href="../Unit/HealthAbovePct.html">HealthAbovePct</a>
