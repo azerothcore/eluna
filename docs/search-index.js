@@ -807,6 +807,7 @@ searchIndex["ALEQuery"] = {
         [3, "HasCasterSpec", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Player/index.html\">Player</a> has a Caster Specialization, <code>false</code> otherwise."],
         [3, "HasHealSpec", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Player/index.html\">Player</a> has a Heal Specialization, <code>false</code> otherwise."],
         [3, "HasItem", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Player/index.html\">Player</a> has the given amount of item entry specified, <code>false</code> otherwise."],
+        [3, "HasKnownTaxiNode", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Player/index.html\">Player</a> knows the given taxi node, <code>false</code> otherwise."],
         [3, "HasMeleeSpec", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Player/index.html\">Player</a> has a Melee Specialization, <code>false</code> otherwise."],
         [3, "HasQuest", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Player/index.html\">Player</a> has an active <a class=\"mod\" href=\"Quest/index.html\">Quest</a> by specific ID, <code>false</code> otherwise."],
         [3, "HasQuestForGO", "", "Returns true if <a class=\"mod\" href=\"Player/index.html\">Player</a> has <a class=\"mod\" href=\"Quest/index.html\">Quest</a> for <a class=\"mod\" href=\"GameObject/index.html\">GameObject</a>"],

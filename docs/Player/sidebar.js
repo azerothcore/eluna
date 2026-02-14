@@ -161,6 +161,7 @@ document.write(`
   <a id="Player:HasCasterSpec" class="fn" href="../Player/HasCasterSpec.html">HasCasterSpec</a>
   <a id="Player:HasHealSpec" class="fn" href="../Player/HasHealSpec.html">HasHealSpec</a>
   <a id="Player:HasItem" class="fn" href="../Player/HasItem.html">HasItem</a>
+  <a id="Player:HasKnownTaxiNode" class="fn" href="../Player/HasKnownTaxiNode.html">HasKnownTaxiNode</a>
   <a id="Player:HasMeleeSpec" class="fn" href="../Player/HasMeleeSpec.html">HasMeleeSpec</a>
   <a id="Player:HasQuest" class="fn" href="../Player/HasQuest.html">HasQuest</a>
   <a id="Player:HasQuestForGO" class="fn" href="../Player/HasQuestForGO.html">HasQuestForGO</a>
