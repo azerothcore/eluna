@@ -184,6 +184,7 @@ document.write(`
   <a id="Player:IsAlliance" class="fn" href="../Player/IsAlliance.html">IsAlliance</a>
   <a id="Player:IsAtGroupRewardDistance" class="fn" href="../Player/IsAtGroupRewardDistance.html">IsAtGroupRewardDistance</a>
   <a id="Player:IsAtLootRewardDistance" class="fn" href="../Player/IsAtLootRewardDistance.html">IsAtLootRewardDistance</a>
+  <a id="Player:IsBot" class="fn" href="../Player/IsBot.html">IsBot</a>
   <a id="Player:IsDND" class="fn" href="../Player/IsDND.html">IsDND</a>
   <a id="Player:IsDailyQuestDone" class="fn" href="../Player/IsDailyQuestDone.html">IsDailyQuestDone</a>
   <a id="Player:IsExistPet" class="fn" href="../Player/IsExistPet.html">IsExistPet</a>

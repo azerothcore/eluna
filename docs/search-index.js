@@ -830,6 +830,7 @@ searchIndex["ALEQuery"] = {
         [3, "IsAlliance", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Player/index.html\">Player</a> is a part of the Alliance faction, <code>false</code> otherwise."],
         [3, "IsAtGroupRewardDistance", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Player/index.html\">Player</a> is at group reward distance from the target, <code>false</code> otherwise."],
         [3, "IsAtLootRewardDistance", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Player/index.html\">Player</a> is at loot reward distance from the target, <code>false</code> otherwise."],
+        [3, "IsBot", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Player/index.html\">Player</a> is a Playerbot/RNDBot, <code>false</code> otherwise."],
         [3, "IsDND", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Player/index.html\">Player</a> is 'Do Not Disturb' flagged, <code>false</code> otherwise."],
         [3, "IsDailyQuestDone", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Player/index.html\">Player</a> has completed the daily quest, <code>false</code> otherwise."],
         [3, "IsExistPet", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Player/index.html\">Player</a> has a <a class=\"mod\" href=\"Pet/index.html\">Pet</a> (active or stored) and returns <code>false</code> otherwise."],
