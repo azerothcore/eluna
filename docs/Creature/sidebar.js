@@ -1,5 +1,6 @@
 document.write(`
   <a id="Creature:AddLootMode" class="fn" href="../Creature/AddLootMode.html">AddLootMode</a>
+  <a id="Creature:AllLootRemovedFromCorpse" class="fn" href="../Creature/AllLootRemovedFromCorpse.html">AllLootRemovedFromCorpse</a>
   <a id="Creature:AttackStart" class="fn" href="../Creature/AttackStart.html">AttackStart</a>
   <a id="Creature:CallAssistance" class="fn" href="../Creature/CallAssistance.html">CallAssistance</a>
   <a id="Creature:CallForHelp" class="fn" href="../Creature/CallForHelp.html">CallForHelp</a>
