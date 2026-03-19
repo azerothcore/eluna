@@ -10,6 +10,7 @@ document.write(`
   <a id="Map:GetName" class="fn" href="../Map/GetName.html">GetName</a>
   <a id="Map:GetPlayerCount" class="fn" href="../Map/GetPlayerCount.html">GetPlayerCount</a>
   <a id="Map:GetPlayers" class="fn" href="../Map/GetPlayers.html">GetPlayers</a>
+  <a id="Map:GetTransports" class="fn" href="../Map/GetTransports.html">GetTransports</a>
   <a id="Map:GetWorldObject" class="fn" href="../Map/GetWorldObject.html">GetWorldObject</a>
   <a id="Map:IsArena" class="fn" href="../Map/IsArena.html">IsArena</a>
   <a id="Map:IsBattleground" class="fn" href="../Map/IsBattleground.html">IsBattleground</a>

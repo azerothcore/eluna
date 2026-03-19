@@ -546,6 +546,7 @@ searchIndex["ALEQuery"] = {
         [3, "GetName", "", "Returns the name of the <a class=\"mod\" href=\"Map/index.html\">Map</a>."],
         [3, "GetPlayerCount", "", "Returns the player count currently on the <a class=\"mod\" href=\"Map/index.html\">Map</a> (excluding GMs)."],
         [3, "GetPlayers", "", "Returns a table with all the current <a class=\"mod\" href=\"Player/index.html\">Player</a>s in the map"],
+        [3, "GetTransports", "", "Returns a table of all <a class=\"mod\" href=\"Transport/index.html\">Transport</a>s on the <a class=\"mod\" href=\"Map/index.html\">Map</a>"],
         [3, "GetWorldObject", "", "Returns a <a class=\"mod\" href=\"WorldObject/index.html\">WorldObject</a> by its GUID from the map if it is spawned."],
         [3, "IsArena", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Map/index.html\">Map</a> is an arena <a class=\"mod\" href=\"BattleGround/index.html\">BattleGround</a>, <code>false</code> otherwise."],
         [3, "IsBattleground", "", "Returns <code>true</code> if the <a class=\"mod\" href=\"Map/index.html\">Map</a> is a non-arena <a class=\"mod\" href=\"BattleGround/index.html\">BattleGround</a>, <code>false</code> otherwise."],
@@ -704,6 +705,7 @@ searchIndex["ALEQuery"] = {
         [3, "GetArenaPoints", "", "Returns the <a class=\"mod\" href=\"Player/index.html\">Player</a>s current amount of Arena Points"],
         [3, "GetArmorProficiency", "", "Returns the <a class=\"mod\" href=\"Player/index.html\">Player</a>'s armor proficiency flags."],
         [3, "GetAverageItemLevel", "", "Returns the average item level of the <a class=\"mod\" href=\"Player/index.html\">Player</a>'s equipment."],
+        [3, "GetBankFreeSlots", "", "Returns the number of free slots in the <a class=\"mod\" href=\"Player/index.html\">Player</a>'s bank (main bank and bank bags)."],
         [3, "GetBankItem", "", "Returns an item from the <a class=\"mod\" href=\"Player/index.html\">Player</a>'s bank by slot."],
         [3, "GetBarberShopCost", "", "Returns the barber shop cost for the specified style changes."],
         [3, "GetBaseSkillValue", "", "Returns base skill value"],
@@ -739,6 +741,7 @@ searchIndex["ALEQuery"] = {
         [3, "GetHomebind", "", "Returns the <a class=\"mod\" href=\"Player/index.html\">Player</a> homebind location."],
         [3, "GetHonorPoints", "", "Returns the <a class=\"mod\" href=\"Player/index.html\">Player</a>s current amount of Honor Points"],
         [3, "GetInGameTime", "", "Returns the amount of time the <a class=\"mod\" href=\"Player/index.html\">Player</a> has spent ingame"],
+        [3, "GetInventoryFreeSlots", "", "Returns the number of free slots in the <a class=\"mod\" href=\"Player/index.html\">Player</a>'s inventory (backpack and equipped bags)."],
         [3, "GetInventoryItem", "", "Returns an item from the <a class=\"mod\" href=\"Player/index.html\">Player</a>'s inventory by slot."],
         [3, "GetItemByEntry", "", "Returns an <a class=\"mod\" href=\"Item/index.html\">Item</a> from the player by entry."],
         [3, "GetItemByGUID", "", "Returns an <a class=\"mod\" href=\"Item/index.html\">Item</a> from the player by guid."],
@@ -1281,6 +1284,16 @@ searchIndex["ALEQuery"] = {
         [3, "SetViewed", "", "Set <a class=\"mod\" href=\"Ticket/index.html\">Ticket</a> as viewed."],
     ],
     "paths": []
+};searchIndex["Transport"] = {
+    "items": [
+        [0, "", "Transport", "Represents a transport object in the world, such as boats and zeppelins."],
+        [3, "AddPassenger", "", "Adds a <a class=\"mod\" href=\"WorldObject/index.html\">WorldObject</a> as a passenger to the <a class=\"mod\" href=\"Transport/index.html\">Transport</a>"],
+        [3, "EnableMovement", "", "Enables or disables movement on the <a class=\"mod\" href=\"Transport/index.html\">Transport</a>"],
+        [3, "GetPassengers", "", "Returns a table of all passengers on the <a class=\"mod\" href=\"Transport/index.html\">Transport</a>"],
+        [3, "IsMotionTransport", "", "Returns 'true' if the <a class=\"mod\" href=\"Transport/index.html\">Transport</a> is a MotionTransport (moving transport such as a boat or zeppelin)"],
+        [3, "RemovePassenger", "", "Removes a <a class=\"mod\" href=\"WorldObject/index.html\">WorldObject</a> passenger from the <a class=\"mod\" href=\"Transport/index.html\">Transport</a>"],
+    ],
+    "paths": []
 };searchIndex["Unit"] = {
     "items": [
         [0, "", "Unit", "Represents a non-<a class=\"mod\" href=\"Player/index.html\">Player</a> controlled <a class=\"mod\" href=\"Unit/index.html\">Unit</a> (i.e. NPCs)."],
@@ -1481,6 +1494,7 @@ searchIndex["ALEQuery"] = {
         [3, "GetPhaseMask", "", "Returns the current phase of the <a class=\"mod\" href=\"WorldObject/index.html\">WorldObject</a>"],
         [3, "GetPlayersInRange", "", "Returns a table of <a class=\"mod\" href=\"Player/index.html\">Player</a> objects in sight of the <a class=\"mod\" href=\"WorldObject/index.html\">WorldObject</a> or within the given range"],
         [3, "GetRelativePoint", "", "Returns the x, y and z of a point dist away from the <a class=\"mod\" href=\"WorldObject/index.html\">WorldObject</a>."],
+        [3, "GetTransport", "", "Returns the transport the <a class=\"mod\" href=\"WorldObject/index.html\">WorldObject</a> is on, or nil if not on a transport"],
         [3, "GetX", "", "Returns the current X coordinate of the <a class=\"mod\" href=\"WorldObject/index.html\">WorldObject</a>"],
         [3, "GetY", "", "Returns the current Y coordinate of the <a class=\"mod\" href=\"WorldObject/index.html\">WorldObject</a>"],
         [3, "GetZ", "", "Returns the current Z coordinate of the <a class=\"mod\" href=\"WorldObject/index.html\">WorldObject</a>"],

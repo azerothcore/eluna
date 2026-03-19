@@ -21,6 +21,7 @@ document.write(`
   <a id="WorldObject:GetPhaseMask" class="fn" href="../WorldObject/GetPhaseMask.html">GetPhaseMask</a>
   <a id="WorldObject:GetPlayersInRange" class="fn" href="../WorldObject/GetPlayersInRange.html">GetPlayersInRange</a>
   <a id="WorldObject:GetRelativePoint" class="fn" href="../WorldObject/GetRelativePoint.html">GetRelativePoint</a>
+  <a id="WorldObject:GetTransport" class="fn" href="../WorldObject/GetTransport.html">GetTransport</a>
   <a id="WorldObject:GetX" class="fn" href="../WorldObject/GetX.html">GetX</a>
   <a id="WorldObject:GetY" class="fn" href="../WorldObject/GetY.html">GetY</a>
   <a id="WorldObject:GetZ" class="fn" href="../WorldObject/GetZ.html">GetZ</a>

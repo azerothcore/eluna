@@ -57,6 +57,7 @@ document.write(`
   <a id="Player:GetArenaPoints" class="fn" href="../Player/GetArenaPoints.html">GetArenaPoints</a>
   <a id="Player:GetArmorProficiency" class="fn" href="../Player/GetArmorProficiency.html">GetArmorProficiency</a>
   <a id="Player:GetAverageItemLevel" class="fn" href="../Player/GetAverageItemLevel.html">GetAverageItemLevel</a>
+  <a id="Player:GetBankFreeSlots" class="fn" href="../Player/GetBankFreeSlots.html">GetBankFreeSlots</a>
   <a id="Player:GetBankItem" class="fn" href="../Player/GetBankItem.html">GetBankItem</a>
   <a id="Player:GetBarberShopCost" class="fn" href="../Player/GetBarberShopCost.html">GetBarberShopCost</a>
   <a id="Player:GetBaseSkillValue" class="fn" href="../Player/GetBaseSkillValue.html">GetBaseSkillValue</a>
@@ -92,6 +93,7 @@ document.write(`
   <a id="Player:GetHomebind" class="fn" href="../Player/GetHomebind.html">GetHomebind</a>
   <a id="Player:GetHonorPoints" class="fn" href="../Player/GetHonorPoints.html">GetHonorPoints</a>
   <a id="Player:GetInGameTime" class="fn" href="../Player/GetInGameTime.html">GetInGameTime</a>
+  <a id="Player:GetInventoryFreeSlots" class="fn" href="../Player/GetInventoryFreeSlots.html">GetInventoryFreeSlots</a>
   <a id="Player:GetInventoryItem" class="fn" href="../Player/GetInventoryItem.html">GetInventoryItem</a>
   <a id="Player:GetItemByEntry" class="fn" href="../Player/GetItemByEntry.html">GetItemByEntry</a>
   <a id="Player:GetItemByGUID" class="fn" href="../Player/GetItemByGUID.html">GetItemByGUID</a>
