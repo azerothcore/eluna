@@ -110,6 +110,7 @@ document.write(`
   <a id="Player:GetManaBonusFromIntellect" class="fn" href="../Player/GetManaBonusFromIntellect.html">GetManaBonusFromIntellect</a>
   <a id="Player:GetMaxSkillValue" class="fn" href="../Player/GetMaxSkillValue.html">GetMaxSkillValue</a>
   <a id="Player:GetMeleeCritFromAgility" class="fn" href="../Player/GetMeleeCritFromAgility.html">GetMeleeCritFromAgility</a>
+  <a id="Player:GetMostPointsTalentTree" class="fn" href="../Player/GetMostPointsTalentTree.html">GetMostPointsTalentTree</a>
   <a id="Player:GetNextRandomRaidMember" class="fn" href="../Player/GetNextRandomRaidMember.html">GetNextRandomRaidMember</a>
   <a id="Player:GetOriginalGroup" class="fn" href="../Player/GetOriginalGroup.html">GetOriginalGroup</a>
   <a id="Player:GetOriginalSubGroup" class="fn" href="../Player/GetOriginalSubGroup.html">GetOriginalSubGroup</a>
@@ -140,6 +141,7 @@ document.write(`
   <a id="Player:GetSpellCritFromIntellect" class="fn" href="../Player/GetSpellCritFromIntellect.html">GetSpellCritFromIntellect</a>
   <a id="Player:GetSpells" class="fn" href="../Player/GetSpells.html">GetSpells</a>
   <a id="Player:GetSubGroup" class="fn" href="../Player/GetSubGroup.html">GetSubGroup</a>
+  <a id="Player:GetTalentTreePoints" class="fn" href="../Player/GetTalentTreePoints.html">GetTalentTreePoints</a>
   <a id="Player:GetTeam" class="fn" href="../Player/GetTeam.html">GetTeam</a>
   <a id="Player:GetTemporaryUnsummonedPetNumber" class="fn" href="../Player/GetTemporaryUnsummonedPetNumber.html">GetTemporaryUnsummonedPetNumber</a>
   <a id="Player:GetTodayHonorPoints" class="fn" href="../Player/GetTodayHonorPoints.html">GetTodayHonorPoints</a>
