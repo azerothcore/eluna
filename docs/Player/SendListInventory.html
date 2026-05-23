@@ -76,6 +76,9 @@
         <p>
             <code>Player:SendListInventory( sender )</code>
         </p>
+        <p>
+            <code>Player:SendListInventory( sender, vendorId )</code>
+        </p>
 
         <h2 id="arguments" class='section-header'>
             <a href="#arguments">Arguments</a>
@@ -84,6 +87,10 @@
             <dl>
                 <dt><code><strong><a class="mod" href="../WorldObject/index.html">WorldObject</a></strong> sender</code></dt>
                 <dd class="docblock"><em>See method description.</em></dd>
+            </dl>
+            <dl>
+                <dt><code><strong><a href="http://www.lua.org/pil/2.3.html">number</a></strong> vendorId (0)</code></dt>
+                <dd class="docblock"><p>Optional entry ID to use for the vendor item list, overriding the sender's default inventory. </p><p><em>Valid numbers</em>: integers from 0 to 4,294,967,295.</p></dd>
             </dl>
         </p>
 
