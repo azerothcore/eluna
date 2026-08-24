@@ -245,6 +245,7 @@ document.write(`
   <a id="Player:RemoveQuest" class="fn" href="../Player/RemoveQuest.html">RemoveQuest</a>
   <a id="Player:RemoveSpell" class="fn" href="../Player/RemoveSpell.html">RemoveSpell</a>
   <a id="Player:RemovedInsignia" class="fn" href="../Player/RemovedInsignia.html">RemovedInsignia</a>
+  <a id="Player:RepopAtGraveyard" class="fn" href="../Player/RepopAtGraveyard.html">RepopAtGraveyard</a>
   <a id="Player:ResetAchievements" class="fn" href="../Player/ResetAchievements.html">ResetAchievements</a>
   <a id="Player:ResetAllCooldowns" class="fn" href="../Player/ResetAllCooldowns.html">ResetAllCooldowns</a>
   <a id="Player:ResetPetTalents" class="fn" href="../Player/ResetPetTalents.html">ResetPetTalents</a>

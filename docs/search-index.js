@@ -893,6 +893,7 @@ searchIndex["ALEQuery"] = {
         [3, "RemoveQuest", "", "Removes the given quest entry from the <a class=\"mod\" href=\"Player/index.html\">Player</a>."],
         [3, "RemoveSpell", "", "Removes the <a class=\"mod\" href=\"Spell/index.html\">Spell</a> from the <a class=\"mod\" href=\"Player/index.html\">Player</a>"],
         [3, "RemovedInsignia", "", "Loots <a class=\"mod\" href=\"Player/index.html\">Player</a>'s bones for insignia"],
+        [3, "RepopAtGraveyard", "", "Teleports the <a class=\"mod\" href=\"Player/index.html\">Player</a> to the most appropriate graveyard."],
         [3, "ResetAchievements", "", "Reset the <a class=\"mod\" href=\"Player/index.html\">Player</a>s completed achievements"],
         [3, "ResetAllCooldowns", "", "Resets all of the <a class=\"mod\" href=\"Player/index.html\">Player</a>'s cooldowns"],
         [3, "ResetPetTalents", "", "Resets the <a class=\"mod\" href=\"Player/index.html\">Player</a>'s pet talents."],
