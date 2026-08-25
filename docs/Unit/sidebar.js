@@ -20,6 +20,7 @@ document.write(`
   <a id="Unit:EmoteState" class="fn" href="../Unit/EmoteState.html">EmoteState</a>
   <a id="Unit:GetAttackers" class="fn" href="../Unit/GetAttackers.html">GetAttackers</a>
   <a id="Unit:GetAura" class="fn" href="../Unit/GetAura.html">GetAura</a>
+  <a id="Unit:GetAuras" class="fn" href="../Unit/GetAuras.html">GetAuras</a>
   <a id="Unit:GetBaseSpellPower" class="fn" href="../Unit/GetBaseSpellPower.html">GetBaseSpellPower</a>
   <a id="Unit:GetCharmGUID" class="fn" href="../Unit/GetCharmGUID.html">GetCharmGUID</a>
   <a id="Unit:GetCharmerGUID" class="fn" href="../Unit/GetCharmerGUID.html">GetCharmerGUID</a>
@@ -62,6 +63,7 @@ document.write(`
   <a id="Unit:GetUnfriendlyUnitsInRange" class="fn" href="../Unit/GetUnfriendlyUnitsInRange.html">GetUnfriendlyUnitsInRange</a>
   <a id="Unit:GetVehicleKit" class="fn" href="../Unit/GetVehicleKit.html">GetVehicleKit</a>
   <a id="Unit:GetVictim" class="fn" href="../Unit/GetVictim.html">GetVictim</a>
+  <a id="Unit:GetVisibleAuras" class="fn" href="../Unit/GetVisibleAuras.html">GetVisibleAuras</a>
   <a id="Unit:HandleStatFlatModifier" class="fn" href="../Unit/HandleStatFlatModifier.html">HandleStatFlatModifier</a>
   <a id="Unit:HasAura" class="fn" href="../Unit/HasAura.html">HasAura</a>
   <a id="Unit:HasUnitState" class="fn" href="../Unit/HasUnitState.html">HasUnitState</a>
