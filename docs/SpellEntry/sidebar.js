@@ -1,153 +1,161 @@
 document.write(`
-  <a id="SpellEntry:GetActiveIconID" class="fn" href="../SpellEntry/GetActiveIconID.html">GetActiveIconID</a>
-  <a id="SpellEntry:GetAreaGroupId" class="fn" href="../SpellEntry/GetAreaGroupId.html">GetAreaGroupId</a>
-  <a id="SpellEntry:GetAttributes" class="fn" href="../SpellEntry/GetAttributes.html">GetAttributes</a>
-  <a id="SpellEntry:GetAttributesEx" class="fn" href="../SpellEntry/GetAttributesEx.html">GetAttributesEx</a>
-  <a id="SpellEntry:GetAttributesEx2" class="fn" href="../SpellEntry/GetAttributesEx2.html">GetAttributesEx2</a>
-  <a id="SpellEntry:GetAttributesEx3" class="fn" href="../SpellEntry/GetAttributesEx3.html">GetAttributesEx3</a>
-  <a id="SpellEntry:GetAttributesEx4" class="fn" href="../SpellEntry/GetAttributesEx4.html">GetAttributesEx4</a>
-  <a id="SpellEntry:GetAttributesEx5" class="fn" href="../SpellEntry/GetAttributesEx5.html">GetAttributesEx5</a>
-  <a id="SpellEntry:GetAttributesEx6" class="fn" href="../SpellEntry/GetAttributesEx6.html">GetAttributesEx6</a>
-  <a id="SpellEntry:GetAttributesEx7" class="fn" href="../SpellEntry/GetAttributesEx7.html">GetAttributesEx7</a>
-  <a id="SpellEntry:GetAuraInterruptFlags" class="fn" href="../SpellEntry/GetAuraInterruptFlags.html">GetAuraInterruptFlags</a>
-  <a id="SpellEntry:GetBaseLevel" class="fn" href="../SpellEntry/GetBaseLevel.html">GetBaseLevel</a>
-  <a id="SpellEntry:GetCasterAuraSpell" class="fn" href="../SpellEntry/GetCasterAuraSpell.html">GetCasterAuraSpell</a>
-  <a id="SpellEntry:GetCasterAuraState" class="fn" href="../SpellEntry/GetCasterAuraState.html">GetCasterAuraState</a>
-  <a id="SpellEntry:GetCasterAuraStateNot" class="fn" href="../SpellEntry/GetCasterAuraStateNot.html">GetCasterAuraStateNot</a>
-  <a id="SpellEntry:GetCastingTimeIndex" class="fn" href="../SpellEntry/GetCastingTimeIndex.html">GetCastingTimeIndex</a>
-  <a id="SpellEntry:GetCategory" class="fn" href="../SpellEntry/GetCategory.html">GetCategory</a>
-  <a id="SpellEntry:GetCategoryRecoveryTime" class="fn" href="../SpellEntry/GetCategoryRecoveryTime.html">GetCategoryRecoveryTime</a>
-  <a id="SpellEntry:GetChannelInterruptFlags" class="fn" href="../SpellEntry/GetChannelInterruptFlags.html">GetChannelInterruptFlags</a>
-  <a id="SpellEntry:GetDispel" class="fn" href="../SpellEntry/GetDispel.html">GetDispel</a>
-  <a id="SpellEntry:GetDmgClass" class="fn" href="../SpellEntry/GetDmgClass.html">GetDmgClass</a>
-  <a id="SpellEntry:GetDurationIndex" class="fn" href="../SpellEntry/GetDurationIndex.html">GetDurationIndex</a>
-  <a id="SpellEntry:GetEffect" class="fn" href="../SpellEntry/GetEffect.html">GetEffect</a>
-  <a id="SpellEntry:GetEffectAmplitude" class="fn" href="../SpellEntry/GetEffectAmplitude.html">GetEffectAmplitude</a>
-  <a id="SpellEntry:GetEffectApplyAuraName" class="fn" href="../SpellEntry/GetEffectApplyAuraName.html">GetEffectApplyAuraName</a>
-  <a id="SpellEntry:GetEffectBasePoints" class="fn" href="../SpellEntry/GetEffectBasePoints.html">GetEffectBasePoints</a>
-  <a id="SpellEntry:GetEffectBonusMultiplier" class="fn" href="../SpellEntry/GetEffectBonusMultiplier.html">GetEffectBonusMultiplier</a>
-  <a id="SpellEntry:GetEffectChainTarget" class="fn" href="../SpellEntry/GetEffectChainTarget.html">GetEffectChainTarget</a>
-  <a id="SpellEntry:GetEffectDamageMultiplier" class="fn" href="../SpellEntry/GetEffectDamageMultiplier.html">GetEffectDamageMultiplier</a>
-  <a id="SpellEntry:GetEffectDieSides" class="fn" href="../SpellEntry/GetEffectDieSides.html">GetEffectDieSides</a>
-  <a id="SpellEntry:GetEffectImplicitTargetA" class="fn" href="../SpellEntry/GetEffectImplicitTargetA.html">GetEffectImplicitTargetA</a>
-  <a id="SpellEntry:GetEffectImplicitTargetB" class="fn" href="../SpellEntry/GetEffectImplicitTargetB.html">GetEffectImplicitTargetB</a>
-  <a id="SpellEntry:GetEffectItemType" class="fn" href="../SpellEntry/GetEffectItemType.html">GetEffectItemType</a>
-  <a id="SpellEntry:GetEffectMechanic" class="fn" href="../SpellEntry/GetEffectMechanic.html">GetEffectMechanic</a>
-  <a id="SpellEntry:GetEffectMiscValue" class="fn" href="../SpellEntry/GetEffectMiscValue.html">GetEffectMiscValue</a>
-  <a id="SpellEntry:GetEffectMiscValueB" class="fn" href="../SpellEntry/GetEffectMiscValueB.html">GetEffectMiscValueB</a>
-  <a id="SpellEntry:GetEffectPointsPerComboPoint" class="fn" href="../SpellEntry/GetEffectPointsPerComboPoint.html">GetEffectPointsPerComboPoint</a>
-  <a id="SpellEntry:GetEffectRadiusIndex" class="fn" href="../SpellEntry/GetEffectRadiusIndex.html">GetEffectRadiusIndex</a>
-  <a id="SpellEntry:GetEffectRealPointsPerLevel" class="fn" href="../SpellEntry/GetEffectRealPointsPerLevel.html">GetEffectRealPointsPerLevel</a>
-  <a id="SpellEntry:GetEffectSpellClassMask" class="fn" href="../SpellEntry/GetEffectSpellClassMask.html">GetEffectSpellClassMask</a>
-  <a id="SpellEntry:GetEffectTriggerSpell" class="fn" href="../SpellEntry/GetEffectTriggerSpell.html">GetEffectTriggerSpell</a>
-  <a id="SpellEntry:GetEffectValueMultiplier" class="fn" href="../SpellEntry/GetEffectValueMultiplier.html">GetEffectValueMultiplier</a>
-  <a id="SpellEntry:GetEquippedItemClass" class="fn" href="../SpellEntry/GetEquippedItemClass.html">GetEquippedItemClass</a>
-  <a id="SpellEntry:GetEquippedItemInventoryTypeMask" class="fn" href="../SpellEntry/GetEquippedItemInventoryTypeMask.html">GetEquippedItemInventoryTypeMask</a>
-  <a id="SpellEntry:GetEquippedItemSubClassMask" class="fn" href="../SpellEntry/GetEquippedItemSubClassMask.html">GetEquippedItemSubClassMask</a>
-  <a id="SpellEntry:GetExcludeCasterAuraSpell" class="fn" href="../SpellEntry/GetExcludeCasterAuraSpell.html">GetExcludeCasterAuraSpell</a>
-  <a id="SpellEntry:GetExcludeTargetAuraSpell" class="fn" href="../SpellEntry/GetExcludeTargetAuraSpell.html">GetExcludeTargetAuraSpell</a>
-  <a id="SpellEntry:GetFacingCasterFlags" class="fn" href="../SpellEntry/GetFacingCasterFlags.html">GetFacingCasterFlags</a>
-  <a id="SpellEntry:GetId" class="fn" href="../SpellEntry/GetId.html">GetId</a>
-  <a id="SpellEntry:GetInterruptFlags" class="fn" href="../SpellEntry/GetInterruptFlags.html">GetInterruptFlags</a>
-  <a id="SpellEntry:GetManaCost" class="fn" href="../SpellEntry/GetManaCost.html">GetManaCost</a>
-  <a id="SpellEntry:GetManaCostPercentage" class="fn" href="../SpellEntry/GetManaCostPercentage.html">GetManaCostPercentage</a>
-  <a id="SpellEntry:GetManaCostPerlevel" class="fn" href="../SpellEntry/GetManaCostPerlevel.html">GetManaCostPerlevel</a>
-  <a id="SpellEntry:GetManaPerSecond" class="fn" href="../SpellEntry/GetManaPerSecond.html">GetManaPerSecond</a>
-  <a id="SpellEntry:GetManaPerSecondPerLevel" class="fn" href="../SpellEntry/GetManaPerSecondPerLevel.html">GetManaPerSecondPerLevel</a>
-  <a id="SpellEntry:GetMaxAffectedTargets" class="fn" href="../SpellEntry/GetMaxAffectedTargets.html">GetMaxAffectedTargets</a>
-  <a id="SpellEntry:GetMaxLevel" class="fn" href="../SpellEntry/GetMaxLevel.html">GetMaxLevel</a>
-  <a id="SpellEntry:GetMaxTargetLevel" class="fn" href="../SpellEntry/GetMaxTargetLevel.html">GetMaxTargetLevel</a>
-  <a id="SpellEntry:GetMechanic" class="fn" href="../SpellEntry/GetMechanic.html">GetMechanic</a>
-  <a id="SpellEntry:GetPowerType" class="fn" href="../SpellEntry/GetPowerType.html">GetPowerType</a>
-  <a id="SpellEntry:GetPreventionType" class="fn" href="../SpellEntry/GetPreventionType.html">GetPreventionType</a>
-  <a id="SpellEntry:GetProcChance" class="fn" href="../SpellEntry/GetProcChance.html">GetProcChance</a>
-  <a id="SpellEntry:GetProcCharges" class="fn" href="../SpellEntry/GetProcCharges.html">GetProcCharges</a>
-  <a id="SpellEntry:GetProcFlags" class="fn" href="../SpellEntry/GetProcFlags.html">GetProcFlags</a>
-  <a id="SpellEntry:GetRangeIndex" class="fn" href="../SpellEntry/GetRangeIndex.html">GetRangeIndex</a>
-  <a id="SpellEntry:GetRank" class="fn" href="../SpellEntry/GetRank.html">GetRank</a>
-  <a id="SpellEntry:GetReagent" class="fn" href="../SpellEntry/GetReagent.html">GetReagent</a>
-  <a id="SpellEntry:GetReagentCount" class="fn" href="../SpellEntry/GetReagentCount.html">GetReagentCount</a>
-  <a id="SpellEntry:GetRecoveryTime" class="fn" href="../SpellEntry/GetRecoveryTime.html">GetRecoveryTime</a>
-  <a id="SpellEntry:GetRequiresSpellFocus" class="fn" href="../SpellEntry/GetRequiresSpellFocus.html">GetRequiresSpellFocus</a>
-  <a id="SpellEntry:GetRuneCostID" class="fn" href="../SpellEntry/GetRuneCostID.html">GetRuneCostID</a>
-  <a id="SpellEntry:GetSchoolMask" class="fn" href="../SpellEntry/GetSchoolMask.html">GetSchoolMask</a>
-  <a id="SpellEntry:GetSpeed" class="fn" href="../SpellEntry/GetSpeed.html">GetSpeed</a>
-  <a id="SpellEntry:GetSpellFamilyFlags" class="fn" href="../SpellEntry/GetSpellFamilyFlags.html">GetSpellFamilyFlags</a>
-  <a id="SpellEntry:GetSpellFamilyName" class="fn" href="../SpellEntry/GetSpellFamilyName.html">GetSpellFamilyName</a>
-  <a id="SpellEntry:GetSpellIconID" class="fn" href="../SpellEntry/GetSpellIconID.html">GetSpellIconID</a>
-  <a id="SpellEntry:GetSpellLevel" class="fn" href="../SpellEntry/GetSpellLevel.html">GetSpellLevel</a>
-  <a id="SpellEntry:GetSpellName" class="fn" href="../SpellEntry/GetSpellName.html">GetSpellName</a>
-  <a id="SpellEntry:GetSpellPriority" class="fn" href="../SpellEntry/GetSpellPriority.html">GetSpellPriority</a>
-  <a id="SpellEntry:GetSpellVisual" class="fn" href="../SpellEntry/GetSpellVisual.html">GetSpellVisual</a>
-  <a id="SpellEntry:GetStackAmount" class="fn" href="../SpellEntry/GetStackAmount.html">GetStackAmount</a>
-  <a id="SpellEntry:GetStances" class="fn" href="../SpellEntry/GetStances.html">GetStances</a>
-  <a id="SpellEntry:GetStancesNot" class="fn" href="../SpellEntry/GetStancesNot.html">GetStancesNot</a>
-  <a id="SpellEntry:GetStartRecoveryCategory" class="fn" href="../SpellEntry/GetStartRecoveryCategory.html">GetStartRecoveryCategory</a>
-  <a id="SpellEntry:GetStartRecoveryTime" class="fn" href="../SpellEntry/GetStartRecoveryTime.html">GetStartRecoveryTime</a>
-  <a id="SpellEntry:GetTargetAuraSpell" class="fn" href="../SpellEntry/GetTargetAuraSpell.html">GetTargetAuraSpell</a>
-  <a id="SpellEntry:GetTargetAuraState" class="fn" href="../SpellEntry/GetTargetAuraState.html">GetTargetAuraState</a>
-  <a id="SpellEntry:GetTargetAuraStateNot" class="fn" href="../SpellEntry/GetTargetAuraStateNot.html">GetTargetAuraStateNot</a>
-  <a id="SpellEntry:GetTargetCreatureType" class="fn" href="../SpellEntry/GetTargetCreatureType.html">GetTargetCreatureType</a>
-  <a id="SpellEntry:GetTargets" class="fn" href="../SpellEntry/GetTargets.html">GetTargets</a>
-  <a id="SpellEntry:GetTotem" class="fn" href="../SpellEntry/GetTotem.html">GetTotem</a>
-  <a id="SpellEntry:GetTotemCategory" class="fn" href="../SpellEntry/GetTotemCategory.html">GetTotemCategory</a>
-  <a id="SpellEntry:SetActiveIconID" class="fn" href="../SpellEntry/SetActiveIconID.html">SetActiveIconID</a>
-  <a id="SpellEntry:SetAttributes" class="fn" href="../SpellEntry/SetAttributes.html">SetAttributes</a>
-  <a id="SpellEntry:SetAttributesEx" class="fn" href="../SpellEntry/SetAttributesEx.html">SetAttributesEx</a>
-  <a id="SpellEntry:SetAttributesEx2" class="fn" href="../SpellEntry/SetAttributesEx2.html">SetAttributesEx2</a>
-  <a id="SpellEntry:SetAttributesEx3" class="fn" href="../SpellEntry/SetAttributesEx3.html">SetAttributesEx3</a>
-  <a id="SpellEntry:SetAttributesEx4" class="fn" href="../SpellEntry/SetAttributesEx4.html">SetAttributesEx4</a>
-  <a id="SpellEntry:SetAttributesEx5" class="fn" href="../SpellEntry/SetAttributesEx5.html">SetAttributesEx5</a>
-  <a id="SpellEntry:SetAttributesEx6" class="fn" href="../SpellEntry/SetAttributesEx6.html">SetAttributesEx6</a>
-  <a id="SpellEntry:SetAttributesEx7" class="fn" href="../SpellEntry/SetAttributesEx7.html">SetAttributesEx7</a>
-  <a id="SpellEntry:SetAuraInterruptFlags" class="fn" href="../SpellEntry/SetAuraInterruptFlags.html">SetAuraInterruptFlags</a>
-  <a id="SpellEntry:SetBaseLevel" class="fn" href="../SpellEntry/SetBaseLevel.html">SetBaseLevel</a>
-  <a id="SpellEntry:SetCasterAuraSpell" class="fn" href="../SpellEntry/SetCasterAuraSpell.html">SetCasterAuraSpell</a>
-  <a id="SpellEntry:SetCasterAuraState" class="fn" href="../SpellEntry/SetCasterAuraState.html">SetCasterAuraState</a>
-  <a id="SpellEntry:SetCasterAuraStateNot" class="fn" href="../SpellEntry/SetCasterAuraStateNot.html">SetCasterAuraStateNot</a>
-  <a id="SpellEntry:SetCategory" class="fn" href="../SpellEntry/SetCategory.html">SetCategory</a>
-  <a id="SpellEntry:SetCategoryRecoveryTime" class="fn" href="../SpellEntry/SetCategoryRecoveryTime.html">SetCategoryRecoveryTime</a>
-  <a id="SpellEntry:SetChannelInterruptFlags" class="fn" href="../SpellEntry/SetChannelInterruptFlags.html">SetChannelInterruptFlags</a>
-  <a id="SpellEntry:SetDispel" class="fn" href="../SpellEntry/SetDispel.html">SetDispel</a>
-  <a id="SpellEntry:SetDmgClass" class="fn" href="../SpellEntry/SetDmgClass.html">SetDmgClass</a>
-  <a id="SpellEntry:SetEquippedItemClass" class="fn" href="../SpellEntry/SetEquippedItemClass.html">SetEquippedItemClass</a>
-  <a id="SpellEntry:SetEquippedItemInventoryTypeMask" class="fn" href="../SpellEntry/SetEquippedItemInventoryTypeMask.html">SetEquippedItemInventoryTypeMask</a>
-  <a id="SpellEntry:SetEquippedItemSubClassMask" class="fn" href="../SpellEntry/SetEquippedItemSubClassMask.html">SetEquippedItemSubClassMask</a>
-  <a id="SpellEntry:SetExcludeCasterAuraSpell" class="fn" href="../SpellEntry/SetExcludeCasterAuraSpell.html">SetExcludeCasterAuraSpell</a>
-  <a id="SpellEntry:SetExcludeTargetAuraSpell" class="fn" href="../SpellEntry/SetExcludeTargetAuraSpell.html">SetExcludeTargetAuraSpell</a>
-  <a id="SpellEntry:SetFacingCasterFlags" class="fn" href="../SpellEntry/SetFacingCasterFlags.html">SetFacingCasterFlags</a>
-  <a id="SpellEntry:SetInterruptFlags" class="fn" href="../SpellEntry/SetInterruptFlags.html">SetInterruptFlags</a>
-  <a id="SpellEntry:SetManaCost" class="fn" href="../SpellEntry/SetManaCost.html">SetManaCost</a>
-  <a id="SpellEntry:SetManaCostPercentage" class="fn" href="../SpellEntry/SetManaCostPercentage.html">SetManaCostPercentage</a>
-  <a id="SpellEntry:SetManaCostPerlevel" class="fn" href="../SpellEntry/SetManaCostPerlevel.html">SetManaCostPerlevel</a>
-  <a id="SpellEntry:SetManaPerSecond" class="fn" href="../SpellEntry/SetManaPerSecond.html">SetManaPerSecond</a>
-  <a id="SpellEntry:SetManaPerSecondPerLevel" class="fn" href="../SpellEntry/SetManaPerSecondPerLevel.html">SetManaPerSecondPerLevel</a>
-  <a id="SpellEntry:SetMaxAffectedTargets" class="fn" href="../SpellEntry/SetMaxAffectedTargets.html">SetMaxAffectedTargets</a>
-  <a id="SpellEntry:SetMaxLevel" class="fn" href="../SpellEntry/SetMaxLevel.html">SetMaxLevel</a>
-  <a id="SpellEntry:SetMaxTargetLevel" class="fn" href="../SpellEntry/SetMaxTargetLevel.html">SetMaxTargetLevel</a>
-  <a id="SpellEntry:SetMechanic" class="fn" href="../SpellEntry/SetMechanic.html">SetMechanic</a>
-  <a id="SpellEntry:SetPowerType" class="fn" href="../SpellEntry/SetPowerType.html">SetPowerType</a>
-  <a id="SpellEntry:SetPreventionType" class="fn" href="../SpellEntry/SetPreventionType.html">SetPreventionType</a>
-  <a id="SpellEntry:SetProcChance" class="fn" href="../SpellEntry/SetProcChance.html">SetProcChance</a>
-  <a id="SpellEntry:SetProcCharges" class="fn" href="../SpellEntry/SetProcCharges.html">SetProcCharges</a>
-  <a id="SpellEntry:SetProcFlags" class="fn" href="../SpellEntry/SetProcFlags.html">SetProcFlags</a>
-  <a id="SpellEntry:SetRecoveryTime" class="fn" href="../SpellEntry/SetRecoveryTime.html">SetRecoveryTime</a>
-  <a id="SpellEntry:SetRequiresSpellFocus" class="fn" href="../SpellEntry/SetRequiresSpellFocus.html">SetRequiresSpellFocus</a>
-  <a id="SpellEntry:SetRuneCostID" class="fn" href="../SpellEntry/SetRuneCostID.html">SetRuneCostID</a>
-  <a id="SpellEntry:SetSchoolMask" class="fn" href="../SpellEntry/SetSchoolMask.html">SetSchoolMask</a>
-  <a id="SpellEntry:SetSpeed" class="fn" href="../SpellEntry/SetSpeed.html">SetSpeed</a>
-  <a id="SpellEntry:SetSpellFamilyName" class="fn" href="../SpellEntry/SetSpellFamilyName.html">SetSpellFamilyName</a>
-  <a id="SpellEntry:SetSpellIconID" class="fn" href="../SpellEntry/SetSpellIconID.html">SetSpellIconID</a>
-  <a id="SpellEntry:SetSpellLevel" class="fn" href="../SpellEntry/SetSpellLevel.html">SetSpellLevel</a>
-  <a id="SpellEntry:SetSpellPriority" class="fn" href="../SpellEntry/SetSpellPriority.html">SetSpellPriority</a>
-  <a id="SpellEntry:SetStackAmount" class="fn" href="../SpellEntry/SetStackAmount.html">SetStackAmount</a>
-  <a id="SpellEntry:SetStances" class="fn" href="../SpellEntry/SetStances.html">SetStances</a>
-  <a id="SpellEntry:SetStancesNot" class="fn" href="../SpellEntry/SetStancesNot.html">SetStancesNot</a>
-  <a id="SpellEntry:SetStartRecoveryCategory" class="fn" href="../SpellEntry/SetStartRecoveryCategory.html">SetStartRecoveryCategory</a>
-  <a id="SpellEntry:SetStartRecoveryTime" class="fn" href="../SpellEntry/SetStartRecoveryTime.html">SetStartRecoveryTime</a>
-  <a id="SpellEntry:SetTargetAuraSpell" class="fn" href="../SpellEntry/SetTargetAuraSpell.html">SetTargetAuraSpell</a>
-  <a id="SpellEntry:SetTargetAuraState" class="fn" href="../SpellEntry/SetTargetAuraState.html">SetTargetAuraState</a>
-  <a id="SpellEntry:SetTargetAuraStateNot" class="fn" href="../SpellEntry/SetTargetAuraStateNot.html">SetTargetAuraStateNot</a>
-  <a id="SpellEntry:SetTargetCreatureType" class="fn" href="../SpellEntry/SetTargetCreatureType.html">SetTargetCreatureType</a>
-  <a id="SpellEntry:SetTargets" class="fn" href="../SpellEntry/SetTargets.html">SetTargets</a>
+<div class="border-b-2 border-line-strong">
+  <div class="flex items-center justify-between px-4 py-2.5 text-[11px] font-bold uppercase tracking-wider text-body-dim">
+    SpellEntry
+    <span class="rounded-full border border-line bg-ink-raised px-1.5 font-semibold normal-case tracking-normal">151</span>
+  </div>
+  <div class="px-2 pb-2">
+    <a id="SpellEntry:GetActiveIconID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetActiveIconID.html">GetActiveIconID</a>
+    <a id="SpellEntry:GetAreaGroupId" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetAreaGroupId.html">GetAreaGroupId</a>
+    <a id="SpellEntry:GetAttributes" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetAttributes.html">GetAttributes</a>
+    <a id="SpellEntry:GetAttributesEx" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetAttributesEx.html">GetAttributesEx</a>
+    <a id="SpellEntry:GetAttributesEx2" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetAttributesEx2.html">GetAttributesEx2</a>
+    <a id="SpellEntry:GetAttributesEx3" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetAttributesEx3.html">GetAttributesEx3</a>
+    <a id="SpellEntry:GetAttributesEx4" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetAttributesEx4.html">GetAttributesEx4</a>
+    <a id="SpellEntry:GetAttributesEx5" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetAttributesEx5.html">GetAttributesEx5</a>
+    <a id="SpellEntry:GetAttributesEx6" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetAttributesEx6.html">GetAttributesEx6</a>
+    <a id="SpellEntry:GetAttributesEx7" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetAttributesEx7.html">GetAttributesEx7</a>
+    <a id="SpellEntry:GetAuraInterruptFlags" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetAuraInterruptFlags.html">GetAuraInterruptFlags</a>
+    <a id="SpellEntry:GetBaseLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetBaseLevel.html">GetBaseLevel</a>
+    <a id="SpellEntry:GetCasterAuraSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetCasterAuraSpell.html">GetCasterAuraSpell</a>
+    <a id="SpellEntry:GetCasterAuraState" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetCasterAuraState.html">GetCasterAuraState</a>
+    <a id="SpellEntry:GetCasterAuraStateNot" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetCasterAuraStateNot.html">GetCasterAuraStateNot</a>
+    <a id="SpellEntry:GetCastingTimeIndex" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetCastingTimeIndex.html">GetCastingTimeIndex</a>
+    <a id="SpellEntry:GetCategory" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetCategory.html">GetCategory</a>
+    <a id="SpellEntry:GetCategoryRecoveryTime" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetCategoryRecoveryTime.html">GetCategoryRecoveryTime</a>
+    <a id="SpellEntry:GetChannelInterruptFlags" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetChannelInterruptFlags.html">GetChannelInterruptFlags</a>
+    <a id="SpellEntry:GetDispel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetDispel.html">GetDispel</a>
+    <a id="SpellEntry:GetDmgClass" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetDmgClass.html">GetDmgClass</a>
+    <a id="SpellEntry:GetDurationIndex" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetDurationIndex.html">GetDurationIndex</a>
+    <a id="SpellEntry:GetEffect" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffect.html">GetEffect</a>
+    <a id="SpellEntry:GetEffectAmplitude" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectAmplitude.html">GetEffectAmplitude</a>
+    <a id="SpellEntry:GetEffectApplyAuraName" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectApplyAuraName.html">GetEffectApplyAuraName</a>
+    <a id="SpellEntry:GetEffectBasePoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectBasePoints.html">GetEffectBasePoints</a>
+    <a id="SpellEntry:GetEffectBonusMultiplier" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectBonusMultiplier.html">GetEffectBonusMultiplier</a>
+    <a id="SpellEntry:GetEffectChainTarget" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectChainTarget.html">GetEffectChainTarget</a>
+    <a id="SpellEntry:GetEffectDamageMultiplier" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectDamageMultiplier.html">GetEffectDamageMultiplier</a>
+    <a id="SpellEntry:GetEffectDieSides" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectDieSides.html">GetEffectDieSides</a>
+    <a id="SpellEntry:GetEffectImplicitTargetA" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectImplicitTargetA.html">GetEffectImplicitTargetA</a>
+    <a id="SpellEntry:GetEffectImplicitTargetB" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectImplicitTargetB.html">GetEffectImplicitTargetB</a>
+    <a id="SpellEntry:GetEffectItemType" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectItemType.html">GetEffectItemType</a>
+    <a id="SpellEntry:GetEffectMechanic" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectMechanic.html">GetEffectMechanic</a>
+    <a id="SpellEntry:GetEffectMiscValue" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectMiscValue.html">GetEffectMiscValue</a>
+    <a id="SpellEntry:GetEffectMiscValueB" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectMiscValueB.html">GetEffectMiscValueB</a>
+    <a id="SpellEntry:GetEffectPointsPerComboPoint" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectPointsPerComboPoint.html">GetEffectPointsPerComboPoint</a>
+    <a id="SpellEntry:GetEffectRadiusIndex" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectRadiusIndex.html">GetEffectRadiusIndex</a>
+    <a id="SpellEntry:GetEffectRealPointsPerLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectRealPointsPerLevel.html">GetEffectRealPointsPerLevel</a>
+    <a id="SpellEntry:GetEffectSpellClassMask" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectSpellClassMask.html">GetEffectSpellClassMask</a>
+    <a id="SpellEntry:GetEffectTriggerSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectTriggerSpell.html">GetEffectTriggerSpell</a>
+    <a id="SpellEntry:GetEffectValueMultiplier" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEffectValueMultiplier.html">GetEffectValueMultiplier</a>
+    <a id="SpellEntry:GetEquippedItemClass" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEquippedItemClass.html">GetEquippedItemClass</a>
+    <a id="SpellEntry:GetEquippedItemInventoryTypeMask" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEquippedItemInventoryTypeMask.html">GetEquippedItemInventoryTypeMask</a>
+    <a id="SpellEntry:GetEquippedItemSubClassMask" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetEquippedItemSubClassMask.html">GetEquippedItemSubClassMask</a>
+    <a id="SpellEntry:GetExcludeCasterAuraSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetExcludeCasterAuraSpell.html">GetExcludeCasterAuraSpell</a>
+    <a id="SpellEntry:GetExcludeTargetAuraSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetExcludeTargetAuraSpell.html">GetExcludeTargetAuraSpell</a>
+    <a id="SpellEntry:GetFacingCasterFlags" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetFacingCasterFlags.html">GetFacingCasterFlags</a>
+    <a id="SpellEntry:GetId" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetId.html">GetId</a>
+    <a id="SpellEntry:GetInterruptFlags" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetInterruptFlags.html">GetInterruptFlags</a>
+    <a id="SpellEntry:GetManaCost" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetManaCost.html">GetManaCost</a>
+    <a id="SpellEntry:GetManaCostPercentage" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetManaCostPercentage.html">GetManaCostPercentage</a>
+    <a id="SpellEntry:GetManaCostPerlevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetManaCostPerlevel.html">GetManaCostPerlevel</a>
+    <a id="SpellEntry:GetManaPerSecond" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetManaPerSecond.html">GetManaPerSecond</a>
+    <a id="SpellEntry:GetManaPerSecondPerLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetManaPerSecondPerLevel.html">GetManaPerSecondPerLevel</a>
+    <a id="SpellEntry:GetMaxAffectedTargets" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetMaxAffectedTargets.html">GetMaxAffectedTargets</a>
+    <a id="SpellEntry:GetMaxLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetMaxLevel.html">GetMaxLevel</a>
+    <a id="SpellEntry:GetMaxTargetLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetMaxTargetLevel.html">GetMaxTargetLevel</a>
+    <a id="SpellEntry:GetMechanic" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetMechanic.html">GetMechanic</a>
+    <a id="SpellEntry:GetPowerType" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetPowerType.html">GetPowerType</a>
+    <a id="SpellEntry:GetPreventionType" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetPreventionType.html">GetPreventionType</a>
+    <a id="SpellEntry:GetProcChance" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetProcChance.html">GetProcChance</a>
+    <a id="SpellEntry:GetProcCharges" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetProcCharges.html">GetProcCharges</a>
+    <a id="SpellEntry:GetProcFlags" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetProcFlags.html">GetProcFlags</a>
+    <a id="SpellEntry:GetRangeIndex" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetRangeIndex.html">GetRangeIndex</a>
+    <a id="SpellEntry:GetRank" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetRank.html">GetRank</a>
+    <a id="SpellEntry:GetReagent" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetReagent.html">GetReagent</a>
+    <a id="SpellEntry:GetReagentCount" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetReagentCount.html">GetReagentCount</a>
+    <a id="SpellEntry:GetRecoveryTime" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetRecoveryTime.html">GetRecoveryTime</a>
+    <a id="SpellEntry:GetRequiresSpellFocus" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetRequiresSpellFocus.html">GetRequiresSpellFocus</a>
+    <a id="SpellEntry:GetRuneCostID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetRuneCostID.html">GetRuneCostID</a>
+    <a id="SpellEntry:GetSchoolMask" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetSchoolMask.html">GetSchoolMask</a>
+    <a id="SpellEntry:GetSpeed" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetSpeed.html">GetSpeed</a>
+    <a id="SpellEntry:GetSpellFamilyFlags" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetSpellFamilyFlags.html">GetSpellFamilyFlags</a>
+    <a id="SpellEntry:GetSpellFamilyName" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetSpellFamilyName.html">GetSpellFamilyName</a>
+    <a id="SpellEntry:GetSpellIconID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetSpellIconID.html">GetSpellIconID</a>
+    <a id="SpellEntry:GetSpellLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetSpellLevel.html">GetSpellLevel</a>
+    <a id="SpellEntry:GetSpellName" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetSpellName.html">GetSpellName</a>
+    <a id="SpellEntry:GetSpellPriority" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetSpellPriority.html">GetSpellPriority</a>
+    <a id="SpellEntry:GetSpellVisual" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetSpellVisual.html">GetSpellVisual</a>
+    <a id="SpellEntry:GetStackAmount" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetStackAmount.html">GetStackAmount</a>
+    <a id="SpellEntry:GetStances" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetStances.html">GetStances</a>
+    <a id="SpellEntry:GetStancesNot" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetStancesNot.html">GetStancesNot</a>
+    <a id="SpellEntry:GetStartRecoveryCategory" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetStartRecoveryCategory.html">GetStartRecoveryCategory</a>
+    <a id="SpellEntry:GetStartRecoveryTime" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetStartRecoveryTime.html">GetStartRecoveryTime</a>
+    <a id="SpellEntry:GetTargetAuraSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetTargetAuraSpell.html">GetTargetAuraSpell</a>
+    <a id="SpellEntry:GetTargetAuraState" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetTargetAuraState.html">GetTargetAuraState</a>
+    <a id="SpellEntry:GetTargetAuraStateNot" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetTargetAuraStateNot.html">GetTargetAuraStateNot</a>
+    <a id="SpellEntry:GetTargetCreatureType" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetTargetCreatureType.html">GetTargetCreatureType</a>
+    <a id="SpellEntry:GetTargets" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetTargets.html">GetTargets</a>
+    <a id="SpellEntry:GetTotem" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetTotem.html">GetTotem</a>
+    <a id="SpellEntry:GetTotemCategory" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/GetTotemCategory.html">GetTotemCategory</a>
+    <a id="SpellEntry:SetActiveIconID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetActiveIconID.html">SetActiveIconID</a>
+    <a id="SpellEntry:SetAttributes" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetAttributes.html">SetAttributes</a>
+    <a id="SpellEntry:SetAttributesEx" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetAttributesEx.html">SetAttributesEx</a>
+    <a id="SpellEntry:SetAttributesEx2" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetAttributesEx2.html">SetAttributesEx2</a>
+    <a id="SpellEntry:SetAttributesEx3" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetAttributesEx3.html">SetAttributesEx3</a>
+    <a id="SpellEntry:SetAttributesEx4" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetAttributesEx4.html">SetAttributesEx4</a>
+    <a id="SpellEntry:SetAttributesEx5" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetAttributesEx5.html">SetAttributesEx5</a>
+    <a id="SpellEntry:SetAttributesEx6" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetAttributesEx6.html">SetAttributesEx6</a>
+    <a id="SpellEntry:SetAttributesEx7" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetAttributesEx7.html">SetAttributesEx7</a>
+    <a id="SpellEntry:SetAuraInterruptFlags" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetAuraInterruptFlags.html">SetAuraInterruptFlags</a>
+    <a id="SpellEntry:SetBaseLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetBaseLevel.html">SetBaseLevel</a>
+    <a id="SpellEntry:SetCasterAuraSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetCasterAuraSpell.html">SetCasterAuraSpell</a>
+    <a id="SpellEntry:SetCasterAuraState" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetCasterAuraState.html">SetCasterAuraState</a>
+    <a id="SpellEntry:SetCasterAuraStateNot" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetCasterAuraStateNot.html">SetCasterAuraStateNot</a>
+    <a id="SpellEntry:SetCategory" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetCategory.html">SetCategory</a>
+    <a id="SpellEntry:SetCategoryRecoveryTime" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetCategoryRecoveryTime.html">SetCategoryRecoveryTime</a>
+    <a id="SpellEntry:SetChannelInterruptFlags" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetChannelInterruptFlags.html">SetChannelInterruptFlags</a>
+    <a id="SpellEntry:SetDispel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetDispel.html">SetDispel</a>
+    <a id="SpellEntry:SetDmgClass" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetDmgClass.html">SetDmgClass</a>
+    <a id="SpellEntry:SetEquippedItemClass" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetEquippedItemClass.html">SetEquippedItemClass</a>
+    <a id="SpellEntry:SetEquippedItemInventoryTypeMask" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetEquippedItemInventoryTypeMask.html">SetEquippedItemInventoryTypeMask</a>
+    <a id="SpellEntry:SetEquippedItemSubClassMask" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetEquippedItemSubClassMask.html">SetEquippedItemSubClassMask</a>
+    <a id="SpellEntry:SetExcludeCasterAuraSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetExcludeCasterAuraSpell.html">SetExcludeCasterAuraSpell</a>
+    <a id="SpellEntry:SetExcludeTargetAuraSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetExcludeTargetAuraSpell.html">SetExcludeTargetAuraSpell</a>
+    <a id="SpellEntry:SetFacingCasterFlags" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetFacingCasterFlags.html">SetFacingCasterFlags</a>
+    <a id="SpellEntry:SetInterruptFlags" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetInterruptFlags.html">SetInterruptFlags</a>
+    <a id="SpellEntry:SetManaCost" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetManaCost.html">SetManaCost</a>
+    <a id="SpellEntry:SetManaCostPercentage" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetManaCostPercentage.html">SetManaCostPercentage</a>
+    <a id="SpellEntry:SetManaCostPerlevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetManaCostPerlevel.html">SetManaCostPerlevel</a>
+    <a id="SpellEntry:SetManaPerSecond" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetManaPerSecond.html">SetManaPerSecond</a>
+    <a id="SpellEntry:SetManaPerSecondPerLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetManaPerSecondPerLevel.html">SetManaPerSecondPerLevel</a>
+    <a id="SpellEntry:SetMaxAffectedTargets" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetMaxAffectedTargets.html">SetMaxAffectedTargets</a>
+    <a id="SpellEntry:SetMaxLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetMaxLevel.html">SetMaxLevel</a>
+    <a id="SpellEntry:SetMaxTargetLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetMaxTargetLevel.html">SetMaxTargetLevel</a>
+    <a id="SpellEntry:SetMechanic" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetMechanic.html">SetMechanic</a>
+    <a id="SpellEntry:SetPowerType" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetPowerType.html">SetPowerType</a>
+    <a id="SpellEntry:SetPreventionType" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetPreventionType.html">SetPreventionType</a>
+    <a id="SpellEntry:SetProcChance" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetProcChance.html">SetProcChance</a>
+    <a id="SpellEntry:SetProcCharges" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetProcCharges.html">SetProcCharges</a>
+    <a id="SpellEntry:SetProcFlags" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetProcFlags.html">SetProcFlags</a>
+    <a id="SpellEntry:SetRecoveryTime" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetRecoveryTime.html">SetRecoveryTime</a>
+    <a id="SpellEntry:SetRequiresSpellFocus" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetRequiresSpellFocus.html">SetRequiresSpellFocus</a>
+    <a id="SpellEntry:SetRuneCostID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetRuneCostID.html">SetRuneCostID</a>
+    <a id="SpellEntry:SetSchoolMask" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetSchoolMask.html">SetSchoolMask</a>
+    <a id="SpellEntry:SetSpeed" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetSpeed.html">SetSpeed</a>
+    <a id="SpellEntry:SetSpellFamilyName" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetSpellFamilyName.html">SetSpellFamilyName</a>
+    <a id="SpellEntry:SetSpellIconID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetSpellIconID.html">SetSpellIconID</a>
+    <a id="SpellEntry:SetSpellLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetSpellLevel.html">SetSpellLevel</a>
+    <a id="SpellEntry:SetSpellPriority" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetSpellPriority.html">SetSpellPriority</a>
+    <a id="SpellEntry:SetStackAmount" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetStackAmount.html">SetStackAmount</a>
+    <a id="SpellEntry:SetStances" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetStances.html">SetStances</a>
+    <a id="SpellEntry:SetStancesNot" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetStancesNot.html">SetStancesNot</a>
+    <a id="SpellEntry:SetStartRecoveryCategory" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetStartRecoveryCategory.html">SetStartRecoveryCategory</a>
+    <a id="SpellEntry:SetStartRecoveryTime" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetStartRecoveryTime.html">SetStartRecoveryTime</a>
+    <a id="SpellEntry:SetTargetAuraSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetTargetAuraSpell.html">SetTargetAuraSpell</a>
+    <a id="SpellEntry:SetTargetAuraState" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetTargetAuraState.html">SetTargetAuraState</a>
+    <a id="SpellEntry:SetTargetAuraStateNot" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetTargetAuraStateNot.html">SetTargetAuraStateNot</a>
+    <a id="SpellEntry:SetTargetCreatureType" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetTargetCreatureType.html">SetTargetCreatureType</a>
+    <a id="SpellEntry:SetTargets" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../SpellEntry/SetTargets.html">SetTargets</a>
+  </div>
+</div>
 `);

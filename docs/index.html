@@ -8,420 +8,373 @@
 
     <title>ALE API</title>
 
-    <link rel="stylesheet" type="text/css" href="static/main.css">
-    <link rel="stylesheet" type="text/css" href="static/dark.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink:    { DEFAULT: '#0e1013', raised: '#16191f', inset: '#0a0c0f' },
+                        line:   { DEFAULT: '#242932', strong: '#333a47' },
+                        body:   { DEFAULT: '#c8cdd6', dim: '#7d8695', bright: '#f4f6f9' },
+                        accent: { DEFAULT: '#5aa2ff', dim: '#1e4d8c' },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Consolas', 'monospace'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- Only what Tailwind cannot reach: the markup main.js builds itself. -->
+    <link rel="stylesheet" type="text/css" href="static/doc.css">
 
     <link rel="shortcut icon" href="static/favicon.ico">
-
 </head>
-<body class="rustdoc">
-<!--[if lte IE 8]>
-    <div class="warning">
-        This old browser is unsupported and will most likely display funky
-        things.
-    </div>
-    <![endif]-->
 
-<section class="sidebar">
-    <a href='index.html'><img src='static/eluna-logo.png' alt='ALE Logo' width='100'></a>
-    <div class="block">
+<body class="bg-ink font-sans text-[15px] leading-relaxed text-body antialiased selection:bg-accent/30">
+
+<input type="checkbox" id="sidebar-toggle" class="peer hidden">
+
+<aside class="sidebar fixed inset-y-0 left-0 z-20 flex w-72 -translate-x-full flex-col overflow-y-auto
+              border-r border-line bg-ink-inset transition-transform
+              peer-checked:translate-x-0 lg:translate-x-0">
+    <a class="group flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-5 hover:bg-ink-raised/50"
+       href='index.html'>
+        <img class="transition group-hover:scale-105" src='static/ale-logo.png' alt='ALE' width='30' height='30'>
+        <span class="font-semibold tracking-tight text-body-bright">ALE <span class="text-accent">API</span></span>
+    </a>
+
+    <div class="pb-8">
         
-            <h2>All Classes</h2>
-            <a class="mod " href="ALEQuery/index.html">ALEQuery</a><a class="mod " href="Achievement/index.html">Achievement</a><a class="mod " href="Aura/index.html">Aura</a><a class="mod " href="BattleGround/index.html">BattleGround</a><a class="mod " href="ChatHandler/index.html">ChatHandler</a><a class="mod " href="Corpse/index.html">Corpse</a><a class="mod " href="Creature/index.html">Creature</a><a class="mod " href="GameObject/index.html">GameObject</a><a class="mod " href="GemPropertiesEntry/index.html">GemPropertiesEntry</a><a class="mod " href="Global/index.html">Global</a><a class="mod " href="Group/index.html">Group</a><a class="mod " href="Guild/index.html">Guild</a><a class="mod " href="Item/index.html">Item</a><a class="mod " href="ItemTemplate/index.html">ItemTemplate</a><a class="mod " href="Loot/index.html">Loot</a><a class="mod " href="Map/index.html">Map</a><a class="mod " href="Object/index.html">Object</a><a class="mod " href="Pet/index.html">Pet</a><a class="mod " href="Player/index.html">Player</a><a class="mod " href="Quest/index.html">Quest</a><a class="mod " href="Roll/index.html">Roll</a><a class="mod " href="Spell/index.html">Spell</a><a class="mod " href="SpellEntry/index.html">SpellEntry</a><a class="mod " href="SpellInfo/index.html">SpellInfo</a><a class="mod " href="Ticket/index.html">Ticket</a><a class="mod " href="Transport/index.html">Transport</a><a class="mod " href="Unit/index.html">Unit</a><a class="mod " href="Vehicle/index.html">Vehicle</a><a class="mod " href="WorldObject/index.html">WorldObject</a><a class="mod " href="WorldPacket/index.html">WorldPacket</a>
-        
+        <details class="border-b border-line" open>
+            <summary class="flex cursor-pointer select-none items-center justify-between px-5 py-3
+                            text-[10px] font-bold uppercase tracking-[0.14em] text-body-dim marker:text-line-strong
+                            hover:text-body-bright">
+                <a class="hover:text-accent hover:underline" href="Game.html">Game</a>
+                <span class="rounded-full border border-line bg-ink-raised px-1.5 text-[11px] font-semibold normal-case tracking-normal">30</span>
+            </summary>
+            <div class="px-3 pb-3">
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="ALEQuery/index.html">ALEQuery</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Achievement/index.html">Achievement</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Aura/index.html">Aura</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="BattleGround/index.html">BattleGround</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="ChatHandler/index.html">ChatHandler</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Corpse/index.html">Corpse</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Creature/index.html">Creature</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="GameObject/index.html">GameObject</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="GemPropertiesEntry/index.html">GemPropertiesEntry</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Global/index.html">Global</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Group/index.html">Group</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Guild/index.html">Guild</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Item/index.html">Item</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="ItemTemplate/index.html">ItemTemplate</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Loot/index.html">Loot</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Map/index.html">Map</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Object/index.html">Object</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Pet/index.html">Pet</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Player/index.html">Player</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Quest/index.html">Quest</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Roll/index.html">Roll</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Spell/index.html">Spell</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="SpellEntry/index.html">SpellEntry</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="SpellInfo/index.html">SpellInfo</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Ticket/index.html">Ticket</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Transport/index.html">Transport</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Unit/index.html">Unit</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="Vehicle/index.html">Vehicle</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="WorldObject/index.html">WorldObject</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="WorldPacket/index.html">WorldPacket</a>
+            </div>
+        </details>
+        <details class="border-b border-line" open>
+            <summary class="flex cursor-pointer select-none items-center justify-between px-5 py-3
+                            text-[10px] font-bold uppercase tracking-[0.14em] text-body-dim marker:text-line-strong
+                            hover:text-body-bright">
+                <a class="hover:text-accent hover:underline" href="Playerbots.html">Playerbots</a>
+                <span class="rounded-full border border-line bg-ink-raised px-1.5 text-[11px] font-semibold normal-case tracking-normal">7</span>
+            </summary>
+            <div class="px-3 pb-3">
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="PlayerBot/index.html">PlayerBot</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="PlayerBotAI/index.html">PlayerBotAI</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="PlayerBotFactory/index.html">PlayerBotFactory</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="PlayerBotHolder/index.html">PlayerBotHolder</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="PlayerBotMgr/index.html">PlayerBotMgr</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="PlayerBotsMgr/index.html">PlayerBotsMgr</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="RandomPlayerBotMgr/index.html">RandomPlayerBotMgr</a>
+            </div>
+        </details>
     </div>
-</section>
+</aside>
 
-<nav class="sub">
-    <form class="search-form js-only">
-        <div class="search-container">
-            <input class="search-input" name="search"
-                   autocomplete="off"
-                   placeholder="Click or press 'S' to search, '?' for more options..."
-                   type="search">
-        </div>
-    </form>
-</nav>
+<div class="flex min-h-screen flex-col lg:pl-72">
 
-<section id='main' class="content mod">
-    <h1 class='fqn'>
-        ALE API Documentation
-        <span class='out-of-band'>
-            <span id='render-detail'>
+    <nav class="sub sticky top-0 z-10 flex h-16 shrink-0 items-center gap-4 border-b border-line
+                bg-ink/80 px-6 backdrop-blur-md
+                lg:px-[max(1.5rem,calc((100%-60rem)/2+1.5rem))]">
+        <label class="cursor-pointer rounded border border-line px-2 py-0.5 text-body-dim lg:hidden"
+               for="sidebar-toggle" title="Toggle the sidebar">&#9776;</label>
+
+        <ol class="flex min-w-0 flex-nowrap items-center overflow-hidden text-sm">
+            <li class="whitespace-nowrap"><a class="text-body-dim hover:text-accent hover:underline" href="index.html">ALE API</a></li>
+            
+        </ol>
+
+        <form class="js-only ml-auto">
+            <input class="search-input w-44 rounded-lg border border-line bg-ink-inset px-3.5 py-2 text-[13.5px] transition
+                          placeholder:text-body-dim/70 hover:border-line-strong
+                          focus:border-accent focus:outline-none focus:ring-4 focus:ring-accent/10 sm:w-72"
+                   name="search" autocomplete="off" placeholder="Search, or press S" type="search">
+        </form>
+    </nav>
+
+    <section id='main' class="content mx-auto w-full max-w-[60rem] grow px-6 py-10">
+        <h1 class='fqn mb-8 border-b border-line pb-5 text-[1.75rem] font-semibold tracking-tight text-body-bright'>
+            ALE API Documentation
+            <span class='out-of-band float-right text-sm font-normal'>
                 <a id="collapse-all" href="#">[-]</a>
                 <a id="expand-all" href="#">[+]</a>
             </span>
-        </span>
-    </h1>
-
-    
-    <div class='docblock'>
-        <h1 id="the-ale-engine-api" class='section-header'>
-            <a href="#the-ale-engine-api">The ALE Lua Engine&copy; API</a>
         </h1>
-        <p>
-            The ALE Lua Engine&copy; API allows you to add your own Lua code to be executed when certain events (called "hooks") occur.
-        </p>
-        <p>
-            Add a new in-game command, give life to creatures with new AI, or even light players who try to duel on fire!
-            If the hook exists, you can script it.
-        </p>
 
-        <h2 id="about-ale" class='section-header'>
-            <a href="#about-ale">About ALE</a>
-        </h2>
-        <p>
-            ALE is a <a href="http://www.lua.org/">Lua</a> engine for World of Warcraft emulators.
-            These pages are for <a href="https://www.azerothcore.org/">AzerothCore</a>'s version, but ALE also supports
-            <a href="https://cmangos.net/">CMaNGOS</a>/<a href="https://www.getmangos.eu/">MaNGOS</a> and <a href="https://www.trinitycore.org/">TrinityCore</a>.
-        </p>
-        <p>
-            If you come from the TypeScript / JavaScript world, or would prefer to use a typed language instead of Lua, check out <a href="https://github.com/azerothcore/eluna-ts">ale-ts</a>!
-        </p>
-        <p>
-            You can get support in the <code>#ale-ac</code> channel of <a href="https://discord.com/invite/sqkPb623">AzerothCore's Discord server</a>.
-        </p>
-
-        <h2 id="installation" class='section-header'>
-            <a href="#installation">How to Install</a>
-        </h2>
-        <p>
-            <ol>
-                <li>If you haven't already, clone AzerothCore from <a href="https://github.com/azerothcore/azerothcore-wotlk">our GitHub repository</a></li>
-                <li>Go to the modules directory and run the following command: <pre>git clone https://github.com/azerothcore/mod-ale.git mod-ale</pre></li>
-                <li>Run CMake</li>
-                <li>Build AzerothCore</li>
-            </ol>
-        </p>
-
-        <!-- <h2 id="tutorials-and-guides" class='section-header'>
-            <a href="#tutorials-and-guides">Tutorials & Guides</a>
-        </h2>
-        <p>
-            We haven't written tutorials yet, but when we do, we'll put the links here.
-        </p> -->
-
-        <h2 id="about-this-documentation" class='section-header'>
-            <a href="#about-this-documentation">About this Documentation</a>
-        </h2>
-        <p>
-            The layout, CSS, and Javascript code for this documentation was borrowed from <a href="http://doc.rust-lang.org/">doc.rust-lang.org</a>.
-        </p>
-        <p>
-            The documentation generator was originally written by <a href="https://github.com/Patman64">Patman64</a> and is maintained by the ALE team.
-        </p>
+        
+    <div class="relative -mt-2 mb-10 overflow-hidden rounded-2xl border border-line bg-gradient-to-br from-accent/10 via-ink-raised to-ink-raised p-8">
+        <div class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-accent/10 blur-3xl"></div>
+        <div class="relative">
+            <h2 class="text-3xl font-bold tracking-tight text-body-bright">Script your server in Lua.</h2>
+            <p class="mt-3 max-w-2xl text-body-dim">
+                ALE (AzerothCore Lua Engine) lets you hook the events of a running world - a player logging in, a creature dying,
+                a table being loaded - and answer them in Lua. Add a command, give a creature new
+                behaviour, patch a data table in memory. If the hook exists, you can script it.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3">
+                <a href="#categories" class="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-ink transition hover:brightness-110">Browse the API</a>
+                <a href="https://github.com/azerothcore/mod-ale" class="rounded-lg border border-line px-4 py-2 text-sm font-semibold text-body transition hover:border-line-strong hover:text-body-bright">GitHub</a>
+            </div>
+        </div>
     </div>
 
-    <h2 id='modules' class='section-header'><a href="#modules">Classes</a></h2>
-    <table>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='ALEQuery/index.html'>ALEQuery</a>
-            </td>
-            <td class='docblock short'>
-                <p>The result of a database query.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Achievement/index.html'>Achievement</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents an entry from the game's achievement database (e.g., achievement earned for completing certain tasks).</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Aura/index.html'>Aura</a>
-            </td>
-            <td class='docblock short'>
-                <p>The persistent effect of a <a class="mod" href="Spell/index.html">Spell</a> that remains on a <a class="mod" href="Unit/index.html">Unit</a> after the <a class="mod" href="Spell/index.html">Spell</a>
-has been cast.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='BattleGround/index.html'>BattleGround</a>
-            </td>
-            <td class='docblock short'>
-                <p>Contains the state of a battleground, e.g. Warsong Gulch, Arathi Basin, etc.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='ChatHandler/index.html'>ChatHandler</a>
-            </td>
-            <td class='docblock short'>
-                <p>Provides access to in-game and console chat commands, messages, and selection context for command execution.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Corpse/index.html'>Corpse</a>
-            </td>
-            <td class='docblock short'>
-                <p>The remains of a <a class="mod" href="Player/index.html">Player</a> that has died.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Creature/index.html'>Creature</a>
-            </td>
-            <td class='docblock short'>
-                <p>Non-<a class="mod" href="Player/index.html">Player</a> controlled <a class="mod" href="Unit/index.html">Unit</a>s (i.e. NPCs).</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='GameObject/index.html'>GameObject</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents a game object in the world, such as doors, chests, and other interactive objects.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='GemPropertiesEntry/index.html'>GemPropertiesEntry</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents static gem data used in item enhancement, including spell enchantments triggered by socketed gems.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Global/index.html'>Global</a>
-            </td>
-            <td class='docblock short'>
-                <p>These functions can be used anywhere at any time, including at start-up.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Group/index.html'>Group</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents a player group in the game, such as a party or raid.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Guild/index.html'>Guild</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents a player guild. Used to manage guild members, ranks, guild bank.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Item/index.html'>Item</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents an instance of an item in the game world.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='ItemTemplate/index.html'>ItemTemplate</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents item data defined in the database and DBCs, such as stats, quality, class restrictions, and display info.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Loot/index.html'>Loot</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents loot that can be obtained from various sources like creatures, gameobjects, or items.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Map/index.html'>Map</a>
-            </td>
-            <td class='docblock short'>
-                <p>A game map, e.g. Azeroth, Eastern Kingdoms, the Molten Core, etc.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Object/index.html'>Object</a>
-            </td>
-            <td class='docblock short'>
-                <p>A basic game object (either an <a class="mod" href="Item/index.html">Item</a> or a <a class="mod" href="WorldObject/index.html">WorldObject</a>).</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Pet/index.html'>Pet</a>
-            </td>
-            <td class='docblock short'>
-                <p>Non-<a class="mod" href="Player/index.html">Player</a> controlled companions that fight alongside their owners.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Unstable' title='Partially Documented'></a>
-                <a class='mod' href='Player/index.html'>Player</a>
-            </td>
-            <td class='docblock short'>
-                <p>Inherits all methods from: <a class="mod" href="Object/index.html">Object</a>, <a class="mod" href="WorldObject/index.html">WorldObject</a>, <a class="mod" href="Unit/index.html">Unit</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Quest/index.html'>Quest</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents a quest in the game, including its objectives, rewards, and conditions.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Roll/index.html'>Roll</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents a group loot roll session for an item, including player votes and roll statistics.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Spell/index.html'>Spell</a>
-            </td>
-            <td class='docblock short'>
-                <p>An instance of a spell, created when the spell is cast by a <a class="mod" href="Unit/index.html">Unit</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='SpellEntry/index.html'>SpellEntry</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents spell data loaded from the DBCs, including effects, costs, attributes, and requirements.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='SpellInfo/index.html'>SpellInfo</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents spell metadata used for behavior, targeting, attributes, mechanics, auras, and conditions.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Ticket/index.html'>Ticket</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents a support ticket created by a <a class="mod" href="Player/index.html">Player</a> using the in-game ticket system.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Transport/index.html'>Transport</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents a transport object in the world, such as boats and zeppelins.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Unit/index.html'>Unit</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents a non-<a class="mod" href="Player/index.html">Player</a> controlled <a class="mod" href="Unit/index.html">Unit</a> (i.e. NPCs).</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='Vehicle/index.html'>Vehicle</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents a vehicle in the game, which can carry passengers and provide special abilities or movement.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='WorldObject/index.html'>WorldObject</a>
-            </td>
-            <td class='docblock short'>
-                <p>Represents a <a class="mod" href="WorldObject/index.html">WorldObject</a> in the game world.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Fully Documented'></a>
-                <a class='mod' href='WorldPacket/index.html'>WorldPacket</a>
-            </td>
-            <td class='docblock short'>
-                <p>A packet used to pass messages between the server and a client.</p>
-            </td>
-        </tr>
-    </table>
-
-</section>
-
-<section id='search' class="content hidden"></section>
-
-<section class="footer"></section>
-
-<div id="help" class="hidden">
-    <div class="shortcuts">
-        <h1>Keyboard shortcuts</h1>
-        <dl>
-            <dt>?</dt>
-            <dd>Show this help dialog</dd>
-            <dt>S</dt>
-            <dd>Focus the search field</dd>
-            <dt>&larrb;</dt>
-            <dd>Move up in search results</dd>
-            <dt>&rarrb;</dt>
-            <dd>Move down in search results</dd>
-            <dt>&#9166;</dt>
-            <dd>Go to active search result</dd>
-        </dl>
+    <h2 id='categories' class='mt-10 text-xl font-semibold tracking-tight text-body-bright'>
+        <a href="#categories">Categories</a>
+    </h2>
+    <div class='mt-5 grid gap-4 sm:grid-cols-3'>
+        <a class='group relative overflow-hidden rounded-xl border border-line bg-ink-raised p-5 transition
+                  hover:-translate-y-0.5 hover:border-accent/60 hover:shadow-lg hover:shadow-accent/5'
+           href='Game.html'>
+            <div class='flex items-baseline justify-between'>
+                <span class='font-semibold text-body-bright'>Game</span>
+                <span class='font-mono text-2xl font-medium text-line-strong transition group-hover:text-accent/60'>30</span>
+            </div>
+            <div class='mt-1 text-[13px] text-body-dim'>classes</div>
+        </a>
+        <a class='group relative overflow-hidden rounded-xl border border-line bg-ink-raised p-5 transition
+                  hover:-translate-y-0.5 hover:border-accent/60 hover:shadow-lg hover:shadow-accent/5'
+           href='Playerbots.html'>
+            <div class='flex items-baseline justify-between'>
+                <span class='font-semibold text-body-bright'>Playerbots</span>
+                <span class='font-mono text-2xl font-medium text-line-strong transition group-hover:text-accent/60'>7</span>
+            </div>
+            <div class='mt-1 text-[13px] text-body-dim'>classes</div>
+        </a>
     </div>
-    <div class="infos">
-        <h1>Search tricks</h1>
-        <p>
-            Prefix searches with a type followed by a colon (e.g.
-            <code>fn:</code>) to restrict the search to a given type.
-        </p>
-        <p>
-            Accepted types are: <code>fn</code>, <code>mod</code>,
-            <code>struct</code> (or <code>str</code>), <code>enum</code>,
-            <code>trait</code>, <code>typedef</code> (or
-            <code>tdef</code>).
-        </p>
+
+    <h2 id='install' class='mt-12 text-xl font-semibold tracking-tight text-body-bright'>
+        <a href="#install">Getting started</a>
+    </h2>
+    <ol class="mt-5 space-y-3 text-[14.5px]">
+        <li class="flex gap-3">
+            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-line bg-ink-raised font-mono text-xs text-body-dim">1</span>
+            <span>Clone <a class="text-accent hover:underline" href="https://github.com/azerothcore/azerothcore-wotlk">AzerothCore</a>, if you have not already.</span>
+        </li>
+        <li class="flex gap-3">
+            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-line bg-ink-raised font-mono text-xs text-body-dim">2</span>
+            <span>
+                From its <code class="rounded border border-line bg-ink-inset px-1.5 py-0.5 font-mono text-[13px]">modules</code> directory, run
+                <pre class="mt-2 overflow-x-auto rounded-xl border border-line bg-ink-inset px-4 py-3 font-mono text-[13px] text-body-bright"><code>git clone https://github.com/azerothcore/mod-ale.git mod-ale</code></pre>
+            </span>
+        </li>
+        <li class="flex gap-3">
+            <span class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-line bg-ink-raised font-mono text-xs text-body-dim">3</span>
+            <span>Run CMake, then build. Your Lua scripts go in <code class="rounded border border-line bg-ink-inset px-1.5 py-0.5 font-mono text-[13px]">lua_scripts</code>.</span>
+        </li>
+    </ol>
+
+    <p class="mt-6 text-[14.5px] text-body-dim">
+        Support lives in the <code class="rounded border border-line bg-ink-inset px-1.5 py-0.5 font-mono text-[13px]">#ac-lua-engine</code>
+        channel of <a class="text-accent hover:underline" href="https://discord.com/invite/235TkXxp">AzerothCore's Discord</a>.
+        If you would rather write typed code, there is
+        <a class="text-accent hover:underline" href="https://github.com/azerothcore/eluna-ts">eluna-ts</a>.
+    </p>
+
+    <h2 id='credits' class='mt-12 text-xl font-semibold tracking-tight text-body-bright'>
+        <a href="#credits">Credits</a>
+    </h2>
+    <div class="mt-5 grid gap-4 sm:grid-cols-2">
+        <div class="rounded-xl border border-line bg-ink-raised p-5">
+            <div class="font-semibold text-body-bright">Eluna</div>
+            <p class="mt-2 text-[14px] text-body-dim">
+                ALE is a fork of the
+                <a class="text-accent hover:underline" href="https://github.com/ElunaLuaEngine/Eluna">Eluna Lua Engine</a>.
+                Nearly everything documented here started there.
+                Our thanks to its authors and contributors.
+            </p>
+        </div>
+        <div class="rounded-xl border border-line bg-ink-raised p-5">
+            <div class="font-semibold text-body-bright">This documentation</div>
+            <p class="mt-2 text-[14px] text-body-dim">
+                The generator was written by
+                <a class="text-accent hover:underline" href="https://github.com/Patman64">Patman64</a>
+                and is maintained by the ALE team. Its search and page structure came from
+                <a class="text-accent hover:underline" href="http://doc.rust-lang.org/">doc.rust-lang.org</a>.
+            </p>
+        </div>
     </div>
+
+    </section>
+
+    <section id='search' class="content mx-auto hidden w-full max-w-[60rem] grow px-6 py-8"></section>
+
+    <footer class="shrink-0 border-t border-line px-6 py-6 text-xs text-body-dim
+                   lg:px-[max(1.5rem,calc((100%-60rem)/2+1.5rem))]">
+        <p class="max-w-2xl leading-relaxed">
+            Built on <a class="font-medium text-body hover:text-accent hover:underline"
+                        href="https://github.com/ElunaLuaEngine/Eluna">Eluna</a>.
+            ALE is a fork, and the heavy lifting was done upstream - our thanks to the original
+            Eluna authors and to everyone who has contributed to it over the years.
+        </p>
+        <div class="mt-4 flex flex-wrap justify-between gap-4 border-t border-line pt-4">
+            <span>Generated on <script src="date.js"></script></span>
+            <span>&copy;2026 ALE Lua Engine</span>
+        </div>
+    </footer>
+</div>
+
+<div id="help" class="hidden fixed inset-0 z-30 m-auto h-fit w-fit rounded-lg border border-line bg-ink-raised p-6 shadow-2xl">
+    <h1 class="mb-3 font-semibold text-body-bright">Keyboard shortcuts</h1>
+    <dl class="grid grid-cols-[3rem_1fr] gap-y-1 text-sm">
+        <dt class="font-mono text-body-dim">?</dt><dd>Show this help dialog</dd>
+        <dt class="font-mono text-body-dim">S</dt><dd>Focus the search field</dd>
+        <dt class="font-mono text-body-dim">&uarr;</dt><dd>Move up in search results</dd>
+        <dt class="font-mono text-body-dim">&darr;</dt><dd>Move down in search results</dd>
+        <dt class="font-mono text-body-dim">&#9166;</dt><dd>Go to active search result</dd>
+    </dl>
 </div>
 
 <script>
@@ -430,7 +383,5 @@ has been cast.</p>
 <script src="static/jquery.js"></script>
 <script src="static/main.js"></script>
 <script async src="search-index.js"></script>
-<center>Generated on <script src="date.js"></script></center>
-<center>&copy;2026 - ALE Lua Engine</center>
 </body>
 </html>

@@ -8,1186 +8,1518 @@
 
     <title>Global - ALE API</title>
 
-    <link rel="stylesheet" type="text/css" href="../static/main.css">
-    <link rel="stylesheet" type="text/css" href="../static/dark.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink:    { DEFAULT: '#0e1013', raised: '#16191f', inset: '#0a0c0f' },
+                        line:   { DEFAULT: '#242932', strong: '#333a47' },
+                        body:   { DEFAULT: '#c8cdd6', dim: '#7d8695', bright: '#f4f6f9' },
+                        accent: { DEFAULT: '#5aa2ff', dim: '#1e4d8c' },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Consolas', 'monospace'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- Only what Tailwind cannot reach: the markup main.js builds itself. -->
+    <link rel="stylesheet" type="text/css" href="../static/doc.css">
 
     <link rel="shortcut icon" href="../static/favicon.ico">
-
 </head>
-<body class="rustdoc">
-<!--[if lte IE 8]>
-    <div class="warning">
-        This old browser is unsupported and will most likely display funky
-        things.
-    </div>
-    <![endif]-->
 
-<section class="sidebar">
-    <a href='../index.html'><img src='../static/eluna-logo.png' alt='ALE Logo' width='100'></a>
-    <div class="block">
+<body class="bg-ink font-sans text-[15px] leading-relaxed text-body antialiased selection:bg-accent/30">
+
+<input type="checkbox" id="sidebar-toggle" class="peer hidden">
+
+<aside class="sidebar fixed inset-y-0 left-0 z-20 flex w-72 -translate-x-full flex-col overflow-y-auto
+              border-r border-line bg-ink-inset transition-transform
+              peer-checked:translate-x-0 lg:translate-x-0">
+    <a class="group flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-5 hover:bg-ink-raised/50"
+       href='../index.html'>
+        <img class="transition group-hover:scale-105" src='../static/ale-logo.png' alt='ALE' width='30' height='30'>
+        <span class="font-semibold tracking-tight text-body-bright">ALE <span class="text-accent">API</span></span>
+    </a>
+
+    <div class="pb-8">
         
-
-    </div>
-</section>
-
-<nav class="sub">
-    <form class="search-form js-only">
-        <div class="search-container">
-            <input class="search-input" name="search"
-                   autocomplete="off"
-                   placeholder="Click or press 'S' to search, '?' for more options..."
-                   type="search">
+    <div class="border-b-2 border-line-strong">
+        <div class="flex items-center justify-between px-4 py-2.5 text-[11px] font-bold uppercase tracking-wider text-body-dim">
+            Global
+            <span class="rounded-full border border-line bg-ink-raised px-1.5 font-semibold normal-case tracking-normal">121</span>
         </div>
-    </form>
-</nav>
+        <div class="px-2 pb-2">
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/AddTaxiPath.html">AddTaxiPath</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/AddVendorItem.html">AddVendorItem</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/AuthDBExecute.html">AuthDBExecute</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/AuthDBQuery.html">AuthDBQuery</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/AuthDBQueryAsync.html">AuthDBQueryAsync</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/Ban.html">Ban</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/CharDBExecute.html">CharDBExecute</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/CharDBQuery.html">CharDBQuery</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/CharDBQueryAsync.html">CharDBQueryAsync</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearAllCreatureEvents.html">ClearAllCreatureEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearBattleGroundEvents.html">ClearBattleGroundEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearCreatureEvents.html">ClearCreatureEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearCreatureGossipEvents.html">ClearCreatureGossipEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearGameObjectEvents.html">ClearGameObjectEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearGameObjectGossipEvents.html">ClearGameObjectGossipEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearGroupEvents.html">ClearGroupEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearGuildEvents.html">ClearGuildEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearInstanceEvents.html">ClearInstanceEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearItemEvents.html">ClearItemEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearItemGossipEvents.html">ClearItemGossipEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearMapEvents.html">ClearMapEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearPacketEvents.html">ClearPacketEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearPlayerEvents.html">ClearPlayerEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearPlayerGossipEvents.html">ClearPlayerGossipEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearServerEvents.html">ClearServerEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearSpellEvents.html">ClearSpellEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearTicketEvents.html">ClearTicketEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ClearUniqueCreatureEvents.html">ClearUniqueCreatureEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/CreateLongLong.html">CreateLongLong</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/CreateLuaEvent.html">CreateLuaEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/CreatePacket.html">CreatePacket</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/CreateULongLong.html">CreateULongLong</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetActiveGameEvents.html">GetActiveGameEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetAreaName.html">GetAreaName</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetConfigValue.html">GetConfigValue</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetCoreExpansion.html">GetCoreExpansion</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetCoreName.html">GetCoreName</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetCoreVersion.html">GetCoreVersion</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetCurrTime.html">GetCurrTime</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetGUIDEntry.html">GetGUIDEntry</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetGUIDLow.html">GetGUIDLow</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetGUIDType.html">GetGUIDType</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetGameTime.html">GetGameTime</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetGossipMenuOptionLocale.html">GetGossipMenuOptionLocale</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetGuildByLeaderGUID.html">GetGuildByLeaderGUID</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetGuildByName.html">GetGuildByName</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetItemGUID.html">GetItemGUID</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetItemLink.html">GetItemLink</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetItemTemplate.html">GetItemTemplate</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetLuaEngine.html">GetLuaEngine</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetMapById.html">GetMapById</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetMapEntrance.html">GetMapEntrance</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetObjectGUID.html">GetObjectGUID</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetOwnerHalaa.html">GetOwnerHalaa</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetPackedGUIDSize.html">GetPackedGUIDSize</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetPlayerByGUID.html">GetPlayerByGUID</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetPlayerByName.html">GetPlayerByName</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetPlayerCount.html">GetPlayerCount</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetPlayerGUID.html">GetPlayerGUID</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetPlayersInWorld.html">GetPlayersInWorld</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetQuest.html">GetQuest</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetRealmID.html">GetRealmID</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetSpellInfo.html">GetSpellInfo</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetStateInstanceId.html">GetStateInstanceId</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetStateMap.html">GetStateMap</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetStateMapId.html">GetStateMapId</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetTimeDiff.html">GetTimeDiff</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/GetUnitGUID.html">GetUnitGUID</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/HttpRequest.html">HttpRequest</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/IsBagPos.html">IsBagPos</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/IsBankPos.html">IsBankPos</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/IsCompatibilityMode.html">IsCompatibilityMode</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/IsEquipmentPos.html">IsEquipmentPos</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/IsGameEventActive.html">IsGameEventActive</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/IsInventoryPos.html">IsInventoryPos</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/Kick.html">Kick</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/LookupEntry.html">LookupEntry</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/PerformIngameSpawn.html">PerformIngameSpawn</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/PrintDebug.html">PrintDebug</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/PrintError.html">PrintError</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/PrintInfo.html">PrintInfo</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterAllCreatureEvent.html">RegisterAllCreatureEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterBGEvent.html">RegisterBGEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterCreatureEvent.html">RegisterCreatureEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterCreatureGossipEvent.html">RegisterCreatureGossipEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterGameObjectEvent.html">RegisterGameObjectEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterGameObjectGossipEvent.html">RegisterGameObjectGossipEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterGroupEvent.html">RegisterGroupEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterGuildEvent.html">RegisterGuildEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterInstanceEvent.html">RegisterInstanceEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterItemEvent.html">RegisterItemEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterItemGossipEvent.html">RegisterItemGossipEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterMapEvent.html">RegisterMapEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterPacketEvent.html">RegisterPacketEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterPlayerEvent.html">RegisterPlayerEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterPlayerGossipEvent.html">RegisterPlayerGossipEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterServerEvent.html">RegisterServerEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterSpellEvent.html">RegisterSpellEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterTicketEvent.html">RegisterTicketEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RegisterUniqueCreatureEvent.html">RegisterUniqueCreatureEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/ReloadALE.html">ReloadALE</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RemoveEventById.html">RemoveEventById</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RemoveEvents.html">RemoveEvents</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/RunCommand.html">RunCommand</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/SaveAllPlayers.html">SaveAllPlayers</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/SendMail.html">SendMail</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/SendWorldMessage.html">SendWorldMessage</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/SetOwnerHalaa.html">SetOwnerHalaa</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/StartGameEvent.html">StartGameEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/StopGameEvent.html">StopGameEvent</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/VendorRemoveAllItems.html">VendorRemoveAllItems</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/VendorRemoveItem.html">VendorRemoveItem</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/WorldDBExecute.html">WorldDBExecute</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/WorldDBQuery.html">WorldDBQuery</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/WorldDBQueryAsync.html">WorldDBQueryAsync</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/bit_and.html">bit_and</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/bit_lshift.html">bit_lshift</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/bit_not.html">bit_not</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/bit_or.html">bit_or</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/bit_rshift.html">bit_rshift</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Global/bit_xor.html">bit_xor</a>
+        </div>
+    </div>
 
-<section id='main' class="content mod">
-    <h1 class='fqn'>
-        Class <a class="mod" href="">Global</a>
-        <span class='out-of-band'>
-            <span id='render-detail'>
+        <details class="border-b border-line" open>
+            <summary class="flex cursor-pointer select-none items-center justify-between px-5 py-3
+                            text-[10px] font-bold uppercase tracking-[0.14em] text-body-dim marker:text-line-strong
+                            hover:text-body-bright">
+                <a class="hover:text-accent hover:underline" href="../Game.html">Game</a>
+                <span class="rounded-full border border-line bg-ink-raised px-1.5 text-[11px] font-semibold normal-case tracking-normal">30</span>
+            </summary>
+            <div class="px-3 pb-3">
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../ALEQuery/index.html">ALEQuery</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Achievement/index.html">Achievement</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Aura/index.html">Aura</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../BattleGround/index.html">BattleGround</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../ChatHandler/index.html">ChatHandler</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Corpse/index.html">Corpse</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Creature/index.html">Creature</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../GameObject/index.html">GameObject</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../GemPropertiesEntry/index.html">GemPropertiesEntry</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          bg-accent/15 font-semibold text-accent shadow-[inset_2px_0_0_0_theme(colors.accent)]"
+                   href="../Global/index.html">Global</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Group/index.html">Group</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Guild/index.html">Guild</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Item/index.html">Item</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../ItemTemplate/index.html">ItemTemplate</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Loot/index.html">Loot</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Map/index.html">Map</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Object/index.html">Object</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Pet/index.html">Pet</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Player/index.html">Player</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Quest/index.html">Quest</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Roll/index.html">Roll</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Spell/index.html">Spell</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../SpellEntry/index.html">SpellEntry</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../SpellInfo/index.html">SpellInfo</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Ticket/index.html">Ticket</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Transport/index.html">Transport</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Unit/index.html">Unit</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Vehicle/index.html">Vehicle</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../WorldObject/index.html">WorldObject</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../WorldPacket/index.html">WorldPacket</a>
+            </div>
+        </details>
+        <details class="border-b border-line" >
+            <summary class="flex cursor-pointer select-none items-center justify-between px-5 py-3
+                            text-[10px] font-bold uppercase tracking-[0.14em] text-body-dim marker:text-line-strong
+                            hover:text-body-bright">
+                <a class="hover:text-accent hover:underline" href="../Playerbots.html">Playerbots</a>
+                <span class="rounded-full border border-line bg-ink-raised px-1.5 text-[11px] font-semibold normal-case tracking-normal">7</span>
+            </summary>
+            <div class="px-3 pb-3">
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBot/index.html">PlayerBot</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotAI/index.html">PlayerBotAI</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotFactory/index.html">PlayerBotFactory</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotHolder/index.html">PlayerBotHolder</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotMgr/index.html">PlayerBotMgr</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotsMgr/index.html">PlayerBotsMgr</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../RandomPlayerBotMgr/index.html">RandomPlayerBotMgr</a>
+            </div>
+        </details>
+    </div>
+</aside>
+
+<div class="flex min-h-screen flex-col lg:pl-72">
+
+    <nav class="sub sticky top-0 z-10 flex h-16 shrink-0 items-center gap-4 border-b border-line
+                bg-ink/80 px-6 backdrop-blur-md
+                lg:px-[max(1.5rem,calc((100%-60rem)/2+1.5rem))]">
+        <label class="cursor-pointer rounded border border-line px-2 py-0.5 text-body-dim lg:hidden"
+               for="sidebar-toggle" title="Toggle the sidebar">&#9776;</label>
+
+        <ol class="flex min-w-0 flex-nowrap items-center overflow-hidden text-sm">
+            <li class="whitespace-nowrap"><a class="text-body-dim hover:text-accent hover:underline" href="../index.html">ALE API</a></li>
+            
+    <li class="whitespace-nowrap before:mx-2 before:text-line-strong before:content-['/']"><a class="text-body-dim hover:text-accent hover:underline" href="../Game.html">Game</a></li>
+    <li class="whitespace-nowrap before:mx-2 before:text-line-strong before:content-['/']"><span class="font-semibold text-body-bright">Global</span></li>
+
+        </ol>
+
+        <form class="js-only ml-auto">
+            <input class="search-input w-44 rounded-lg border border-line bg-ink-inset px-3.5 py-2 text-[13.5px] transition
+                          placeholder:text-body-dim/70 hover:border-line-strong
+                          focus:border-accent focus:outline-none focus:ring-4 focus:ring-accent/10 sm:w-72"
+                   name="search" autocomplete="off" placeholder="Search, or press S" type="search">
+        </form>
+    </nav>
+
+    <section id='main' class="content mx-auto w-full max-w-[60rem] grow px-6 py-10">
+        <h1 class='fqn mb-8 border-b border-line pb-5 text-[1.75rem] font-semibold tracking-tight text-body-bright'>
+            <span class='text-body-dim'>Class</span> Global
+            <span class='out-of-band float-right text-sm font-normal'>
                 <a id="collapse-all" href="#">[-]</a>
                 <a id="expand-all" href="#">[+]</a>
             </span>
-        </span>
-    </h1>
+        </h1>
 
-    
-    <p>These functions can be used anywhere at any time, including at start-up.</p>
+        
+    <div class='prose prose-invert max-w-none'><p>These functions can be used anywhere at any time, including at start-up.</p></div>
 
-    <h2 id='methods' class='section-header'><a href="#methods">Methods</a></h2>
-    <table>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='AddTaxiPath.html'>AddTaxiPath</a>
+    <h2 id='methods' class='mt-10 text-xl font-semibold tracking-tight text-body-bright'>
+        <a href="#methods">Methods</a>
+    </h2>
+    <div class='mt-5 overflow-x-auto rounded-xl border border-line bg-ink-raised'>
+    <table class='w-full border-collapse text-left [&_tr:first-child_td]:border-t-0'>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='AddTaxiPath.html'>AddTaxiPath</a>
             </td>
-            <td class='docblock short'>
-                <p>Adds a taxi path to a specified map, returns the used pathId.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Adds a taxi path to a specified map, returns the used pathId.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='AddVendorItem.html'>AddVendorItem</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='AddVendorItem.html'>AddVendorItem</a>
             </td>
-            <td class='docblock short'>
-                <p>Adds an <a class="mod" href="../Item/index.html">Item</a> to a vendor and updates the world database.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Adds an <a class="text-accent hover:underline" href="../Item/index.html">Item</a> to a vendor and updates the world database.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='AuthDBExecute.html'>AuthDBExecute</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='AuthDBExecute.html'>AuthDBExecute</a>
             </td>
-            <td class='docblock short'>
-                <p>Executes a SQL query on the login database.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Executes a SQL query on the login database.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='AuthDBQuery.html'>AuthDBQuery</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='AuthDBQuery.html'>AuthDBQuery</a>
             </td>
-            <td class='docblock short'>
-                <p>Executes a SQL query on the login database and returns an <a class="mod" href="../ALEQuery/index.html">ALEQuery</a>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Executes a SQL query on the login database and returns an <a class="text-accent hover:underline" href="../ALEQuery/index.html">ALEQuery</a>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='AuthDBQueryAsync.html'>AuthDBQueryAsync</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='AuthDBQueryAsync.html'>AuthDBQueryAsync</a>
             </td>
-            <td class='docblock short'>
-                <p>Executes an asynchronous SQL query on the character database and passes an <a class="mod" href="../ALEQuery/index.html">ALEQuery</a> to a callback function.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Executes an asynchronous SQL query on the character database and passes an <a class="text-accent hover:underline" href="../ALEQuery/index.html">ALEQuery</a> to a callback function.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='Ban.html'>Ban</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='Ban.html'>Ban</a>
             </td>
-            <td class='docblock short'>
-                <p>Ban's a <a class="mod" href="../Player/index.html">Player</a>'s account, character or IP</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Ban's a <a class="text-accent hover:underline" href="../Player/index.html">Player</a>'s account, character or IP</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CharDBExecute.html'>CharDBExecute</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CharDBExecute.html'>CharDBExecute</a>
             </td>
-            <td class='docblock short'>
-                <p>Executes a SQL query on the character database.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Executes a SQL query on the character database.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CharDBQuery.html'>CharDBQuery</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CharDBQuery.html'>CharDBQuery</a>
             </td>
-            <td class='docblock short'>
-                <p>Executes a SQL query on the character database and returns an <a class="mod" href="../ALEQuery/index.html">ALEQuery</a>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Executes a SQL query on the character database and returns an <a class="text-accent hover:underline" href="../ALEQuery/index.html">ALEQuery</a>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CharDBQueryAsync.html'>CharDBQueryAsync</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CharDBQueryAsync.html'>CharDBQueryAsync</a>
             </td>
-            <td class='docblock short'>
-                <p>Executes an asynchronous SQL query on the character database and passes an <a class="mod" href="../ALEQuery/index.html">ALEQuery</a> to a callback function.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Executes an asynchronous SQL query on the character database and passes an <a class="text-accent hover:underline" href="../ALEQuery/index.html">ALEQuery</a> to a callback function.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearAllCreatureEvents.html'>ClearAllCreatureEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearAllCreatureEvents.html'>ClearAllCreatureEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all <a class="mod" href="../Creature/index.html">Creature</a> events, or one type of <a class="mod" href="../Creature/index.html">Creature</a> event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> events, or one type of <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearBattleGroundEvents.html'>ClearBattleGroundEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearBattleGroundEvents.html'>ClearBattleGroundEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all <a class="mod" href="../BattleGround/index.html">BattleGround</a> events, or one type of event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all <a class="text-accent hover:underline" href="../BattleGround/index.html">BattleGround</a> events, or one type of event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearCreatureEvents.html'>ClearCreatureEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearCreatureEvents.html'>ClearCreatureEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all of a <a class="mod" href="../Creature/index.html">Creature</a>'s events, or one type of event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all of a <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s events, or one type of event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearCreatureGossipEvents.html'>ClearCreatureGossipEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearCreatureGossipEvents.html'>ClearCreatureGossipEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all of a <a class="mod" href="../Creature/index.html">Creature</a>'s gossip events, or one type of event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all of a <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s gossip events, or one type of event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearGameObjectEvents.html'>ClearGameObjectEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearGameObjectEvents.html'>ClearGameObjectEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all of a <a class="mod" href="../GameObject/index.html">GameObject</a>'s events, or one type of event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all of a <a class="text-accent hover:underline" href="../GameObject/index.html">GameObject</a>'s events, or one type of event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearGameObjectGossipEvents.html'>ClearGameObjectGossipEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearGameObjectGossipEvents.html'>ClearGameObjectGossipEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all of a <a class="mod" href="../GameObject/index.html">GameObject</a>'s gossip events, or one type of event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all of a <a class="text-accent hover:underline" href="../GameObject/index.html">GameObject</a>'s gossip events, or one type of event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearGroupEvents.html'>ClearGroupEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearGroupEvents.html'>ClearGroupEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all <a class="mod" href="../Group/index.html">Group</a> events, or one type of <a class="mod" href="../Group/index.html">Group</a> event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all <a class="text-accent hover:underline" href="../Group/index.html">Group</a> events, or one type of <a class="text-accent hover:underline" href="../Group/index.html">Group</a> event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearGuildEvents.html'>ClearGuildEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearGuildEvents.html'>ClearGuildEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all <a class="mod" href="../Guild/index.html">Guild</a> events, or one type of <a class="mod" href="../Guild/index.html">Guild</a> event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all <a class="text-accent hover:underline" href="../Guild/index.html">Guild</a> events, or one type of <a class="text-accent hover:underline" href="../Guild/index.html">Guild</a> event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearInstanceEvents.html'>ClearInstanceEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearInstanceEvents.html'>ClearInstanceEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all of an instanced <a class="mod" href="../Map/index.html">Map</a>'s events, or one type of event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all of an instanced <a class="text-accent hover:underline" href="../Map/index.html">Map</a>'s events, or one type of event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearItemEvents.html'>ClearItemEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearItemEvents.html'>ClearItemEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all of an <a class="mod" href="../Item/index.html">Item</a>'s events, or one type of event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all of an <a class="text-accent hover:underline" href="../Item/index.html">Item</a>'s events, or one type of event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearItemGossipEvents.html'>ClearItemGossipEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearItemGossipEvents.html'>ClearItemGossipEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all of an <a class="mod" href="../Item/index.html">Item</a>'s gossip events, or one type of event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all of an <a class="text-accent hover:underline" href="../Item/index.html">Item</a>'s gossip events, or one type of event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearMapEvents.html'>ClearMapEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearMapEvents.html'>ClearMapEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all of a non-instanced <a class="mod" href="../Map/index.html">Map</a>'s events, or one type of event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all of a non-instanced <a class="text-accent hover:underline" href="../Map/index.html">Map</a>'s events, or one type of event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearPacketEvents.html'>ClearPacketEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearPacketEvents.html'>ClearPacketEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all of a <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> opcode's events, or one type of event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all of a <a class="text-accent hover:underline" href="../WorldPacket/index.html">WorldPacket</a> opcode's events, or one type of event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearPlayerEvents.html'>ClearPlayerEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearPlayerEvents.html'>ClearPlayerEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all <a class="mod" href="../Player/index.html">Player</a> events, or one type of <a class="mod" href="../Player/index.html">Player</a> event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all <a class="text-accent hover:underline" href="../Player/index.html">Player</a> events, or one type of <a class="text-accent hover:underline" href="../Player/index.html">Player</a> event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearPlayerGossipEvents.html'>ClearPlayerGossipEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearPlayerGossipEvents.html'>ClearPlayerGossipEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all of a <a class="mod" href="../Player/index.html">Player</a>'s gossip events, or one type of event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all of a <a class="text-accent hover:underline" href="../Player/index.html">Player</a>'s gossip events, or one type of event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearServerEvents.html'>ClearServerEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearServerEvents.html'>ClearServerEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all server events, or one type of event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all server events, or one type of event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearSpellEvents.html'>ClearSpellEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearSpellEvents.html'>ClearSpellEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all of a <a class="mod" href="../Spell/index.html">Spell</a>'s events, or one type of event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all of a <a class="text-accent hover:underline" href="../Spell/index.html">Spell</a>'s events, or one type of event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearTicketEvents.html'>ClearTicketEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearTicketEvents.html'>ClearTicketEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all <a class="mod" href="../Ticket/index.html">Ticket</a> events, or one type of <a class="mod" href="../Ticket/index.html">Ticket</a> event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all <a class="text-accent hover:underline" href="../Ticket/index.html">Ticket</a> events, or one type of <a class="text-accent hover:underline" href="../Ticket/index.html">Ticket</a> event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearUniqueCreatureEvents.html'>ClearUniqueCreatureEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearUniqueCreatureEvents.html'>ClearUniqueCreatureEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Unbinds event handlers for either all of a <a class="mod" href="../Creature/index.html">Creature</a>'s events, or one type of event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Unbinds event handlers for either all of a <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s events, or one type of event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CreateLongLong.html'>CreateLongLong</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CreateLongLong.html'>CreateLongLong</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns an object representing a <code>long long</code> (64-bit) value.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns an object representing a <code>long long</code> (64-bit) value.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CreateLuaEvent.html'>CreateLuaEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CreateLuaEvent.html'>CreateLuaEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a global timed event.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a global timed event.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CreatePacket.html'>CreatePacket</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CreatePacket.html'>CreatePacket</a>
             </td>
-            <td class='docblock short'>
-                <p>Creates a <a class="mod" href="../WorldPacket/index.html">WorldPacket</a>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Creates a <a class="text-accent hover:underline" href="../WorldPacket/index.html">WorldPacket</a>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CreateULongLong.html'>CreateULongLong</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CreateULongLong.html'>CreateULongLong</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns an object representing an <code>unsigned long long</code> (64-bit) value.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns an object representing an <code>unsigned long long</code> (64-bit) value.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetActiveGameEvents.html'>GetActiveGameEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetActiveGameEvents.html'>GetActiveGameEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the currently active game events.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the currently active game events.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetAreaName.html'>GetAreaName</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetAreaName.html'>GetAreaName</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the area or zone's name.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the area or zone's name.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetConfigValue.html'>GetConfigValue</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetConfigValue.html'>GetConfigValue</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns config value as a string.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns config value as a string.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetCoreExpansion.html'>GetCoreExpansion</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetCoreExpansion.html'>GetCoreExpansion</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns emulator's supported expansion.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns emulator's supported expansion.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetCoreName.html'>GetCoreName</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetCoreName.html'>GetCoreName</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns emulator's name.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns emulator's name.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetCoreVersion.html'>GetCoreVersion</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetCoreVersion.html'>GetCoreVersion</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns emulator version</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns emulator version</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetCurrTime.html'>GetCurrTime</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetCurrTime.html'>GetCurrTime</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the server's current time.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the server's current time.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetGUIDEntry.html'>GetGUIDEntry</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetGUIDEntry.html'>GetGUIDEntry</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the entry ID from a GUID.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the entry ID from a GUID.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetGUIDLow.html'>GetGUIDLow</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetGUIDLow.html'>GetGUIDLow</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the low GUID from a GUID.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the low GUID from a GUID.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetGUIDType.html'>GetGUIDType</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetGUIDType.html'>GetGUIDType</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the type ID from a GUID.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the type ID from a GUID.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetGameTime.html'>GetGameTime</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetGameTime.html'>GetGameTime</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns game time in seconds</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns game time in seconds</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetGossipMenuOptionLocale.html'>GetGossipMenuOptionLocale</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetGossipMenuOptionLocale.html'>GetGossipMenuOptionLocale</a>
             </td>
-            <td class='docblock short'>
-                <p>Gets the localized OptionText and BoxText for a specific gossip menu option.
-If the text for the specified locale is not found, it returns the default text.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Gets the localized OptionText and BoxText for a specific gossip menu option.
+If the text for the specified locale is not found, it returns the default text.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetGuildByLeaderGUID.html'>GetGuildByLeaderGUID</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetGuildByLeaderGUID.html'>GetGuildByLeaderGUID</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns <a class="mod" href="../Guild/index.html">Guild</a> by the leader's GUID</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <a class="text-accent hover:underline" href="../Guild/index.html">Guild</a> by the leader's GUID</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetGuildByName.html'>GetGuildByName</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetGuildByName.html'>GetGuildByName</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns a <a class="mod" href="../Guild/index.html">Guild</a> by name.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns a <a class="text-accent hover:underline" href="../Guild/index.html">Guild</a> by name.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetItemGUID.html'>GetItemGUID</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetItemGUID.html'>GetItemGUID</a>
             </td>
-            <td class='docblock short'>
-                <p>Builds an <a class="mod" href="../Item/index.html">Item</a>'s GUID.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Builds an <a class="text-accent hover:underline" href="../Item/index.html">Item</a>'s GUID.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetItemLink.html'>GetItemLink</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetItemLink.html'>GetItemLink</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns an chat link for an <a class="mod" href="../Item/index.html">Item</a>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns an chat link for an <a class="text-accent hover:underline" href="../Item/index.html">Item</a>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetItemTemplate.html'>GetItemTemplate</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetItemTemplate.html'>GetItemTemplate</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../ItemTemplate/index.html">ItemTemplate</a> for the specified item ID.  The ItemTemplate contains all static data about an item, such as name, quality, stats, required level, and more.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../ItemTemplate/index.html">ItemTemplate</a> for the specified item ID.  The ItemTemplate contains all static data about an item, such as name, quality, stats, required level, and more.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetLuaEngine.html'>GetLuaEngine</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetLuaEngine.html'>GetLuaEngine</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns Lua engine's name.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns Lua engine's name.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetMapById.html'>GetMapById</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetMapById.html'>GetMapById</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns a <a class="mod" href="../Map/index.html">Map</a> by ID.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns a <a class="text-accent hover:underline" href="../Map/index.html">Map</a> by ID.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetMapEntrance.html'>GetMapEntrance</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetMapEntrance.html'>GetMapEntrance</a>
             </td>
-            <td class='docblock short'>
-                <p>Return the entrance position (x, y, z, o) of the specified dungeon map id.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Return the entrance position (x, y, z, o) of the specified dungeon map id.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetObjectGUID.html'>GetObjectGUID</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetObjectGUID.html'>GetObjectGUID</a>
             </td>
-            <td class='docblock short'>
-                <p>Builds a <a class="mod" href="../GameObject/index.html">GameObject</a>'s GUID.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Builds a <a class="text-accent hover:underline" href="../GameObject/index.html">GameObject</a>'s GUID.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetOwnerHalaa.html'>GetOwnerHalaa</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetOwnerHalaa.html'>GetOwnerHalaa</a>
             </td>
-            <td class='docblock short'>
-                <p>Gets the faction which is the current owner of Halaa in Nagrand
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Gets the faction which is the current owner of Halaa in Nagrand
 0 = Alliance
-1 = Horde</p>
-            </td>
+1 = Horde</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetPackedGUIDSize.html'>GetPackedGUIDSize</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetPackedGUIDSize.html'>GetPackedGUIDSize</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the byte size in bytes (2-9) of the ObjectGuid when packed.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the byte size in bytes (2-9) of the ObjectGuid when packed.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetPlayerByGUID.html'>GetPlayerByGUID</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetPlayerByGUID.html'>GetPlayerByGUID</a>
             </td>
-            <td class='docblock short'>
-                <p>Finds and Returns <a class="mod" href="../Player/index.html">Player</a> by guid if found</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Finds and Returns <a class="text-accent hover:underline" href="../Player/index.html">Player</a> by guid if found</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetPlayerByName.html'>GetPlayerByName</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetPlayerByName.html'>GetPlayerByName</a>
             </td>
-            <td class='docblock short'>
-                <p>Finds and Returns <a class="mod" href="../Player/index.html">Player</a> by name if found</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Finds and Returns <a class="text-accent hover:underline" href="../Player/index.html">Player</a> by name if found</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetPlayerCount.html'>GetPlayerCount</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetPlayerCount.html'>GetPlayerCount</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the amount of <a class="mod" href="../Player/index.html">Player</a>s in the world.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the amount of <a class="text-accent hover:underline" href="../Player/index.html">Player</a>s in the world.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetPlayerGUID.html'>GetPlayerGUID</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetPlayerGUID.html'>GetPlayerGUID</a>
             </td>
-            <td class='docblock short'>
-                <p>Builds a <a class="mod" href="../Player/index.html">Player</a>'s GUID</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Builds a <a class="text-accent hover:underline" href="../Player/index.html">Player</a>'s GUID</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetPlayersInWorld.html'>GetPlayersInWorld</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetPlayersInWorld.html'>GetPlayersInWorld</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns a table with all the current <a class="mod" href="../Player/index.html">Player</a>s in the world</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns a table with all the current <a class="text-accent hover:underline" href="../Player/index.html">Player</a>s in the world</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetQuest.html'>GetQuest</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetQuest.html'>GetQuest</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns <a class="mod" href="../Quest/index.html">Quest</a> template</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <a class="text-accent hover:underline" href="../Quest/index.html">Quest</a> template</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetRealmID.html'>GetRealmID</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetRealmID.html'>GetRealmID</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns emulator .conf RealmID</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns emulator .conf RealmID</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetSpellInfo.html'>GetSpellInfo</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetSpellInfo.html'>GetSpellInfo</a>
             </td>
-            <td class='docblock short'>
-                <p>Get the <a class="mod" href="../SpellInfo/index.html">SpellInfo</a> for the specified <a class="mod" href="../Spell/index.html">Spell</a> id</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Get the <a class="text-accent hover:underline" href="../SpellInfo/index.html">SpellInfo</a> for the specified <a class="text-accent hover:underline" href="../Spell/index.html">Spell</a> id</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetStateInstanceId.html'>GetStateInstanceId</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetStateInstanceId.html'>GetStateInstanceId</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the instance ID of the Lua state. Returns 0 for continent maps and the world state.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the instance ID of the Lua state. Returns 0 for continent maps and the world state.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetStateMap.html'>GetStateMap</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetStateMap.html'>GetStateMap</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Map/index.html">Map</a> pointer of the Lua state. Returns null for the "World" state. </p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Map/index.html">Map</a> pointer of the Lua state. Returns null for the "World" state. </td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetStateMapId.html'>GetStateMapId</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetStateMapId.html'>GetStateMapId</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the map ID of the Lua state. Returns -1 for the "World" state.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the map ID of the Lua state. Returns -1 for the "World" state.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetTimeDiff.html'>GetTimeDiff</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetTimeDiff.html'>GetTimeDiff</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the difference between an old timestamp and the current time.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the difference between an old timestamp and the current time.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetUnitGUID.html'>GetUnitGUID</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetUnitGUID.html'>GetUnitGUID</a>
             </td>
-            <td class='docblock short'>
-                <p>Builds a <a class="mod" href="../Creature/index.html">Creature</a>'s GUID.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Builds a <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s GUID.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='HttpRequest.html'>HttpRequest</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='HttpRequest.html'>HttpRequest</a>
             </td>
-            <td class='docblock short'>
-                <p>Performs a non-blocking HTTP request.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Performs a non-blocking HTTP request.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsBagPos.html'>IsBagPos</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsBagPos.html'>IsBagPos</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the bag and slot is a valid bag position, otherwise <code>false</code>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the bag and slot is a valid bag position, otherwise <code>false</code>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsBankPos.html'>IsBankPos</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsBankPos.html'>IsBankPos</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the bag and slot is a valid bank position, otherwise <code>false</code>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the bag and slot is a valid bank position, otherwise <code>false</code>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsCompatibilityMode.html'>IsCompatibilityMode</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsCompatibilityMode.html'>IsCompatibilityMode</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if ALE is in compatibility mode, <code>false</code> if in multistate.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if ALE is in compatibility mode, <code>false</code> if in multistate.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsEquipmentPos.html'>IsEquipmentPos</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsEquipmentPos.html'>IsEquipmentPos</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the bag and slot is a valid equipment position, otherwise <code>false</code>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the bag and slot is a valid equipment position, otherwise <code>false</code>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsGameEventActive.html'>IsGameEventActive</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsGameEventActive.html'>IsGameEventActive</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the event is currently active, otherwise <code>false</code>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the event is currently active, otherwise <code>false</code>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsInventoryPos.html'>IsInventoryPos</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsInventoryPos.html'>IsInventoryPos</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the bag and slot is a valid inventory position, otherwise <code>false</code>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the bag and slot is a valid inventory position, otherwise <code>false</code>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='Kick.html'>Kick</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='Kick.html'>Kick</a>
             </td>
-            <td class='docblock short'>
-                <p>Kicks a <a class="mod" href="../Player/index.html">Player</a> from the server.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Kicks a <a class="text-accent hover:underline" href="../Player/index.html">Player</a> from the server.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='LookupEntry.html'>LookupEntry</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='LookupEntry.html'>LookupEntry</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns an entry from the specified DBC (DatabaseClient) store.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns an entry from the specified DBC (DatabaseClient) store.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='PerformIngameSpawn.html'>PerformIngameSpawn</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='PerformIngameSpawn.html'>PerformIngameSpawn</a>
             </td>
-            <td class='docblock short'>
-                <p>Performs an in-game spawn and returns the <a class="mod" href="../Creature/index.html">Creature</a> or <a class="mod" href="../GameObject/index.html">GameObject</a> spawned.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Performs an in-game spawn and returns the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> or <a class="text-accent hover:underline" href="../GameObject/index.html">GameObject</a> spawned.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='PrintDebug.html'>PrintDebug</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='PrintDebug.html'>PrintDebug</a>
             </td>
-            <td class='docblock short'>
-                <p>Prints given parameters to the debug log.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Prints given parameters to the debug log.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='PrintError.html'>PrintError</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='PrintError.html'>PrintError</a>
             </td>
-            <td class='docblock short'>
-                <p>Prints given parameters to the error log.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Prints given parameters to the error log.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='PrintInfo.html'>PrintInfo</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='PrintInfo.html'>PrintInfo</a>
             </td>
-            <td class='docblock short'>
-                <p>Prints given parameters to the info log.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Prints given parameters to the info log.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterAllCreatureEvent.html'>RegisterAllCreatureEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterAllCreatureEvent.html'>RegisterAllCreatureEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../Creature/index.html">Creature</a> event handler. It used AllCreatureScript so this don't need creature entry as a key.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> event handler. It used AllCreatureScript so this don't need creature entry as a key.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterBGEvent.html'>RegisterBGEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterBGEvent.html'>RegisterBGEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../BattleGround/index.html">BattleGround</a> event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../BattleGround/index.html">BattleGround</a> event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterCreatureEvent.html'>RegisterCreatureEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterCreatureEvent.html'>RegisterCreatureEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../Creature/index.html">Creature</a> event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterCreatureGossipEvent.html'>RegisterCreatureGossipEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterCreatureGossipEvent.html'>RegisterCreatureGossipEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../Creature/index.html">Creature</a> gossip event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> gossip event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterGameObjectEvent.html'>RegisterGameObjectEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterGameObjectEvent.html'>RegisterGameObjectEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../GameObject/index.html">GameObject</a> event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../GameObject/index.html">GameObject</a> event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterGameObjectGossipEvent.html'>RegisterGameObjectGossipEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterGameObjectGossipEvent.html'>RegisterGameObjectGossipEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../GameObject/index.html">GameObject</a> gossip event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../GameObject/index.html">GameObject</a> gossip event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterGroupEvent.html'>RegisterGroupEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterGroupEvent.html'>RegisterGroupEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../Group/index.html">Group</a> event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../Group/index.html">Group</a> event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterGuildEvent.html'>RegisterGuildEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterGuildEvent.html'>RegisterGuildEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../Guild/index.html">Guild</a> event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../Guild/index.html">Guild</a> event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterInstanceEvent.html'>RegisterInstanceEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterInstanceEvent.html'>RegisterInstanceEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../Map/index.html">Map</a> event handler for one instance of a <a class="mod" href="../Map/index.html">Map</a>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../Map/index.html">Map</a> event handler for one instance of a <a class="text-accent hover:underline" href="../Map/index.html">Map</a>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterItemEvent.html'>RegisterItemEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterItemEvent.html'>RegisterItemEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers an <a class="mod" href="../Item/index.html">Item</a> event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers an <a class="text-accent hover:underline" href="../Item/index.html">Item</a> event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterItemGossipEvent.html'>RegisterItemGossipEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterItemGossipEvent.html'>RegisterItemGossipEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers an <a class="mod" href="../Item/index.html">Item</a> gossip event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers an <a class="text-accent hover:underline" href="../Item/index.html">Item</a> gossip event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterMapEvent.html'>RegisterMapEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterMapEvent.html'>RegisterMapEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../Map/index.html">Map</a> event handler for all instance of a <a class="mod" href="../Map/index.html">Map</a>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../Map/index.html">Map</a> event handler for all instance of a <a class="text-accent hover:underline" href="../Map/index.html">Map</a>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterPacketEvent.html'>RegisterPacketEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterPacketEvent.html'>RegisterPacketEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../WorldPacket/index.html">WorldPacket</a> event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../WorldPacket/index.html">WorldPacket</a> event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterPlayerEvent.html'>RegisterPlayerEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterPlayerEvent.html'>RegisterPlayerEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../Player/index.html">Player</a> event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../Player/index.html">Player</a> event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterPlayerGossipEvent.html'>RegisterPlayerGossipEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterPlayerGossipEvent.html'>RegisterPlayerGossipEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../Player/index.html">Player</a> gossip event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../Player/index.html">Player</a> gossip event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterServerEvent.html'>RegisterServerEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterServerEvent.html'>RegisterServerEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a server event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a server event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterSpellEvent.html'>RegisterSpellEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterSpellEvent.html'>RegisterSpellEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../Spell/index.html">Spell</a> event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../Spell/index.html">Spell</a> event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterTicketEvent.html'>RegisterTicketEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterTicketEvent.html'>RegisterTicketEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../Ticket/index.html">Ticket</a> event handler.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../Ticket/index.html">Ticket</a> event handler.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RegisterUniqueCreatureEvent.html'>RegisterUniqueCreatureEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RegisterUniqueCreatureEvent.html'>RegisterUniqueCreatureEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Registers a <a class="mod" href="../Creature/index.html">Creature</a> event handler for a <em>single</em> <a class="mod" href="../Creature/index.html">Creature</a>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Registers a <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> event handler for a <em>single</em> <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ReloadALE.html'>ReloadALE</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ReloadALE.html'>ReloadALE</a>
             </td>
-            <td class='docblock short'>
-                <p>Reloads the Lua engine.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Reloads the Lua engine.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RemoveEventById.html'>RemoveEventById</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RemoveEventById.html'>RemoveEventById</a>
             </td>
-            <td class='docblock short'>
-                <p>Removes a global timed event specified by ID.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Removes a global timed event specified by ID.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RemoveEvents.html'>RemoveEvents</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RemoveEvents.html'>RemoveEvents</a>
             </td>
-            <td class='docblock short'>
-                <p>Removes all global timed events.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Removes all global timed events.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RunCommand.html'>RunCommand</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RunCommand.html'>RunCommand</a>
             </td>
-            <td class='docblock short'>
-                <p>Runs a command.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Runs a command.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SaveAllPlayers.html'>SaveAllPlayers</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SaveAllPlayers.html'>SaveAllPlayers</a>
             </td>
-            <td class='docblock short'>
-                <p>Saves all <a class="mod" href="../Player/index.html">Player</a>s.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Saves all <a class="text-accent hover:underline" href="../Player/index.html">Player</a>s.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SendMail.html'>SendMail</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SendMail.html'>SendMail</a>
             </td>
-            <td class='docblock short'>
-                <p>Sends mail to a <a class="mod" href="../Player/index.html">Player</a>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sends mail to a <a class="text-accent hover:underline" href="../Player/index.html">Player</a>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SendWorldMessage.html'>SendWorldMessage</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SendWorldMessage.html'>SendWorldMessage</a>
             </td>
-            <td class='docblock short'>
-                <p>Sends a message to all <a class="mod" href="../Player/index.html">Player</a>s online.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sends a message to all <a class="text-accent hover:underline" href="../Player/index.html">Player</a>s online.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetOwnerHalaa.html'>SetOwnerHalaa</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetOwnerHalaa.html'>SetOwnerHalaa</a>
             </td>
-            <td class='docblock short'>
-                <p>Sets the owner of Halaa in Nagrand to the respective faction
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the owner of Halaa in Nagrand to the respective faction
 0 = Alliance
-1 = Horde</p>
-            </td>
+1 = Horde</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='StartGameEvent.html'>StartGameEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='StartGameEvent.html'>StartGameEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Starts the event by eventId, if force is set, the event will force start regardless of previous event state.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Starts the event by eventId, if force is set, the event will force start regardless of previous event state.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='StopGameEvent.html'>StopGameEvent</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='StopGameEvent.html'>StopGameEvent</a>
             </td>
-            <td class='docblock short'>
-                <p>Stops the event by eventId, if force is set, the event will force stop regardless of previous event state.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Stops the event by eventId, if force is set, the event will force stop regardless of previous event state.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='VendorRemoveAllItems.html'>VendorRemoveAllItems</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='VendorRemoveAllItems.html'>VendorRemoveAllItems</a>
             </td>
-            <td class='docblock short'>
-                <p>Removes all <a class="mod" href="../Item/index.html">Item</a>s from a vendor and updates the database.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Removes all <a class="text-accent hover:underline" href="../Item/index.html">Item</a>s from a vendor and updates the database.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='VendorRemoveItem.html'>VendorRemoveItem</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='VendorRemoveItem.html'>VendorRemoveItem</a>
             </td>
-            <td class='docblock short'>
-                <p>Removes an <a class="mod" href="../Item/index.html">Item</a> from a vendor and updates the database.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Removes an <a class="text-accent hover:underline" href="../Item/index.html">Item</a> from a vendor and updates the database.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='WorldDBExecute.html'>WorldDBExecute</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='WorldDBExecute.html'>WorldDBExecute</a>
             </td>
-            <td class='docblock short'>
-                <p>Executes a SQL query on the world database.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Executes a SQL query on the world database.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='WorldDBQuery.html'>WorldDBQuery</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='WorldDBQuery.html'>WorldDBQuery</a>
             </td>
-            <td class='docblock short'>
-                <p>Executes a SQL query on the world database and returns an <a class="mod" href="../ALEQuery/index.html">ALEQuery</a>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Executes a SQL query on the world database and returns an <a class="text-accent hover:underline" href="../ALEQuery/index.html">ALEQuery</a>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='WorldDBQueryAsync.html'>WorldDBQueryAsync</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='WorldDBQueryAsync.html'>WorldDBQueryAsync</a>
             </td>
-            <td class='docblock short'>
-                <p>Executes an asynchronous SQL query on the world database and passes an <a class="mod" href="../ALEQuery/index.html">ALEQuery</a> to a callback function.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Executes an asynchronous SQL query on the world database and passes an <a class="text-accent hover:underline" href="../ALEQuery/index.html">ALEQuery</a> to a callback function.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='bit_and.html'>bit_and</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='bit_and.html'>bit_and</a>
             </td>
-            <td class='docblock short'>
-                <p>Performs a bitwise AND (a &amp; b).</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Performs a bitwise AND (a &amp; b).</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='bit_lshift.html'>bit_lshift</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='bit_lshift.html'>bit_lshift</a>
             </td>
-            <td class='docblock short'>
-                <p>Performs a bitwise left-shift (a &lt;&lt; b).</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Performs a bitwise left-shift (a &lt;&lt; b).</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='bit_not.html'>bit_not</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='bit_not.html'>bit_not</a>
             </td>
-            <td class='docblock short'>
-                <p>Performs a bitwise NOT (~a).</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Performs a bitwise NOT (~a).</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='bit_or.html'>bit_or</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='bit_or.html'>bit_or</a>
             </td>
-            <td class='docblock short'>
-                <p>Performs a bitwise OR (a | b).</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Performs a bitwise OR (a | b).</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='bit_rshift.html'>bit_rshift</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='bit_rshift.html'>bit_rshift</a>
             </td>
-            <td class='docblock short'>
-                <p>Performs a bitwise right-shift (a &gt;&gt; b).</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Performs a bitwise right-shift (a &gt;&gt; b).</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='bit_xor.html'>bit_xor</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='bit_xor.html'>bit_xor</a>
             </td>
-            <td class='docblock short'>
-                <p>Performs a bitwise XOR (a ^ b).</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Performs a bitwise XOR (a ^ b).</td>
         </tr>
     </table>
-
-</section>
-
-<section id='search' class="content hidden"></section>
-
-<section class="footer"></section>
-
-<div id="help" class="hidden">
-    <div class="shortcuts">
-        <h1>Keyboard shortcuts</h1>
-        <dl>
-            <dt>?</dt>
-            <dd>Show this help dialog</dd>
-            <dt>S</dt>
-            <dd>Focus the search field</dd>
-            <dt>&larrb;</dt>
-            <dd>Move up in search results</dd>
-            <dt>&rarrb;</dt>
-            <dd>Move down in search results</dd>
-            <dt>&#9166;</dt>
-            <dd>Go to active search result</dd>
-        </dl>
     </div>
-    <div class="infos">
-        <h1>Search tricks</h1>
-        <p>
-            Prefix searches with a type followed by a colon (e.g.
-            <code>fn:</code>) to restrict the search to a given type.
+
+    </section>
+
+    <section id='search' class="content mx-auto hidden w-full max-w-[60rem] grow px-6 py-8"></section>
+
+    <footer class="shrink-0 border-t border-line px-6 py-6 text-xs text-body-dim
+                   lg:px-[max(1.5rem,calc((100%-60rem)/2+1.5rem))]">
+        <p class="max-w-2xl leading-relaxed">
+            Built on <a class="font-medium text-body hover:text-accent hover:underline"
+                        href="https://github.com/ElunaLuaEngine/Eluna">Eluna</a>.
+            ALE is a fork, and the heavy lifting was done upstream - our thanks to the original
+            Eluna authors and to everyone who has contributed to it over the years.
         </p>
-        <p>
-            Accepted types are: <code>fn</code>, <code>mod</code>,
-            <code>struct</code> (or <code>str</code>), <code>enum</code>,
-            <code>trait</code>, <code>typedef</code> (or
-            <code>tdef</code>).
-        </p>
-    </div>
+        <div class="mt-4 flex flex-wrap justify-between gap-4 border-t border-line pt-4">
+            <span>Generated on <script src="../date.js"></script></span>
+            <span>&copy;2026 ALE Lua Engine</span>
+        </div>
+    </footer>
+</div>
+
+<div id="help" class="hidden fixed inset-0 z-30 m-auto h-fit w-fit rounded-lg border border-line bg-ink-raised p-6 shadow-2xl">
+    <h1 class="mb-3 font-semibold text-body-bright">Keyboard shortcuts</h1>
+    <dl class="grid grid-cols-[3rem_1fr] gap-y-1 text-sm">
+        <dt class="font-mono text-body-dim">?</dt><dd>Show this help dialog</dd>
+        <dt class="font-mono text-body-dim">S</dt><dd>Focus the search field</dd>
+        <dt class="font-mono text-body-dim">&uarr;</dt><dd>Move up in search results</dd>
+        <dt class="font-mono text-body-dim">&darr;</dt><dd>Move down in search results</dd>
+        <dt class="font-mono text-body-dim">&#9166;</dt><dd>Go to active search result</dd>
+    </dl>
 </div>
 
 <script>
@@ -1196,7 +1528,5 @@ If the text for the specified locale is not found, it returns the default text.<
 <script src="../static/jquery.js"></script>
 <script src="../static/main.js"></script>
 <script async src="../search-index.js"></script>
-<center>Generated on <script src="../date.js"></script></center>
-<center>&copy;2026 - ALE Lua Engine</center>
 </body>
 </html>

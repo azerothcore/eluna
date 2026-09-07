@@ -1,338 +1,346 @@
 document.write(`
-  <a id="Player:AbandonQuest" class="fn" href="../Player/AbandonQuest.html">AbandonQuest</a>
-  <a id="Player:AddArmorProficiency" class="fn" href="../Player/AddArmorProficiency.html">AddArmorProficiency</a>
-  <a id="Player:AddBonusTalent" class="fn" href="../Player/AddBonusTalent.html">AddBonusTalent</a>
-  <a id="Player:AddComboPoints" class="fn" href="../Player/AddComboPoints.html">AddComboPoints</a>
-  <a id="Player:AddItem" class="fn" href="../Player/AddItem.html">AddItem</a>
-  <a id="Player:AddLifetimeKills" class="fn" href="../Player/AddLifetimeKills.html">AddLifetimeKills</a>
-  <a id="Player:AddQuest" class="fn" href="../Player/AddQuest.html">AddQuest</a>
-  <a id="Player:AddWeaponProficiency" class="fn" href="../Player/AddWeaponProficiency.html">AddWeaponProficiency</a>
-  <a id="Player:AdvanceAllSkills" class="fn" href="../Player/AdvanceAllSkills.html">AdvanceAllSkills</a>
-  <a id="Player:AdvanceSkill" class="fn" href="../Player/AdvanceSkill.html">AdvanceSkill</a>
-  <a id="Player:AdvanceSkillsToMax" class="fn" href="../Player/AdvanceSkillsToMax.html">AdvanceSkillsToMax</a>
-  <a id="Player:ApplyRatingMod" class="fn" href="../Player/ApplyRatingMod.html">ApplyRatingMod</a>
-  <a id="Player:AreaExploredOrEventHappens" class="fn" href="../Player/AreaExploredOrEventHappens.html">AreaExploredOrEventHappens</a>
-  <a id="Player:CalculateReputationGain" class="fn" href="../Player/CalculateReputationGain.html">CalculateReputationGain</a>
-  <a id="Player:CanAddQuest" class="fn" href="../Player/CanAddQuest.html">CanAddQuest</a>
-  <a id="Player:CanBlock" class="fn" href="../Player/CanBlock.html">CanBlock</a>
-  <a id="Player:CanCompleteQuest" class="fn" href="../Player/CanCompleteQuest.html">CanCompleteQuest</a>
-  <a id="Player:CanCompleteRepeatableQuest" class="fn" href="../Player/CanCompleteRepeatableQuest.html">CanCompleteRepeatableQuest</a>
-  <a id="Player:CanEquipItem" class="fn" href="../Player/CanEquipItem.html">CanEquipItem</a>
-  <a id="Player:CanFly" class="fn" href="../Player/CanFly.html">CanFly</a>
-  <a id="Player:CanInteractWithQuestGiver" class="fn" href="../Player/CanInteractWithQuestGiver.html">CanInteractWithQuestGiver</a>
-  <a id="Player:CanParry" class="fn" href="../Player/CanParry.html">CanParry</a>
-  <a id="Player:CanPetResurrect" class="fn" href="../Player/CanPetResurrect.html">CanPetResurrect</a>
-  <a id="Player:CanResummonPet" class="fn" href="../Player/CanResummonPet.html">CanResummonPet</a>
-  <a id="Player:CanRewardQuest" class="fn" href="../Player/CanRewardQuest.html">CanRewardQuest</a>
-  <a id="Player:CanSeeDKPet" class="fn" href="../Player/CanSeeDKPet.html">CanSeeDKPet</a>
-  <a id="Player:CanSeeStartQuest" class="fn" href="../Player/CanSeeStartQuest.html">CanSeeStartQuest</a>
-  <a id="Player:CanShareQuest" class="fn" href="../Player/CanShareQuest.html">CanShareQuest</a>
-  <a id="Player:CanSpeak" class="fn" href="../Player/CanSpeak.html">CanSpeak</a>
-  <a id="Player:CanTakeQuest" class="fn" href="../Player/CanTakeQuest.html">CanTakeQuest</a>
-  <a id="Player:CanTameExoticPets" class="fn" href="../Player/CanTameExoticPets.html">CanTameExoticPets</a>
-  <a id="Player:CanTeleport" class="fn" href="../Player/CanTeleport.html">CanTeleport</a>
-  <a id="Player:CanTitanGrip" class="fn" href="../Player/CanTitanGrip.html">CanTitanGrip</a>
-  <a id="Player:CanUninviteFromGroup" class="fn" href="../Player/CanUninviteFromGroup.html">CanUninviteFromGroup</a>
-  <a id="Player:CanUseItem" class="fn" href="../Player/CanUseItem.html">CanUseItem</a>
-  <a id="Player:ClearComboPoints" class="fn" href="../Player/ClearComboPoints.html">ClearComboPoints</a>
-  <a id="Player:CompleteQuest" class="fn" href="../Player/CompleteQuest.html">CompleteQuest</a>
-  <a id="Player:CreatePet" class="fn" href="../Player/CreatePet.html">CreatePet</a>
-  <a id="Player:DoRandomRoll" class="fn" href="../Player/DoRandomRoll.html">DoRandomRoll</a>
-  <a id="Player:DurabilityLoss" class="fn" href="../Player/DurabilityLoss.html">DurabilityLoss</a>
-  <a id="Player:DurabilityLossAll" class="fn" href="../Player/DurabilityLossAll.html">DurabilityLossAll</a>
-  <a id="Player:DurabilityPointLossForEquipSlot" class="fn" href="../Player/DurabilityPointLossForEquipSlot.html">DurabilityPointLossForEquipSlot</a>
-  <a id="Player:DurabilityPointsLoss" class="fn" href="../Player/DurabilityPointsLoss.html">DurabilityPointsLoss</a>
-  <a id="Player:DurabilityPointsLossAll" class="fn" href="../Player/DurabilityPointsLossAll.html">DurabilityPointsLossAll</a>
-  <a id="Player:DurabilityRepair" class="fn" href="../Player/DurabilityRepair.html">DurabilityRepair</a>
-  <a id="Player:DurabilityRepairAll" class="fn" href="../Player/DurabilityRepairAll.html">DurabilityRepairAll</a>
-  <a id="Player:EnvironmentalDamage" class="fn" href="../Player/EnvironmentalDamage.html">EnvironmentalDamage</a>
-  <a id="Player:EquipItem" class="fn" href="../Player/EquipItem.html">EquipItem</a>
-  <a id="Player:FailQuest" class="fn" href="../Player/FailQuest.html">FailQuest</a>
-  <a id="Player:GetAccountId" class="fn" href="../Player/GetAccountId.html">GetAccountId</a>
-  <a id="Player:GetAccountName" class="fn" href="../Player/GetAccountName.html">GetAccountName</a>
-  <a id="Player:GetAchievementCriteriaProgress" class="fn" href="../Player/GetAchievementCriteriaProgress.html">GetAchievementCriteriaProgress</a>
-  <a id="Player:GetAchievementPoints" class="fn" href="../Player/GetAchievementPoints.html">GetAchievementPoints</a>
-  <a id="Player:GetActiveSpec" class="fn" href="../Player/GetActiveSpec.html">GetActiveSpec</a>
-  <a id="Player:GetAmmoDPS" class="fn" href="../Player/GetAmmoDPS.html">GetAmmoDPS</a>
-  <a id="Player:GetArenaPoints" class="fn" href="../Player/GetArenaPoints.html">GetArenaPoints</a>
-  <a id="Player:GetArmorProficiency" class="fn" href="../Player/GetArmorProficiency.html">GetArmorProficiency</a>
-  <a id="Player:GetAverageItemLevel" class="fn" href="../Player/GetAverageItemLevel.html">GetAverageItemLevel</a>
-  <a id="Player:GetBankFreeSlots" class="fn" href="../Player/GetBankFreeSlots.html">GetBankFreeSlots</a>
-  <a id="Player:GetBankItem" class="fn" href="../Player/GetBankItem.html">GetBankItem</a>
-  <a id="Player:GetBarberShopCost" class="fn" href="../Player/GetBarberShopCost.html">GetBarberShopCost</a>
-  <a id="Player:GetBaseSkillValue" class="fn" href="../Player/GetBaseSkillValue.html">GetBaseSkillValue</a>
-  <a id="Player:GetBattlegroundId" class="fn" href="../Player/GetBattlegroundId.html">GetBattlegroundId</a>
-  <a id="Player:GetBattlegroundTypeId" class="fn" href="../Player/GetBattlegroundTypeId.html">GetBattlegroundTypeId</a>
-  <a id="Player:GetBonusTalentCount" class="fn" href="../Player/GetBonusTalentCount.html">GetBonusTalentCount</a>
-  <a id="Player:GetChampioningFaction" class="fn" href="../Player/GetChampioningFaction.html">GetChampioningFaction</a>
-  <a id="Player:GetChatTag" class="fn" href="../Player/GetChatTag.html">GetChatTag</a>
-  <a id="Player:GetCoinage" class="fn" href="../Player/GetCoinage.html">GetCoinage</a>
-  <a id="Player:GetComboPoints" class="fn" href="../Player/GetComboPoints.html">GetComboPoints</a>
-  <a id="Player:GetComboTarget" class="fn" href="../Player/GetComboTarget.html">GetComboTarget</a>
-  <a id="Player:GetCompletedAchievementsCount" class="fn" href="../Player/GetCompletedAchievementsCount.html">GetCompletedAchievementsCount</a>
-  <a id="Player:GetCompletedQuestsCount" class="fn" href="../Player/GetCompletedQuestsCount.html">GetCompletedQuestsCount</a>
-  <a id="Player:GetCorpse" class="fn" href="../Player/GetCorpse.html">GetCorpse</a>
-  <a id="Player:GetCreationTime" class="fn" href="../Player/GetCreationTime.html">GetCreationTime</a>
-  <a id="Player:GetDbLocaleIndex" class="fn" href="../Player/GetDbLocaleIndex.html">GetDbLocaleIndex</a>
-  <a id="Player:GetDbcLocale" class="fn" href="../Player/GetDbcLocale.html">GetDbcLocale</a>
-  <a id="Player:GetDifficulty" class="fn" href="../Player/GetDifficulty.html">GetDifficulty</a>
-  <a id="Player:GetDodgeFromAgility" class="fn" href="../Player/GetDodgeFromAgility.html">GetDodgeFromAgility</a>
-  <a id="Player:GetDrunkValue" class="fn" href="../Player/GetDrunkValue.html">GetDrunkValue</a>
-  <a id="Player:GetEquippedItemBySlot" class="fn" href="../Player/GetEquippedItemBySlot.html">GetEquippedItemBySlot</a>
-  <a id="Player:GetFreeTalentPoints" class="fn" href="../Player/GetFreeTalentPoints.html">GetFreeTalentPoints</a>
-  <a id="Player:GetGMRank" class="fn" href="../Player/GetGMRank.html">GetGMRank</a>
-  <a id="Player:GetGlyph" class="fn" href="../Player/GetGlyph.html">GetGlyph</a>
-  <a id="Player:GetGossipTextId" class="fn" href="../Player/GetGossipTextId.html">GetGossipTextId</a>
-  <a id="Player:GetGroup" class="fn" href="../Player/GetGroup.html">GetGroup</a>
-  <a id="Player:GetGroupInvite" class="fn" href="../Player/GetGroupInvite.html">GetGroupInvite</a>
-  <a id="Player:GetGuild" class="fn" href="../Player/GetGuild.html">GetGuild</a>
-  <a id="Player:GetGuildId" class="fn" href="../Player/GetGuildId.html">GetGuildId</a>
-  <a id="Player:GetGuildName" class="fn" href="../Player/GetGuildName.html">GetGuildName</a>
-  <a id="Player:GetGuildRank" class="fn" href="../Player/GetGuildRank.html">GetGuildRank</a>
-  <a id="Player:GetHealthBonusFromStamina" class="fn" href="../Player/GetHealthBonusFromStamina.html">GetHealthBonusFromStamina</a>
-  <a id="Player:GetHomebind" class="fn" href="../Player/GetHomebind.html">GetHomebind</a>
-  <a id="Player:GetHonorPoints" class="fn" href="../Player/GetHonorPoints.html">GetHonorPoints</a>
-  <a id="Player:GetInGameTime" class="fn" href="../Player/GetInGameTime.html">GetInGameTime</a>
-  <a id="Player:GetInventoryFreeSlots" class="fn" href="../Player/GetInventoryFreeSlots.html">GetInventoryFreeSlots</a>
-  <a id="Player:GetInventoryItem" class="fn" href="../Player/GetInventoryItem.html">GetInventoryItem</a>
-  <a id="Player:GetItemByEntry" class="fn" href="../Player/GetItemByEntry.html">GetItemByEntry</a>
-  <a id="Player:GetItemByGUID" class="fn" href="../Player/GetItemByGUID.html">GetItemByGUID</a>
-  <a id="Player:GetItemByPos" class="fn" href="../Player/GetItemByPos.html">GetItemByPos</a>
-  <a id="Player:GetItemCount" class="fn" href="../Player/GetItemCount.html">GetItemCount</a>
-  <a id="Player:GetKnownTaxiNodes" class="fn" href="../Player/GetKnownTaxiNodes.html">GetKnownTaxiNodes</a>
-  <a id="Player:GetLastPetNumber" class="fn" href="../Player/GetLastPetNumber.html">GetLastPetNumber</a>
-  <a id="Player:GetLastPetSpell" class="fn" href="../Player/GetLastPetSpell.html">GetLastPetSpell</a>
-  <a id="Player:GetLatency" class="fn" href="../Player/GetLatency.html">GetLatency</a>
-  <a id="Player:GetLevelPlayedTime" class="fn" href="../Player/GetLevelPlayedTime.html">GetLevelPlayedTime</a>
-  <a id="Player:GetLifetimeKills" class="fn" href="../Player/GetLifetimeKills.html">GetLifetimeKills</a>
-  <a id="Player:GetMailCount" class="fn" href="../Player/GetMailCount.html">GetMailCount</a>
-  <a id="Player:GetMailItem" class="fn" href="../Player/GetMailItem.html">GetMailItem</a>
-  <a id="Player:GetManaBonusFromIntellect" class="fn" href="../Player/GetManaBonusFromIntellect.html">GetManaBonusFromIntellect</a>
-  <a id="Player:GetMaxSkillValue" class="fn" href="../Player/GetMaxSkillValue.html">GetMaxSkillValue</a>
-  <a id="Player:GetMeleeCritFromAgility" class="fn" href="../Player/GetMeleeCritFromAgility.html">GetMeleeCritFromAgility</a>
-  <a id="Player:GetMostPointsTalentTree" class="fn" href="../Player/GetMostPointsTalentTree.html">GetMostPointsTalentTree</a>
-  <a id="Player:GetNextRandomRaidMember" class="fn" href="../Player/GetNextRandomRaidMember.html">GetNextRandomRaidMember</a>
-  <a id="Player:GetOriginalGroup" class="fn" href="../Player/GetOriginalGroup.html">GetOriginalGroup</a>
-  <a id="Player:GetOriginalSubGroup" class="fn" href="../Player/GetOriginalSubGroup.html">GetOriginalSubGroup</a>
-  <a id="Player:GetPet" class="fn" href="../Player/GetPet.html">GetPet</a>
-  <a id="Player:GetPhaseMaskForSpawn" class="fn" href="../Player/GetPhaseMaskForSpawn.html">GetPhaseMaskForSpawn</a>
-  <a id="Player:GetPlayerIP" class="fn" href="../Player/GetPlayerIP.html">GetPlayerIP</a>
-  <a id="Player:GetPlayerSettingValue" class="fn" href="../Player/GetPlayerSettingValue.html">GetPlayerSettingValue</a>
-  <a id="Player:GetPureMaxSkillValue" class="fn" href="../Player/GetPureMaxSkillValue.html">GetPureMaxSkillValue</a>
-  <a id="Player:GetPureSkillValue" class="fn" href="../Player/GetPureSkillValue.html">GetPureSkillValue</a>
-  <a id="Player:GetQuestLevel" class="fn" href="../Player/GetQuestLevel.html">GetQuestLevel</a>
-  <a id="Player:GetQuestRewardStatus" class="fn" href="../Player/GetQuestRewardStatus.html">GetQuestRewardStatus</a>
-  <a id="Player:GetQuestSlotQuestId" class="fn" href="../Player/GetQuestSlotQuestId.html">GetQuestSlotQuestId</a>
-  <a id="Player:GetQuestStatus" class="fn" href="../Player/GetQuestStatus.html">GetQuestStatus</a>
-  <a id="Player:GetReputation" class="fn" href="../Player/GetReputation.html">GetReputation</a>
-  <a id="Player:GetReputationRank" class="fn" href="../Player/GetReputationRank.html">GetReputationRank</a>
-  <a id="Player:GetReqKillOrCastCurrentCount" class="fn" href="../Player/GetReqKillOrCastCurrentCount.html">GetReqKillOrCastCurrentCount</a>
-  <a id="Player:GetRestBonus" class="fn" href="../Player/GetRestBonus.html">GetRestBonus</a>
-  <a id="Player:GetRunesState" class="fn" href="../Player/GetRunesState.html">GetRunesState</a>
-  <a id="Player:GetSelection" class="fn" href="../Player/GetSelection.html">GetSelection</a>
-  <a id="Player:GetShield" class="fn" href="../Player/GetShield.html">GetShield</a>
-  <a id="Player:GetShieldBlockValue" class="fn" href="../Player/GetShieldBlockValue.html">GetShieldBlockValue</a>
-  <a id="Player:GetSightRange" class="fn" href="../Player/GetSightRange.html">GetSightRange</a>
-  <a id="Player:GetSkillPermBonusValue" class="fn" href="../Player/GetSkillPermBonusValue.html">GetSkillPermBonusValue</a>
-  <a id="Player:GetSkillTempBonusValue" class="fn" href="../Player/GetSkillTempBonusValue.html">GetSkillTempBonusValue</a>
-  <a id="Player:GetSkillValue" class="fn" href="../Player/GetSkillValue.html">GetSkillValue</a>
-  <a id="Player:GetSpecsCount" class="fn" href="../Player/GetSpecsCount.html">GetSpecsCount</a>
-  <a id="Player:GetSpellCooldownDelay" class="fn" href="../Player/GetSpellCooldownDelay.html">GetSpellCooldownDelay</a>
-  <a id="Player:GetSpellCritFromIntellect" class="fn" href="../Player/GetSpellCritFromIntellect.html">GetSpellCritFromIntellect</a>
-  <a id="Player:GetSpells" class="fn" href="../Player/GetSpells.html">GetSpells</a>
-  <a id="Player:GetSubGroup" class="fn" href="../Player/GetSubGroup.html">GetSubGroup</a>
-  <a id="Player:GetTalentTreePoints" class="fn" href="../Player/GetTalentTreePoints.html">GetTalentTreePoints</a>
-  <a id="Player:GetTeam" class="fn" href="../Player/GetTeam.html">GetTeam</a>
-  <a id="Player:GetTemporaryUnsummonedPetNumber" class="fn" href="../Player/GetTemporaryUnsummonedPetNumber.html">GetTemporaryUnsummonedPetNumber</a>
-  <a id="Player:GetTodayHonorPoints" class="fn" href="../Player/GetTodayHonorPoints.html">GetTodayHonorPoints</a>
-  <a id="Player:GetTodayKills" class="fn" href="../Player/GetTodayKills.html">GetTodayKills</a>
-  <a id="Player:GetTotalPlayedTime" class="fn" href="../Player/GetTotalPlayedTime.html">GetTotalPlayedTime</a>
-  <a id="Player:GetTrader" class="fn" href="../Player/GetTrader.html">GetTrader</a>
-  <a id="Player:GetViewpoint" class="fn" href="../Player/GetViewpoint.html">GetViewpoint</a>
-  <a id="Player:GetWeaponProficiency" class="fn" href="../Player/GetWeaponProficiency.html">GetWeaponProficiency</a>
-  <a id="Player:GetXP" class="fn" href="../Player/GetXP.html">GetXP</a>
-  <a id="Player:GetXPRestBonus" class="fn" href="../Player/GetXPRestBonus.html">GetXPRestBonus</a>
-  <a id="Player:GetYesterdayHonorPoints" class="fn" href="../Player/GetYesterdayHonorPoints.html">GetYesterdayHonorPoints</a>
-  <a id="Player:GetYesterdayKills" class="fn" href="../Player/GetYesterdayKills.html">GetYesterdayKills</a>
-  <a id="Player:GiveXP" class="fn" href="../Player/GiveXP.html">GiveXP</a>
-  <a id="Player:GossipAddQuests" class="fn" href="../Player/GossipAddQuests.html">GossipAddQuests</a>
-  <a id="Player:GossipClearMenu" class="fn" href="../Player/GossipClearMenu.html">GossipClearMenu</a>
-  <a id="Player:GossipComplete" class="fn" href="../Player/GossipComplete.html">GossipComplete</a>
-  <a id="Player:GossipMenuAddItem" class="fn" href="../Player/GossipMenuAddItem.html">GossipMenuAddItem</a>
-  <a id="Player:GossipSendMenu" class="fn" href="../Player/GossipSendMenu.html">GossipSendMenu</a>
-  <a id="Player:GossipSendPOI" class="fn" href="../Player/GossipSendPOI.html">GossipSendPOI</a>
-  <a id="Player:GroupCreate" class="fn" href="../Player/GroupCreate.html">GroupCreate</a>
-  <a id="Player:GroupEventHappens" class="fn" href="../Player/GroupEventHappens.html">GroupEventHappens</a>
-  <a id="Player:GroupInvite" class="fn" href="../Player/GroupInvite.html">GroupInvite</a>
-  <a id="Player:HasAchieved" class="fn" href="../Player/HasAchieved.html">HasAchieved</a>
-  <a id="Player:HasAtLoginFlag" class="fn" href="../Player/HasAtLoginFlag.html">HasAtLoginFlag</a>
-  <a id="Player:HasCasterSpec" class="fn" href="../Player/HasCasterSpec.html">HasCasterSpec</a>
-  <a id="Player:HasHealSpec" class="fn" href="../Player/HasHealSpec.html">HasHealSpec</a>
-  <a id="Player:HasItem" class="fn" href="../Player/HasItem.html">HasItem</a>
-  <a id="Player:HasKnownTaxiNode" class="fn" href="../Player/HasKnownTaxiNode.html">HasKnownTaxiNode</a>
-  <a id="Player:HasMeleeSpec" class="fn" href="../Player/HasMeleeSpec.html">HasMeleeSpec</a>
-  <a id="Player:HasQuest" class="fn" href="../Player/HasQuest.html">HasQuest</a>
-  <a id="Player:HasQuestForGO" class="fn" href="../Player/HasQuestForGO.html">HasQuestForGO</a>
-  <a id="Player:HasQuestForItem" class="fn" href="../Player/HasQuestForItem.html">HasQuestForItem</a>
-  <a id="Player:HasSkill" class="fn" href="../Player/HasSkill.html">HasSkill</a>
-  <a id="Player:HasSpell" class="fn" href="../Player/HasSpell.html">HasSpell</a>
-  <a id="Player:HasSpellCooldown" class="fn" href="../Player/HasSpellCooldown.html">HasSpellCooldown</a>
-  <a id="Player:HasTalent" class="fn" href="../Player/HasTalent.html">HasTalent</a>
-  <a id="Player:HasTankSpec" class="fn" href="../Player/HasTankSpec.html">HasTankSpec</a>
-  <a id="Player:HasTitle" class="fn" href="../Player/HasTitle.html">HasTitle</a>
-  <a id="Player:HasTitleByIndex" class="fn" href="../Player/HasTitleByIndex.html">HasTitleByIndex</a>
-  <a id="Player:InArena" class="fn" href="../Player/InArena.html">InArena</a>
-  <a id="Player:InBattleground" class="fn" href="../Player/InBattleground.html">InBattleground</a>
-  <a id="Player:InBattlegroundQueue" class="fn" href="../Player/InBattlegroundQueue.html">InBattlegroundQueue</a>
-  <a id="Player:InRandomLfgDungeon" class="fn" href="../Player/InRandomLfgDungeon.html">InRandomLfgDungeon</a>
-  <a id="Player:IncompleteQuest" class="fn" href="../Player/IncompleteQuest.html">IncompleteQuest</a>
-  <a id="Player:InitTaxiNodesForLevel" class="fn" href="../Player/InitTaxiNodesForLevel.html">InitTaxiNodesForLevel</a>
-  <a id="Player:IsAFK" class="fn" href="../Player/IsAFK.html">IsAFK</a>
-  <a id="Player:IsAcceptingWhispers" class="fn" href="../Player/IsAcceptingWhispers.html">IsAcceptingWhispers</a>
-  <a id="Player:IsAlliance" class="fn" href="../Player/IsAlliance.html">IsAlliance</a>
-  <a id="Player:IsAtGroupRewardDistance" class="fn" href="../Player/IsAtGroupRewardDistance.html">IsAtGroupRewardDistance</a>
-  <a id="Player:IsAtLootRewardDistance" class="fn" href="../Player/IsAtLootRewardDistance.html">IsAtLootRewardDistance</a>
-  <a id="Player:IsBot" class="fn" href="../Player/IsBot.html">IsBot</a>
-  <a id="Player:IsDND" class="fn" href="../Player/IsDND.html">IsDND</a>
-  <a id="Player:IsDailyQuestDone" class="fn" href="../Player/IsDailyQuestDone.html">IsDailyQuestDone</a>
-  <a id="Player:IsExistPet" class="fn" href="../Player/IsExistPet.html">IsExistPet</a>
-  <a id="Player:IsFFAPvP" class="fn" href="../Player/IsFFAPvP.html">IsFFAPvP</a>
-  <a id="Player:IsFalling" class="fn" href="../Player/IsFalling.html">IsFalling</a>
-  <a id="Player:IsFlying" class="fn" href="../Player/IsFlying.html">IsFlying</a>
-  <a id="Player:IsGM" class="fn" href="../Player/IsGM.html">IsGM</a>
-  <a id="Player:IsGMChat" class="fn" href="../Player/IsGMChat.html">IsGMChat</a>
-  <a id="Player:IsGMVisible" class="fn" href="../Player/IsGMVisible.html">IsGMVisible</a>
-  <a id="Player:IsGroupVisibleFor" class="fn" href="../Player/IsGroupVisibleFor.html">IsGroupVisibleFor</a>
-  <a id="Player:IsHonorOrXPTarget" class="fn" href="../Player/IsHonorOrXPTarget.html">IsHonorOrXPTarget</a>
-  <a id="Player:IsHorde" class="fn" href="../Player/IsHorde.html">IsHorde</a>
-  <a id="Player:IsImmuneToDamage" class="fn" href="../Player/IsImmuneToDamage.html">IsImmuneToDamage</a>
-  <a id="Player:IsInArenaTeam" class="fn" href="../Player/IsInArenaTeam.html">IsInArenaTeam</a>
-  <a id="Player:IsInGroup" class="fn" href="../Player/IsInGroup.html">IsInGroup</a>
-  <a id="Player:IsInGuild" class="fn" href="../Player/IsInGuild.html">IsInGuild</a>
-  <a id="Player:IsInSameGroupWith" class="fn" href="../Player/IsInSameGroupWith.html">IsInSameGroupWith</a>
-  <a id="Player:IsInSameRaidWith" class="fn" href="../Player/IsInSameRaidWith.html">IsInSameRaidWith</a>
-  <a id="Player:IsInWater" class="fn" href="../Player/IsInWater.html">IsInWater</a>
-  <a id="Player:IsMaxLevel" class="fn" href="../Player/IsMaxLevel.html">IsMaxLevel</a>
-  <a id="Player:IsMoving" class="fn" href="../Player/IsMoving.html">IsMoving</a>
-  <a id="Player:IsPetNeedBeTemporaryUnsummoned" class="fn" href="../Player/IsPetNeedBeTemporaryUnsummoned.html">IsPetNeedBeTemporaryUnsummoned</a>
-  <a id="Player:IsPvP" class="fn" href="../Player/IsPvP.html">IsPvP</a>
-  <a id="Player:IsRested" class="fn" href="../Player/IsRested.html">IsRested</a>
-  <a id="Player:IsSpectator" class="fn" href="../Player/IsSpectator.html">IsSpectator</a>
-  <a id="Player:IsTaxiCheater" class="fn" href="../Player/IsTaxiCheater.html">IsTaxiCheater</a>
-  <a id="Player:IsUsingLfg" class="fn" href="../Player/IsUsingLfg.html">IsUsingLfg</a>
-  <a id="Player:IsVisibleForPlayer" class="fn" href="../Player/IsVisibleForPlayer.html">IsVisibleForPlayer</a>
-  <a id="Player:KickPlayer" class="fn" href="../Player/KickPlayer.html">KickPlayer</a>
-  <a id="Player:KillPlayer" class="fn" href="../Player/KillPlayer.html">KillPlayer</a>
-  <a id="Player:KilledMonsterCredit" class="fn" href="../Player/KilledMonsterCredit.html">KilledMonsterCredit</a>
-  <a id="Player:LearnPetTalent" class="fn" href="../Player/LearnPetTalent.html">LearnPetTalent</a>
-  <a id="Player:LearnSpell" class="fn" href="../Player/LearnSpell.html">LearnSpell</a>
-  <a id="Player:LearnTalent" class="fn" href="../Player/LearnTalent.html">LearnTalent</a>
-  <a id="Player:LeaveBattleground" class="fn" href="../Player/LeaveBattleground.html">LeaveBattleground</a>
-  <a id="Player:LogoutPlayer" class="fn" href="../Player/LogoutPlayer.html">LogoutPlayer</a>
-  <a id="Player:ModifyArenaPoints" class="fn" href="../Player/ModifyArenaPoints.html">ModifyArenaPoints</a>
-  <a id="Player:ModifyHonorPoints" class="fn" href="../Player/ModifyHonorPoints.html">ModifyHonorPoints</a>
-  <a id="Player:ModifyMoney" class="fn" href="../Player/ModifyMoney.html">ModifyMoney</a>
-  <a id="Player:Mute" class="fn" href="../Player/Mute.html">Mute</a>
-  <a id="Player:RemoveAmmo" class="fn" href="../Player/RemoveAmmo.html">RemoveAmmo</a>
-  <a id="Player:RemoveArenaSpellCooldowns" class="fn" href="../Player/RemoveArenaSpellCooldowns.html">RemoveArenaSpellCooldowns</a>
-  <a id="Player:RemoveBonusTalent" class="fn" href="../Player/RemoveBonusTalent.html">RemoveBonusTalent</a>
-  <a id="Player:RemoveFromBattlegroundRaid" class="fn" href="../Player/RemoveFromBattlegroundRaid.html">RemoveFromBattlegroundRaid</a>
-  <a id="Player:RemoveFromGroup" class="fn" href="../Player/RemoveFromGroup.html">RemoveFromGroup</a>
-  <a id="Player:RemoveItem" class="fn" href="../Player/RemoveItem.html">RemoveItem</a>
-  <a id="Player:RemoveLifetimeKills" class="fn" href="../Player/RemoveLifetimeKills.html">RemoveLifetimeKills</a>
-  <a id="Player:RemovePet" class="fn" href="../Player/RemovePet.html">RemovePet</a>
-  <a id="Player:RemovePlayerFlag" class="fn" href="../Player/RemovePlayerFlag.html">RemovePlayerFlag</a>
-  <a id="Player:RemoveQuest" class="fn" href="../Player/RemoveQuest.html">RemoveQuest</a>
-  <a id="Player:RemoveSpell" class="fn" href="../Player/RemoveSpell.html">RemoveSpell</a>
-  <a id="Player:RemovedInsignia" class="fn" href="../Player/RemovedInsignia.html">RemovedInsignia</a>
-  <a id="Player:RepopAtGraveyard" class="fn" href="../Player/RepopAtGraveyard.html">RepopAtGraveyard</a>
-  <a id="Player:ResetAchievements" class="fn" href="../Player/ResetAchievements.html">ResetAchievements</a>
-  <a id="Player:ResetAllCooldowns" class="fn" href="../Player/ResetAllCooldowns.html">ResetAllCooldowns</a>
-  <a id="Player:ResetPetTalents" class="fn" href="../Player/ResetPetTalents.html">ResetPetTalents</a>
-  <a id="Player:ResetSpellCooldown" class="fn" href="../Player/ResetSpellCooldown.html">ResetSpellCooldown</a>
-  <a id="Player:ResetTalents" class="fn" href="../Player/ResetTalents.html">ResetTalents</a>
-  <a id="Player:ResetTalentsCost" class="fn" href="../Player/ResetTalentsCost.html">ResetTalentsCost</a>
-  <a id="Player:ResetTypeCooldowns" class="fn" href="../Player/ResetTypeCooldowns.html">ResetTypeCooldowns</a>
-  <a id="Player:ResummonPetTemporaryUnSummonedIfAny" class="fn" href="../Player/ResummonPetTemporaryUnSummonedIfAny.html">ResummonPetTemporaryUnSummonedIfAny</a>
-  <a id="Player:ResurrectPlayer" class="fn" href="../Player/ResurrectPlayer.html">ResurrectPlayer</a>
-  <a id="Player:RewardQuest" class="fn" href="../Player/RewardQuest.html">RewardQuest</a>
-  <a id="Player:RunCommand" class="fn" href="../Player/RunCommand.html">RunCommand</a>
-  <a id="Player:SaveToDB" class="fn" href="../Player/SaveToDB.html">SaveToDB</a>
-  <a id="Player:Say" class="fn" href="../Player/Say.html">Say</a>
-  <a id="Player:SendAddonMessage" class="fn" href="../Player/SendAddonMessage.html">SendAddonMessage</a>
-  <a id="Player:SendAreaTriggerMessage" class="fn" href="../Player/SendAreaTriggerMessage.html">SendAreaTriggerMessage</a>
-  <a id="Player:SendAuctionMenu" class="fn" href="../Player/SendAuctionMenu.html">SendAuctionMenu</a>
-  <a id="Player:SendBroadcastMessage" class="fn" href="../Player/SendBroadcastMessage.html">SendBroadcastMessage</a>
-  <a id="Player:SendCinematicStart" class="fn" href="../Player/SendCinematicStart.html">SendCinematicStart</a>
-  <a id="Player:SendGuildInvite" class="fn" href="../Player/SendGuildInvite.html">SendGuildInvite</a>
-  <a id="Player:SendListInventory" class="fn" href="../Player/SendListInventory.html">SendListInventory</a>
-  <a id="Player:SendMovieStart" class="fn" href="../Player/SendMovieStart.html">SendMovieStart</a>
-  <a id="Player:SendNotification" class="fn" href="../Player/SendNotification.html">SendNotification</a>
-  <a id="Player:SendPacket" class="fn" href="../Player/SendPacket.html">SendPacket</a>
-  <a id="Player:SendQuestTemplate" class="fn" href="../Player/SendQuestTemplate.html">SendQuestTemplate</a>
-  <a id="Player:SendShowBank" class="fn" href="../Player/SendShowBank.html">SendShowBank</a>
-  <a id="Player:SendShowMailBox" class="fn" href="../Player/SendShowMailBox.html">SendShowMailBox</a>
-  <a id="Player:SendSpiritResurrect" class="fn" href="../Player/SendSpiritResurrect.html">SendSpiritResurrect</a>
-  <a id="Player:SendTabardVendorActivate" class="fn" href="../Player/SendTabardVendorActivate.html">SendTabardVendorActivate</a>
-  <a id="Player:SendTaxiMenu" class="fn" href="../Player/SendTaxiMenu.html">SendTaxiMenu</a>
-  <a id="Player:SendTrainerList" class="fn" href="../Player/SendTrainerList.html">SendTrainerList</a>
-  <a id="Player:SendUpdateWorldState" class="fn" href="../Player/SendUpdateWorldState.html">SendUpdateWorldState</a>
-  <a id="Player:SetAcceptWhispers" class="fn" href="../Player/SetAcceptWhispers.html">SetAcceptWhispers</a>
-  <a id="Player:SetAchievement" class="fn" href="../Player/SetAchievement.html">SetAchievement</a>
-  <a id="Player:SetAmmo" class="fn" href="../Player/SetAmmo.html">SetAmmo</a>
-  <a id="Player:SetArenaPoints" class="fn" href="../Player/SetArenaPoints.html">SetArenaPoints</a>
-  <a id="Player:SetAtLoginFlag" class="fn" href="../Player/SetAtLoginFlag.html">SetAtLoginFlag</a>
-  <a id="Player:SetBindPoint" class="fn" href="../Player/SetBindPoint.html">SetBindPoint</a>
-  <a id="Player:SetBonusTalentCount" class="fn" href="../Player/SetBonusTalentCount.html">SetBonusTalentCount</a>
-  <a id="Player:SetCanFly" class="fn" href="../Player/SetCanFly.html">SetCanFly</a>
-  <a id="Player:SetCanTeleport" class="fn" href="../Player/SetCanTeleport.html">SetCanTeleport</a>
-  <a id="Player:SetCoinage" class="fn" href="../Player/SetCoinage.html">SetCoinage</a>
-  <a id="Player:SetCreationTime" class="fn" href="../Player/SetCreationTime.html">SetCreationTime</a>
-  <a id="Player:SetDrunkValue" class="fn" href="../Player/SetDrunkValue.html">SetDrunkValue</a>
-  <a id="Player:SetFactionForRace" class="fn" href="../Player/SetFactionForRace.html">SetFactionForRace</a>
-  <a id="Player:SetFreeTalentPoints" class="fn" href="../Player/SetFreeTalentPoints.html">SetFreeTalentPoints</a>
-  <a id="Player:SetGMChat" class="fn" href="../Player/SetGMChat.html">SetGMChat</a>
-  <a id="Player:SetGMVisible" class="fn" href="../Player/SetGMVisible.html">SetGMVisible</a>
-  <a id="Player:SetGameMaster" class="fn" href="../Player/SetGameMaster.html">SetGameMaster</a>
-  <a id="Player:SetGender" class="fn" href="../Player/SetGender.html">SetGender</a>
-  <a id="Player:SetGlyph" class="fn" href="../Player/SetGlyph.html">SetGlyph</a>
-  <a id="Player:SetGuildRank" class="fn" href="../Player/SetGuildRank.html">SetGuildRank</a>
-  <a id="Player:SetHonorPoints" class="fn" href="../Player/SetHonorPoints.html">SetHonorPoints</a>
-  <a id="Player:SetIsSpectator" class="fn" href="../Player/SetIsSpectator.html">SetIsSpectator</a>
-  <a id="Player:SetKnownTaxiNodes" class="fn" href="../Player/SetKnownTaxiNodes.html">SetKnownTaxiNodes</a>
-  <a id="Player:SetKnownTitle" class="fn" href="../Player/SetKnownTitle.html">SetKnownTitle</a>
-  <a id="Player:SetLastPetNumber" class="fn" href="../Player/SetLastPetNumber.html">SetLastPetNumber</a>
-  <a id="Player:SetLastPetSpell" class="fn" href="../Player/SetLastPetSpell.html">SetLastPetSpell</a>
-  <a id="Player:SetLifetimeKills" class="fn" href="../Player/SetLifetimeKills.html">SetLifetimeKills</a>
-  <a id="Player:SetPlayerFlag" class="fn" href="../Player/SetPlayerFlag.html">SetPlayerFlag</a>
-  <a id="Player:SetPlayerLock" class="fn" href="../Player/SetPlayerLock.html">SetPlayerLock</a>
-  <a id="Player:SetPvPDeath" class="fn" href="../Player/SetPvPDeath.html">SetPvPDeath</a>
-  <a id="Player:SetQuestStatus" class="fn" href="../Player/SetQuestStatus.html">SetQuestStatus</a>
-  <a id="Player:SetReputation" class="fn" href="../Player/SetReputation.html">SetReputation</a>
-  <a id="Player:SetRestBonus" class="fn" href="../Player/SetRestBonus.html">SetRestBonus</a>
-  <a id="Player:SetSheath" class="fn" href="../Player/SetSheath.html">SetSheath</a>
-  <a id="Player:SetShowDKPet" class="fn" href="../Player/SetShowDKPet.html">SetShowDKPet</a>
-  <a id="Player:SetSkill" class="fn" href="../Player/SetSkill.html">SetSkill</a>
-  <a id="Player:SetSpellPower" class="fn" href="../Player/SetSpellPower.html">SetSpellPower</a>
-  <a id="Player:SetTaxiCheat" class="fn" href="../Player/SetTaxiCheat.html">SetTaxiCheat</a>
-  <a id="Player:SetTemporaryUnsummonedPetNumber" class="fn" href="../Player/SetTemporaryUnsummonedPetNumber.html">SetTemporaryUnsummonedPetNumber</a>
-  <a id="Player:SetViewpoint" class="fn" href="../Player/SetViewpoint.html">SetViewpoint</a>
-  <a id="Player:SpawnBones" class="fn" href="../Player/SpawnBones.html">SpawnBones</a>
-  <a id="Player:StartTaxi" class="fn" href="../Player/StartTaxi.html">StartTaxi</a>
-  <a id="Player:SummonPet" class="fn" href="../Player/SummonPet.html">SummonPet</a>
-  <a id="Player:SummonPlayer" class="fn" href="../Player/SummonPlayer.html">SummonPlayer</a>
-  <a id="Player:TalkedToCreature" class="fn" href="../Player/TalkedToCreature.html">TalkedToCreature</a>
-  <a id="Player:Teleport" class="fn" href="../Player/Teleport.html">Teleport</a>
-  <a id="Player:TeleportTo" class="fn" href="../Player/TeleportTo.html">TeleportTo</a>
-  <a id="Player:TextEmote" class="fn" href="../Player/TextEmote.html">TextEmote</a>
-  <a id="Player:ToggleAFK" class="fn" href="../Player/ToggleAFK.html">ToggleAFK</a>
-  <a id="Player:ToggleDND" class="fn" href="../Player/ToggleDND.html">ToggleDND</a>
-  <a id="Player:ToggleInstantFlight" class="fn" href="../Player/ToggleInstantFlight.html">ToggleInstantFlight</a>
-  <a id="Player:UnbindAllInstances" class="fn" href="../Player/UnbindAllInstances.html">UnbindAllInstances</a>
-  <a id="Player:UnbindInstance" class="fn" href="../Player/UnbindInstance.html">UnbindInstance</a>
-  <a id="Player:UnsetKnownTitle" class="fn" href="../Player/UnsetKnownTitle.html">UnsetKnownTitle</a>
-  <a id="Player:UnsummonPetTemporarily" class="fn" href="../Player/UnsummonPetTemporarily.html">UnsummonPetTemporarily</a>
-  <a id="Player:UpdatePlayerSetting" class="fn" href="../Player/UpdatePlayerSetting.html">UpdatePlayerSetting</a>
-  <a id="Player:Whisper" class="fn" href="../Player/Whisper.html">Whisper</a>
-  <a id="Player:Yell" class="fn" href="../Player/Yell.html">Yell</a>
+<div class="border-b-2 border-line-strong">
+  <div class="flex items-center justify-between px-4 py-2.5 text-[11px] font-bold uppercase tracking-wider text-body-dim">
+    Player
+    <span class="rounded-full border border-line bg-ink-raised px-1.5 font-semibold normal-case tracking-normal">336</span>
+  </div>
+  <div class="px-2 pb-2">
+    <a id="Player:AbandonQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/AbandonQuest.html">AbandonQuest</a>
+    <a id="Player:AddArmorProficiency" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/AddArmorProficiency.html">AddArmorProficiency</a>
+    <a id="Player:AddBonusTalent" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/AddBonusTalent.html">AddBonusTalent</a>
+    <a id="Player:AddComboPoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/AddComboPoints.html">AddComboPoints</a>
+    <a id="Player:AddItem" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/AddItem.html">AddItem</a>
+    <a id="Player:AddLifetimeKills" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/AddLifetimeKills.html">AddLifetimeKills</a>
+    <a id="Player:AddQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/AddQuest.html">AddQuest</a>
+    <a id="Player:AddWeaponProficiency" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/AddWeaponProficiency.html">AddWeaponProficiency</a>
+    <a id="Player:AdvanceAllSkills" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/AdvanceAllSkills.html">AdvanceAllSkills</a>
+    <a id="Player:AdvanceSkill" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/AdvanceSkill.html">AdvanceSkill</a>
+    <a id="Player:AdvanceSkillsToMax" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/AdvanceSkillsToMax.html">AdvanceSkillsToMax</a>
+    <a id="Player:ApplyRatingMod" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ApplyRatingMod.html">ApplyRatingMod</a>
+    <a id="Player:AreaExploredOrEventHappens" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/AreaExploredOrEventHappens.html">AreaExploredOrEventHappens</a>
+    <a id="Player:CalculateReputationGain" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CalculateReputationGain.html">CalculateReputationGain</a>
+    <a id="Player:CanAddQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanAddQuest.html">CanAddQuest</a>
+    <a id="Player:CanBlock" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanBlock.html">CanBlock</a>
+    <a id="Player:CanCompleteQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanCompleteQuest.html">CanCompleteQuest</a>
+    <a id="Player:CanCompleteRepeatableQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanCompleteRepeatableQuest.html">CanCompleteRepeatableQuest</a>
+    <a id="Player:CanEquipItem" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanEquipItem.html">CanEquipItem</a>
+    <a id="Player:CanFly" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanFly.html">CanFly</a>
+    <a id="Player:CanInteractWithQuestGiver" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanInteractWithQuestGiver.html">CanInteractWithQuestGiver</a>
+    <a id="Player:CanParry" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanParry.html">CanParry</a>
+    <a id="Player:CanPetResurrect" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanPetResurrect.html">CanPetResurrect</a>
+    <a id="Player:CanResummonPet" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanResummonPet.html">CanResummonPet</a>
+    <a id="Player:CanRewardQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanRewardQuest.html">CanRewardQuest</a>
+    <a id="Player:CanSeeDKPet" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanSeeDKPet.html">CanSeeDKPet</a>
+    <a id="Player:CanSeeStartQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanSeeStartQuest.html">CanSeeStartQuest</a>
+    <a id="Player:CanShareQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanShareQuest.html">CanShareQuest</a>
+    <a id="Player:CanSpeak" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanSpeak.html">CanSpeak</a>
+    <a id="Player:CanTakeQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanTakeQuest.html">CanTakeQuest</a>
+    <a id="Player:CanTameExoticPets" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanTameExoticPets.html">CanTameExoticPets</a>
+    <a id="Player:CanTeleport" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanTeleport.html">CanTeleport</a>
+    <a id="Player:CanTitanGrip" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanTitanGrip.html">CanTitanGrip</a>
+    <a id="Player:CanUninviteFromGroup" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanUninviteFromGroup.html">CanUninviteFromGroup</a>
+    <a id="Player:CanUseItem" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CanUseItem.html">CanUseItem</a>
+    <a id="Player:ClearComboPoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ClearComboPoints.html">ClearComboPoints</a>
+    <a id="Player:CompleteQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CompleteQuest.html">CompleteQuest</a>
+    <a id="Player:CreatePet" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/CreatePet.html">CreatePet</a>
+    <a id="Player:DoRandomRoll" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/DoRandomRoll.html">DoRandomRoll</a>
+    <a id="Player:DurabilityLoss" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/DurabilityLoss.html">DurabilityLoss</a>
+    <a id="Player:DurabilityLossAll" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/DurabilityLossAll.html">DurabilityLossAll</a>
+    <a id="Player:DurabilityPointLossForEquipSlot" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/DurabilityPointLossForEquipSlot.html">DurabilityPointLossForEquipSlot</a>
+    <a id="Player:DurabilityPointsLoss" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/DurabilityPointsLoss.html">DurabilityPointsLoss</a>
+    <a id="Player:DurabilityPointsLossAll" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/DurabilityPointsLossAll.html">DurabilityPointsLossAll</a>
+    <a id="Player:DurabilityRepair" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/DurabilityRepair.html">DurabilityRepair</a>
+    <a id="Player:DurabilityRepairAll" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/DurabilityRepairAll.html">DurabilityRepairAll</a>
+    <a id="Player:EnvironmentalDamage" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/EnvironmentalDamage.html">EnvironmentalDamage</a>
+    <a id="Player:EquipItem" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/EquipItem.html">EquipItem</a>
+    <a id="Player:FailQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/FailQuest.html">FailQuest</a>
+    <a id="Player:GetAccountId" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetAccountId.html">GetAccountId</a>
+    <a id="Player:GetAccountName" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetAccountName.html">GetAccountName</a>
+    <a id="Player:GetAchievementCriteriaProgress" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetAchievementCriteriaProgress.html">GetAchievementCriteriaProgress</a>
+    <a id="Player:GetAchievementPoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetAchievementPoints.html">GetAchievementPoints</a>
+    <a id="Player:GetActiveSpec" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetActiveSpec.html">GetActiveSpec</a>
+    <a id="Player:GetAmmoDPS" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetAmmoDPS.html">GetAmmoDPS</a>
+    <a id="Player:GetArenaPoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetArenaPoints.html">GetArenaPoints</a>
+    <a id="Player:GetArmorProficiency" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetArmorProficiency.html">GetArmorProficiency</a>
+    <a id="Player:GetAverageItemLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetAverageItemLevel.html">GetAverageItemLevel</a>
+    <a id="Player:GetBankFreeSlots" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetBankFreeSlots.html">GetBankFreeSlots</a>
+    <a id="Player:GetBankItem" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetBankItem.html">GetBankItem</a>
+    <a id="Player:GetBarberShopCost" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetBarberShopCost.html">GetBarberShopCost</a>
+    <a id="Player:GetBaseSkillValue" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetBaseSkillValue.html">GetBaseSkillValue</a>
+    <a id="Player:GetBattlegroundId" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetBattlegroundId.html">GetBattlegroundId</a>
+    <a id="Player:GetBattlegroundTypeId" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetBattlegroundTypeId.html">GetBattlegroundTypeId</a>
+    <a id="Player:GetBonusTalentCount" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetBonusTalentCount.html">GetBonusTalentCount</a>
+    <a id="Player:GetChampioningFaction" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetChampioningFaction.html">GetChampioningFaction</a>
+    <a id="Player:GetChatTag" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetChatTag.html">GetChatTag</a>
+    <a id="Player:GetCoinage" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetCoinage.html">GetCoinage</a>
+    <a id="Player:GetComboPoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetComboPoints.html">GetComboPoints</a>
+    <a id="Player:GetComboTarget" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetComboTarget.html">GetComboTarget</a>
+    <a id="Player:GetCompletedAchievementsCount" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetCompletedAchievementsCount.html">GetCompletedAchievementsCount</a>
+    <a id="Player:GetCompletedQuestsCount" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetCompletedQuestsCount.html">GetCompletedQuestsCount</a>
+    <a id="Player:GetCorpse" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetCorpse.html">GetCorpse</a>
+    <a id="Player:GetCreationTime" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetCreationTime.html">GetCreationTime</a>
+    <a id="Player:GetDbLocaleIndex" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetDbLocaleIndex.html">GetDbLocaleIndex</a>
+    <a id="Player:GetDbcLocale" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetDbcLocale.html">GetDbcLocale</a>
+    <a id="Player:GetDifficulty" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetDifficulty.html">GetDifficulty</a>
+    <a id="Player:GetDodgeFromAgility" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetDodgeFromAgility.html">GetDodgeFromAgility</a>
+    <a id="Player:GetDrunkValue" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetDrunkValue.html">GetDrunkValue</a>
+    <a id="Player:GetEquippedItemBySlot" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetEquippedItemBySlot.html">GetEquippedItemBySlot</a>
+    <a id="Player:GetFreeTalentPoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetFreeTalentPoints.html">GetFreeTalentPoints</a>
+    <a id="Player:GetGMRank" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetGMRank.html">GetGMRank</a>
+    <a id="Player:GetGlyph" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetGlyph.html">GetGlyph</a>
+    <a id="Player:GetGossipTextId" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetGossipTextId.html">GetGossipTextId</a>
+    <a id="Player:GetGroup" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetGroup.html">GetGroup</a>
+    <a id="Player:GetGroupInvite" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetGroupInvite.html">GetGroupInvite</a>
+    <a id="Player:GetGuild" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetGuild.html">GetGuild</a>
+    <a id="Player:GetGuildId" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetGuildId.html">GetGuildId</a>
+    <a id="Player:GetGuildName" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetGuildName.html">GetGuildName</a>
+    <a id="Player:GetGuildRank" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetGuildRank.html">GetGuildRank</a>
+    <a id="Player:GetHealthBonusFromStamina" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetHealthBonusFromStamina.html">GetHealthBonusFromStamina</a>
+    <a id="Player:GetHomebind" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetHomebind.html">GetHomebind</a>
+    <a id="Player:GetHonorPoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetHonorPoints.html">GetHonorPoints</a>
+    <a id="Player:GetInGameTime" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetInGameTime.html">GetInGameTime</a>
+    <a id="Player:GetInventoryFreeSlots" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetInventoryFreeSlots.html">GetInventoryFreeSlots</a>
+    <a id="Player:GetInventoryItem" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetInventoryItem.html">GetInventoryItem</a>
+    <a id="Player:GetItemByEntry" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetItemByEntry.html">GetItemByEntry</a>
+    <a id="Player:GetItemByGUID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetItemByGUID.html">GetItemByGUID</a>
+    <a id="Player:GetItemByPos" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetItemByPos.html">GetItemByPos</a>
+    <a id="Player:GetItemCount" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetItemCount.html">GetItemCount</a>
+    <a id="Player:GetKnownTaxiNodes" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetKnownTaxiNodes.html">GetKnownTaxiNodes</a>
+    <a id="Player:GetLastPetNumber" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetLastPetNumber.html">GetLastPetNumber</a>
+    <a id="Player:GetLastPetSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetLastPetSpell.html">GetLastPetSpell</a>
+    <a id="Player:GetLatency" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetLatency.html">GetLatency</a>
+    <a id="Player:GetLevelPlayedTime" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetLevelPlayedTime.html">GetLevelPlayedTime</a>
+    <a id="Player:GetLifetimeKills" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetLifetimeKills.html">GetLifetimeKills</a>
+    <a id="Player:GetMailCount" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetMailCount.html">GetMailCount</a>
+    <a id="Player:GetMailItem" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetMailItem.html">GetMailItem</a>
+    <a id="Player:GetManaBonusFromIntellect" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetManaBonusFromIntellect.html">GetManaBonusFromIntellect</a>
+    <a id="Player:GetMaxSkillValue" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetMaxSkillValue.html">GetMaxSkillValue</a>
+    <a id="Player:GetMeleeCritFromAgility" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetMeleeCritFromAgility.html">GetMeleeCritFromAgility</a>
+    <a id="Player:GetMostPointsTalentTree" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetMostPointsTalentTree.html">GetMostPointsTalentTree</a>
+    <a id="Player:GetNextRandomRaidMember" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetNextRandomRaidMember.html">GetNextRandomRaidMember</a>
+    <a id="Player:GetOriginalGroup" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetOriginalGroup.html">GetOriginalGroup</a>
+    <a id="Player:GetOriginalSubGroup" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetOriginalSubGroup.html">GetOriginalSubGroup</a>
+    <a id="Player:GetPet" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetPet.html">GetPet</a>
+    <a id="Player:GetPhaseMaskForSpawn" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetPhaseMaskForSpawn.html">GetPhaseMaskForSpawn</a>
+    <a id="Player:GetPlayerIP" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetPlayerIP.html">GetPlayerIP</a>
+    <a id="Player:GetPlayerSettingValue" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetPlayerSettingValue.html">GetPlayerSettingValue</a>
+    <a id="Player:GetPureMaxSkillValue" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetPureMaxSkillValue.html">GetPureMaxSkillValue</a>
+    <a id="Player:GetPureSkillValue" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetPureSkillValue.html">GetPureSkillValue</a>
+    <a id="Player:GetQuestLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetQuestLevel.html">GetQuestLevel</a>
+    <a id="Player:GetQuestRewardStatus" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetQuestRewardStatus.html">GetQuestRewardStatus</a>
+    <a id="Player:GetQuestSlotQuestId" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetQuestSlotQuestId.html">GetQuestSlotQuestId</a>
+    <a id="Player:GetQuestStatus" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetQuestStatus.html">GetQuestStatus</a>
+    <a id="Player:GetReputation" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetReputation.html">GetReputation</a>
+    <a id="Player:GetReputationRank" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetReputationRank.html">GetReputationRank</a>
+    <a id="Player:GetReqKillOrCastCurrentCount" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetReqKillOrCastCurrentCount.html">GetReqKillOrCastCurrentCount</a>
+    <a id="Player:GetRestBonus" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetRestBonus.html">GetRestBonus</a>
+    <a id="Player:GetRunesState" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetRunesState.html">GetRunesState</a>
+    <a id="Player:GetSelection" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetSelection.html">GetSelection</a>
+    <a id="Player:GetShield" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetShield.html">GetShield</a>
+    <a id="Player:GetShieldBlockValue" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetShieldBlockValue.html">GetShieldBlockValue</a>
+    <a id="Player:GetSightRange" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetSightRange.html">GetSightRange</a>
+    <a id="Player:GetSkillPermBonusValue" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetSkillPermBonusValue.html">GetSkillPermBonusValue</a>
+    <a id="Player:GetSkillTempBonusValue" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetSkillTempBonusValue.html">GetSkillTempBonusValue</a>
+    <a id="Player:GetSkillValue" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetSkillValue.html">GetSkillValue</a>
+    <a id="Player:GetSpecsCount" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetSpecsCount.html">GetSpecsCount</a>
+    <a id="Player:GetSpellCooldownDelay" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetSpellCooldownDelay.html">GetSpellCooldownDelay</a>
+    <a id="Player:GetSpellCritFromIntellect" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetSpellCritFromIntellect.html">GetSpellCritFromIntellect</a>
+    <a id="Player:GetSpells" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetSpells.html">GetSpells</a>
+    <a id="Player:GetSubGroup" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetSubGroup.html">GetSubGroup</a>
+    <a id="Player:GetTalentTreePoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetTalentTreePoints.html">GetTalentTreePoints</a>
+    <a id="Player:GetTeam" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetTeam.html">GetTeam</a>
+    <a id="Player:GetTemporaryUnsummonedPetNumber" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetTemporaryUnsummonedPetNumber.html">GetTemporaryUnsummonedPetNumber</a>
+    <a id="Player:GetTodayHonorPoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetTodayHonorPoints.html">GetTodayHonorPoints</a>
+    <a id="Player:GetTodayKills" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetTodayKills.html">GetTodayKills</a>
+    <a id="Player:GetTotalPlayedTime" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetTotalPlayedTime.html">GetTotalPlayedTime</a>
+    <a id="Player:GetTrader" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetTrader.html">GetTrader</a>
+    <a id="Player:GetViewpoint" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetViewpoint.html">GetViewpoint</a>
+    <a id="Player:GetWeaponProficiency" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetWeaponProficiency.html">GetWeaponProficiency</a>
+    <a id="Player:GetXP" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetXP.html">GetXP</a>
+    <a id="Player:GetXPRestBonus" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetXPRestBonus.html">GetXPRestBonus</a>
+    <a id="Player:GetYesterdayHonorPoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetYesterdayHonorPoints.html">GetYesterdayHonorPoints</a>
+    <a id="Player:GetYesterdayKills" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GetYesterdayKills.html">GetYesterdayKills</a>
+    <a id="Player:GiveXP" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GiveXP.html">GiveXP</a>
+    <a id="Player:GossipAddQuests" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GossipAddQuests.html">GossipAddQuests</a>
+    <a id="Player:GossipClearMenu" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GossipClearMenu.html">GossipClearMenu</a>
+    <a id="Player:GossipComplete" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GossipComplete.html">GossipComplete</a>
+    <a id="Player:GossipMenuAddItem" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GossipMenuAddItem.html">GossipMenuAddItem</a>
+    <a id="Player:GossipSendMenu" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GossipSendMenu.html">GossipSendMenu</a>
+    <a id="Player:GossipSendPOI" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GossipSendPOI.html">GossipSendPOI</a>
+    <a id="Player:GroupCreate" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GroupCreate.html">GroupCreate</a>
+    <a id="Player:GroupEventHappens" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GroupEventHappens.html">GroupEventHappens</a>
+    <a id="Player:GroupInvite" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/GroupInvite.html">GroupInvite</a>
+    <a id="Player:HasAchieved" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasAchieved.html">HasAchieved</a>
+    <a id="Player:HasAtLoginFlag" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasAtLoginFlag.html">HasAtLoginFlag</a>
+    <a id="Player:HasCasterSpec" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasCasterSpec.html">HasCasterSpec</a>
+    <a id="Player:HasHealSpec" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasHealSpec.html">HasHealSpec</a>
+    <a id="Player:HasItem" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasItem.html">HasItem</a>
+    <a id="Player:HasKnownTaxiNode" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasKnownTaxiNode.html">HasKnownTaxiNode</a>
+    <a id="Player:HasMeleeSpec" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasMeleeSpec.html">HasMeleeSpec</a>
+    <a id="Player:HasQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasQuest.html">HasQuest</a>
+    <a id="Player:HasQuestForGO" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasQuestForGO.html">HasQuestForGO</a>
+    <a id="Player:HasQuestForItem" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasQuestForItem.html">HasQuestForItem</a>
+    <a id="Player:HasSkill" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasSkill.html">HasSkill</a>
+    <a id="Player:HasSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasSpell.html">HasSpell</a>
+    <a id="Player:HasSpellCooldown" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasSpellCooldown.html">HasSpellCooldown</a>
+    <a id="Player:HasTalent" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasTalent.html">HasTalent</a>
+    <a id="Player:HasTankSpec" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasTankSpec.html">HasTankSpec</a>
+    <a id="Player:HasTitle" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasTitle.html">HasTitle</a>
+    <a id="Player:HasTitleByIndex" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/HasTitleByIndex.html">HasTitleByIndex</a>
+    <a id="Player:InArena" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/InArena.html">InArena</a>
+    <a id="Player:InBattleground" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/InBattleground.html">InBattleground</a>
+    <a id="Player:InBattlegroundQueue" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/InBattlegroundQueue.html">InBattlegroundQueue</a>
+    <a id="Player:InRandomLfgDungeon" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/InRandomLfgDungeon.html">InRandomLfgDungeon</a>
+    <a id="Player:IncompleteQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IncompleteQuest.html">IncompleteQuest</a>
+    <a id="Player:InitTaxiNodesForLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/InitTaxiNodesForLevel.html">InitTaxiNodesForLevel</a>
+    <a id="Player:IsAFK" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsAFK.html">IsAFK</a>
+    <a id="Player:IsAcceptingWhispers" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsAcceptingWhispers.html">IsAcceptingWhispers</a>
+    <a id="Player:IsAlliance" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsAlliance.html">IsAlliance</a>
+    <a id="Player:IsAtGroupRewardDistance" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsAtGroupRewardDistance.html">IsAtGroupRewardDistance</a>
+    <a id="Player:IsAtLootRewardDistance" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsAtLootRewardDistance.html">IsAtLootRewardDistance</a>
+    <a id="Player:IsBot" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsBot.html">IsBot</a>
+    <a id="Player:IsDND" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsDND.html">IsDND</a>
+    <a id="Player:IsDailyQuestDone" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsDailyQuestDone.html">IsDailyQuestDone</a>
+    <a id="Player:IsExistPet" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsExistPet.html">IsExistPet</a>
+    <a id="Player:IsFFAPvP" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsFFAPvP.html">IsFFAPvP</a>
+    <a id="Player:IsFalling" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsFalling.html">IsFalling</a>
+    <a id="Player:IsFlying" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsFlying.html">IsFlying</a>
+    <a id="Player:IsGM" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsGM.html">IsGM</a>
+    <a id="Player:IsGMChat" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsGMChat.html">IsGMChat</a>
+    <a id="Player:IsGMVisible" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsGMVisible.html">IsGMVisible</a>
+    <a id="Player:IsGroupVisibleFor" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsGroupVisibleFor.html">IsGroupVisibleFor</a>
+    <a id="Player:IsHonorOrXPTarget" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsHonorOrXPTarget.html">IsHonorOrXPTarget</a>
+    <a id="Player:IsHorde" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsHorde.html">IsHorde</a>
+    <a id="Player:IsImmuneToDamage" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsImmuneToDamage.html">IsImmuneToDamage</a>
+    <a id="Player:IsInArenaTeam" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsInArenaTeam.html">IsInArenaTeam</a>
+    <a id="Player:IsInGroup" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsInGroup.html">IsInGroup</a>
+    <a id="Player:IsInGuild" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsInGuild.html">IsInGuild</a>
+    <a id="Player:IsInSameGroupWith" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsInSameGroupWith.html">IsInSameGroupWith</a>
+    <a id="Player:IsInSameRaidWith" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsInSameRaidWith.html">IsInSameRaidWith</a>
+    <a id="Player:IsInWater" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsInWater.html">IsInWater</a>
+    <a id="Player:IsMaxLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsMaxLevel.html">IsMaxLevel</a>
+    <a id="Player:IsMoving" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsMoving.html">IsMoving</a>
+    <a id="Player:IsPetNeedBeTemporaryUnsummoned" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsPetNeedBeTemporaryUnsummoned.html">IsPetNeedBeTemporaryUnsummoned</a>
+    <a id="Player:IsPvP" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsPvP.html">IsPvP</a>
+    <a id="Player:IsRested" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsRested.html">IsRested</a>
+    <a id="Player:IsSpectator" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsSpectator.html">IsSpectator</a>
+    <a id="Player:IsTaxiCheater" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsTaxiCheater.html">IsTaxiCheater</a>
+    <a id="Player:IsUsingLfg" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsUsingLfg.html">IsUsingLfg</a>
+    <a id="Player:IsVisibleForPlayer" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/IsVisibleForPlayer.html">IsVisibleForPlayer</a>
+    <a id="Player:KickPlayer" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/KickPlayer.html">KickPlayer</a>
+    <a id="Player:KillPlayer" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/KillPlayer.html">KillPlayer</a>
+    <a id="Player:KilledMonsterCredit" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/KilledMonsterCredit.html">KilledMonsterCredit</a>
+    <a id="Player:LearnPetTalent" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/LearnPetTalent.html">LearnPetTalent</a>
+    <a id="Player:LearnSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/LearnSpell.html">LearnSpell</a>
+    <a id="Player:LearnTalent" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/LearnTalent.html">LearnTalent</a>
+    <a id="Player:LeaveBattleground" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/LeaveBattleground.html">LeaveBattleground</a>
+    <a id="Player:LogoutPlayer" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/LogoutPlayer.html">LogoutPlayer</a>
+    <a id="Player:ModifyArenaPoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ModifyArenaPoints.html">ModifyArenaPoints</a>
+    <a id="Player:ModifyHonorPoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ModifyHonorPoints.html">ModifyHonorPoints</a>
+    <a id="Player:ModifyMoney" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ModifyMoney.html">ModifyMoney</a>
+    <a id="Player:Mute" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/Mute.html">Mute</a>
+    <a id="Player:RemoveAmmo" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RemoveAmmo.html">RemoveAmmo</a>
+    <a id="Player:RemoveArenaSpellCooldowns" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RemoveArenaSpellCooldowns.html">RemoveArenaSpellCooldowns</a>
+    <a id="Player:RemoveBonusTalent" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RemoveBonusTalent.html">RemoveBonusTalent</a>
+    <a id="Player:RemoveFromBattlegroundRaid" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RemoveFromBattlegroundRaid.html">RemoveFromBattlegroundRaid</a>
+    <a id="Player:RemoveFromGroup" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RemoveFromGroup.html">RemoveFromGroup</a>
+    <a id="Player:RemoveItem" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RemoveItem.html">RemoveItem</a>
+    <a id="Player:RemoveLifetimeKills" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RemoveLifetimeKills.html">RemoveLifetimeKills</a>
+    <a id="Player:RemovePet" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RemovePet.html">RemovePet</a>
+    <a id="Player:RemovePlayerFlag" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RemovePlayerFlag.html">RemovePlayerFlag</a>
+    <a id="Player:RemoveQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RemoveQuest.html">RemoveQuest</a>
+    <a id="Player:RemoveSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RemoveSpell.html">RemoveSpell</a>
+    <a id="Player:RemovedInsignia" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RemovedInsignia.html">RemovedInsignia</a>
+    <a id="Player:RepopAtGraveyard" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RepopAtGraveyard.html">RepopAtGraveyard</a>
+    <a id="Player:ResetAchievements" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ResetAchievements.html">ResetAchievements</a>
+    <a id="Player:ResetAllCooldowns" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ResetAllCooldowns.html">ResetAllCooldowns</a>
+    <a id="Player:ResetPetTalents" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ResetPetTalents.html">ResetPetTalents</a>
+    <a id="Player:ResetSpellCooldown" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ResetSpellCooldown.html">ResetSpellCooldown</a>
+    <a id="Player:ResetTalents" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ResetTalents.html">ResetTalents</a>
+    <a id="Player:ResetTalentsCost" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ResetTalentsCost.html">ResetTalentsCost</a>
+    <a id="Player:ResetTypeCooldowns" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ResetTypeCooldowns.html">ResetTypeCooldowns</a>
+    <a id="Player:ResummonPetTemporaryUnSummonedIfAny" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ResummonPetTemporaryUnSummonedIfAny.html">ResummonPetTemporaryUnSummonedIfAny</a>
+    <a id="Player:ResurrectPlayer" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ResurrectPlayer.html">ResurrectPlayer</a>
+    <a id="Player:RewardQuest" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RewardQuest.html">RewardQuest</a>
+    <a id="Player:RunCommand" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/RunCommand.html">RunCommand</a>
+    <a id="Player:SaveToDB" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SaveToDB.html">SaveToDB</a>
+    <a id="Player:Say" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/Say.html">Say</a>
+    <a id="Player:SendAddonMessage" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendAddonMessage.html">SendAddonMessage</a>
+    <a id="Player:SendAreaTriggerMessage" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendAreaTriggerMessage.html">SendAreaTriggerMessage</a>
+    <a id="Player:SendAuctionMenu" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendAuctionMenu.html">SendAuctionMenu</a>
+    <a id="Player:SendBroadcastMessage" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendBroadcastMessage.html">SendBroadcastMessage</a>
+    <a id="Player:SendCinematicStart" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendCinematicStart.html">SendCinematicStart</a>
+    <a id="Player:SendGuildInvite" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendGuildInvite.html">SendGuildInvite</a>
+    <a id="Player:SendListInventory" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendListInventory.html">SendListInventory</a>
+    <a id="Player:SendMovieStart" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendMovieStart.html">SendMovieStart</a>
+    <a id="Player:SendNotification" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendNotification.html">SendNotification</a>
+    <a id="Player:SendPacket" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendPacket.html">SendPacket</a>
+    <a id="Player:SendQuestTemplate" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendQuestTemplate.html">SendQuestTemplate</a>
+    <a id="Player:SendShowBank" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendShowBank.html">SendShowBank</a>
+    <a id="Player:SendShowMailBox" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendShowMailBox.html">SendShowMailBox</a>
+    <a id="Player:SendSpiritResurrect" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendSpiritResurrect.html">SendSpiritResurrect</a>
+    <a id="Player:SendTabardVendorActivate" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendTabardVendorActivate.html">SendTabardVendorActivate</a>
+    <a id="Player:SendTaxiMenu" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendTaxiMenu.html">SendTaxiMenu</a>
+    <a id="Player:SendTrainerList" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendTrainerList.html">SendTrainerList</a>
+    <a id="Player:SendUpdateWorldState" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SendUpdateWorldState.html">SendUpdateWorldState</a>
+    <a id="Player:SetAcceptWhispers" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetAcceptWhispers.html">SetAcceptWhispers</a>
+    <a id="Player:SetAchievement" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetAchievement.html">SetAchievement</a>
+    <a id="Player:SetAmmo" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetAmmo.html">SetAmmo</a>
+    <a id="Player:SetArenaPoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetArenaPoints.html">SetArenaPoints</a>
+    <a id="Player:SetAtLoginFlag" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetAtLoginFlag.html">SetAtLoginFlag</a>
+    <a id="Player:SetBindPoint" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetBindPoint.html">SetBindPoint</a>
+    <a id="Player:SetBonusTalentCount" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetBonusTalentCount.html">SetBonusTalentCount</a>
+    <a id="Player:SetCanFly" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetCanFly.html">SetCanFly</a>
+    <a id="Player:SetCanTeleport" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetCanTeleport.html">SetCanTeleport</a>
+    <a id="Player:SetCoinage" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetCoinage.html">SetCoinage</a>
+    <a id="Player:SetCreationTime" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetCreationTime.html">SetCreationTime</a>
+    <a id="Player:SetDrunkValue" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetDrunkValue.html">SetDrunkValue</a>
+    <a id="Player:SetFactionForRace" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetFactionForRace.html">SetFactionForRace</a>
+    <a id="Player:SetFreeTalentPoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetFreeTalentPoints.html">SetFreeTalentPoints</a>
+    <a id="Player:SetGMChat" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetGMChat.html">SetGMChat</a>
+    <a id="Player:SetGMVisible" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetGMVisible.html">SetGMVisible</a>
+    <a id="Player:SetGameMaster" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetGameMaster.html">SetGameMaster</a>
+    <a id="Player:SetGender" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetGender.html">SetGender</a>
+    <a id="Player:SetGlyph" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetGlyph.html">SetGlyph</a>
+    <a id="Player:SetGuildRank" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetGuildRank.html">SetGuildRank</a>
+    <a id="Player:SetHonorPoints" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetHonorPoints.html">SetHonorPoints</a>
+    <a id="Player:SetIsSpectator" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetIsSpectator.html">SetIsSpectator</a>
+    <a id="Player:SetKnownTaxiNodes" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetKnownTaxiNodes.html">SetKnownTaxiNodes</a>
+    <a id="Player:SetKnownTitle" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetKnownTitle.html">SetKnownTitle</a>
+    <a id="Player:SetLastPetNumber" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetLastPetNumber.html">SetLastPetNumber</a>
+    <a id="Player:SetLastPetSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetLastPetSpell.html">SetLastPetSpell</a>
+    <a id="Player:SetLifetimeKills" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetLifetimeKills.html">SetLifetimeKills</a>
+    <a id="Player:SetPlayerFlag" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetPlayerFlag.html">SetPlayerFlag</a>
+    <a id="Player:SetPlayerLock" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetPlayerLock.html">SetPlayerLock</a>
+    <a id="Player:SetPvPDeath" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetPvPDeath.html">SetPvPDeath</a>
+    <a id="Player:SetQuestStatus" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetQuestStatus.html">SetQuestStatus</a>
+    <a id="Player:SetReputation" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetReputation.html">SetReputation</a>
+    <a id="Player:SetRestBonus" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetRestBonus.html">SetRestBonus</a>
+    <a id="Player:SetSheath" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetSheath.html">SetSheath</a>
+    <a id="Player:SetShowDKPet" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetShowDKPet.html">SetShowDKPet</a>
+    <a id="Player:SetSkill" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetSkill.html">SetSkill</a>
+    <a id="Player:SetSpellPower" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetSpellPower.html">SetSpellPower</a>
+    <a id="Player:SetTaxiCheat" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetTaxiCheat.html">SetTaxiCheat</a>
+    <a id="Player:SetTemporaryUnsummonedPetNumber" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetTemporaryUnsummonedPetNumber.html">SetTemporaryUnsummonedPetNumber</a>
+    <a id="Player:SetViewpoint" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SetViewpoint.html">SetViewpoint</a>
+    <a id="Player:SpawnBones" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SpawnBones.html">SpawnBones</a>
+    <a id="Player:StartTaxi" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/StartTaxi.html">StartTaxi</a>
+    <a id="Player:SummonPet" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SummonPet.html">SummonPet</a>
+    <a id="Player:SummonPlayer" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/SummonPlayer.html">SummonPlayer</a>
+    <a id="Player:TalkedToCreature" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/TalkedToCreature.html">TalkedToCreature</a>
+    <a id="Player:Teleport" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/Teleport.html">Teleport</a>
+    <a id="Player:TeleportTo" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/TeleportTo.html">TeleportTo</a>
+    <a id="Player:TextEmote" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/TextEmote.html">TextEmote</a>
+    <a id="Player:ToggleAFK" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ToggleAFK.html">ToggleAFK</a>
+    <a id="Player:ToggleDND" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ToggleDND.html">ToggleDND</a>
+    <a id="Player:ToggleInstantFlight" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/ToggleInstantFlight.html">ToggleInstantFlight</a>
+    <a id="Player:UnbindAllInstances" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/UnbindAllInstances.html">UnbindAllInstances</a>
+    <a id="Player:UnbindInstance" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/UnbindInstance.html">UnbindInstance</a>
+    <a id="Player:UnsetKnownTitle" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/UnsetKnownTitle.html">UnsetKnownTitle</a>
+    <a id="Player:UnsummonPetTemporarily" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/UnsummonPetTemporarily.html">UnsummonPetTemporarily</a>
+    <a id="Player:UpdatePlayerSetting" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/UpdatePlayerSetting.html">UpdatePlayerSetting</a>
+    <a id="Player:Whisper" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/Whisper.html">Whisper</a>
+    <a id="Player:Yell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Player/Yell.html">Yell</a>
+  </div>
+</div>
 `);

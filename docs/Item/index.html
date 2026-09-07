@@ -8,588 +8,854 @@
 
     <title>Item - ALE API</title>
 
-    <link rel="stylesheet" type="text/css" href="../static/main.css">
-    <link rel="stylesheet" type="text/css" href="../static/dark.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink:    { DEFAULT: '#0e1013', raised: '#16191f', inset: '#0a0c0f' },
+                        line:   { DEFAULT: '#242932', strong: '#333a47' },
+                        body:   { DEFAULT: '#c8cdd6', dim: '#7d8695', bright: '#f4f6f9' },
+                        accent: { DEFAULT: '#5aa2ff', dim: '#1e4d8c' },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Consolas', 'monospace'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- Only what Tailwind cannot reach: the markup main.js builds itself. -->
+    <link rel="stylesheet" type="text/css" href="../static/doc.css">
 
     <link rel="shortcut icon" href="../static/favicon.ico">
-
 </head>
-<body class="rustdoc">
-<!--[if lte IE 8]>
-    <div class="warning">
-        This old browser is unsupported and will most likely display funky
-        things.
-    </div>
-    <![endif]-->
 
-<section class="sidebar">
-    <a href='../index.html'><img src='../static/eluna-logo.png' alt='ALE Logo' width='100'></a>
-    <div class="block">
+<body class="bg-ink font-sans text-[15px] leading-relaxed text-body antialiased selection:bg-accent/30">
+
+<input type="checkbox" id="sidebar-toggle" class="peer hidden">
+
+<aside class="sidebar fixed inset-y-0 left-0 z-20 flex w-72 -translate-x-full flex-col overflow-y-auto
+              border-r border-line bg-ink-inset transition-transform
+              peer-checked:translate-x-0 lg:translate-x-0">
+    <a class="group flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-5 hover:bg-ink-raised/50"
+       href='../index.html'>
+        <img class="transition group-hover:scale-105" src='../static/ale-logo.png' alt='ALE' width='30' height='30'>
+        <span class="font-semibold tracking-tight text-body-bright">ALE <span class="text-accent">API</span></span>
+    </a>
+
+    <div class="pb-8">
         
-
-    </div>
-</section>
-
-<nav class="sub">
-    <form class="search-form js-only">
-        <div class="search-container">
-            <input class="search-input" name="search"
-                   autocomplete="off"
-                   placeholder="Click or press 'S' to search, '?' for more options..."
-                   type="search">
+    <div class="border-b-2 border-line-strong">
+        <div class="flex items-center justify-between px-4 py-2.5 text-[11px] font-bold uppercase tracking-wider text-body-dim">
+            Item
+            <span class="rounded-full border border-line bg-ink-raised px-1.5 font-semibold normal-case tracking-normal">55</span>
         </div>
-    </form>
-</nav>
+        <div class="px-2 pb-2">
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/CanBeTraded.html">CanBeTraded</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/ClearEnchantment.html">ClearEnchantment</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetAllowableClass.html">GetAllowableClass</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetAllowableRace.html">GetAllowableRace</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetBagSize.html">GetBagSize</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetBagSlot.html">GetBagSlot</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetBuyCount.html">GetBuyCount</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetBuyPrice.html">GetBuyPrice</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetClass.html">GetClass</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetCount.html">GetCount</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetDisplayId.html">GetDisplayId</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetEnchantmentId.html">GetEnchantmentId</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetInventoryType.html">GetInventoryType</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetItemLevel.html">GetItemLevel</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetItemLink.html">GetItemLink</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetItemSet.html">GetItemSet</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetItemTemplate.html">GetItemTemplate</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetMaxStackCount.html">GetMaxStackCount</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetName.html">GetName</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetOwner.html">GetOwner</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetOwnerGUID.html">GetOwnerGUID</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetQuality.html">GetQuality</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetRandomProperty.html">GetRandomProperty</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetRandomSuffix.html">GetRandomSuffix</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetRequiredLevel.html">GetRequiredLevel</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetSellPrice.html">GetSellPrice</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetSlot.html">GetSlot</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetSpellId.html">GetSpellId</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetSpellTrigger.html">GetSpellTrigger</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetStatsCount.html">GetStatsCount</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/GetSubClass.html">GetSubClass</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/HasQuest.html">HasQuest</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsArmorVellum.html">IsArmorVellum</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsBag.html">IsBag</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsBoundAccountWide.html">IsBoundAccountWide</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsBoundByEnchant.html">IsBoundByEnchant</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsBroken.html">IsBroken</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsConjuredConsumable.html">IsConjuredConsumable</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsCurrencyToken.html">IsCurrencyToken</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsEquipped.html">IsEquipped</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsInBag.html">IsInBag</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsInTrade.html">IsInTrade</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsLocked.html">IsLocked</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsNotBoundToPlayer.html">IsNotBoundToPlayer</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsNotEmptyBag.html">IsNotEmptyBag</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsPotion.html">IsPotion</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsSoulBound.html">IsSoulBound</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/IsWeaponVellum.html">IsWeaponVellum</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/SaveToDB.html">SaveToDB</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/SetBinding.html">SetBinding</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/SetCount.html">SetCount</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/SetEnchantment.html">SetEnchantment</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/SetOwner.html">SetOwner</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/SetRandomProperty.html">SetRandomProperty</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Item/SetRandomSuffix.html">SetRandomSuffix</a>
+        </div>
+    </div>
 
-<section id='main' class="content mod">
-    <h1 class='fqn'>
-        Class <a class="mod" href="">Item</a>
-        <span class='out-of-band'>
-            <span id='render-detail'>
+        <details class="border-b border-line" open>
+            <summary class="flex cursor-pointer select-none items-center justify-between px-5 py-3
+                            text-[10px] font-bold uppercase tracking-[0.14em] text-body-dim marker:text-line-strong
+                            hover:text-body-bright">
+                <a class="hover:text-accent hover:underline" href="../Game.html">Game</a>
+                <span class="rounded-full border border-line bg-ink-raised px-1.5 text-[11px] font-semibold normal-case tracking-normal">30</span>
+            </summary>
+            <div class="px-3 pb-3">
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../ALEQuery/index.html">ALEQuery</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Achievement/index.html">Achievement</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Aura/index.html">Aura</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../BattleGround/index.html">BattleGround</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../ChatHandler/index.html">ChatHandler</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Corpse/index.html">Corpse</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Creature/index.html">Creature</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../GameObject/index.html">GameObject</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../GemPropertiesEntry/index.html">GemPropertiesEntry</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Global/index.html">Global</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Group/index.html">Group</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Guild/index.html">Guild</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          bg-accent/15 font-semibold text-accent shadow-[inset_2px_0_0_0_theme(colors.accent)]"
+                   href="../Item/index.html">Item</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../ItemTemplate/index.html">ItemTemplate</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Loot/index.html">Loot</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Map/index.html">Map</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Object/index.html">Object</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Pet/index.html">Pet</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Player/index.html">Player</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Quest/index.html">Quest</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Roll/index.html">Roll</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Spell/index.html">Spell</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../SpellEntry/index.html">SpellEntry</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../SpellInfo/index.html">SpellInfo</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Ticket/index.html">Ticket</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Transport/index.html">Transport</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Unit/index.html">Unit</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Vehicle/index.html">Vehicle</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../WorldObject/index.html">WorldObject</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../WorldPacket/index.html">WorldPacket</a>
+            </div>
+        </details>
+        <details class="border-b border-line" >
+            <summary class="flex cursor-pointer select-none items-center justify-between px-5 py-3
+                            text-[10px] font-bold uppercase tracking-[0.14em] text-body-dim marker:text-line-strong
+                            hover:text-body-bright">
+                <a class="hover:text-accent hover:underline" href="../Playerbots.html">Playerbots</a>
+                <span class="rounded-full border border-line bg-ink-raised px-1.5 text-[11px] font-semibold normal-case tracking-normal">7</span>
+            </summary>
+            <div class="px-3 pb-3">
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBot/index.html">PlayerBot</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotAI/index.html">PlayerBotAI</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotFactory/index.html">PlayerBotFactory</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotHolder/index.html">PlayerBotHolder</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotMgr/index.html">PlayerBotMgr</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotsMgr/index.html">PlayerBotsMgr</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../RandomPlayerBotMgr/index.html">RandomPlayerBotMgr</a>
+            </div>
+        </details>
+    </div>
+</aside>
+
+<div class="flex min-h-screen flex-col lg:pl-72">
+
+    <nav class="sub sticky top-0 z-10 flex h-16 shrink-0 items-center gap-4 border-b border-line
+                bg-ink/80 px-6 backdrop-blur-md
+                lg:px-[max(1.5rem,calc((100%-60rem)/2+1.5rem))]">
+        <label class="cursor-pointer rounded border border-line px-2 py-0.5 text-body-dim lg:hidden"
+               for="sidebar-toggle" title="Toggle the sidebar">&#9776;</label>
+
+        <ol class="flex min-w-0 flex-nowrap items-center overflow-hidden text-sm">
+            <li class="whitespace-nowrap"><a class="text-body-dim hover:text-accent hover:underline" href="../index.html">ALE API</a></li>
+            
+    <li class="whitespace-nowrap before:mx-2 before:text-line-strong before:content-['/']"><a class="text-body-dim hover:text-accent hover:underline" href="../Game.html">Game</a></li>
+    <li class="whitespace-nowrap before:mx-2 before:text-line-strong before:content-['/']"><span class="font-semibold text-body-bright">Item</span></li>
+
+        </ol>
+
+        <form class="js-only ml-auto">
+            <input class="search-input w-44 rounded-lg border border-line bg-ink-inset px-3.5 py-2 text-[13.5px] transition
+                          placeholder:text-body-dim/70 hover:border-line-strong
+                          focus:border-accent focus:outline-none focus:ring-4 focus:ring-accent/10 sm:w-72"
+                   name="search" autocomplete="off" placeholder="Search, or press S" type="search">
+        </form>
+    </nav>
+
+    <section id='main' class="content mx-auto w-full max-w-[60rem] grow px-6 py-10">
+        <h1 class='fqn mb-8 border-b border-line pb-5 text-[1.75rem] font-semibold tracking-tight text-body-bright'>
+            <span class='text-body-dim'>Class</span> Item
+            <span class='out-of-band float-right text-sm font-normal'>
                 <a id="collapse-all" href="#">[-]</a>
                 <a id="expand-all" href="#">[+]</a>
             </span>
-        </span>
-    </h1>
+        </h1>
 
-    
-    <p>Represents an instance of an item in the game world.</p>
-<p>Inherits all methods from: <a class="mod" href="../Object/index.html">Object</a></p>
+        
+    <div class='prose prose-invert max-w-none'><p>Represents an instance of an item in the game world.</p>
+<p>Inherits all methods from: <a class="text-accent hover:underline" href="../Object/index.html">Object</a></p></div>
 
-    <h2 id='methods' class='section-header'><a href="#methods">Methods</a></h2>
-    <table>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CanBeTraded.html'>CanBeTraded</a>
+    <h2 id='methods' class='mt-10 text-xl font-semibold tracking-tight text-body-bright'>
+        <a href="#methods">Methods</a>
+    </h2>
+    <div class='mt-5 overflow-x-auto rounded-xl border border-line bg-ink-raised'>
+    <table class='w-full border-collapse text-left [&_tr:first-child_td]:border-t-0'>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CanBeTraded.html'>CanBeTraded</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> can be traded, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> can be traded, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ClearEnchantment.html'>ClearEnchantment</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ClearEnchantment.html'>ClearEnchantment</a>
             </td>
-            <td class='docblock short'>
-                <p>Removes an enchant from the <a class="mod" href="../Item/index.html">Item</a> by the specified slot</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Removes an enchant from the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> by the specified slot</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetAllowableClass.html'>GetAllowableClass</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetAllowableClass.html'>GetAllowableClass</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Player/index.html">Player</a> classes allowed to use this <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Player/index.html">Player</a> classes allowed to use this <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetAllowableRace.html'>GetAllowableRace</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetAllowableRace.html'>GetAllowableRace</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Player/index.html">Player</a> races allowed to use this <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Player/index.html">Player</a> races allowed to use this <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetBagSize.html'>GetBagSize</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetBagSize.html'>GetBagSize</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the bag size of this <a class="mod" href="../Item/index.html">Item</a>, 0 if <a class="mod" href="../Item/index.html">Item</a> is not a bag</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the bag size of this <a class="text-accent hover:underline" href="../Item/index.html">Item</a>, 0 if <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is not a bag</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetBagSlot.html'>GetBagSlot</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetBagSlot.html'>GetBagSlot</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Item/index.html">Item</a>s current bag slot</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Item/index.html">Item</a>s current bag slot</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetBuyCount.html'>GetBuyCount</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetBuyCount.html'>GetBuyCount</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the default purchase count of the <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the default purchase count of the <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetBuyPrice.html'>GetBuyPrice</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetBuyPrice.html'>GetBuyPrice</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the purchase price of the <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the purchase price of the <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetClass.html'>GetClass</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetClass.html'>GetClass</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns class of the <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns class of the <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetCount.html'>GetCount</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetCount.html'>GetCount</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Item/index.html">Item</a>s stack count</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Item/index.html">Item</a>s stack count</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetDisplayId.html'>GetDisplayId</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetDisplayId.html'>GetDisplayId</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the display ID of the <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the display ID of the <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetEnchantmentId.html'>GetEnchantmentId</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetEnchantmentId.html'>GetEnchantmentId</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Item/index.html">Item</a>s enchantment ID by enchant slot specified</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Item/index.html">Item</a>s enchantment ID by enchant slot specified</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetInventoryType.html'>GetInventoryType</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetInventoryType.html'>GetInventoryType</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the inventory type of the <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the inventory type of the <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetItemLevel.html'>GetItemLevel</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetItemLevel.html'>GetItemLevel</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Item/index.html">Item</a>s level</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Item/index.html">Item</a>s level</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetItemLink.html'>GetItemLink</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetItemLink.html'>GetItemLink</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the chat link of the <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the chat link of the <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetItemSet.html'>GetItemSet</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetItemSet.html'>GetItemSet</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the item set ID of this <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the item set ID of this <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetItemTemplate.html'>GetItemTemplate</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetItemTemplate.html'>GetItemTemplate</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../ItemTemplate/index.html">ItemTemplate</a> for this <a class="mod" href="../Item/index.html">Item</a>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../ItemTemplate/index.html">ItemTemplate</a> for this <a class="text-accent hover:underline" href="../Item/index.html">Item</a>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetMaxStackCount.html'>GetMaxStackCount</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetMaxStackCount.html'>GetMaxStackCount</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Item/index.html">Item</a>s max stack count</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Item/index.html">Item</a>s max stack count</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetName.html'>GetName</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetName.html'>GetName</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the name of the <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the name of the <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetOwner.html'>GetOwner</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetOwner.html'>GetOwner</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Player/index.html">Player</a> who currently owns the <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Player/index.html">Player</a> who currently owns the <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetOwnerGUID.html'>GetOwnerGUID</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetOwnerGUID.html'>GetOwnerGUID</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the GUID of the <a class="mod" href="../Player/index.html">Player</a> who owns the specified <a class="mod" href="../Item/index.html">Item</a>.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the GUID of the <a class="text-accent hover:underline" href="../Player/index.html">Player</a> who owns the specified <a class="text-accent hover:underline" href="../Item/index.html">Item</a>.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetQuality.html'>GetQuality</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetQuality.html'>GetQuality</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the quality of the <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the quality of the <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetRandomProperty.html'>GetRandomProperty</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetRandomProperty.html'>GetRandomProperty</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the random property ID of this <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the random property ID of this <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetRandomSuffix.html'>GetRandomSuffix</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetRandomSuffix.html'>GetRandomSuffix</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the random suffix ID of the specified <a class="mod" href="../Item/index.html">Item</a>.  This corresponds to the <code>RandomSuffix</code> field from the item's <a class="mod" href="../ItemTemplate/index.html">ItemTemplate</a>, which controls the applied suffix (e.g., "of the Bear", "of the Eagle").</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the random suffix ID of the specified <a class="text-accent hover:underline" href="../Item/index.html">Item</a>.  This corresponds to the <code>RandomSuffix</code> field from the item's <a class="text-accent hover:underline" href="../ItemTemplate/index.html">ItemTemplate</a>, which controls the applied suffix (e.g., "of the Bear", "of the Eagle").</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetRequiredLevel.html'>GetRequiredLevel</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetRequiredLevel.html'>GetRequiredLevel</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the minimum level required to use this <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the minimum level required to use this <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetSellPrice.html'>GetSellPrice</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetSellPrice.html'>GetSellPrice</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the sell price of the <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the sell price of the <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetSlot.html'>GetSlot</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetSlot.html'>GetSlot</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Item/index.html">Item</a>s current slot</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Item/index.html">Item</a>s current slot</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetSpellId.html'>GetSpellId</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetSpellId.html'>GetSpellId</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the spell ID tied to the <a class="mod" href="../Item/index.html">Item</a> by spell index</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the spell ID tied to the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> by spell index</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetSpellTrigger.html'>GetSpellTrigger</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetSpellTrigger.html'>GetSpellTrigger</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the spell trigger tied to the <a class="mod" href="../Item/index.html">Item</a> by spell index</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the spell trigger tied to the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> by spell index</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetStatsCount.html'>GetStatsCount</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetStatsCount.html'>GetStatsCount</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns the number of stat entries defined on the <a class="mod" href="../Item/index.html">Item</a>'s <a class="mod" href="../ItemTemplate/index.html">ItemTemplate</a>.  This reflects how many stat slots (e.g., Strength, Stamina, etc.) are defined for the item.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the number of stat entries defined on the <a class="text-accent hover:underline" href="../Item/index.html">Item</a>'s <a class="text-accent hover:underline" href="../ItemTemplate/index.html">ItemTemplate</a>.  This reflects how many stat slots (e.g., Strength, Stamina, etc.) are defined for the item.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetSubClass.html'>GetSubClass</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetSubClass.html'>GetSubClass</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns subclass of the <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns subclass of the <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='HasQuest.html'>HasQuest</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='HasQuest.html'>HasQuest</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> has the <a class="mod" href="../Quest/index.html">Quest</a> specified tied to it, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> has the <a class="text-accent hover:underline" href="../Quest/index.html">Quest</a> specified tied to it, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsArmorVellum.html'>IsArmorVellum</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsArmorVellum.html'>IsArmorVellum</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is an armor vellum, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is an armor vellum, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsBag.html'>IsBag</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsBag.html'>IsBag</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is a bag, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is a bag, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsBoundAccountWide.html'>IsBoundAccountWide</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsBoundAccountWide.html'>IsBoundAccountWide</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is account bound, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is account bound, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsBoundByEnchant.html'>IsBoundByEnchant</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsBoundByEnchant.html'>IsBoundByEnchant</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is bound to a <a class="mod" href="../Player/index.html">Player</a> by an enchant, 'false' otehrwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is bound to a <a class="text-accent hover:underline" href="../Player/index.html">Player</a> by an enchant, 'false' otehrwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsBroken.html'>IsBroken</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsBroken.html'>IsBroken</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is broken, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is broken, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsConjuredConsumable.html'>IsConjuredConsumable</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsConjuredConsumable.html'>IsConjuredConsumable</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is a conjured consumable, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is a conjured consumable, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsCurrencyToken.html'>IsCurrencyToken</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsCurrencyToken.html'>IsCurrencyToken</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is a currency token, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is a currency token, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsEquipped.html'>IsEquipped</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsEquipped.html'>IsEquipped</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is currently equipped, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is currently equipped, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsInBag.html'>IsInBag</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsInBag.html'>IsInBag</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is currently in a bag, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is currently in a bag, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsInTrade.html'>IsInTrade</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsInTrade.html'>IsInTrade</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is currently in a trade window, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is currently in a trade window, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsLocked.html'>IsLocked</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsLocked.html'>IsLocked</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is locked, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is locked, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsNotBoundToPlayer.html'>IsNotBoundToPlayer</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsNotBoundToPlayer.html'>IsNotBoundToPlayer</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is not bound to the <a class="mod" href="../Player/index.html">Player</a> specified, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is not bound to the <a class="text-accent hover:underline" href="../Player/index.html">Player</a> specified, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsNotEmptyBag.html'>IsNotEmptyBag</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsNotEmptyBag.html'>IsNotEmptyBag</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is a not an empty bag, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is a not an empty bag, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsPotion.html'>IsPotion</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsPotion.html'>IsPotion</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is a potion, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is a potion, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsSoulBound.html'>IsSoulBound</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsSoulBound.html'>IsSoulBound</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is soulbound, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is soulbound, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsWeaponVellum.html'>IsWeaponVellum</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsWeaponVellum.html'>IsWeaponVellum</a>
             </td>
-            <td class='docblock short'>
-                <p>Returns 'true' if the <a class="mod" href="../Item/index.html">Item</a> is a weapon vellum, 'false' otherwise</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns 'true' if the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> is a weapon vellum, 'false' otherwise</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SaveToDB.html'>SaveToDB</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SaveToDB.html'>SaveToDB</a>
             </td>
-            <td class='docblock short'>
-                <p>Saves the <a class="mod" href="../Item/index.html">Item</a> to the database</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Saves the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> to the database</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetBinding.html'>SetBinding</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetBinding.html'>SetBinding</a>
             </td>
-            <td class='docblock short'>
-                <p>Sets the binding of the <a class="mod" href="../Item/index.html">Item</a> to 'true' or 'false'</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the binding of the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> to 'true' or 'false'</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetCount.html'>SetCount</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetCount.html'>SetCount</a>
             </td>
-            <td class='docblock short'>
-                <p>Sets the stack count of the <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the stack count of the <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetEnchantment.html'>SetEnchantment</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetEnchantment.html'>SetEnchantment</a>
             </td>
-            <td class='docblock short'>
-                <p>Sets the specified enchantment of the <a class="mod" href="../Item/index.html">Item</a> to the specified slot</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the specified enchantment of the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> to the specified slot</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetOwner.html'>SetOwner</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetOwner.html'>SetOwner</a>
             </td>
-            <td class='docblock short'>
-                <p>Sets the <a class="mod" href="../Player/index.html">Player</a> specified as the owner of the <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the <a class="text-accent hover:underline" href="../Player/index.html">Player</a> specified as the owner of the <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetRandomProperty.html'>SetRandomProperty</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetRandomProperty.html'>SetRandomProperty</a>
             </td>
-            <td class='docblock short'>
-                <p>Sets the random properties for the <a class="mod" href="../Item/index.html">Item</a> from a given random property ID.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the random properties for the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> from a given random property ID.</td>
         </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetRandomSuffix.html'>SetRandomSuffix</a>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetRandomSuffix.html'>SetRandomSuffix</a>
             </td>
-            <td class='docblock short'>
-                <p>Sets the random suffix for the <a class="mod" href="../Item/index.html">Item</a> from a given random suffix ID.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the random suffix for the <a class="text-accent hover:underline" href="../Item/index.html">Item</a> from a given random suffix ID.</td>
         </tr>
     </table>
-
-</section>
-
-<section id='search' class="content hidden"></section>
-
-<section class="footer"></section>
-
-<div id="help" class="hidden">
-    <div class="shortcuts">
-        <h1>Keyboard shortcuts</h1>
-        <dl>
-            <dt>?</dt>
-            <dd>Show this help dialog</dd>
-            <dt>S</dt>
-            <dd>Focus the search field</dd>
-            <dt>&larrb;</dt>
-            <dd>Move up in search results</dd>
-            <dt>&rarrb;</dt>
-            <dd>Move down in search results</dd>
-            <dt>&#9166;</dt>
-            <dd>Go to active search result</dd>
-        </dl>
     </div>
-    <div class="infos">
-        <h1>Search tricks</h1>
-        <p>
-            Prefix searches with a type followed by a colon (e.g.
-            <code>fn:</code>) to restrict the search to a given type.
+
+    </section>
+
+    <section id='search' class="content mx-auto hidden w-full max-w-[60rem] grow px-6 py-8"></section>
+
+    <footer class="shrink-0 border-t border-line px-6 py-6 text-xs text-body-dim
+                   lg:px-[max(1.5rem,calc((100%-60rem)/2+1.5rem))]">
+        <p class="max-w-2xl leading-relaxed">
+            Built on <a class="font-medium text-body hover:text-accent hover:underline"
+                        href="https://github.com/ElunaLuaEngine/Eluna">Eluna</a>.
+            ALE is a fork, and the heavy lifting was done upstream - our thanks to the original
+            Eluna authors and to everyone who has contributed to it over the years.
         </p>
-        <p>
-            Accepted types are: <code>fn</code>, <code>mod</code>,
-            <code>struct</code> (or <code>str</code>), <code>enum</code>,
-            <code>trait</code>, <code>typedef</code> (or
-            <code>tdef</code>).
-        </p>
-    </div>
+        <div class="mt-4 flex flex-wrap justify-between gap-4 border-t border-line pt-4">
+            <span>Generated on <script src="../date.js"></script></span>
+            <span>&copy;2026 ALE Lua Engine</span>
+        </div>
+    </footer>
+</div>
+
+<div id="help" class="hidden fixed inset-0 z-30 m-auto h-fit w-fit rounded-lg border border-line bg-ink-raised p-6 shadow-2xl">
+    <h1 class="mb-3 font-semibold text-body-bright">Keyboard shortcuts</h1>
+    <dl class="grid grid-cols-[3rem_1fr] gap-y-1 text-sm">
+        <dt class="font-mono text-body-dim">?</dt><dd>Show this help dialog</dd>
+        <dt class="font-mono text-body-dim">S</dt><dd>Focus the search field</dd>
+        <dt class="font-mono text-body-dim">&uarr;</dt><dd>Move up in search results</dd>
+        <dt class="font-mono text-body-dim">&darr;</dt><dd>Move down in search results</dd>
+        <dt class="font-mono text-body-dim">&#9166;</dt><dd>Go to active search result</dd>
+    </dl>
 </div>
 
 <script>
@@ -598,7 +864,5 @@
 <script src="../static/jquery.js"></script>
 <script src="../static/main.js"></script>
 <script async src="../search-index.js"></script>
-<center>Generated on <script src="../date.js"></script></center>
-<center>&copy;2026 - ALE Lua Engine</center>
 </body>
 </html>

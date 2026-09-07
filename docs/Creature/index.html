@@ -8,949 +8,1252 @@
 
     <title>Creature - ALE API</title>
 
-    <link rel="stylesheet" type="text/css" href="../static/main.css">
-    <link rel="stylesheet" type="text/css" href="../static/dark.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink:    { DEFAULT: '#0e1013', raised: '#16191f', inset: '#0a0c0f' },
+                        line:   { DEFAULT: '#242932', strong: '#333a47' },
+                        body:   { DEFAULT: '#c8cdd6', dim: '#7d8695', bright: '#f4f6f9' },
+                        accent: { DEFAULT: '#5aa2ff', dim: '#1e4d8c' },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Consolas', 'monospace'],
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- Only what Tailwind cannot reach: the markup main.js builds itself. -->
+    <link rel="stylesheet" type="text/css" href="../static/doc.css">
 
     <link rel="shortcut icon" href="../static/favicon.ico">
-
 </head>
-<body class="rustdoc">
-<!--[if lte IE 8]>
-    <div class="warning">
-        This old browser is unsupported and will most likely display funky
-        things.
-    </div>
-    <![endif]-->
 
-<section class="sidebar">
-    <a href='../index.html'><img src='../static/eluna-logo.png' alt='ALE Logo' width='100'></a>
-    <div class="block">
+<body class="bg-ink font-sans text-[15px] leading-relaxed text-body antialiased selection:bg-accent/30">
+
+<input type="checkbox" id="sidebar-toggle" class="peer hidden">
+
+<aside class="sidebar fixed inset-y-0 left-0 z-20 flex w-72 -translate-x-full flex-col overflow-y-auto
+              border-r border-line bg-ink-inset transition-transform
+              peer-checked:translate-x-0 lg:translate-x-0">
+    <a class="group flex h-16 shrink-0 items-center gap-2.5 border-b border-line px-5 hover:bg-ink-raised/50"
+       href='../index.html'>
+        <img class="transition group-hover:scale-105" src='../static/ale-logo.png' alt='ALE' width='30' height='30'>
+        <span class="font-semibold tracking-tight text-body-bright">ALE <span class="text-accent">API</span></span>
+    </a>
+
+    <div class="pb-8">
         
-
-    </div>
-</section>
-
-<nav class="sub">
-    <form class="search-form js-only">
-        <div class="search-container">
-            <input class="search-input" name="search"
-                   autocomplete="off"
-                   placeholder="Click or press 'S' to search, '?' for more options..."
-                   type="search">
+    <div class="border-b-2 border-line-strong">
+        <div class="flex items-center justify-between px-4 py-2.5 text-[11px] font-bold uppercase tracking-wider text-body-dim">
+            Creature
+            <span class="rounded-full border border-line bg-ink-raised px-1.5 font-semibold normal-case tracking-normal">92</span>
         </div>
-    </form>
-</nav>
+        <div class="px-2 pb-2">
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/AddLootMode.html">AddLootMode</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/AllLootRemovedFromCorpse.html">AllLootRemovedFromCorpse</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/AttackStart.html">AttackStart</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/CallAssistance.html">CallAssistance</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/CallForHelp.html">CallForHelp</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/CanAggro.html">CanAggro</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/CanAssistTo.html">CanAssistTo</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/CanCompleteQuest.html">CanCompleteQuest</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/CanFly.html">CanFly</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/CanStartAttack.html">CanStartAttack</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/CanSwim.html">CanSwim</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/CanWalk.html">CanWalk</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/DespawnOrUnsummon.html">DespawnOrUnsummon</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/FleeToGetAssistance.html">FleeToGetAssistance</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetAIName.html">GetAIName</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetAITarget.html">GetAITarget</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetAITargets.html">GetAITargets</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetAITargetsCount.html">GetAITargetsCount</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetAggroRange.html">GetAggroRange</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetCorpseDelay.html">GetCorpseDelay</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetCreatureFamily.html">GetCreatureFamily</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetCreatureSpellCooldownDelay.html">GetCreatureSpellCooldownDelay</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetCurrentWaypointId.html">GetCurrentWaypointId</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetDBTableGUIDLow.html">GetDBTableGUIDLow</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetDefaultMovementType.html">GetDefaultMovementType</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetExtraFlags.html">GetExtraFlags</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetHomePosition.html">GetHomePosition</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetLoot.html">GetLoot</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetLootMode.html">GetLootMode</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetLootRecipient.html">GetLootRecipient</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetLootRecipientGroup.html">GetLootRecipientGroup</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetNPCFlags.html">GetNPCFlags</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetRank.html">GetRank</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetReactState.html">GetReactState</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetRespawnDelay.html">GetRespawnDelay</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetScriptId.html">GetScriptId</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetScriptName.html">GetScriptName</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetShieldBlockValue.html">GetShieldBlockValue</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetSpawnId.html">GetSpawnId</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetUnitFlags.html">GetUnitFlags</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetUnitFlagsTwo.html">GetUnitFlagsTwo</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetWanderRadius.html">GetWanderRadius</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/GetWaypointPath.html">GetWaypointPath</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/HasCategoryCooldown.html">HasCategoryCooldown</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/HasLootMode.html">HasLootMode</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/HasLootRecipient.html">HasLootRecipient</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/HasQuest.html">HasQuest</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/HasSearchedAssistance.html">HasSearchedAssistance</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/HasSpell.html">HasSpell</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/HasSpellCooldown.html">HasSpellCooldown</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/IsCivilian.html">IsCivilian</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/IsDamageEnoughForLootingAndReward.html">IsDamageEnoughForLootingAndReward</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/IsDungeonBoss.html">IsDungeonBoss</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/IsElite.html">IsElite</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/IsGuard.html">IsGuard</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/IsInEvadeMode.html">IsInEvadeMode</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/IsRacialLeader.html">IsRacialLeader</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/IsRegeneratingHealth.html">IsRegeneratingHealth</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/IsReputationGainDisabled.html">IsReputationGainDisabled</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/IsTappedBy.html">IsTappedBy</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/IsTargetableForAttack.html">IsTargetableForAttack</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/IsTrigger.html">IsTrigger</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/IsWorldBoss.html">IsWorldBoss</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/MoveWaypoint.html">MoveWaypoint</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/RemoveCorpse.html">RemoveCorpse</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/RemoveLootMode.html">RemoveLootMode</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/ResetLootMode.html">ResetLootMode</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/Respawn.html">Respawn</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SaveToDB.html">SaveToDB</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SelectVictim.html">SelectVictim</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetAggroEnabled.html">SetAggroEnabled</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetCorpseDelay.html">SetCorpseDelay</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetDeathState.html">SetDeathState</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetDefaultMovementType.html">SetDefaultMovementType</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetDisableGravity.html">SetDisableGravity</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetDisableReputationGain.html">SetDisableReputationGain</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetEquipmentSlots.html">SetEquipmentSlots</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetHomePosition.html">SetHomePosition</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetHover.html">SetHover</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetInCombatWithZone.html">SetInCombatWithZone</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetLootMode.html">SetLootMode</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetNPCFlags.html">SetNPCFlags</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetNoCallAssistance.html">SetNoCallAssistance</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetNoSearchAssistance.html">SetNoSearchAssistance</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetReactState.html">SetReactState</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetRegeneratingHealth.html">SetRegeneratingHealth</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetRespawnDelay.html">SetRespawnDelay</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetUnitFlags.html">SetUnitFlags</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetUnitFlagsTwo.html">SetUnitFlagsTwo</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetWalk.html">SetWalk</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/SetWanderRadius.html">SetWanderRadius</a>
+            <a class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright"
+               href="../Creature/UpdateEntry.html">UpdateEntry</a>
+        </div>
+    </div>
 
-<section id='main' class="content mod">
-    <h1 class='fqn'>
-        Class <a class="mod" href="">Creature</a>
-        <span class='out-of-band'>
-            <span id='render-detail'>
+        <details class="border-b border-line" open>
+            <summary class="flex cursor-pointer select-none items-center justify-between px-5 py-3
+                            text-[10px] font-bold uppercase tracking-[0.14em] text-body-dim marker:text-line-strong
+                            hover:text-body-bright">
+                <a class="hover:text-accent hover:underline" href="../Game.html">Game</a>
+                <span class="rounded-full border border-line bg-ink-raised px-1.5 text-[11px] font-semibold normal-case tracking-normal">30</span>
+            </summary>
+            <div class="px-3 pb-3">
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../ALEQuery/index.html">ALEQuery</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Achievement/index.html">Achievement</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Aura/index.html">Aura</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../BattleGround/index.html">BattleGround</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../ChatHandler/index.html">ChatHandler</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Corpse/index.html">Corpse</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          bg-accent/15 font-semibold text-accent shadow-[inset_2px_0_0_0_theme(colors.accent)]"
+                   href="../Creature/index.html">Creature</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../GameObject/index.html">GameObject</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../GemPropertiesEntry/index.html">GemPropertiesEntry</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Global/index.html">Global</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Group/index.html">Group</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Guild/index.html">Guild</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Item/index.html">Item</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../ItemTemplate/index.html">ItemTemplate</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Loot/index.html">Loot</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Map/index.html">Map</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Object/index.html">Object</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Pet/index.html">Pet</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Player/index.html">Player</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Quest/index.html">Quest</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Roll/index.html">Roll</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Spell/index.html">Spell</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../SpellEntry/index.html">SpellEntry</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../SpellInfo/index.html">SpellInfo</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Ticket/index.html">Ticket</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Transport/index.html">Transport</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Unit/index.html">Unit</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../Vehicle/index.html">Vehicle</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../WorldObject/index.html">WorldObject</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../WorldPacket/index.html">WorldPacket</a>
+            </div>
+        </details>
+        <details class="border-b border-line" >
+            <summary class="flex cursor-pointer select-none items-center justify-between px-5 py-3
+                            text-[10px] font-bold uppercase tracking-[0.14em] text-body-dim marker:text-line-strong
+                            hover:text-body-bright">
+                <a class="hover:text-accent hover:underline" href="../Playerbots.html">Playerbots</a>
+                <span class="rounded-full border border-line bg-ink-raised px-1.5 text-[11px] font-semibold normal-case tracking-normal">7</span>
+            </summary>
+            <div class="px-3 pb-3">
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBot/index.html">PlayerBot</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotAI/index.html">PlayerBotAI</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotFactory/index.html">PlayerBotFactory</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotHolder/index.html">PlayerBotHolder</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotMgr/index.html">PlayerBotMgr</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../PlayerBotsMgr/index.html">PlayerBotsMgr</a>
+                <a class="block truncate rounded-md px-2.5 py-1.5 text-[13.5px] transition
+                          hover:bg-ink-raised hover:text-body-bright
+                          "
+                   href="../RandomPlayerBotMgr/index.html">RandomPlayerBotMgr</a>
+            </div>
+        </details>
+    </div>
+</aside>
+
+<div class="flex min-h-screen flex-col lg:pl-72">
+
+    <nav class="sub sticky top-0 z-10 flex h-16 shrink-0 items-center gap-4 border-b border-line
+                bg-ink/80 px-6 backdrop-blur-md
+                lg:px-[max(1.5rem,calc((100%-60rem)/2+1.5rem))]">
+        <label class="cursor-pointer rounded border border-line px-2 py-0.5 text-body-dim lg:hidden"
+               for="sidebar-toggle" title="Toggle the sidebar">&#9776;</label>
+
+        <ol class="flex min-w-0 flex-nowrap items-center overflow-hidden text-sm">
+            <li class="whitespace-nowrap"><a class="text-body-dim hover:text-accent hover:underline" href="../index.html">ALE API</a></li>
+            
+    <li class="whitespace-nowrap before:mx-2 before:text-line-strong before:content-['/']"><a class="text-body-dim hover:text-accent hover:underline" href="../Game.html">Game</a></li>
+    <li class="whitespace-nowrap before:mx-2 before:text-line-strong before:content-['/']"><span class="font-semibold text-body-bright">Creature</span></li>
+
+        </ol>
+
+        <form class="js-only ml-auto">
+            <input class="search-input w-44 rounded-lg border border-line bg-ink-inset px-3.5 py-2 text-[13.5px] transition
+                          placeholder:text-body-dim/70 hover:border-line-strong
+                          focus:border-accent focus:outline-none focus:ring-4 focus:ring-accent/10 sm:w-72"
+                   name="search" autocomplete="off" placeholder="Search, or press S" type="search">
+        </form>
+    </nav>
+
+    <section id='main' class="content mx-auto w-full max-w-[60rem] grow px-6 py-10">
+        <h1 class='fqn mb-8 border-b border-line pb-5 text-[1.75rem] font-semibold tracking-tight text-body-bright'>
+            <span class='text-body-dim'>Class</span> Creature
+            <span class='out-of-band float-right text-sm font-normal'>
                 <a id="collapse-all" href="#">[-]</a>
                 <a id="expand-all" href="#">[+]</a>
             </span>
-        </span>
-    </h1>
+        </h1>
 
-    
-    <p>Non-<a class="mod" href="../Player/index.html">Player</a> controlled <a class="mod" href="../Unit/index.html">Unit</a>s (i.e. NPCs).</p>
-<p>Inherits all methods from: <a class="mod" href="../Object/index.html">Object</a>, <a class="mod" href="../WorldObject/index.html">WorldObject</a>, <a class="mod" href="../Unit/index.html">Unit</a></p>
+        
+    <div class='prose prose-invert max-w-none'><p>Non-<a class="text-accent hover:underline" href="../Player/index.html">Player</a> controlled <a class="text-accent hover:underline" href="../Unit/index.html">Unit</a>s (i.e. NPCs).</p>
+<p>Inherits all methods from: <a class="text-accent hover:underline" href="../Object/index.html">Object</a>, <a class="text-accent hover:underline" href="../WorldObject/index.html">WorldObject</a>, <a class="text-accent hover:underline" href="../Unit/index.html">Unit</a></p></div>
 
-    <h2 id='methods' class='section-header'><a href="#methods">Methods</a></h2>
-    <table>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='AddLootMode.html'>AddLootMode</a>
+    <h2 id='methods' class='mt-10 text-xl font-semibold tracking-tight text-body-bright'>
+        <a href="#methods">Methods</a>
+    </h2>
+    <div class='mt-5 overflow-x-auto rounded-xl border border-line bg-ink-raised'>
+    <table class='w-full border-collapse text-left [&_tr:first-child_td]:border-t-0'>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='AddLootMode.html'>AddLootMode</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Adds a loot mode to the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a></td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='AllLootRemovedFromCorpse.html'>AllLootRemovedFromCorpse</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Handles this <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s corpse state after all loot is removed.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='AttackStart.html'>AttackStart</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Make the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> attack <code>target</code>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CallAssistance.html'>CallAssistance</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Make the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> call for assistance in combat from other nearby <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>s.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CallForHelp.html'>CallForHelp</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Make the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> call for help in combat from friendly <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>s within <code>radius</code>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CanAggro.html'>CanAggro</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> can start attacking nearby hostile <a class="text-accent hover:underline" href="../Unit/index.html">Unit</a>s,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CanAssistTo.html'>CanAssistTo</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> can assist <code>friend</code> in combat against <code>enemy</code>,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CanCompleteQuest.html'>CanCompleteQuest</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> completes the <a class="text-accent hover:underline" href="../Quest/index.html">Quest</a> with the ID <code>questID</code>,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CanFly.html'>CanFly</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> can fly,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CanStartAttack.html'>CanStartAttack</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns true if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> can start attacking specified target</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CanSwim.html'>CanSwim</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> can move through deep water,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='CanWalk.html'>CanWalk</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> can move on land,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='DespawnOrUnsummon.html'>DespawnOrUnsummon</a>
             </td>
-            <td class='docblock short'>
-                <p>Adds a loot mode to the <a class="mod" href="../Creature/index.html">Creature</a></p>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Despawn this <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='FleeToGetAssistance.html'>FleeToGetAssistance</a>
             </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='AllLootRemovedFromCorpse.html'>AllLootRemovedFromCorpse</a>
-            </td>
-            <td class='docblock short'>
-                <p>Handles this <a class="mod" href="../Creature/index.html">Creature</a>'s corpse state after all loot is removed.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='AttackStart.html'>AttackStart</a>
-            </td>
-            <td class='docblock short'>
-                <p>Make the <a class="mod" href="../Creature/index.html">Creature</a> attack <code>target</code>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CallAssistance.html'>CallAssistance</a>
-            </td>
-            <td class='docblock short'>
-                <p>Make the <a class="mod" href="../Creature/index.html">Creature</a> call for assistance in combat from other nearby <a class="mod" href="../Creature/index.html">Creature</a>s.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CallForHelp.html'>CallForHelp</a>
-            </td>
-            <td class='docblock short'>
-                <p>Make the <a class="mod" href="../Creature/index.html">Creature</a> call for help in combat from friendly <a class="mod" href="../Creature/index.html">Creature</a>s within <code>radius</code>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CanAggro.html'>CanAggro</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> can start attacking nearby hostile <a class="mod" href="../Unit/index.html">Unit</a>s,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CanAssistTo.html'>CanAssistTo</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> can assist <code>friend</code> in combat against <code>enemy</code>,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CanCompleteQuest.html'>CanCompleteQuest</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> completes the <a class="mod" href="../Quest/index.html">Quest</a> with the ID <code>questID</code>,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CanFly.html'>CanFly</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> can fly,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CanStartAttack.html'>CanStartAttack</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns true if the <a class="mod" href="../Creature/index.html">Creature</a> can start attacking specified target</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CanSwim.html'>CanSwim</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> can move through deep water,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='CanWalk.html'>CanWalk</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> can move on land,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='DespawnOrUnsummon.html'>DespawnOrUnsummon</a>
-            </td>
-            <td class='docblock short'>
-                <p>Despawn this <a class="mod" href="../Creature/index.html">Creature</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='FleeToGetAssistance.html'>FleeToGetAssistance</a>
-            </td>
-            <td class='docblock short'>
-                <p>Make the <a class="mod" href="../Creature/index.html">Creature</a> flee combat to get assistance from a nearby friendly <a class="mod" href="../Creature/index.html">Creature</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetAIName.html'>GetAIName</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Creature/index.html">Creature</a>'s AI name.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetAITarget.html'>GetAITarget</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns a target from the <a class="mod" href="../Creature/index.html">Creature</a>'s threat list based on the
-  supplied arguments.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetAITargets.html'>GetAITargets</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns all <a class="mod" href="../Unit/index.html">Unit</a>s in the <a class="mod" href="../Creature/index.html">Creature</a>'s threat list.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetAITargetsCount.html'>GetAITargetsCount</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the number of <a class="mod" href="../Unit/index.html">Unit</a>s in this <a class="mod" href="../Creature/index.html">Creature</a>'s threat list.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetAggroRange.html'>GetAggroRange</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the aggro range of the <a class="mod" href="../Creature/index.html">Creature</a> for <code>target</code>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetCorpseDelay.html'>GetCorpseDelay</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the delay between when the <a class="mod" href="../Creature/index.html">Creature</a> dies and when its body despawns.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetCreatureFamily.html'>GetCreatureFamily</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Creature/index.html">Creature</a>'s creature family ID (enumerated in CreatureFamily.dbc).</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetCreatureSpellCooldownDelay.html'>GetCreatureSpellCooldownDelay</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Creature/index.html">Creature</a>'s cooldown for <code>spellID</code>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetCurrentWaypointId.html'>GetCurrentWaypointId</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the current waypoint ID of the <a class="mod" href="../Creature/index.html">Creature</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetDBTableGUIDLow.html'>GetDBTableGUIDLow</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the guid of the <a class="mod" href="../Creature/index.html">Creature</a> that is used as the ID in the database</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetDefaultMovementType.html'>GetDefaultMovementType</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the default movement type for this <a class="mod" href="../Creature/index.html">Creature</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetExtraFlags.html'>GetExtraFlags</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Creature/index.html">Creature</a>'s Extra flags.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetHomePosition.html'>GetHomePosition</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns position the <a class="mod" href="../Creature/index.html">Creature</a> returns to when evading from combat
-  or respawning.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetLoot.html'>GetLoot</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Creature/index.html">Creature</a>'s loot.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetLootMode.html'>GetLootMode</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the loot mode flags for the specified <a class="mod" href="../Creature/index.html">Creature</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetLootRecipient.html'>GetLootRecipient</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Player/index.html">Player</a> that can loot this <a class="mod" href="../Creature/index.html">Creature</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetLootRecipientGroup.html'>GetLootRecipientGroup</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Group/index.html">Group</a> that can loot this <a class="mod" href="../Creature/index.html">Creature</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetNPCFlags.html'>GetNPCFlags</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Creature/index.html">Creature</a>'s NPC flags.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetRank.html'>GetRank</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Creature/index.html">Creature</a>'s rank.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetReactState.html'>GetReactState</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Creature/index.html">Creature</a>'s current ReactState.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetRespawnDelay.html'>GetRespawnDelay</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the time it takes for this <a class="mod" href="../Creature/index.html">Creature</a> to respawn once killed.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetScriptId.html'>GetScriptId</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Creature/index.html">Creature</a>'s script ID.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetScriptName.html'>GetScriptName</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Creature/index.html">Creature</a>'s script name.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetShieldBlockValue.html'>GetShieldBlockValue</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Creature/index.html">Creature</a>'s shield block value.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetSpawnId.html'>GetSpawnId</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the spawn ID for this <a class="mod" href="../Creature/index.html">Creature</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetUnitFlags.html'>GetUnitFlags</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Creature/index.html">Creature</a>'s Unit flags.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetUnitFlagsTwo.html'>GetUnitFlagsTwo</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the <a class="mod" href="../Creature/index.html">Creature</a>'s Unit flags 2.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetWanderRadius.html'>GetWanderRadius</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the radius the <a class="mod" href="../Creature/index.html">Creature</a> is permitted to wander from its
-  respawn point.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='GetWaypointPath.html'>GetWaypointPath</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns the current waypoint path ID of the <a class="mod" href="../Creature/index.html">Creature</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='HasCategoryCooldown.html'>HasCategoryCooldown</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> cannot cast <code>spellId</code> due to a category cooldown,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='HasLootMode.html'>HasLootMode</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns true if <a class="mod" href="../Creature/index.html">Creature</a> has the specified loot mode</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='HasLootRecipient.html'>HasLootRecipient</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> will give its loot to a <a class="mod" href="../Player/index.html">Player</a> or <a class="mod" href="../Group/index.html">Group</a>,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='HasQuest.html'>HasQuest</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> starts the <a class="mod" href="../Quest/index.html">Quest</a> <code>questId</code>,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='HasSearchedAssistance.html'>HasSearchedAssistance</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> has searched for combat assistance already,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='HasSpell.html'>HasSpell</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> can cast <code>spellId</code> when mind-controlled,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='HasSpellCooldown.html'>HasSpellCooldown</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> has <code>spellId</code> on cooldown,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsCivilian.html'>IsCivilian</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> is a civilian,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsDamageEnoughForLootingAndReward.html'>IsDamageEnoughForLootingAndReward</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns true if the <a class="mod" href="../Creature/index.html">Creature</a> is damaged enough for looting</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsDungeonBoss.html'>IsDungeonBoss</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a>'s flags_extra includes Dungeon Boss (0x1000000),
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsElite.html'>IsElite</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a>'s rank is Elite or Rare Elite,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsGuard.html'>IsGuard</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> is a city guard,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsInEvadeMode.html'>IsInEvadeMode</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> is returning to its spawn position from combat,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsRacialLeader.html'>IsRacialLeader</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> is the leader of a player faction,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsRegeneratingHealth.html'>IsRegeneratingHealth</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> can regenerate health,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsReputationGainDisabled.html'>IsReputationGainDisabled</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> is set to not give reputation when killed,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsTappedBy.html'>IsTappedBy</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> will give its loot to <code>player</code>,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsTargetableForAttack.html'>IsTargetableForAttack</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> can be targeted for attack,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsTrigger.html'>IsTrigger</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a> is an invisible trigger,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='IsWorldBoss.html'>IsWorldBoss</a>
-            </td>
-            <td class='docblock short'>
-                <p>Returns <code>true</code> if the <a class="mod" href="../Creature/index.html">Creature</a>'s rank is Boss,
-  and returns <code>false</code> otherwise.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='MoveWaypoint.html'>MoveWaypoint</a>
-            </td>
-            <td class='docblock short'>
-                <p>Make the <a class="mod" href="../Creature/index.html">Creature</a> start following its waypoint path.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RemoveCorpse.html'>RemoveCorpse</a>
-            </td>
-            <td class='docblock short'>
-                <p>Remove this <a class="mod" href="../Creature/index.html">Creature</a>'s corpse.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='RemoveLootMode.html'>RemoveLootMode</a>
-            </td>
-            <td class='docblock short'>
-                <p>Removes specified loot mode from <a class="mod" href="../Creature/index.html">Creature</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='ResetLootMode.html'>ResetLootMode</a>
-            </td>
-            <td class='docblock short'>
-                <p>Resets <a class="mod" href="../Creature/index.html">Creature</a>'s loot mode to default</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='Respawn.html'>Respawn</a>
-            </td>
-            <td class='docblock short'>
-                <p>Respawn this <a class="mod" href="../Creature/index.html">Creature</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SaveToDB.html'>SaveToDB</a>
-            </td>
-            <td class='docblock short'>
-                <p>Save the <a class="mod" href="../Creature/index.html">Creature</a> in the database.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SelectVictim.html'>SelectVictim</a>
-            </td>
-            <td class='docblock short'>
-                <p>Make the <a class="mod" href="../Creature/index.html">Creature</a> try to find a new target.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetAggroEnabled.html'>SetAggroEnabled</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets whether the <a class="mod" href="../Creature/index.html">Creature</a> can be aggroed.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetCorpseDelay.html'>SetCorpseDelay</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets the time it takes for the <a class="mod" href="../Creature/index.html">Creature</a>'s corpse to despawn when killed.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetDeathState.html'>SetDeathState</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets the <a class="mod" href="../Creature/index.html">Creature</a>'s death state to <code>deathState</code>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetDefaultMovementType.html'>SetDefaultMovementType</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets the default movement type of the <a class="mod" href="../Creature/index.html">Creature</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetDisableGravity.html'>SetDisableGravity</a>
-            </td>
-            <td class='docblock short'>
-                <p>Makes the <a class="mod" href="../Creature/index.html">Creature</a> able to fly if enabled.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetDisableReputationGain.html'>SetDisableReputationGain</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets whether the <a class="mod" href="../Creature/index.html">Creature</a> gives reputation or not.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetEquipmentSlots.html'>SetEquipmentSlots</a>
-            </td>
-            <td class='docblock short'>
-                <p>Equips given <a class="mod" href="../Item/index.html">Item</a>s to the <a class="mod" href="../Unit/index.html">Unit</a>. Using 0 removes the equipped <a class="mod" href="../Item/index.html">Item</a></p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetHomePosition.html'>SetHomePosition</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets the position the <a class="mod" href="../Creature/index.html">Creature</a> returns to when evading from combat
-  or respawning.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetHover.html'>SetHover</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets whether the creature is hovering / levitating or not.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetInCombatWithZone.html'>SetInCombatWithZone</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets the <a class="mod" href="../Creature/index.html">Creature</a> as in combat with all <a class="mod" href="../Player/index.html">Player</a>s in the dungeon instance.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetLootMode.html'>SetLootMode</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets the loot mode flags for the specified <a class="mod" href="../Creature/index.html">Creature</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetNPCFlags.html'>SetNPCFlags</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets the <a class="mod" href="../Creature/index.html">Creature</a>'s NPC flags to <code>flags</code>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetNoCallAssistance.html'>SetNoCallAssistance</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets whether the <a class="mod" href="../Creature/index.html">Creature</a> can call nearby enemies for help in combat or not.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetNoSearchAssistance.html'>SetNoSearchAssistance</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets whether the <a class="mod" href="../Creature/index.html">Creature</a> can search for assistance at low health or not.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetReactState.html'>SetReactState</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets the <a class="mod" href="../Creature/index.html">Creature</a>'s ReactState to <code>state</code>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetRegeneratingHealth.html'>SetRegeneratingHealth</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets whether the <a class="mod" href="../Creature/index.html">Creature</a> can regenerate health or not.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetRespawnDelay.html'>SetRespawnDelay</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets the time it takes for the <a class="mod" href="../Creature/index.html">Creature</a> to respawn when killed.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetUnitFlags.html'>SetUnitFlags</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets the <a class="mod" href="../Creature/index.html">Creature</a>'s Unit flags to <code>flags</code>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetUnitFlagsTwo.html'>SetUnitFlagsTwo</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets the <a class="mod" href="../Creature/index.html">Creature</a>'s Unit flags2 to <code>flags</code>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetWalk.html'>SetWalk</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets whether the <a class="mod" href="../Creature/index.html">Creature</a> is currently walking or running.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='SetWanderRadius.html'>SetWanderRadius</a>
-            </td>
-            <td class='docblock short'>
-                <p>Sets the distance the <a class="mod" href="../Creature/index.html">Creature</a> can wander from it's spawn point.</p>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a class='stability Stable' title='Documented'></a>
-                <a class='fn' href='UpdateEntry.html'>UpdateEntry</a>
-            </td>
-            <td class='docblock short'>
-                <p>Transform the <a class="mod" href="../Creature/index.html">Creature</a> into another Creature.</p>
-            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Make the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> flee combat to get assistance from a nearby friendly <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetAIName.html'>GetAIName</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s AI name.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetAITarget.html'>GetAITarget</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns a target from the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s threat list based on the
+  supplied arguments.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetAITargets.html'>GetAITargets</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns all <a class="text-accent hover:underline" href="../Unit/index.html">Unit</a>s in the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s threat list.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetAITargetsCount.html'>GetAITargetsCount</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the number of <a class="text-accent hover:underline" href="../Unit/index.html">Unit</a>s in this <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s threat list.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetAggroRange.html'>GetAggroRange</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the aggro range of the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> for <code>target</code>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetCorpseDelay.html'>GetCorpseDelay</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the delay between when the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> dies and when its body despawns.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetCreatureFamily.html'>GetCreatureFamily</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s creature family ID (enumerated in CreatureFamily.dbc).</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetCreatureSpellCooldownDelay.html'>GetCreatureSpellCooldownDelay</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s cooldown for <code>spellID</code>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetCurrentWaypointId.html'>GetCurrentWaypointId</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the current waypoint ID of the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetDBTableGUIDLow.html'>GetDBTableGUIDLow</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the guid of the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> that is used as the ID in the database</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetDefaultMovementType.html'>GetDefaultMovementType</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the default movement type for this <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetExtraFlags.html'>GetExtraFlags</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s Extra flags.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetHomePosition.html'>GetHomePosition</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns position the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> returns to when evading from combat
+  or respawning.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetLoot.html'>GetLoot</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s loot.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetLootMode.html'>GetLootMode</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the loot mode flags for the specified <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetLootRecipient.html'>GetLootRecipient</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Player/index.html">Player</a> that can loot this <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetLootRecipientGroup.html'>GetLootRecipientGroup</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Group/index.html">Group</a> that can loot this <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetNPCFlags.html'>GetNPCFlags</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s NPC flags.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetRank.html'>GetRank</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s rank.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetReactState.html'>GetReactState</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s current ReactState.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetRespawnDelay.html'>GetRespawnDelay</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the time it takes for this <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> to respawn once killed.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetScriptId.html'>GetScriptId</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s script ID.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetScriptName.html'>GetScriptName</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s script name.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetShieldBlockValue.html'>GetShieldBlockValue</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s shield block value.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetSpawnId.html'>GetSpawnId</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the spawn ID for this <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetUnitFlags.html'>GetUnitFlags</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s Unit flags.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetUnitFlagsTwo.html'>GetUnitFlagsTwo</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s Unit flags 2.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetWanderRadius.html'>GetWanderRadius</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the radius the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> is permitted to wander from its
+  respawn point.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='GetWaypointPath.html'>GetWaypointPath</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns the current waypoint path ID of the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='HasCategoryCooldown.html'>HasCategoryCooldown</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> cannot cast <code>spellId</code> due to a category cooldown,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='HasLootMode.html'>HasLootMode</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns true if <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> has the specified loot mode</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='HasLootRecipient.html'>HasLootRecipient</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> will give its loot to a <a class="text-accent hover:underline" href="../Player/index.html">Player</a> or <a class="text-accent hover:underline" href="../Group/index.html">Group</a>,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='HasQuest.html'>HasQuest</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> starts the <a class="text-accent hover:underline" href="../Quest/index.html">Quest</a> <code>questId</code>,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='HasSearchedAssistance.html'>HasSearchedAssistance</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> has searched for combat assistance already,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='HasSpell.html'>HasSpell</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> can cast <code>spellId</code> when mind-controlled,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='HasSpellCooldown.html'>HasSpellCooldown</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> has <code>spellId</code> on cooldown,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsCivilian.html'>IsCivilian</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> is a civilian,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsDamageEnoughForLootingAndReward.html'>IsDamageEnoughForLootingAndReward</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns true if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> is damaged enough for looting</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsDungeonBoss.html'>IsDungeonBoss</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s flags_extra includes Dungeon Boss (0x1000000),
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsElite.html'>IsElite</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s rank is Elite or Rare Elite,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsGuard.html'>IsGuard</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> is a city guard,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsInEvadeMode.html'>IsInEvadeMode</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> is returning to its spawn position from combat,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsRacialLeader.html'>IsRacialLeader</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> is the leader of a player faction,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsRegeneratingHealth.html'>IsRegeneratingHealth</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> can regenerate health,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsReputationGainDisabled.html'>IsReputationGainDisabled</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> is set to not give reputation when killed,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsTappedBy.html'>IsTappedBy</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> will give its loot to <code>player</code>,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsTargetableForAttack.html'>IsTargetableForAttack</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> can be targeted for attack,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsTrigger.html'>IsTrigger</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> is an invisible trigger,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='IsWorldBoss.html'>IsWorldBoss</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Returns <code>true</code> if the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s rank is Boss,
+  and returns <code>false</code> otherwise.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='MoveWaypoint.html'>MoveWaypoint</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Make the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> start following its waypoint path.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RemoveCorpse.html'>RemoveCorpse</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Remove this <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s corpse.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='RemoveLootMode.html'>RemoveLootMode</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Removes specified loot mode from <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a></td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='ResetLootMode.html'>ResetLootMode</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Resets <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s loot mode to default</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='Respawn.html'>Respawn</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Respawn this <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SaveToDB.html'>SaveToDB</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Save the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> in the database.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SelectVictim.html'>SelectVictim</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Make the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> try to find a new target.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetAggroEnabled.html'>SetAggroEnabled</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets whether the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> can be aggroed.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetCorpseDelay.html'>SetCorpseDelay</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the time it takes for the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s corpse to despawn when killed.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetDeathState.html'>SetDeathState</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s death state to <code>deathState</code>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetDefaultMovementType.html'>SetDefaultMovementType</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the default movement type of the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetDisableGravity.html'>SetDisableGravity</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Makes the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> able to fly if enabled.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetDisableReputationGain.html'>SetDisableReputationGain</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets whether the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> gives reputation or not.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetEquipmentSlots.html'>SetEquipmentSlots</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Equips given <a class="text-accent hover:underline" href="../Item/index.html">Item</a>s to the <a class="text-accent hover:underline" href="../Unit/index.html">Unit</a>. Using 0 removes the equipped <a class="text-accent hover:underline" href="../Item/index.html">Item</a></td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetHomePosition.html'>SetHomePosition</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the position the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> returns to when evading from combat
+  or respawning.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetHover.html'>SetHover</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets whether the creature is hovering / levitating or not.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetInCombatWithZone.html'>SetInCombatWithZone</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> as in combat with all <a class="text-accent hover:underline" href="../Player/index.html">Player</a>s in the dungeon instance.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetLootMode.html'>SetLootMode</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the loot mode flags for the specified <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetNPCFlags.html'>SetNPCFlags</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s NPC flags to <code>flags</code>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetNoCallAssistance.html'>SetNoCallAssistance</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets whether the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> can call nearby enemies for help in combat or not.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetNoSearchAssistance.html'>SetNoSearchAssistance</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets whether the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> can search for assistance at low health or not.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetReactState.html'>SetReactState</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s ReactState to <code>state</code>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetRegeneratingHealth.html'>SetRegeneratingHealth</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets whether the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> can regenerate health or not.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetRespawnDelay.html'>SetRespawnDelay</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the time it takes for the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> to respawn when killed.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetUnitFlags.html'>SetUnitFlags</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s Unit flags to <code>flags</code>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetUnitFlagsTwo.html'>SetUnitFlagsTwo</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a>'s Unit flags2 to <code>flags</code>.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetWalk.html'>SetWalk</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets whether the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> is currently walking or running.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='SetWanderRadius.html'>SetWanderRadius</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Sets the distance the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> can wander from it's spawn point.</td>
+        </tr>
+        <tr class='transition hover:bg-white/[0.025]'>
+            <td class='w-px whitespace-nowrap border-t border-line px-4 py-3 font-mono text-[13.5px]'>
+                <span class="mr-2 inline-block h-2 w-2 shrink-0 rounded-full align-middle bg-emerald-500"
+                      title="Documented"></span>
+                <a class='text-accent hover:underline' href='UpdateEntry.html'>UpdateEntry</a>
+            </td>
+            <td class='border-t border-line px-4 py-3 text-[13.5px] text-body-dim'>Transform the <a class="text-accent hover:underline" href="../Creature/index.html">Creature</a> into another Creature.</td>
         </tr>
     </table>
-
-</section>
-
-<section id='search' class="content hidden"></section>
-
-<section class="footer"></section>
-
-<div id="help" class="hidden">
-    <div class="shortcuts">
-        <h1>Keyboard shortcuts</h1>
-        <dl>
-            <dt>?</dt>
-            <dd>Show this help dialog</dd>
-            <dt>S</dt>
-            <dd>Focus the search field</dd>
-            <dt>&larrb;</dt>
-            <dd>Move up in search results</dd>
-            <dt>&rarrb;</dt>
-            <dd>Move down in search results</dd>
-            <dt>&#9166;</dt>
-            <dd>Go to active search result</dd>
-        </dl>
     </div>
-    <div class="infos">
-        <h1>Search tricks</h1>
-        <p>
-            Prefix searches with a type followed by a colon (e.g.
-            <code>fn:</code>) to restrict the search to a given type.
+
+    </section>
+
+    <section id='search' class="content mx-auto hidden w-full max-w-[60rem] grow px-6 py-8"></section>
+
+    <footer class="shrink-0 border-t border-line px-6 py-6 text-xs text-body-dim
+                   lg:px-[max(1.5rem,calc((100%-60rem)/2+1.5rem))]">
+        <p class="max-w-2xl leading-relaxed">
+            Built on <a class="font-medium text-body hover:text-accent hover:underline"
+                        href="https://github.com/ElunaLuaEngine/Eluna">Eluna</a>.
+            ALE is a fork, and the heavy lifting was done upstream - our thanks to the original
+            Eluna authors and to everyone who has contributed to it over the years.
         </p>
-        <p>
-            Accepted types are: <code>fn</code>, <code>mod</code>,
-            <code>struct</code> (or <code>str</code>), <code>enum</code>,
-            <code>trait</code>, <code>typedef</code> (or
-            <code>tdef</code>).
-        </p>
-    </div>
+        <div class="mt-4 flex flex-wrap justify-between gap-4 border-t border-line pt-4">
+            <span>Generated on <script src="../date.js"></script></span>
+            <span>&copy;2026 ALE Lua Engine</span>
+        </div>
+    </footer>
+</div>
+
+<div id="help" class="hidden fixed inset-0 z-30 m-auto h-fit w-fit rounded-lg border border-line bg-ink-raised p-6 shadow-2xl">
+    <h1 class="mb-3 font-semibold text-body-bright">Keyboard shortcuts</h1>
+    <dl class="grid grid-cols-[3rem_1fr] gap-y-1 text-sm">
+        <dt class="font-mono text-body-dim">?</dt><dd>Show this help dialog</dd>
+        <dt class="font-mono text-body-dim">S</dt><dd>Focus the search field</dd>
+        <dt class="font-mono text-body-dim">&uarr;</dt><dd>Move up in search results</dd>
+        <dt class="font-mono text-body-dim">&darr;</dt><dd>Move down in search results</dd>
+        <dt class="font-mono text-body-dim">&#9166;</dt><dd>Go to active search result</dd>
+    </dl>
 </div>
 
 <script>
@@ -959,7 +1262,5 @@
 <script src="../static/jquery.js"></script>
 <script src="../static/main.js"></script>
 <script async src="../search-index.js"></script>
-<center>Generated on <script src="../date.js"></script></center>
-<center>&copy;2026 - ALE Lua Engine</center>
 </body>
 </html>

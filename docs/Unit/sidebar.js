@@ -1,163 +1,171 @@
 document.write(`
-  <a id="Unit:AddAura" class="fn" href="../Unit/AddAura.html">AddAura</a>
-  <a id="Unit:AddThreat" class="fn" href="../Unit/AddThreat.html">AddThreat</a>
-  <a id="Unit:AddUnitState" class="fn" href="../Unit/AddUnitState.html">AddUnitState</a>
-  <a id="Unit:Attack" class="fn" href="../Unit/Attack.html">Attack</a>
-  <a id="Unit:AttackStop" class="fn" href="../Unit/AttackStop.html">AttackStop</a>
-  <a id="Unit:CastCustomSpell" class="fn" href="../Unit/CastCustomSpell.html">CastCustomSpell</a>
-  <a id="Unit:CastSpell" class="fn" href="../Unit/CastSpell.html">CastSpell</a>
-  <a id="Unit:CastSpellAoF" class="fn" href="../Unit/CastSpellAoF.html">CastSpellAoF</a>
-  <a id="Unit:ClearInCombat" class="fn" href="../Unit/ClearInCombat.html">ClearInCombat</a>
-  <a id="Unit:ClearThreat" class="fn" href="../Unit/ClearThreat.html">ClearThreat</a>
-  <a id="Unit:ClearThreatList" class="fn" href="../Unit/ClearThreatList.html">ClearThreatList</a>
-  <a id="Unit:ClearUnitState" class="fn" href="../Unit/ClearUnitState.html">ClearUnitState</a>
-  <a id="Unit:CountPctFromCurHealth" class="fn" href="../Unit/CountPctFromCurHealth.html">CountPctFromCurHealth</a>
-  <a id="Unit:CountPctFromMaxHealth" class="fn" href="../Unit/CountPctFromMaxHealth.html">CountPctFromMaxHealth</a>
-  <a id="Unit:DeMorph" class="fn" href="../Unit/DeMorph.html">DeMorph</a>
-  <a id="Unit:DealDamage" class="fn" href="../Unit/DealDamage.html">DealDamage</a>
-  <a id="Unit:DealHeal" class="fn" href="../Unit/DealHeal.html">DealHeal</a>
-  <a id="Unit:Dismount" class="fn" href="../Unit/Dismount.html">Dismount</a>
-  <a id="Unit:EmoteState" class="fn" href="../Unit/EmoteState.html">EmoteState</a>
-  <a id="Unit:GetAttackers" class="fn" href="../Unit/GetAttackers.html">GetAttackers</a>
-  <a id="Unit:GetAura" class="fn" href="../Unit/GetAura.html">GetAura</a>
-  <a id="Unit:GetAuras" class="fn" href="../Unit/GetAuras.html">GetAuras</a>
-  <a id="Unit:GetBaseSpellPower" class="fn" href="../Unit/GetBaseSpellPower.html">GetBaseSpellPower</a>
-  <a id="Unit:GetCharmGUID" class="fn" href="../Unit/GetCharmGUID.html">GetCharmGUID</a>
-  <a id="Unit:GetCharmerGUID" class="fn" href="../Unit/GetCharmerGUID.html">GetCharmerGUID</a>
-  <a id="Unit:GetClass" class="fn" href="../Unit/GetClass.html">GetClass</a>
-  <a id="Unit:GetClassAsString" class="fn" href="../Unit/GetClassAsString.html">GetClassAsString</a>
-  <a id="Unit:GetClassMask" class="fn" href="../Unit/GetClassMask.html">GetClassMask</a>
-  <a id="Unit:GetControllerGUID" class="fn" href="../Unit/GetControllerGUID.html">GetControllerGUID</a>
-  <a id="Unit:GetControllerGUIDS" class="fn" href="../Unit/GetControllerGUIDS.html">GetControllerGUIDS</a>
-  <a id="Unit:GetCreatorGUID" class="fn" href="../Unit/GetCreatorGUID.html">GetCreatorGUID</a>
-  <a id="Unit:GetCreatureType" class="fn" href="../Unit/GetCreatureType.html">GetCreatureType</a>
-  <a id="Unit:GetCritterGUID" class="fn" href="../Unit/GetCritterGUID.html">GetCritterGUID</a>
-  <a id="Unit:GetCurrentSpell" class="fn" href="../Unit/GetCurrentSpell.html">GetCurrentSpell</a>
-  <a id="Unit:GetDisplayId" class="fn" href="../Unit/GetDisplayId.html">GetDisplayId</a>
-  <a id="Unit:GetFaction" class="fn" href="../Unit/GetFaction.html">GetFaction</a>
-  <a id="Unit:GetFriendlyUnitsInRange" class="fn" href="../Unit/GetFriendlyUnitsInRange.html">GetFriendlyUnitsInRange</a>
-  <a id="Unit:GetGender" class="fn" href="../Unit/GetGender.html">GetGender</a>
-  <a id="Unit:GetHealth" class="fn" href="../Unit/GetHealth.html">GetHealth</a>
-  <a id="Unit:GetHealthPct" class="fn" href="../Unit/GetHealthPct.html">GetHealthPct</a>
-  <a id="Unit:GetLevel" class="fn" href="../Unit/GetLevel.html">GetLevel</a>
-  <a id="Unit:GetMaxHealth" class="fn" href="../Unit/GetMaxHealth.html">GetMaxHealth</a>
-  <a id="Unit:GetMaxPower" class="fn" href="../Unit/GetMaxPower.html">GetMaxPower</a>
-  <a id="Unit:GetMountId" class="fn" href="../Unit/GetMountId.html">GetMountId</a>
-  <a id="Unit:GetMovementType" class="fn" href="../Unit/GetMovementType.html">GetMovementType</a>
-  <a id="Unit:GetNativeDisplayId" class="fn" href="../Unit/GetNativeDisplayId.html">GetNativeDisplayId</a>
-  <a id="Unit:GetOwner" class="fn" href="../Unit/GetOwner.html">GetOwner</a>
-  <a id="Unit:GetOwnerGUID" class="fn" href="../Unit/GetOwnerGUID.html">GetOwnerGUID</a>
-  <a id="Unit:GetPetGUID" class="fn" href="../Unit/GetPetGUID.html">GetPetGUID</a>
-  <a id="Unit:GetPower" class="fn" href="../Unit/GetPower.html">GetPower</a>
-  <a id="Unit:GetPowerPct" class="fn" href="../Unit/GetPowerPct.html">GetPowerPct</a>
-  <a id="Unit:GetPowerType" class="fn" href="../Unit/GetPowerType.html">GetPowerType</a>
-  <a id="Unit:GetRace" class="fn" href="../Unit/GetRace.html">GetRace</a>
-  <a id="Unit:GetRaceAsString" class="fn" href="../Unit/GetRaceAsString.html">GetRaceAsString</a>
-  <a id="Unit:GetRaceMask" class="fn" href="../Unit/GetRaceMask.html">GetRaceMask</a>
-  <a id="Unit:GetSpeed" class="fn" href="../Unit/GetSpeed.html">GetSpeed</a>
-  <a id="Unit:GetSpeedRate" class="fn" href="../Unit/GetSpeedRate.html">GetSpeedRate</a>
-  <a id="Unit:GetStandState" class="fn" href="../Unit/GetStandState.html">GetStandState</a>
-  <a id="Unit:GetStat" class="fn" href="../Unit/GetStat.html">GetStat</a>
-  <a id="Unit:GetThreat" class="fn" href="../Unit/GetThreat.html">GetThreat</a>
-  <a id="Unit:GetThreatList" class="fn" href="../Unit/GetThreatList.html">GetThreatList</a>
-  <a id="Unit:GetUnfriendlyUnitsInRange" class="fn" href="../Unit/GetUnfriendlyUnitsInRange.html">GetUnfriendlyUnitsInRange</a>
-  <a id="Unit:GetVehicleKit" class="fn" href="../Unit/GetVehicleKit.html">GetVehicleKit</a>
-  <a id="Unit:GetVictim" class="fn" href="../Unit/GetVictim.html">GetVictim</a>
-  <a id="Unit:GetVisibleAuras" class="fn" href="../Unit/GetVisibleAuras.html">GetVisibleAuras</a>
-  <a id="Unit:HandleStatFlatModifier" class="fn" href="../Unit/HandleStatFlatModifier.html">HandleStatFlatModifier</a>
-  <a id="Unit:HasAura" class="fn" href="../Unit/HasAura.html">HasAura</a>
-  <a id="Unit:HasUnitState" class="fn" href="../Unit/HasUnitState.html">HasUnitState</a>
-  <a id="Unit:HealthAbovePct" class="fn" href="../Unit/HealthAbovePct.html">HealthAbovePct</a>
-  <a id="Unit:HealthBelowPct" class="fn" href="../Unit/HealthBelowPct.html">HealthBelowPct</a>
-  <a id="Unit:InterruptSpell" class="fn" href="../Unit/InterruptSpell.html">InterruptSpell</a>
-  <a id="Unit:IsAlive" class="fn" href="../Unit/IsAlive.html">IsAlive</a>
-  <a id="Unit:IsArmorer" class="fn" href="../Unit/IsArmorer.html">IsArmorer</a>
-  <a id="Unit:IsAttackingPlayer" class="fn" href="../Unit/IsAttackingPlayer.html">IsAttackingPlayer</a>
-  <a id="Unit:IsAuctioneer" class="fn" href="../Unit/IsAuctioneer.html">IsAuctioneer</a>
-  <a id="Unit:IsBanker" class="fn" href="../Unit/IsBanker.html">IsBanker</a>
-  <a id="Unit:IsBattleMaster" class="fn" href="../Unit/IsBattleMaster.html">IsBattleMaster</a>
-  <a id="Unit:IsCasting" class="fn" href="../Unit/IsCasting.html">IsCasting</a>
-  <a id="Unit:IsCharmed" class="fn" href="../Unit/IsCharmed.html">IsCharmed</a>
-  <a id="Unit:IsDead" class="fn" href="../Unit/IsDead.html">IsDead</a>
-  <a id="Unit:IsDying" class="fn" href="../Unit/IsDying.html">IsDying</a>
-  <a id="Unit:IsFullHealth" class="fn" href="../Unit/IsFullHealth.html">IsFullHealth</a>
-  <a id="Unit:IsGossip" class="fn" href="../Unit/IsGossip.html">IsGossip</a>
-  <a id="Unit:IsGuildMaster" class="fn" href="../Unit/IsGuildMaster.html">IsGuildMaster</a>
-  <a id="Unit:IsInAccessiblePlaceFor" class="fn" href="../Unit/IsInAccessiblePlaceFor.html">IsInAccessiblePlaceFor</a>
-  <a id="Unit:IsInCombat" class="fn" href="../Unit/IsInCombat.html">IsInCombat</a>
-  <a id="Unit:IsInWater" class="fn" href="../Unit/IsInWater.html">IsInWater</a>
-  <a id="Unit:IsInnkeeper" class="fn" href="../Unit/IsInnkeeper.html">IsInnkeeper</a>
-  <a id="Unit:IsMounted" class="fn" href="../Unit/IsMounted.html">IsMounted</a>
-  <a id="Unit:IsOnVehicle" class="fn" href="../Unit/IsOnVehicle.html">IsOnVehicle</a>
-  <a id="Unit:IsPvPFlagged" class="fn" href="../Unit/IsPvPFlagged.html">IsPvPFlagged</a>
-  <a id="Unit:IsQuestGiver" class="fn" href="../Unit/IsQuestGiver.html">IsQuestGiver</a>
-  <a id="Unit:IsRooted" class="fn" href="../Unit/IsRooted.html">IsRooted</a>
-  <a id="Unit:IsServiceProvider" class="fn" href="../Unit/IsServiceProvider.html">IsServiceProvider</a>
-  <a id="Unit:IsSpiritGuide" class="fn" href="../Unit/IsSpiritGuide.html">IsSpiritGuide</a>
-  <a id="Unit:IsSpiritHealer" class="fn" href="../Unit/IsSpiritHealer.html">IsSpiritHealer</a>
-  <a id="Unit:IsSpiritService" class="fn" href="../Unit/IsSpiritService.html">IsSpiritService</a>
-  <a id="Unit:IsStandState" class="fn" href="../Unit/IsStandState.html">IsStandState</a>
-  <a id="Unit:IsStopped" class="fn" href="../Unit/IsStopped.html">IsStopped</a>
-  <a id="Unit:IsTabardDesigner" class="fn" href="../Unit/IsTabardDesigner.html">IsTabardDesigner</a>
-  <a id="Unit:IsTaxi" class="fn" href="../Unit/IsTaxi.html">IsTaxi</a>
-  <a id="Unit:IsTrainer" class="fn" href="../Unit/IsTrainer.html">IsTrainer</a>
-  <a id="Unit:IsUnderWater" class="fn" href="../Unit/IsUnderWater.html">IsUnderWater</a>
-  <a id="Unit:IsVendor" class="fn" href="../Unit/IsVendor.html">IsVendor</a>
-  <a id="Unit:Kill" class="fn" href="../Unit/Kill.html">Kill</a>
-  <a id="Unit:ModifyPower" class="fn" href="../Unit/ModifyPower.html">ModifyPower</a>
-  <a id="Unit:ModifyThreatPct" class="fn" href="../Unit/ModifyThreatPct.html">ModifyThreatPct</a>
-  <a id="Unit:Mount" class="fn" href="../Unit/Mount.html">Mount</a>
-  <a id="Unit:MoveChase" class="fn" href="../Unit/MoveChase.html">MoveChase</a>
-  <a id="Unit:MoveClear" class="fn" href="../Unit/MoveClear.html">MoveClear</a>
-  <a id="Unit:MoveConfused" class="fn" href="../Unit/MoveConfused.html">MoveConfused</a>
-  <a id="Unit:MoveExpire" class="fn" href="../Unit/MoveExpire.html">MoveExpire</a>
-  <a id="Unit:MoveFleeing" class="fn" href="../Unit/MoveFleeing.html">MoveFleeing</a>
-  <a id="Unit:MoveFollow" class="fn" href="../Unit/MoveFollow.html">MoveFollow</a>
-  <a id="Unit:MoveHome" class="fn" href="../Unit/MoveHome.html">MoveHome</a>
-  <a id="Unit:MoveIdle" class="fn" href="../Unit/MoveIdle.html">MoveIdle</a>
-  <a id="Unit:MoveJump" class="fn" href="../Unit/MoveJump.html">MoveJump</a>
-  <a id="Unit:MoveRandom" class="fn" href="../Unit/MoveRandom.html">MoveRandom</a>
-  <a id="Unit:MoveStop" class="fn" href="../Unit/MoveStop.html">MoveStop</a>
-  <a id="Unit:MoveTo" class="fn" href="../Unit/MoveTo.html">MoveTo</a>
-  <a id="Unit:NearTeleport" class="fn" href="../Unit/NearTeleport.html">NearTeleport</a>
-  <a id="Unit:PerformEmote" class="fn" href="../Unit/PerformEmote.html">PerformEmote</a>
-  <a id="Unit:RemoveAllAuras" class="fn" href="../Unit/RemoveAllAuras.html">RemoveAllAuras</a>
-  <a id="Unit:RemoveArenaAuras" class="fn" href="../Unit/RemoveArenaAuras.html">RemoveArenaAuras</a>
-  <a id="Unit:RemoveAura" class="fn" href="../Unit/RemoveAura.html">RemoveAura</a>
-  <a id="Unit:ResetAllThreat" class="fn" href="../Unit/ResetAllThreat.html">ResetAllThreat</a>
-  <a id="Unit:SendChatMessageToPlayer" class="fn" href="../Unit/SendChatMessageToPlayer.html">SendChatMessageToPlayer</a>
-  <a id="Unit:SendUnitEmote" class="fn" href="../Unit/SendUnitEmote.html">SendUnitEmote</a>
-  <a id="Unit:SendUnitSay" class="fn" href="../Unit/SendUnitSay.html">SendUnitSay</a>
-  <a id="Unit:SendUnitWhisper" class="fn" href="../Unit/SendUnitWhisper.html">SendUnitWhisper</a>
-  <a id="Unit:SendUnitYell" class="fn" href="../Unit/SendUnitYell.html">SendUnitYell</a>
-  <a id="Unit:SetConfused" class="fn" href="../Unit/SetConfused.html">SetConfused</a>
-  <a id="Unit:SetCreatorGUID" class="fn" href="../Unit/SetCreatorGUID.html">SetCreatorGUID</a>
-  <a id="Unit:SetCritterGUID" class="fn" href="../Unit/SetCritterGUID.html">SetCritterGUID</a>
-  <a id="Unit:SetDisplayId" class="fn" href="../Unit/SetDisplayId.html">SetDisplayId</a>
-  <a id="Unit:SetFFA" class="fn" href="../Unit/SetFFA.html">SetFFA</a>
-  <a id="Unit:SetFacing" class="fn" href="../Unit/SetFacing.html">SetFacing</a>
-  <a id="Unit:SetFacingToObject" class="fn" href="../Unit/SetFacingToObject.html">SetFacingToObject</a>
-  <a id="Unit:SetFaction" class="fn" href="../Unit/SetFaction.html">SetFaction</a>
-  <a id="Unit:SetFeared" class="fn" href="../Unit/SetFeared.html">SetFeared</a>
-  <a id="Unit:SetHealth" class="fn" href="../Unit/SetHealth.html">SetHealth</a>
-  <a id="Unit:SetImmuneTo" class="fn" href="../Unit/SetImmuneTo.html">SetImmuneTo</a>
-  <a id="Unit:SetInCombatWith" class="fn" href="../Unit/SetInCombatWith.html">SetInCombatWith</a>
-  <a id="Unit:SetLevel" class="fn" href="../Unit/SetLevel.html">SetLevel</a>
-  <a id="Unit:SetMaxHealth" class="fn" href="../Unit/SetMaxHealth.html">SetMaxHealth</a>
-  <a id="Unit:SetMaxPower" class="fn" href="../Unit/SetMaxPower.html">SetMaxPower</a>
-  <a id="Unit:SetName" class="fn" href="../Unit/SetName.html">SetName</a>
-  <a id="Unit:SetNativeDisplayId" class="fn" href="../Unit/SetNativeDisplayId.html">SetNativeDisplayId</a>
-  <a id="Unit:SetOwnerGUID" class="fn" href="../Unit/SetOwnerGUID.html">SetOwnerGUID</a>
-  <a id="Unit:SetPetGUID" class="fn" href="../Unit/SetPetGUID.html">SetPetGUID</a>
-  <a id="Unit:SetPower" class="fn" href="../Unit/SetPower.html">SetPower</a>
-  <a id="Unit:SetPowerType" class="fn" href="../Unit/SetPowerType.html">SetPowerType</a>
-  <a id="Unit:SetPvP" class="fn" href="../Unit/SetPvP.html">SetPvP</a>
-  <a id="Unit:SetRooted" class="fn" href="../Unit/SetRooted.html">SetRooted</a>
-  <a id="Unit:SetSanctuary" class="fn" href="../Unit/SetSanctuary.html">SetSanctuary</a>
-  <a id="Unit:SetSheath" class="fn" href="../Unit/SetSheath.html">SetSheath</a>
-  <a id="Unit:SetSpeed" class="fn" href="../Unit/SetSpeed.html">SetSpeed</a>
-  <a id="Unit:SetSpeedRate" class="fn" href="../Unit/SetSpeedRate.html">SetSpeedRate</a>
-  <a id="Unit:SetStandState" class="fn" href="../Unit/SetStandState.html">SetStandState</a>
-  <a id="Unit:SetWaterWalk" class="fn" href="../Unit/SetWaterWalk.html">SetWaterWalk</a>
-  <a id="Unit:StopSpellCast" class="fn" href="../Unit/StopSpellCast.html">StopSpellCast</a>
+<div class="border-b-2 border-line-strong">
+  <div class="flex items-center justify-between px-4 py-2.5 text-[11px] font-bold uppercase tracking-wider text-body-dim">
+    Unit
+    <span class="rounded-full border border-line bg-ink-raised px-1.5 font-semibold normal-case tracking-normal">161</span>
+  </div>
+  <div class="px-2 pb-2">
+    <a id="Unit:AddAura" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/AddAura.html">AddAura</a>
+    <a id="Unit:AddThreat" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/AddThreat.html">AddThreat</a>
+    <a id="Unit:AddUnitState" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/AddUnitState.html">AddUnitState</a>
+    <a id="Unit:Attack" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/Attack.html">Attack</a>
+    <a id="Unit:AttackStop" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/AttackStop.html">AttackStop</a>
+    <a id="Unit:CastCustomSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/CastCustomSpell.html">CastCustomSpell</a>
+    <a id="Unit:CastSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/CastSpell.html">CastSpell</a>
+    <a id="Unit:CastSpellAoF" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/CastSpellAoF.html">CastSpellAoF</a>
+    <a id="Unit:ClearInCombat" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/ClearInCombat.html">ClearInCombat</a>
+    <a id="Unit:ClearThreat" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/ClearThreat.html">ClearThreat</a>
+    <a id="Unit:ClearThreatList" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/ClearThreatList.html">ClearThreatList</a>
+    <a id="Unit:ClearUnitState" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/ClearUnitState.html">ClearUnitState</a>
+    <a id="Unit:CountPctFromCurHealth" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/CountPctFromCurHealth.html">CountPctFromCurHealth</a>
+    <a id="Unit:CountPctFromMaxHealth" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/CountPctFromMaxHealth.html">CountPctFromMaxHealth</a>
+    <a id="Unit:DeMorph" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/DeMorph.html">DeMorph</a>
+    <a id="Unit:DealDamage" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/DealDamage.html">DealDamage</a>
+    <a id="Unit:DealHeal" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/DealHeal.html">DealHeal</a>
+    <a id="Unit:Dismount" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/Dismount.html">Dismount</a>
+    <a id="Unit:EmoteState" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/EmoteState.html">EmoteState</a>
+    <a id="Unit:GetAttackers" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetAttackers.html">GetAttackers</a>
+    <a id="Unit:GetAura" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetAura.html">GetAura</a>
+    <a id="Unit:GetAuras" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetAuras.html">GetAuras</a>
+    <a id="Unit:GetBaseSpellPower" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetBaseSpellPower.html">GetBaseSpellPower</a>
+    <a id="Unit:GetCharmGUID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetCharmGUID.html">GetCharmGUID</a>
+    <a id="Unit:GetCharmerGUID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetCharmerGUID.html">GetCharmerGUID</a>
+    <a id="Unit:GetClass" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetClass.html">GetClass</a>
+    <a id="Unit:GetClassAsString" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetClassAsString.html">GetClassAsString</a>
+    <a id="Unit:GetClassMask" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetClassMask.html">GetClassMask</a>
+    <a id="Unit:GetControllerGUID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetControllerGUID.html">GetControllerGUID</a>
+    <a id="Unit:GetControllerGUIDS" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetControllerGUIDS.html">GetControllerGUIDS</a>
+    <a id="Unit:GetCreatorGUID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetCreatorGUID.html">GetCreatorGUID</a>
+    <a id="Unit:GetCreatureType" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetCreatureType.html">GetCreatureType</a>
+    <a id="Unit:GetCritterGUID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetCritterGUID.html">GetCritterGUID</a>
+    <a id="Unit:GetCurrentSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetCurrentSpell.html">GetCurrentSpell</a>
+    <a id="Unit:GetDisplayId" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetDisplayId.html">GetDisplayId</a>
+    <a id="Unit:GetFaction" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetFaction.html">GetFaction</a>
+    <a id="Unit:GetFriendlyUnitsInRange" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetFriendlyUnitsInRange.html">GetFriendlyUnitsInRange</a>
+    <a id="Unit:GetGender" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetGender.html">GetGender</a>
+    <a id="Unit:GetHealth" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetHealth.html">GetHealth</a>
+    <a id="Unit:GetHealthPct" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetHealthPct.html">GetHealthPct</a>
+    <a id="Unit:GetLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetLevel.html">GetLevel</a>
+    <a id="Unit:GetMaxHealth" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetMaxHealth.html">GetMaxHealth</a>
+    <a id="Unit:GetMaxPower" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetMaxPower.html">GetMaxPower</a>
+    <a id="Unit:GetMountId" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetMountId.html">GetMountId</a>
+    <a id="Unit:GetMovementType" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetMovementType.html">GetMovementType</a>
+    <a id="Unit:GetNativeDisplayId" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetNativeDisplayId.html">GetNativeDisplayId</a>
+    <a id="Unit:GetOwner" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetOwner.html">GetOwner</a>
+    <a id="Unit:GetOwnerGUID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetOwnerGUID.html">GetOwnerGUID</a>
+    <a id="Unit:GetPetGUID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetPetGUID.html">GetPetGUID</a>
+    <a id="Unit:GetPower" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetPower.html">GetPower</a>
+    <a id="Unit:GetPowerPct" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetPowerPct.html">GetPowerPct</a>
+    <a id="Unit:GetPowerType" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetPowerType.html">GetPowerType</a>
+    <a id="Unit:GetRace" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetRace.html">GetRace</a>
+    <a id="Unit:GetRaceAsString" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetRaceAsString.html">GetRaceAsString</a>
+    <a id="Unit:GetRaceMask" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetRaceMask.html">GetRaceMask</a>
+    <a id="Unit:GetSpeed" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetSpeed.html">GetSpeed</a>
+    <a id="Unit:GetSpeedRate" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetSpeedRate.html">GetSpeedRate</a>
+    <a id="Unit:GetStandState" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetStandState.html">GetStandState</a>
+    <a id="Unit:GetStat" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetStat.html">GetStat</a>
+    <a id="Unit:GetThreat" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetThreat.html">GetThreat</a>
+    <a id="Unit:GetThreatList" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetThreatList.html">GetThreatList</a>
+    <a id="Unit:GetUnfriendlyUnitsInRange" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetUnfriendlyUnitsInRange.html">GetUnfriendlyUnitsInRange</a>
+    <a id="Unit:GetVehicleKit" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetVehicleKit.html">GetVehicleKit</a>
+    <a id="Unit:GetVictim" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetVictim.html">GetVictim</a>
+    <a id="Unit:GetVisibleAuras" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/GetVisibleAuras.html">GetVisibleAuras</a>
+    <a id="Unit:HandleStatFlatModifier" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/HandleStatFlatModifier.html">HandleStatFlatModifier</a>
+    <a id="Unit:HasAura" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/HasAura.html">HasAura</a>
+    <a id="Unit:HasUnitState" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/HasUnitState.html">HasUnitState</a>
+    <a id="Unit:HealthAbovePct" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/HealthAbovePct.html">HealthAbovePct</a>
+    <a id="Unit:HealthBelowPct" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/HealthBelowPct.html">HealthBelowPct</a>
+    <a id="Unit:InterruptSpell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/InterruptSpell.html">InterruptSpell</a>
+    <a id="Unit:IsAlive" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsAlive.html">IsAlive</a>
+    <a id="Unit:IsArmorer" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsArmorer.html">IsArmorer</a>
+    <a id="Unit:IsAttackingPlayer" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsAttackingPlayer.html">IsAttackingPlayer</a>
+    <a id="Unit:IsAuctioneer" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsAuctioneer.html">IsAuctioneer</a>
+    <a id="Unit:IsBanker" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsBanker.html">IsBanker</a>
+    <a id="Unit:IsBattleMaster" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsBattleMaster.html">IsBattleMaster</a>
+    <a id="Unit:IsCasting" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsCasting.html">IsCasting</a>
+    <a id="Unit:IsCharmed" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsCharmed.html">IsCharmed</a>
+    <a id="Unit:IsDead" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsDead.html">IsDead</a>
+    <a id="Unit:IsDying" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsDying.html">IsDying</a>
+    <a id="Unit:IsFullHealth" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsFullHealth.html">IsFullHealth</a>
+    <a id="Unit:IsGossip" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsGossip.html">IsGossip</a>
+    <a id="Unit:IsGuildMaster" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsGuildMaster.html">IsGuildMaster</a>
+    <a id="Unit:IsInAccessiblePlaceFor" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsInAccessiblePlaceFor.html">IsInAccessiblePlaceFor</a>
+    <a id="Unit:IsInCombat" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsInCombat.html">IsInCombat</a>
+    <a id="Unit:IsInWater" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsInWater.html">IsInWater</a>
+    <a id="Unit:IsInnkeeper" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsInnkeeper.html">IsInnkeeper</a>
+    <a id="Unit:IsMounted" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsMounted.html">IsMounted</a>
+    <a id="Unit:IsOnVehicle" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsOnVehicle.html">IsOnVehicle</a>
+    <a id="Unit:IsPvPFlagged" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsPvPFlagged.html">IsPvPFlagged</a>
+    <a id="Unit:IsQuestGiver" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsQuestGiver.html">IsQuestGiver</a>
+    <a id="Unit:IsRooted" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsRooted.html">IsRooted</a>
+    <a id="Unit:IsServiceProvider" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsServiceProvider.html">IsServiceProvider</a>
+    <a id="Unit:IsSpiritGuide" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsSpiritGuide.html">IsSpiritGuide</a>
+    <a id="Unit:IsSpiritHealer" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsSpiritHealer.html">IsSpiritHealer</a>
+    <a id="Unit:IsSpiritService" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsSpiritService.html">IsSpiritService</a>
+    <a id="Unit:IsStandState" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsStandState.html">IsStandState</a>
+    <a id="Unit:IsStopped" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsStopped.html">IsStopped</a>
+    <a id="Unit:IsTabardDesigner" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsTabardDesigner.html">IsTabardDesigner</a>
+    <a id="Unit:IsTaxi" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsTaxi.html">IsTaxi</a>
+    <a id="Unit:IsTrainer" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsTrainer.html">IsTrainer</a>
+    <a id="Unit:IsUnderWater" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsUnderWater.html">IsUnderWater</a>
+    <a id="Unit:IsVendor" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/IsVendor.html">IsVendor</a>
+    <a id="Unit:Kill" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/Kill.html">Kill</a>
+    <a id="Unit:ModifyPower" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/ModifyPower.html">ModifyPower</a>
+    <a id="Unit:ModifyThreatPct" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/ModifyThreatPct.html">ModifyThreatPct</a>
+    <a id="Unit:Mount" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/Mount.html">Mount</a>
+    <a id="Unit:MoveChase" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/MoveChase.html">MoveChase</a>
+    <a id="Unit:MoveClear" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/MoveClear.html">MoveClear</a>
+    <a id="Unit:MoveConfused" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/MoveConfused.html">MoveConfused</a>
+    <a id="Unit:MoveExpire" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/MoveExpire.html">MoveExpire</a>
+    <a id="Unit:MoveFleeing" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/MoveFleeing.html">MoveFleeing</a>
+    <a id="Unit:MoveFollow" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/MoveFollow.html">MoveFollow</a>
+    <a id="Unit:MoveHome" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/MoveHome.html">MoveHome</a>
+    <a id="Unit:MoveIdle" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/MoveIdle.html">MoveIdle</a>
+    <a id="Unit:MoveJump" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/MoveJump.html">MoveJump</a>
+    <a id="Unit:MoveRandom" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/MoveRandom.html">MoveRandom</a>
+    <a id="Unit:MoveStop" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/MoveStop.html">MoveStop</a>
+    <a id="Unit:MoveTo" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/MoveTo.html">MoveTo</a>
+    <a id="Unit:NearTeleport" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/NearTeleport.html">NearTeleport</a>
+    <a id="Unit:PerformEmote" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/PerformEmote.html">PerformEmote</a>
+    <a id="Unit:RemoveAllAuras" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/RemoveAllAuras.html">RemoveAllAuras</a>
+    <a id="Unit:RemoveArenaAuras" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/RemoveArenaAuras.html">RemoveArenaAuras</a>
+    <a id="Unit:RemoveAura" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/RemoveAura.html">RemoveAura</a>
+    <a id="Unit:ResetAllThreat" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/ResetAllThreat.html">ResetAllThreat</a>
+    <a id="Unit:SendChatMessageToPlayer" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SendChatMessageToPlayer.html">SendChatMessageToPlayer</a>
+    <a id="Unit:SendUnitEmote" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SendUnitEmote.html">SendUnitEmote</a>
+    <a id="Unit:SendUnitSay" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SendUnitSay.html">SendUnitSay</a>
+    <a id="Unit:SendUnitWhisper" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SendUnitWhisper.html">SendUnitWhisper</a>
+    <a id="Unit:SendUnitYell" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SendUnitYell.html">SendUnitYell</a>
+    <a id="Unit:SetConfused" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetConfused.html">SetConfused</a>
+    <a id="Unit:SetCreatorGUID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetCreatorGUID.html">SetCreatorGUID</a>
+    <a id="Unit:SetCritterGUID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetCritterGUID.html">SetCritterGUID</a>
+    <a id="Unit:SetDisplayId" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetDisplayId.html">SetDisplayId</a>
+    <a id="Unit:SetFFA" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetFFA.html">SetFFA</a>
+    <a id="Unit:SetFacing" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetFacing.html">SetFacing</a>
+    <a id="Unit:SetFacingToObject" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetFacingToObject.html">SetFacingToObject</a>
+    <a id="Unit:SetFaction" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetFaction.html">SetFaction</a>
+    <a id="Unit:SetFeared" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetFeared.html">SetFeared</a>
+    <a id="Unit:SetHealth" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetHealth.html">SetHealth</a>
+    <a id="Unit:SetImmuneTo" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetImmuneTo.html">SetImmuneTo</a>
+    <a id="Unit:SetInCombatWith" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetInCombatWith.html">SetInCombatWith</a>
+    <a id="Unit:SetLevel" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetLevel.html">SetLevel</a>
+    <a id="Unit:SetMaxHealth" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetMaxHealth.html">SetMaxHealth</a>
+    <a id="Unit:SetMaxPower" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetMaxPower.html">SetMaxPower</a>
+    <a id="Unit:SetName" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetName.html">SetName</a>
+    <a id="Unit:SetNativeDisplayId" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetNativeDisplayId.html">SetNativeDisplayId</a>
+    <a id="Unit:SetOwnerGUID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetOwnerGUID.html">SetOwnerGUID</a>
+    <a id="Unit:SetPetGUID" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetPetGUID.html">SetPetGUID</a>
+    <a id="Unit:SetPower" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetPower.html">SetPower</a>
+    <a id="Unit:SetPowerType" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetPowerType.html">SetPowerType</a>
+    <a id="Unit:SetPvP" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetPvP.html">SetPvP</a>
+    <a id="Unit:SetRooted" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetRooted.html">SetRooted</a>
+    <a id="Unit:SetSanctuary" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetSanctuary.html">SetSanctuary</a>
+    <a id="Unit:SetSheath" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetSheath.html">SetSheath</a>
+    <a id="Unit:SetSpeed" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetSpeed.html">SetSpeed</a>
+    <a id="Unit:SetSpeedRate" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetSpeedRate.html">SetSpeedRate</a>
+    <a id="Unit:SetStandState" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetStandState.html">SetStandState</a>
+    <a id="Unit:SetWaterWalk" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/SetWaterWalk.html">SetWaterWalk</a>
+    <a id="Unit:StopSpellCast" class="block truncate rounded px-2.5 py-1 text-sm hover:bg-ink-raised hover:text-body-bright" href="../Unit/StopSpellCast.html">StopSpellCast</a>
+  </div>
+</div>
 `);
